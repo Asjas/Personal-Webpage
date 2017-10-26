@@ -26,7 +26,6 @@
     "eslint": "^4.9.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-sass": "^3.1.0",
-    "modernizr": "^3.5.0"
+    "gulp-sass": "^3.1.0"
   }
 }
