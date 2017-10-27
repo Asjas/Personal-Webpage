@@ -2,7 +2,7 @@
 @font-face{font-family:Neuton;font-style:normal;font-weight:400;src:local("Neuton Regular"),local("Neuton-Regular"),url(fonts/Neuton-Regular.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
 @font-face{font-family:Neuton;font-style:normal;font-weight:700;src:local("Neuton Bold"),local("Neuton-Bold"),url(fonts/Neuton-Bold.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
 *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}
-.body{background-color:#e7e7e7;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px;width:100vw}
+.body{background-color:#e7e7e7;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px;overflow-x:hidden;width:100vw}
 .body h2{font-family:Neuton,serif;margin:80px 0;text-align:center}
 .navbar-fixed-top{min-width:100%;position:fixed!important;top:0;z-index:2000}
 a.navbar-brand{color:#fff!important;font-family:Neuton,serif;letter-spacing:.15em}
