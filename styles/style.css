@@ -342,7 +342,7 @@ textarea.form-control {
   letter-spacing: .05em;
 }
 
-@media screen and (min-width: 380px) and (max-width: 767px) {
+@media screen and (min-width: 340px) and (max-width: 767px) {
   .background h1 {
     font-size: 1.4em;
     min-width: 350px;
@@ -355,6 +355,14 @@ textarea.form-control {
 
   .form-line {
     border-right: 0;
+  }
+
+  .contact-section .col-md-6 {
+    width: 100vw;
+  }
+
+  .row-margin {
+    margin-bottom: 0;
   }
 }
 

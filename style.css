@@ -42,10 +42,12 @@ textarea.form-control{height:125px;letter-spacing:.06em}
 .submit{background-color:transparent;color:#fff;float:right;font-size:1.1em;letter-spacing:.02em;width:150px}
 #footer{color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-top:2.2vh}
 #footer p{display:-webkit-box;display:-ms-flexbox;display:flex;font-family:Neuton,serif;font-size:.85em;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;letter-spacing:.05em}
-@media screen and (min-width:380px) and (max-width:767px){
+@media screen and (min-width:340px) and (max-width:767px){
 .background h1{font-size:1.4em;min-width:350px}
 body h2{font-size:1.3em;padding:0 20px}
 .form-line{border-right:0}
+.contact-section .col-md-6{width:100vw}
+.row-margin{margin-bottom:0}
 }
 @media screen and (min-width:768px) and (max-width:992px){
 .background h1{font-size:1.8em;min-width:350px}
