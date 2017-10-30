@@ -7,19 +7,18 @@
 .container a{color:#fff!important;font-family:Neuton,serif;letter-spacing:.14em}
 a.nav-link{font-family:Neuton,serif;letter-spacing:.064em;margin:0 3px;text-align:center}
 li.nav-item.active:hover a{background:#fff;border-radius:5px;color:#000!important}
-.row-margin{margin-bottom:20px}
-.view{border-radius:.25rem;-webkit-box-shadow:1px 1px 2px #e6e6e6;box-shadow:1px 1px 2px #e6e6e6;cursor:default;float:left;overflow:hidden;position:relative;text-align:center}
+.view{border-radius:.25rem;-webkit-box-shadow:1px 1px 2px #e6e6e6;box-shadow:1px 1px 2px #e6e6e6;cursor:default;float:left;overflow:hidden;position:relative;text-align:center;margin-bottom:25px}
 .view .mask{background-color:rgba(52,58,64,.8);opacity:0;-webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out}
 .view .content,.view .mask{height:100%;left:0;overflow:hidden;position:absolute;top:0;width:100%}
 .view img{max-height:100%;max-width:100%;overflow:hidden;position:relative;-webkit-transition:all .2s linear;transition:all .2s linear}
-.view h2{color:#fff;font-family:Katibeh,cursive;font-size:1.4em;letter-spacing:.125em;margin:20px 0 0;opacity:0;padding:10px;position:relative;text-align:center;text-transform:uppercase;-webkit-transform:translateY(-100px);transform:translateY(-100px);-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
-.view p{color:#fff;font-family:Neuton,serif;font-size:.95em;letter-spacing:.045em;opacity:0;padding:0 20px;position:relative;text-align:center;-webkit-transform:translateY(100px);transform:translateY(100px);-webkit-transition:all .2s linear;transition:all .2s linear}
+.view h2{color:#fff;font-family:Katibeh,cursive;font-size:1.45em;letter-spacing:.125em;margin:20px 0 0;opacity:0;position:relative;text-align:center;text-transform:uppercase;-webkit-transform:translateY(-100px);transform:translateY(-100px);-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
+.view p{color:#fff;font-family:Neuton,serif;font-size:1.1em;letter-spacing:.045em;opacity:0;position:relative;text-align:center;-webkit-transform:translateY(100px);transform:translateY(100px);-webkit-transition:all .2s linear;transition:all .2s linear}
 .view a.info{background:#000;-webkit-box-shadow:0 0 1px #000;box-shadow:0 0 1px #000;color:#fff;display:inline-block;letter-spacing:.055em;opacity:0;padding:7px 14px;text-decoration:none;text-transform:uppercase;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
 .view a.info:hover{-webkit-box-shadow:0 0 5px #000;box-shadow:0 0 5px #000}
-.view:hover img{-webkit-transform:scale(1.1);transform:scale(1.1)}
+.view:hover img{overflow:hidden;-webkit-transform:scale(1.1);transform:scale(1.1)}
 .view:hover .mask{opacity:1}
-.view:hover a.info,.view:hover h2,.view:hover p{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
-.view:hover p{-webkit-transition-delay:.1s;transition-delay:.1s}
+.view:hover a.info,.view:hover h2{opacity:1;-webkit-transform:translateY(-55px);transform:translateY(-55px)}
+.view:hover p{opacity:1;-webkit-transform:translateY(-70px);transform:translateY(-70px);-webkit-transition-delay:.1s;transition-delay:.1s}
 .view:hover a.info{-webkit-transition-delay:.2s;transition-delay:.2s}
 .content-header{color:#fcc500;font-family:Satisfy,cursive;font-size:1.15em}
 .section-content{text-align:center}
@@ -37,12 +36,21 @@ textarea.form-control{height:125px;letter-spacing:.06em}
 body h2{font-size:1.3em;padding:0 20px}
 .form-line{border-right:0}
 .contact-section .col-md-6{width:100vw}
-.row-margin{margin-bottom:0}
+.view:hover h2{font-size:1.2em;top:-10px}
+.view:hover p{font-size:1em;margin:0;padding:0;top:-40px}
+.view:hover a.info{-webkit-transform:translateY(-85px);transform:translateY(-85px)}
 }
 @media screen and (min-width:768px) and (max-width:992px){
 .background h1{font-size:1.8em;min-width:350px}
 body h2{font-size:1.8em;padding:0 20px}
 .form-line{border-right:1px solid #b29999}
+.view:hover h2{font-size:.9em;top:-10px}
+.view:hover p{font-size:.9em;margin:0;padding:0;top:-40px}
+.view:hover a.info{-webkit-transform:translateY(-110px);transform:translateY(-110px)}
+}
+@media screen and (min-width:992px) and (max-width:1200px){
+.view:hover h2{font-size:1.2em;top:-5px}
+.view:hover p{font-size:1em;margin:0;padding:0;top:-25px}
 }
 *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}
 .body{background-color:#e7e7e7;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px;overflow-x:hidden;width:100vw}

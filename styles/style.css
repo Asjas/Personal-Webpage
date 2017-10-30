@@ -63,10 +63,6 @@ li.nav-item.active:hover a {
   color: #000 !important;
 }
 
-.row-margin {
-  margin-bottom: 20px;
-}
-
 .view {
   border-radius: .25rem;
   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
@@ -76,6 +72,7 @@ li.nav-item.active:hover a {
   overflow: hidden;
   position: relative;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 .view .mask {
@@ -106,11 +103,10 @@ li.nav-item.active:hover a {
 .view h2 {
   color: #fff;
   font-family: "Katibeh", cursive;
-  font-size: 1.4em;
+  font-size: 1.45em;
   letter-spacing: .125em;
   margin: 20px 0 0 0;
   opacity: 0;
-  padding: 10px;
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -123,10 +119,9 @@ li.nav-item.active:hover a {
 .view p {
   color: #fff;
   font-family: "Neuton", serif;
-  font-size: .95em;
+  font-size: 1.1em;
   letter-spacing: .045em;
   opacity: 0;
-  padding: 0 20px 0;
   position: relative;
   text-align: center;
   -webkit-transform: translateY(100px);
@@ -156,6 +151,7 @@ li.nav-item.active:hover a {
 }
 
 .view:hover img {
+  overflow: hidden;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -165,14 +161,16 @@ li.nav-item.active:hover a {
 }
 
 .view:hover h2,
-  .view:hover p,
   .view:hover a.info {
   opacity: 1;
-  -webkit-transform: translateY(0px);
-  transform: translateY(0px);
+  -webkit-transform: translateY(-55px);
+  transform: translateY(-55px);
 }
 
 .view:hover p {
+  opacity: 1;
+  -webkit-transform: translateY(-70px);
+  transform: translateY(-70px);
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
@@ -266,8 +264,21 @@ textarea.form-control {
     width: 100vw;
   }
 
-  .row-margin {
-    margin-bottom: 0;
+  .view:hover h2 {
+    font-size: 1.2em;
+    top: -10px;
+  }
+
+  .view:hover p {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    top: -40px;
+  }
+
+  .view:hover a.info {
+    -webkit-transform: translateY(-85px);
+    transform: translateY(-85px);
   }
 }
 
@@ -284,6 +295,37 @@ textarea.form-control {
 
   .form-line {
     border-right: 1px solid #B29999;
+  }
+
+  .view:hover h2 {
+    font-size: 0.9em;
+    top: -10px;
+  }
+
+  .view:hover p {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+    top: -40px;
+  }
+
+  .view:hover a.info {
+    -webkit-transform: translateY(-110px);
+    transform: translateY(-110px);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .view:hover h2 {
+    font-size: 1.2em;
+    top: -5px;
+  }
+
+  .view:hover p {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    top: -25px;
   }
 }
 
