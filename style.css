@@ -28,9 +28,9 @@ li.nav-item.active:hover a{background:#fff;border-radius:5px;color:#000!importan
 .form-line{border-right:1px solid #b29999;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .form-group{margin-top:10px}
 label{font-size:1.3em;font-weight:400;line-height:1em}
-.form-control{color:#080808;font-size:1.3em}
-textarea.form-control{height:125px;letter-spacing:.06em}
-.submit{background-color:transparent;color:#fff;float:right;font-size:1.1em;letter-spacing:.02em;width:150px}
+.form-control{letter-spacing:.055em;color:#080808;font-size:1.3em}
+textarea.form-control{height:125px}
+.submit{background-color:rgba(0,0,0,.45);color:#fff;float:right;font-size:1.1em;letter-spacing:.02em;width:150px}
 @media screen and (min-width:340px) and (max-width:767px){
 .background h1{font-size:1.4em;min-width:350px}
 body h2{font-size:1.3em;padding:0 20px}
