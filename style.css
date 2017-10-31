@@ -52,6 +52,9 @@ body h2{font-size:1.8em;padding:0 20px}
 .view:hover h2{font-size:1.2em;top:-5px}
 .view:hover p{font-size:1em;margin:0;padding:0;top:-25px}
 }
+.intro-header{display:-webkit-box;display:-ms-flexbox;display:flex;min-height:100vh;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.intro-header .container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.intro-message{font-family:Prociono,serif;letter-spacing:.045em;width:50%}
 *,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}
 .body{background-color:#e7e7e7;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:16px;overflow-x:hidden;width:100vw}
 .body h2{font-family:Neuton,serif;letter-spacing:.045em;margin:80px 0;text-align:center}
@@ -60,5 +63,5 @@ body h2{font-size:1.8em;padding:0 20px}
 .background h1{background:rgba(0,0,0,.85);border-radius:6px;color:#fff;font-family:Prociono,serif;font-size:2.1em;left:50%;letter-spacing:.032em;min-width:500px;padding:.26em;position:absolute;text-align:center;top:280px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:10}
 .projects{display:inline-block;background:#ffff1e;padding:0 6px 8px 8px;margin:0 -2px 0 -3px;color:#212529;-webkit-transform:translateY(-2.5%) rotate(3deg);transform:translateY(-2.5%) rotate(3deg)}
 .inverse-projects{display:inline-block;-webkit-transform:translateY(2.5%) rotate(-3deg);transform:translateY(2.5%) rotate(-3deg)}
-#footer{color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-top:2.2vh}
+#footer{margin-top:-60px;color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-top:2.2vh}
 #footer p{display:-webkit-box;display:-ms-flexbox;display:flex;font-family:Neuton,serif;font-size:.85em;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;letter-spacing:.05em}
