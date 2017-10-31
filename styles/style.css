@@ -330,10 +330,10 @@ textarea.form-control {
 }
 
 .intro-header {
+  height: 92vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -358,10 +358,6 @@ textarea.form-control {
   font-family: "Prociono", serif;
   letter-spacing: 0.045em;
   width: 50%;
-}
-
-#footer {
-  margin-top: -60px;
 }
 
 *,
@@ -445,6 +441,7 @@ textarea.form-control {
   -ms-flex-pack: center;
   justify-content: center;
   padding-top: 2.2vh;
+  background: #e7e7e7;
 }
 
 #footer p {
