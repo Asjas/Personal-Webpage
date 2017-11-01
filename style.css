@@ -31,7 +31,7 @@ label{font-size:1.3em;font-weight:400;line-height:1em}
 .form-control{letter-spacing:.055em;color:#080808;font-size:1.3em}
 textarea.form-control{height:125px}
 .submit{background-color:rgba(0,0,0,.45);color:#fff;float:right;font-size:1.1em;letter-spacing:.02em;width:150px}
-@media screen and (min-width:340px) and (max-width:767px){
+@media screen and (min-width:320px) and (max-width:767px){
 .background h1{font-size:1.4em;min-width:350px}
 body h2{font-size:1.3em;padding:0 20px}
 .form-line{border-right:0}
@@ -60,7 +60,7 @@ body h2{font-size:1.8em;padding:0 20px}
 .body h2{font-family:Neuton,serif;letter-spacing:.045em;margin:80px 0;text-align:center}
 .background{height:524px;overflow:hidden}
 .background img{position:relative}
-.background h1{background:rgba(0,0,0,.85);border-radius:6px;color:#fff;font-family:Prociono,serif;font-size:2.1em;left:50%;letter-spacing:.032em;min-width:500px;padding:.26em;position:absolute;text-align:center;top:280px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:10}
+.background h1{background:rgba(0,0,0,.85);border-radius:6px;color:#fff;font-family:Prociono,serif;font-size:2.1em;left:50%;letter-spacing:.032em;padding:.26em;position:absolute;text-align:center;top:280px;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:10}
 .projects{display:inline-block;background:#ffff1e;padding:0 6px 8px 8px;margin:0 -2px 0 -3px;color:#212529;-webkit-transform:translateY(-2.5%) rotate(3deg);transform:translateY(-2.5%) rotate(3deg)}
 .inverse-projects{display:inline-block;-webkit-transform:translateY(2.5%) rotate(-3deg);transform:translateY(2.5%) rotate(-3deg)}
 #footer{color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding-top:2.2vh;background:#e7e7e7}
