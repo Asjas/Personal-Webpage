@@ -2,7 +2,7 @@
   "name": "personal_website",
   "version": "1.0.0",
   "description": "Personal Viewer",
-  "main": "javascript.js",
+  "main": "public/js/javascript.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,28 +11,28 @@
     "url": "git+https://github.com/Asjas/Personal-Webpage.git"
   },
   "author": "A-J Roos",
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
-  ],
+  "licenses": [{
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }],
   "bugs": {
     "url": "https://github.com/Asjas/Personal_Website/issues"
   },
   "homepage": "https://github.com/Asjas/Personal_Website#readme",
-  "dependencies": {},
+  "dependencies": {
+    "prettier-eslint": "^8.2.3"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "del": "^3.0.0",
-    "eslint": "^4.11.0",
+    "eslint": "^4.12.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-cssbeautify": "^0.1.3",
-    "gulp-imagemin": "^3.4.0",
+    "gulp-imagemin": "^4.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
@@ -42,6 +42,6 @@
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^5.0.1",
     "imagemin-webp": "^4.0.0",
-    "static-server": "^2.0.6"
+    "static-server": "^3.0.0"
   }
 }
