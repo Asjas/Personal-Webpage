@@ -13,7 +13,7 @@
 
 ### I used the following Gulp.js plugins when creating this website
 
-``` JavaScript
+```JavaScript
 const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
 const cleanCSS = require("gulp-clean-css");
