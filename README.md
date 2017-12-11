@@ -7,7 +7,8 @@
 * HTML
 * SCSS
 * JavaScript
-* JavaSript Libraries:
+* JavaScript Libraries:
+  * Webfont.js
   * Parallax.js
   * Masonry.js
   * jQuery.js
