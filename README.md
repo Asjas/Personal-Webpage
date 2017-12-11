@@ -14,6 +14,8 @@
   * jQuery.js
   * Slick.js
 * Foundation Social Webicons
+* Yarn Package Manager
+* Gulp.js
 
 ###
 
