@@ -14,6 +14,7 @@
   * jQuery.js
   * Slick.js
 * Foundation Social Webicons
+* Penthouse \(Critical Path CSS Generator)
 * Yarn Package Manager
 * Gulp.js
 
