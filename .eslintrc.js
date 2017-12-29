@@ -4,7 +4,4 @@ module.exports = {
     browser: true,
     jquery: true,
   },
-  rules: {
-    'no-console': 0,
-  },
 };
