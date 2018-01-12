@@ -54,7 +54,8 @@ $webicons-icons: f500px aboutme adn android apple behance bitbucket blogger
   youversion zerply;
 
 // Specify the path to the webicons directory here. Include trailing slash.
-$webicons-url: "../../assets/foundation-icons/webicons/" !default;
+$webicons-url: "https://myfiles.ams3.digitaloceanspaces.com/personal-portfolio/webicons/"
+  !default;
 
 @each $webicons-icon in $webicons-icons {
   .no-svg .webicon.#{$webicons-icon} {
