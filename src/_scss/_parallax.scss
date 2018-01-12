@@ -1,0 +1,97 @@
+// Parallax Main Banner
+.cover-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("https://myfiles.ams3.digitaloceanspaces.com/personal-portfolio/background-hero.jpeg")
+      top center no-repeat / cover;
+  height: 60vh;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+#scene {
+  padding: 0;
+  margin-top: 7.5rem;
+
+  li {
+    list-style-type: none;
+  }
+
+  li.name {
+    color: #fff;
+    font-family: $montserrat;
+    font-size: 3.3rem;
+    line-height: 3.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  li.title {
+    color: #fff;
+    font-family: $montserrat;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-top: 4.6rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  li.btn {
+    color: #fff;
+    font-family: $montserrat;
+    margin-top: 9rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.portfolio-btn,
+.contact-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  padding: 10px 20px;
+  pointer-events: auto;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.portfolio-btn {
+  margin-right: 2rem;
+}
+
+.contact-btn {
+  margin-left: 2rem;
+}
+
+h2.sub-title {
+  display: block;
+  font-family: $playfair;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  margin: 70px auto;
+  position: relative;
+  text-align: center;
+  text-shadow: 1px 1px 0px transparent, 1px 1px 0px rgba(0, 0, 0, 0.2),
+    2px 2px 0px rgba(0, 0, 0, 0.2), 3px 3px 1px rgba(0, 0, 0, 0.2);
+
+  &:after {
+    background-color: #000;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 30px auto 0 auto;
+    width: 100px;
+  }
+}

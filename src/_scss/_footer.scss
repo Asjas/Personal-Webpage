@@ -1,0 +1,17 @@
+// Footer style main
+footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://myfiles.ams3.digitaloceanspaces.com/personal-portfolio/footer_background.jpeg")
+      center center no-repeat / cover;
+  padding-top: 50px;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+
+  p,
+  span {
+    font-family: $montserrat;
+    font-size: 1rem;
+    line-height: 1.1rem;
+  }
+}

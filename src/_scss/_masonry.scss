@@ -1,0 +1,33 @@
+// Masonry Grid for Portfolio Images
+.masonry-grid {
+  position: relative;
+}
+
+.grid {
+  margin: 0 auto;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.grid-item {
+  border: 2px solid hsla(0, 0%, 0%, 0.5);
+  float: left;
+  margin-bottom: 1.4rem;
+  width: 450px;
+}
+
+.wide-img {
+  width: 600px;
+}
+
+.high-img {
+  height: 710px;
+}
+
+img {
+  max-width: 100%;
+}
