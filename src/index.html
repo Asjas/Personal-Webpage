@@ -35,8 +35,16 @@
   <meta name="twitter:creator" content="@asjasroos">
   <meta name="twitter:image" content="https://myfiles.ams3.digitaloceanspaces.com/personal-portfolio/background-hero.jpeg">
 
+  <!-- JavaScript LoadCSS Polyfill Script -->
+  <script src="https://myfiles.ams3.digitaloceanspaces.com/personal-portfolio/js/loadCSS.js"></script>
+
   <!-- CSS Styles -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" type="text/css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" as="style" onload="this.rel='stylesheet'">
+
+  <!-- Noscript CSS Style Fallback -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  </noscript>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js">
@@ -188,7 +196,7 @@
 
   <!-- Footer -->
   <footer id="footer">
-    <span>Heart icon made by Smashicons from www.flaticon.com</span>
+    <span>Heart icon made by Smashicons from www.flaticon.com.</span>
     <p>Copyright © A-J Roos 2018. All Rights Reserved.</p>
     <div class="social-icons">
       <a href="https://github.com/Asjas/" class="webicon github large" target="_blank"></a>
@@ -198,10 +206,24 @@
   </footer>
 
   <!-- CSS Libraries -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/ajax-loader.gif" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/fonts/slick.ttf" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/fonts/slick.woff" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" type="text/css">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/ajax-loader.gif" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/fonts/slick.ttf" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/fonts/slick.woff" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" as="style" onload="this.rel='stylesheet'">
+
+  <!-- NoScript CSS Style Fallback -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/ajax-loader.gif">
+  </noscript>
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/fonts/slick.ttf">
+  </noscript>
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/fonts/slick.woff">
+  </noscript>
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  </noscript>
 
   <!-- JavaScript Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" type="application/javascript"></script>
