@@ -47,8 +47,8 @@ module.exports = {
     "func-names": 0,
     "space-before-function-paren": 0,
     "comma-dangle": ["error", {
-        "arrays": "always",
-        "objects": "always",
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
         "imports": "never",
         "exports": "never",
         "functions": "ignore"
@@ -90,6 +90,7 @@ module.exports = {
     ],
   },
   "plugins": [
-    "prettier"
+    "prettier",
+    "react"
   ]
 }
