@@ -33,10 +33,7 @@ module.exports = {
     ],
     "no-console": 0,
     "import/prefer-default-export": 0,
-    "react/jsx-max-props-per-line": [1, {
-      "maximum": 1,
-      "when": "always"
-    }],
+    "react/jsx-max-props-per-line": [0],
     "import": 0,
     "no-plusplus": ["error", {
       "allowForLoopAfterthoughts": true
@@ -85,7 +82,7 @@ module.exports = {
       {
         "trailingComma": "all",
         "singleQuote": true,
-        "printWidth": 120,
+        "printWidth": 80,
       }
     ],
   },
