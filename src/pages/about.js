@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/navbar';
-import HomePage from '../components/homepage';
 import Footer from '../components/footer';
+import { media } from '../utils/media';
 
-const IndexPage = () => (
+const AboutPage = () => (
   <div>
     <Navbar />
-    <HomePage />
+    <h1>About Page</h1>
     <Footer />
   </div>
 );
 
-export default IndexPage;
+export default AboutPage;

@@ -1,15 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import Navbar from '../components/navbar';
-import HomePage from '../components/homepage';
+import ContactForm from '../components/form';
 import Footer from '../components/footer';
 
-const IndexPage = () => (
+const ContactPage = () => (
   <div>
     <Navbar />
-    <HomePage />
+    <ContactForm />
     <Footer />
   </div>
 );
 
-export default IndexPage;
+export default ContactPage;
