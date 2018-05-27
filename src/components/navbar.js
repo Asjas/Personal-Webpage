@@ -13,6 +13,10 @@ const Nav = styled.nav`
   position: relative;
   width: 100%;
 
+  ${media.medium`
+    width: 900px;
+  `};
+
   ${media.xSmall``};
 `;
 
@@ -49,10 +53,6 @@ const NavMenu = styled.div`
   width: 460px;
 
   ${media.medium`
-    width: 400px;
-  `};
-
-  ${media.small`
     width: 350px;
   `};
 

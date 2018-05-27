@@ -1,19 +1,35 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import { media } from '../utils/media';
 
-const Wrapper = styled.div`
+const Container = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(135deg, #4290f7 20%, #29bbff 80%);
+  margin: 0 auto;
+  max-width: 1200px;
+
+  ${media.small`
+      max-width: 768px;
+  `};
+`;
+
+const Wrapper = styled.div`
+  position: absolute;
   font-size: 1rem;
   margin: 40px auto;
   padding: 55px 0;
-  position: relative;
-  z-index: 3;
-  max-width: 1200px;
+`;
+
+const StyledImg = styled(Img)`
+  height: auto;
+  width: 1200px;
+  margin-top: 10px;
+
+  ${media.small`
+    width: 768px;
+    height: auto;
+  `};
 `;
 
 const Heading = styled.h2`
@@ -159,9 +175,9 @@ const Button = styled.input`
     rgba(0, 0, 0, 0) 75%,
     rgba(0, 0, 0, 0)
   );
-  background-color: #24b41f;
+  background-color: #579af2;
   background-size: 20px 20px;
-  border: solid 1px #24b41f;
+  border: solid 1px #579af2;
   border-bottom-width: 3px;
   color: #fff;
   cursor: pointer;
@@ -209,37 +225,46 @@ export default class ContactForm extends Component {
 
   render() {
     return (
-      <Wrapper>
-        <Heading>Quickly &amp; easily contact me using the form below.</Heading>
-        <Form onSubmit={this.handleSubmit}>
-          <FormBlock>
-            <Label htmlFor="name">Enter your name:</Label>
-            <Input
-              type="text"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-              placeholder="John Doe"
-            />
-            <Label htmlFor="email">Enter your email:</Label>
-            <Input
-              type="email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-              placeholder="example@gmail.com"
-            />
-            <Label htmlFor="textarea">Please enter a message:</Label>
-            <TextArea
-              name="textarea"
-              value={this.state.textarea}
-              onChange={this.handleChange}
-              placeholder="Please type your message here."
-            />
-            <Button type="submit" value="Submit" />
-          </FormBlock>
-        </Form>
-      </Wrapper>
+      <Container>
+        <StyledImg
+          title="Contact Form Image"
+          alt="Macbook sticking out of a brown leather bag"
+          sizes={this.props.contactImage.sizes}
+        />
+        <Wrapper>
+          <Heading>
+            Quickly &amp; easily contact me using the form below.
+          </Heading>
+          <Form onSubmit={this.handleSubmit}>
+            <FormBlock>
+              <Label htmlFor="name">Enter your name:</Label>
+              <Input
+                type="text"
+                name="name"
+                value={this.state.name}
+                onChange={this.handleChange}
+                placeholder="John Doe"
+              />
+              <Label htmlFor="email">Enter your email:</Label>
+              <Input
+                type="email"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+                placeholder="example@gmail.com"
+              />
+              <Label htmlFor="textarea">Please enter a message:</Label>
+              <TextArea
+                name="textarea"
+                value={this.state.textarea}
+                onChange={this.handleChange}
+                placeholder="Please type your message here."
+              />
+              <Button type="submit" value="Submit" />
+            </FormBlock>
+          </Form>
+        </Wrapper>
+      </Container>
     );
   }
 }
