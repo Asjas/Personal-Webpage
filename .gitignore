@@ -58,4 +58,5 @@ typings/
 .env
 
 # gatsby cache
-.cache/*
+.cache/
+public/
