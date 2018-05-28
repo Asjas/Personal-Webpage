@@ -38,7 +38,7 @@ const StyledSocialIcon = styled(SocialIcon)`
 
 const Footer = () => (
   <FooterStyled>
-    <Paragraph>Made with love by A-J Roos.</Paragraph>
+    <Paragraph>Made with love.</Paragraph>
     <div>
       <StyledSocialIcon url="https://twitter.com/asjasroos" />
       <StyledSocialIcon url="https://github.com/Asjas/" />

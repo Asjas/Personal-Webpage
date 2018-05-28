@@ -26,6 +26,20 @@ const Heading = styled.h1`
   left: 120px;
   font-size: 3rem;
   line-height: 3.3rem;
+
+  ${media.medium`
+    top: 120px;
+    left: 100px;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  `};
+
+  ${media.small`
+    top: 80px;
+    left: 90px;
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+  `};
 `;
 
 const Paragraph = styled.p`
@@ -33,12 +47,29 @@ const Paragraph = styled.p`
   top: 150px;
   left: 450px;
   font-size: 2.7rem;
+
+  ${media.medium`
+    top: 120px;
+    left: 380px;
+    font-size: 2.5rem;
+  `};
+
+  ${media.small`
+    top: 80px;
+    left: 330px;
+    font-size: 2.3rem;
+  `};
 `;
 
 const StyledImg = styled(Img)`
   height: auto;
   width: 1200px;
   margin-top: 10px;
+
+  ${media.medium`
+    width: 1024px;
+    height: auto;
+  `};
 
   ${media.small`
     width: 768px;

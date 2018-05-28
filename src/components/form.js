@@ -25,11 +25,6 @@ const StyledImg = styled(Img)`
   height: auto;
   width: 1200px;
   margin-top: 10px;
-
-  ${media.small`
-    width: 768px;
-    height: auto;
-  `};
 `;
 
 const Heading = styled.h2`
