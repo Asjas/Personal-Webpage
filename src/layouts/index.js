@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import normalize from 'normalize.css/normalize.css';
+import './index.css';
 
 const Layout = ({ children, data }) => (
   <div>
