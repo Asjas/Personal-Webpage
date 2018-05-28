@@ -24,8 +24,9 @@ const Wrapper = styled.div`
 
 const StyledImg = styled(Img)`
   height: auto;
-  width: 1200px;
   margin-top: 10px;
+  width: 1200px;
+  z-index: -4;
 `;
 
 const Heading = styled.h2`
@@ -56,24 +57,24 @@ const FormBlock = styled.div`
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
   display: block;
   margin: 0 auto;
-  width: 100%;
   max-width: 450px;
   padding: 30px;
   position: relative;
+  width: 100%;
 
   &:before,
   &:after {
-    content: '';
     background: #fff;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
     bottom: 0;
+    content: '';
     display: block;
+    height: 100%;
+    left: 0;
     position: absolute;
     right: 0;
     top: 0;
-    left: 0;
-    border: solid 1px #e6e6e6;
-    border-radius: 5px;
-    height: 100%;
     transform: scale(0.9) translate(0, 0);
     transition: all 0.3s ease;
     width: 100%;
@@ -86,6 +87,7 @@ const FormBlock = styled.div`
 
   &:hover::before {
     transform: scale(0.96) translate(0, 16px);
+    z-index: -1;
   }
 
   &:hover::after {
