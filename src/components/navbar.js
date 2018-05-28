@@ -18,8 +18,6 @@ const Nav = styled.nav`
   ${media.medium`
     max-width: 900px;
   `};
-
-  ${media.small``};
 `;
 
 const Name = styled.a`
@@ -45,7 +43,9 @@ const Name = styled.a`
     line-height: 3.2rem;
   `};
 
-  ${media.xSmall``};
+  ${media.xSmall`
+    font-size: 2.6rem;
+  `};
 `;
 
 const NavMenu = styled.div`

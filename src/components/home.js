@@ -41,6 +41,13 @@ const Heading = styled.h1`
     line-height: 2.8rem;
     top: 80px;
   `};
+
+  ${media.xSmall`
+    font-size: 1.9rem;
+    left: 90px;
+    width: 80%;
+    top: 60px;
+  `};
 `;
 
 const Paragraph = styled.p`
@@ -61,6 +68,12 @@ const Paragraph = styled.p`
     left: 330px;
     top: 80px;
   `};
+
+  ${media.xSmall`
+    font-size: 1.9rem;
+    left: 170px;
+    top: 50px;
+  `};
 `;
 
 const StyledImg = styled(Img)`
@@ -70,12 +83,17 @@ const StyledImg = styled(Img)`
 
   ${media.medium`
     height: auto;
-    width: 1024px;
+    max-width: 900px;
   `};
 
   ${media.small`
     height: auto;
-    width: 768px;
+    max-width: 768px;
+  `};
+
+  ${media.xSmall`
+    height: auto;
+    max-width: 576px;
   `};
 `;
 
