@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Link from 'gatsby-link';
+import { slide as Menu } from 'react-burger-menu';
 import styled from 'styled-components';
 import { media } from '../utils/media';
+import '../styles/ResponsiveNav.css';
 
 const Nav = styled.nav`
   align-items: center;
@@ -14,10 +16,10 @@ const Nav = styled.nav`
   width: 100%;
 
   ${media.medium`
-    width: 900px;
+    max-width: 900px;
   `};
 
-  ${media.xSmall``};
+  ${media.small``};
 `;
 
 const Name = styled.a`
@@ -53,10 +55,16 @@ const NavMenu = styled.div`
   width: 460px;
 
   ${media.medium`
-    width: 350px;
+    display: none;
   `};
+`;
 
-  ${media.xSmall``};
+const ResponsiveNavMenu = styled(Menu)`
+  display: none;
+
+  ${media.medium`
+    display: block;
+  `};
 `;
 
 const StyledLink = styled(Link)`
@@ -111,18 +119,80 @@ const StyledLink = styled(Link)`
   ${media.xSmall``};
 `;
 
-const Navbar = () => (
-  <Nav>
-    <Name href="#" tabIndex={-1}>
-      Portfolio| A-J Roos
-    </Name>
-    <NavMenu>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/portfolio/">Portfolio</StyledLink>
-      <StyledLink to="/about/">About</StyledLink>
-      <StyledLink to="/contact/">Contact</StyledLink>
-    </NavMenu>
-  </Nav>
-);
+const ResponsiveStyledLink = styled(Link)`
+  color: #bdc3c7;
+  cursor: pointer;
+  font-size: 2.2rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.5rem;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  position: relative;
+  text-decoration: none;
+`;
+
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      menuOpen: false,
+    };
+  }
+
+  // This keeps your state in sync with the opening/closing of the menu
+  // via the default means, e.g. clicking the X, pressing the ESC key etc.
+  handleStateChange = state => {
+    this.setState({ menuOpen: state.isOpen });
+  };
+
+  // This can be used to close the menu, e.g. when a user clicks a menu item
+  closeMenu = () => {
+    this.setState({ menuOpen: false });
+  };
+
+  // This can be used to toggle the menu, e.g. when using a custom icon
+  // Tip: You probably want to hide either/both default icons if using a custom icon
+  // See https://github.com/negomi/react-burger-menu#custom-icons
+  toggleMenu = () => {
+    this.setState({ menuOpen: !this.state.menuOpen });
+  };
+
+  render() {
+    return (
+      <Nav>
+        <Name href="#" tabIndex={-1}>
+          Portfolio| A-J Roos
+        </Name>
+        <NavMenu>
+          <StyledLink to="/">Home</StyledLink>
+          <StyledLink to="/portfolio/">Portfolio</StyledLink>
+          <StyledLink to="/about/">About</StyledLink>
+          <StyledLink to="/contact/">Contact</StyledLink>
+        </NavMenu>
+        <ResponsiveNavMenu
+          isOpen={!this.state.menuOpen}
+          onStateChange={state => this.handleStateChange(state)}
+        >
+          <ResponsiveStyledLink to="/" onClick={() => this.closeMenu()}>
+            Home
+          </ResponsiveStyledLink>
+          <ResponsiveStyledLink
+            to="/portfolio/"
+            onClick={() => this.closeMenu()}
+          >
+            Portfolio
+          </ResponsiveStyledLink>
+          <ResponsiveStyledLink to="/about/" onClick={() => this.closeMenu()}>
+            About
+          </ResponsiveStyledLink>
+          <ResponsiveStyledLink to="/contact/" onClick={() => this.closeMenu()}>
+            Contact
+          </ResponsiveStyledLink>
+        </ResponsiveNavMenu>
+      </Nav>
+    );
+  }
+}
 
 export default Navbar;
