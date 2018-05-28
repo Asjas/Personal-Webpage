@@ -1,15 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
 import Navbar from '../components/navbar';
+import AboutPage from '../components/aboutpage';
 import Footer from '../components/footer';
-import { media } from '../utils/media';
 
-const AboutPage = () => (
+const About = ({ data }) => (
   <div>
     <Navbar />
-    <h1>About Page</h1>
+    <AboutPage aboutImage={data.aboutImage} />
     <Footer />
   </div>
 );
 
-export default AboutPage;
+export const pageQuery = graphql`
+  query AboutPageQuery {
+    aboutImage: imageSharp(id: { regex: "/aboutpage/" }) {
+      sizes(maxWidth: 1200, quality: 92) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;
+
+export default About;
