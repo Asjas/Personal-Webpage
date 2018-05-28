@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/navbar';
-import HomePage from '../components/homepage';
+import Home from '../components/home';
 import Footer from '../components/footer';
 
 const IndexPage = ({ data }) => (
   <div>
     <Navbar />
-    <HomePage homepageImage={data.homepageImage} />
+    <Home homepageImage={data.homepageImage} />
     <Footer />
   </div>
 );

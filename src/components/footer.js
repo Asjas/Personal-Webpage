@@ -4,11 +4,12 @@ import { SocialIcon } from 'react-social-icons';
 import { media } from '../utils/media';
 
 const FooterStyled = styled.footer`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 150px;
+  justify-content: center;
+  letter-spacing: 0.04rem;
   width: 100%;
 
   ${media.xSmall``};

@@ -4,9 +4,9 @@ import Img from 'gatsby-image';
 import { media } from '../utils/media';
 
 const Container = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0 auto;
   max-width: 1200px;
 
@@ -21,63 +21,65 @@ const Wrapper = styled.div`
 `;
 
 const Heading = styled.h1`
+  font-size: 3rem;
+  left: 120px;
+  letter-spacing: 0.04rem;
+  line-height: 3.3rem;
   position: relative;
   top: 150px;
-  left: 120px;
-  font-size: 3rem;
-  line-height: 3.3rem;
 
   ${media.medium`
-    top: 120px;
-    left: 100px;
     font-size: 2.8rem;
+    left: 100px;
     line-height: 3rem;
+    top: 120px;
   `};
 
   ${media.small`
-    top: 80px;
-    left: 90px;
     font-size: 2.6rem;
+    left: 90px;
     line-height: 2.8rem;
+    top: 80px;
   `};
 `;
 
 const Paragraph = styled.p`
+  font-size: 2.7rem;
+  left: 450px;
+  letter-spacing: 0.04rem;
   position: relative;
   top: 150px;
-  left: 450px;
-  font-size: 2.7rem;
 
   ${media.medium`
-    top: 120px;
-    left: 380px;
     font-size: 2.5rem;
+    left: 380px;
+    top: 120px;
   `};
 
   ${media.small`
-    top: 80px;
-    left: 330px;
     font-size: 2.3rem;
+    left: 330px;
+    top: 80px;
   `};
 `;
 
 const StyledImg = styled(Img)`
   height: auto;
-  width: 1200px;
   margin-top: 10px;
+  width: 1200px;
 
   ${media.medium`
-    width: 1024px;
     height: auto;
+    width: 1024px;
   `};
 
   ${media.small`
-    width: 768px;
     height: auto;
+    width: 768px;
   `};
 `;
 
-const HomePage = props => (
+const Home = props => (
   <Container>
     <Wrapper>
       <Heading>Front-End Web Developer</Heading>
@@ -91,4 +93,4 @@ const HomePage = props => (
   </Container>
 );
 
-export default HomePage;
+export default Home;

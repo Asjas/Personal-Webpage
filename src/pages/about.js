@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from '../components/navbar';
-import AboutPage from '../components/aboutpage';
+import AboutInfo from '../components/aboutinfo';
 import Footer from '../components/footer';
 
 const About = ({ data }) => (
   <div>
     <Navbar />
-    <AboutPage aboutImage={data.aboutImage} />
+    <AboutInfo aboutImage={data.aboutImage} />
     <Footer />
   </div>
 );

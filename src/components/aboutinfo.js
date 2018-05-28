@@ -4,9 +4,9 @@ import Img from 'gatsby-image';
 import { media } from '../utils/media';
 
 const Container = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0 auto;
   max-width: 1200px;
 
@@ -17,8 +17,8 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   position: absolute;
-  z-index: 2;
   width: 330px;
+  z-index: 2;
 
   ${media.small`
     width: 220px;
@@ -26,81 +26,85 @@ const Wrapper = styled.div`
 `;
 
 const Heading = styled.h1`
-  position: relative;
-  top: 65px;
-  right: 45px;
   font-size: 2.8rem;
+  letter-spacing: 0.03rem;
   line-height: 3rem;
+  position: relative;
+  right: 45px;
+  top: 65px;
   transform: rotate(-6deg);
 
   ${media.small`
-    top: 75px;
-    right: 32px;
     font-size: 2.4rem;
     line-height: 2.4rem;
+    right: 32px;
+    top: 75px;
   `};
 `;
 
 const Paragraph1 = styled.p`
-  position: relative;
-  top: 90px;
-  right: 37px;
   font-size: 1.9rem;
-  transform: rotate(-6deg);
+  letter-spacing: 0.02rem;
   margin-bottom: 30px;
+  position: relative;
+  right: 37px;
+  top: 90px;
+  transform: rotate(-6deg);
 
   ${media.small`
-    top: 80px;
-    right: 26px;
     font-size: 1.7rem;
+    right: 26px;
+    top: 80px;
   `};
 `;
 
 const Paragraph2 = styled.p`
-  position: relative;
-  top: 90px;
-  right: 30px;
   font-size: 1.9rem;
+  letter-spacing: 0.02rem;
+  position: relative;
+  right: 30px;
+  top: 90px;
   transform: rotate(-6deg);
 
   ${media.small`
-    top: 60px;
-    right: 22px;
     font-size: 1.7rem;
+    right: 22px;
+    top: 60px;
   `};
 `;
 
 const Paragraph3 = styled.p`
-  position: relative;
-  top: 90px;
-  right: 22px;
   font-size: 1.9rem;
+  letter-spacing: 0.02rem;
+  position: relative;
+  right: 22px;
+  top: 90px;
   transform: rotate(-6deg);
 
   ${media.small`
-    top: 70px;
-    right: 15px;
     font-size: 1.7rem;
+    right: 15px;
+    top: 70px;
   `};
 `;
 
 const StyledImg = styled(Img)`
   height: auto;
-  width: 1200px;
   margin-top: 10px;
+  width: 1200px;
 
   ${media.medium`
-    width: 1024px;
     height: auto;
+    width: 1024px;
   `};
 
   ${media.small`
-    width: 768px;
     height: auto;
+    width: 768px;
   `};
 `;
 
-const AboutPage = props => (
+const AboutInfo = props => (
   <Container>
     <Wrapper>
       <Heading>About Me</Heading>
@@ -118,4 +122,4 @@ const AboutPage = props => (
   </Container>
 );
 
-export default AboutPage;
+export default AboutInfo;

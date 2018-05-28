@@ -64,6 +64,7 @@ const StyledLink = styled(Link)`
     color: #000;
     cursor: pointer;
     font-size: 2rem;
+    letter-spacing: 0.03rem;
     line-height: 2.2rem;
     padding: 3px;
     position: relative;
