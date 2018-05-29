@@ -43,10 +43,11 @@ const Heading = styled.h1`
   `};
 
   ${media.xSmall`
-    font-size: 1.9rem;
+    font-size: 2.1rem;
+    line-height: 2.3rem;
     left: 90px;
     width: 80%;
-    top: 60px;
+    top: 55px;
   `};
 `;
 
@@ -72,7 +73,7 @@ const Paragraph = styled.p`
   ${media.xSmall`
     font-size: 1.9rem;
     left: 170px;
-    top: 50px;
+    top: 55px;
   `};
 `;
 
