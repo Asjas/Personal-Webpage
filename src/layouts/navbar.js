@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import { slide as Menu } from 'react-burger-menu';
+import Menu from 'react-burger-menu/lib/menus/slide';
 import styled from 'styled-components';
 import { media } from '../utils/media';
 import '../styles/ResponsiveNav.css';
@@ -85,6 +85,7 @@ const StyledLink = styled(Link)`
       content: '';
       height: 2px;
       left: 0;
+      outline: 0;
       position: absolute;
       transform: scaleX(0);
       transition: all 0.3s ease-in-out 0s;
@@ -97,8 +98,8 @@ const StyledLink = styled(Link)`
       visibility: visible;
     }
 
-    &:focus {
-      outline: 1px solid black;
+    &:focus:before {
+      outline: 0;
     }
   }
 

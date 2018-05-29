@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import normalize from 'normalize.css/normalize.css';
+import Navbar from './navbar';
+import Footer from './footer';
 import './index.css';
 
 const Layout = ({ children, data }) => (
@@ -14,7 +16,9 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     />
+    <Navbar />
     {children()}
+    <Footer />
   </div>
 );
 

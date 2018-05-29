@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { media } from '../utils/media';
-import Navbar from '../components/navbar';
 import Project from '../components/project';
-import Footer from '../components/footer';
 
 const Container = styled.div`
   display: grid;
@@ -15,13 +13,11 @@ const Container = styled.div`
 
 const PortfolioPage = ({ data }) => (
   <div>
-    <Navbar />
     <Container>
       {data.allPrismicProjects.edges.map(project => (
         <Project key={project.node.id} projectQuery={project.node} />
       ))}
     </Container>
-    <Footer />
   </div>
 );
 

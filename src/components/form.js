@@ -1,32 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import StyledButton from './button';
 import { media } from '../utils/media';
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  letter-spacing: 0.04rem;
-  margin: 0 auto;
-  max-width: 1200px;
-
-  ${media.small`
-      max-width: 768px;
-  `};
-`;
-
 const Wrapper = styled.div`
-  font-size: 1rem;
   margin: 40px auto;
   padding: 55px 0;
   position: absolute;
-`;
-
-const StyledImg = styled(Img)`
-  height: auto;
-  margin-top: 10px;
-  width: 1200px;
-  z-index: -4;
 `;
 
 const Heading = styled.h2`
@@ -116,12 +96,13 @@ const Input = styled.input`
   border-bottom-width: 3px;
   border-radius: 5px;
   display: inline-block;
-  height: 50px;
   font-size: 1.4rem;
+  height: 50px;
+  line-height: 1.6rem;
+  margin: 3px 0 20px 0;
   outline: none;
   padding: 0 20px;
   transition: all 0.3s ease;
-  margin: 3px 0 20px 0;
   width: 100%;
 
   &:active {
@@ -134,6 +115,7 @@ const Input = styled.input`
 
   ${media.small`
     font-size: 1.3rem;
+    line-height: 1.5rem;
   `};
 `;
 
@@ -144,10 +126,10 @@ const TextArea = styled.textarea`
   border-radius: 5px;
   display: inline-block;
   height: 50px;
-  line-height: 50px;
+  line-height: 1.6px;
   outline: none;
   font-size: 1.4rem;
-  padding: 0 20px;
+  padding: 20px;
   transition: all 0.3s ease;
   min-width: 390px;
   max-width: 348px;
@@ -164,48 +146,10 @@ const TextArea = styled.textarea`
   }
 
   ${media.small`
+    font-size: 1.3rem;
+    line-height: 1.5rem;
     min-width: 290px;
     max-width: 290px;
-  `};
-`;
-
-const Button = styled.input`
-  background-image: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.15) 25%,
-    rgba(0, 0, 0, 0) 25%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.15) 75%,
-    rgba(0, 0, 0, 0) 75%,
-    rgba(0, 0, 0, 0)
-  );
-  background-color: #579af2;
-  background-size: 20px 20px;
-  border: solid 1px #579af2;
-  border-bottom-width: 3px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.6rem;
-  padding: 14px;
-  border-radius: 4px;
-  outline: 0;
-  position: relative;
-  transition: all 0.3s ease;
-  z-index: 1;
-
-  &:hover {
-    background-size: 40px 40px;
-  }
-
-  &:focus {
-    outline: 2px solid black;
-  }
-
-  ${media.small`
-    font-size: 1.5rem;
-    padding: 10px;
   `};
 `;
 
@@ -230,46 +174,37 @@ export default class ContactForm extends Component {
 
   render() {
     return (
-      <Container>
-        <StyledImg
-          title="Contact Form Image"
-          alt="Macbook sticking out of a brown leather bag"
-          sizes={this.props.contactImage.sizes}
-        />
-        <Wrapper>
-          <Heading>
-            Quickly &amp; easily contact me using the form below.
-          </Heading>
-          <Form onSubmit={this.handleSubmit}>
-            <FormBlock>
-              <Label htmlFor="name">Enter your name:</Label>
-              <Input
-                type="text"
-                name="name"
-                value={this.state.name}
-                onChange={this.handleChange}
-                placeholder="John Doe"
-              />
-              <Label htmlFor="email">Enter your email:</Label>
-              <Input
-                type="email"
-                name="email"
-                value={this.state.email}
-                onChange={this.handleChange}
-                placeholder="example@gmail.com"
-              />
-              <Label htmlFor="textarea">Please enter a message:</Label>
-              <TextArea
-                name="textarea"
-                value={this.state.textarea}
-                onChange={this.handleChange}
-                placeholder="Please type your message here."
-              />
-              <Button type="submit" value="Submit" />
-            </FormBlock>
-          </Form>
-        </Wrapper>
-      </Container>
+      <Wrapper>
+        <Heading>Quickly &amp; easily contact me using the form below.</Heading>
+        <Form onSubmit={this.handleSubmit}>
+          <FormBlock>
+            <Label htmlFor="name">Enter your name:</Label>
+            <Input
+              type="text"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleChange}
+              placeholder="John Doe"
+            />
+            <Label htmlFor="email">Enter your email:</Label>
+            <Input
+              type="email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              placeholder="example@gmail.com"
+            />
+            <Label htmlFor="textarea">Please enter a message:</Label>
+            <TextArea
+              name="textarea"
+              value={this.state.textarea}
+              onChange={this.handleChange}
+              placeholder="Please type your message here."
+            />
+            <StyledButton />
+          </FormBlock>
+        </Form>
+      </Wrapper>
     );
   }
 }
