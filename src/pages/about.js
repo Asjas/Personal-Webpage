@@ -9,8 +9,10 @@ const Container = styled.div`
   justify-content: center;
   margin: 0 auto;
   max-width: 1200px;
+  overflow: hidden;
 
   ${media.small`
+      min-height: 50vh;
       max-width: 768px;
   `};
 `;

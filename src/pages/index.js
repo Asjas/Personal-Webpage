@@ -16,6 +16,7 @@ const Container = styled.div`
   `};
 
   ${media.small`
+      height: 85vh;
       max-width: 768px;
   `};
 
