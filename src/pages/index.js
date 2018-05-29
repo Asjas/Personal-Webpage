@@ -9,6 +9,7 @@ const Container = styled.div`
   justify-content: center;
   margin: 0 auto;
   max-width: 1200px;
+  overflow: hidden;
 
   ${media.medium`
       max-width: 918px;
@@ -104,7 +105,7 @@ const StyledImg = styled(Img)`
   `};
 
   ${media.xSmall`
-    max-width: 450px;
+    max-width: 576px;
   `};
 `;
 
