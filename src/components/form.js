@@ -80,6 +80,10 @@ const FormBlock = styled.div`
   `};
 `;
 
+const Paragraph = styled.p`
+  display: hidden;
+`;
+
 const Label = styled.label`
   font-size: 1.6rem;
   line-height: 1.8rem;
@@ -156,12 +160,7 @@ const TextArea = styled.textarea`
 const ContactForm = () => (
   <Wrapper>
     <Heading>Quickly &amp; easily contact me using the form below.</Heading>
-    <Form
-      name="contact"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
+    <Form name="contact" method="POST" netlify>
       <FormBlock>
         <Label htmlFor="name">Enter your name:</Label>
         <Input type="text" name="name" placeholder="Your name" required />
@@ -179,6 +178,7 @@ const ContactForm = () => (
           required
         />
         <StyledButton />
+        <div data-netlify-recaptcha />
       </FormBlock>
     </Form>
   </Wrapper>

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { media } from '../utils/media';
 
-const Button = styled.input`
+const Button = styled.button`
   background-image: linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.15) 25%,
@@ -46,7 +46,7 @@ const Button = styled.input`
 
 const StyledButton = () => (
   <Fragment>
-    <Button type="submit" value="Submit" />
+    <Button type="submit">Submit</Button>
   </Fragment>
 );
 
