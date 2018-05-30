@@ -12,7 +12,7 @@ const Container = styled.div`
   overflow: hidden;
 
   ${media.small`
-      min-height: 50vh;
+      min-height: 40vh;
       max-width: 768px;
   `};
 `;
