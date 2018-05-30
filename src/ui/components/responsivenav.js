@@ -22,4 +22,9 @@ export const ResponsiveStyledLink = styled(Link)`
   margin: 10px 0 10px 0;
   position: relative;
   text-decoration: none;
+
+  ${media.small`
+    font-size: 1.8rem;
+    line-height: 1.9rem;
+  `};
 `;
