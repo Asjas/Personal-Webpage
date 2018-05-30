@@ -109,12 +109,13 @@ const LinkDescription = styled.p`
 
 const StyledLink = styled.a`
   color: #000;
+  color: blue;
   cursor: pointer;
   font-size: 1.4rem;
   line-height: 1.6rem;
+  padding-left: 5px;
   position: relative;
   text-decoration: none;
-  padding-left: 5px;
 
   &:hover {
     color: lightcoral;
