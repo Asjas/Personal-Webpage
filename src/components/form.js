@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import StyledButton from './button';
 import { media } from '../utils/media';
@@ -153,58 +153,35 @@ const TextArea = styled.textarea`
   `};
 `;
 
-export default class ContactForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      textarea: '',
-    };
-  }
+const ContactForm = () => (
+  <Wrapper>
+    <Heading>Quickly &amp; easily contact me using the form below.</Heading>
+    <Form
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <FormBlock>
+        <Label htmlFor="name">Enter your name:</Label>
+        <Input type="text" name="name" placeholder="Your name" required />
+        <Label htmlFor="email">Enter your email:</Label>
+        <Input
+          type="email"
+          name="email"
+          placeholder="example@gmail.com"
+          required
+        />
+        <Label htmlFor="textarea">Please enter a message:</Label>
+        <TextArea
+          name="textarea"
+          placeholder="Please type your message here."
+          required
+        />
+        <StyledButton />
+      </FormBlock>
+    </Form>
+  </Wrapper>
+);
 
-  handleChange = event => {
-    const { value, name } = event.target;
-    this.setState({ [name]: value });
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-  };
-
-  render() {
-    return (
-      <Wrapper>
-        <Heading>Quickly &amp; easily contact me using the form below.</Heading>
-        <Form onSubmit={this.handleSubmit}>
-          <FormBlock>
-            <Label htmlFor="name">Enter your name:</Label>
-            <Input
-              type="text"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-              placeholder="John Doe"
-            />
-            <Label htmlFor="email">Enter your email:</Label>
-            <Input
-              type="email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-              placeholder="example@gmail.com"
-            />
-            <Label htmlFor="textarea">Please enter a message:</Label>
-            <TextArea
-              name="textarea"
-              value={this.state.textarea}
-              onChange={this.handleChange}
-              placeholder="Please type your message here."
-            />
-            <StyledButton />
-          </FormBlock>
-        </Form>
-      </Wrapper>
-    );
-  }
-}
+export default ContactForm;
