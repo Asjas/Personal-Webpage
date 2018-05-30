@@ -8,20 +8,9 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Portfolio| A-J Roos',
-        short_name: 'Portfolio',
-        start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
-        display: 'minimal-ui',
-        icon: 'src/img/icon.png', // This path is relative to the root of the site.
-      },
-    },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-react-next',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -35,13 +24,6 @@ module.exports = {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography.js',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        // Disable the loading spinner.
-        showSpinner: false,
       },
     },
     {
@@ -92,7 +74,19 @@ module.exports = {
         fonts: ['Playfair Display', 'Montserrat'],
       },
     },
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Portfolio| A-J Roos',
+        short_name: 'Portfolio',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'minimal-ui',
+        icon: 'src/img/icon.png', // This path is relative to the root of the site.
+      },
+    },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
