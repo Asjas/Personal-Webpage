@@ -34,7 +34,7 @@ export const Card = styled.div`
   margin: 0 auto;
 `;
 
-export const Title = styled.p`
+export const Title = styled.h1`
   font-size: 2.4rem;
   letter-spacing: 0.03rem;
   line-height: 2.6rem;
@@ -51,7 +51,7 @@ export const Title = styled.p`
   `};
 `;
 
-export const Description = styled.p`
+export const Description = styled.h2`
   font-size: 1.8rem;
   letter-spacing: 0.03rem;
   line-height: 2rem;
