@@ -6,6 +6,22 @@ import { media } from '../utils/media';
 const Content = styled.div`
   width: 550px;
   margin: 30px auto 0;
+
+  ${media.large`
+    width: 700px;
+  `};
+
+  ${media.medium`
+    width: 550px;
+  `};
+
+  ${media.small`
+    width: 420px;
+  `};
+
+  ${media.xSmall`
+    width: 320px;
+  `};
 `;
 
 const Card = styled.div`
@@ -21,13 +37,35 @@ const Card = styled.div`
 const Title = styled.p`
   font-size: 2.4rem;
   letter-spacing: 0.03rem;
+  line-height: 2.6rem;
   padding: 1.6rem 0 0 1.6rem;
+
+  ${media.small`
+    font-size: 2rem;
+    line-height: 2.2rem;
+  `};
+
+  ${media.xSmall`
+    font-size: 1.8rem;
+    line-height: 2rem;
+  `};
 `;
 
 const Description = styled.p`
   font-size: 1.8rem;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.03rem;
+  line-height: 2rem;
   padding: 1.6rem 0 0 1.6rem;
+
+  ${media.small`
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  `};
+
+  ${media.xSmall`
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  `};
 `;
 
 const StyledImg = styled(Img)`
@@ -35,22 +73,38 @@ const StyledImg = styled(Img)`
   width: 540px;
   margin: 0 auto;
 
+  ${media.large`
+    width: 700px;
+  `};
+
   ${media.medium`
-    width: 400px;
-    height: auto;
+    width: 550px;
   `};
 
   ${media.small`
-    width: 768px;
-    height: auto;
+    width: 420px;
+  `};
+
+  ${media.xSmall`
+    width: 320px;
   `};
 `;
 
 const LinkDescription = styled.p`
   font-size: 1.4rem;
-  line-height: 1.6rem;
   letter-spacing: 0.02rem;
+  line-height: 1.6rem;
   padding: 0 0 1.6rem 1.6rem;
+
+  ${media.small`
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  `};
+
+  ${media.xSmall`
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  `};
 `;
 
 const StyledLink = styled.a`
@@ -69,6 +123,16 @@ const StyledLink = styled.a`
   &:focus {
     outline: 1px solid black;
   }
+
+  ${media.small`
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  `};
+
+  ${media.xSmall`
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  `};
 `;
 
 const Project = ({ projectQuery }) => (

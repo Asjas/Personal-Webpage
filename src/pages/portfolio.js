@@ -7,8 +7,12 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+
+  ${media.large`
+    grid-template-columns: 1fr;
+  `};
 `;
 
 const PortfolioPage = ({ data }) => (

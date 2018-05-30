@@ -3,6 +3,7 @@ import { css } from 'styled-components';
 
 // Mobile Query Screen Sizes
 const sizes = {
+  large: 1200,
   medium: 918,
   small: 768,
   xSmall: 576,
