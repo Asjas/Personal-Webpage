@@ -1,28 +1,13 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { media } from '../utils/media';
+import { Container } from '../ui/pages/portfolio';
 import Project from '../components/project';
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  ${media.large`
-    grid-template-columns: 1fr;
-  `};
-`;
-
 const PortfolioPage = ({ data }) => (
-  <div>
-    <Container>
-      {data.allPrismicProjects.edges.map(project => (
-        <Project key={project.node.id} projectQuery={project.node} />
-      ))}
-    </Container>
-  </div>
+  <Container>
+    {data.allPrismicProjects.edges.map(project => (
+      <Project key={project.node.id} projectQuery={project.node} />
+    ))}
+  </Container>
 );
 
 export const projectQuery = graphql`
