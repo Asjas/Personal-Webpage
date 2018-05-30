@@ -161,19 +161,22 @@ class Navbar extends Component {
 
   render() {
     return (
-      <Nav>
-        <Name href="#" tabIndex={-1}>
-          Portfolio| A-J Roos
-        </Name>
-        <NavMenu>
-          <StyledLink to="/">Home</StyledLink>
-          <StyledLink to="/portfolio/">Portfolio</StyledLink>
-          <StyledLink to="/about/">About</StyledLink>
-          <StyledLink to="/contact/">Contact</StyledLink>
-        </NavMenu>
+      <div>
+        <Nav>
+          <Name href="#" tabIndex={-1}>
+            Portfolio| A-J Roos
+          </Name>
+          <NavMenu>
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/portfolio/">Portfolio</StyledLink>
+            <StyledLink to="/about/">About</StyledLink>
+            <StyledLink to="/contact/">Contact</StyledLink>
+          </NavMenu>
+        </Nav>
         <ResponsiveNavMenu
-          isOpen={!this.state.menuOpen}
+          isOpen={this.state.menuOpen}
           onStateChange={state => this.handleStateChange(state)}
+          right
         >
           <ResponsiveStyledLink to="/" onClick={() => this.closeMenu()}>
             Home
@@ -191,7 +194,7 @@ class Navbar extends Component {
             Contact
           </ResponsiveStyledLink>
         </ResponsiveNavMenu>
-      </Nav>
+      </div>
     );
   }
 }
