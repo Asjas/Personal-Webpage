@@ -45,9 +45,9 @@ const Button = styled.input`
 `;
 
 const StyledButton = () => (
-  <div>
+  <Fragment>
     <Button type="submit" value="Submit" />
-  </div>
+  </Fragment>
 );
 
 export default StyledButton;
