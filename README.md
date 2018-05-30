@@ -1,22 +1,14 @@
 ## This is my personal webpage
 
-![Screenshot of personal website](https://github.com/Asjas/Personal-Webpage/blob/master/public/readme_img.jpg "Website")
-
 ### This project was built using the following
 
-* HTML
-* SCSS
-* JavaScript
-* JavaScript Libraries:
-  * Webfont.js
-  * Parallax.js
-  * Masonry.js
-  * jQuery.js
-  * Slick.js
-* Foundation Social Webicons
-* Penthouse \(Critical Path CSS Generator)
-* Yarn Package Manager
-* Gulp.js
+* Front-End
+  * GatsbyJS
+  * Styled Components
+  * GraphQL
+  * Offline PWA
+* Back-End
+  * Prismic Headless CMS (https://prismic.io/)
 
 ###
 
@@ -31,7 +23,7 @@ And then run the following commands.
 ```sh
 cd Personal-Webpage
 yarn
-gulp watch
+yarn run develop
 ```
 
-This will start a local server on port `3000` that you can open to run a local version of my website.
+This will start a local server on `http://localhost:8000` that you can open to run a local version of my website.
