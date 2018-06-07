@@ -15,6 +15,7 @@ const ContactForm = () => (
     <Heading>Quickly &amp; easily contact me using the form below.</Heading>
     <Form name="contact" method="POST" netlify>
       <FormBlock>
+        <input type="hidden" name="form-name" value="contact" />
         <Label htmlFor="name">Enter your name:</Label>
         <Input type="text" name="name" placeholder="Your name" required />
         <Label htmlFor="email">Enter your email:</Label>
@@ -31,7 +32,6 @@ const ContactForm = () => (
           required
         />
         <StyledButton />
-        <div data-netlify-recaptcha />
       </FormBlock>
     </Form>
   </Wrapper>
