@@ -59,11 +59,11 @@ export const Heading = styled.h1`
   `};
 `;
 
-export const Paragraph = styled.p`
-  font-size: 2.7rem;
+export const Paragraph = styled.h2`
+  font-size: 2.6rem;
   left: 450px;
   letter-spacing: 0.04rem;
-  line-height: 3rem;
+  line-height: 2.8rem;
   position: relative;
   top: 150px;
 
