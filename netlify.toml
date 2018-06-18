@@ -5,7 +5,7 @@ YARN_VERSION = "1.7.0"
 NODE_ENV = "production"
 
 [[redirects]]
-from = "https://asjas.netlify.com/*"
+from = "https://www.asjasroos.co.za/*"
 to = "https://asjasroos.co.za/:splat"
 status = 301
 force = true
