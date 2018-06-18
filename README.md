@@ -1,12 +1,11 @@
-## This is my personal webpage
+## This is my Personal Webpage
 
 ### This project was built using the following
 
 * Front-End
-  * GatsbyJS
+  * GatsbyJS v2
   * Styled Components
   * GraphQL
-  * Offline PWA
 * Back-End
   * Prismic Headless CMS (https://prismic.io/)
 
