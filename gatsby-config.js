@@ -76,6 +76,7 @@ module.exports = {
         generateMatchPathRewrites: true,
       },
     },
+    'gatsby-plugin-netlify-cache',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
