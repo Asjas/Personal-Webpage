@@ -58,5 +58,10 @@ typings/
 .env
 
 # gatsby cache
+.gatsby-context.js
+.sass-cache/
 .cache/
-public/
+/public
+yarn.lock
+src/cache
+package-lock.json
