@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery } from 'gatsby';
-import normalize from 'normalize.css/normalize.css';
+import 'normalize.css/normalize.css';
 import Navbar from '../layouts/navbar';
 import Footer from '../layouts/footer';
 import '../layouts/index.css';

@@ -7,7 +7,7 @@ const NotFoundPage = () => (
     <Paragraph>
       You just hit a route that doesn&#39;t exist... the sadness.
     </Paragraph>
-    <StyledLink to={'/'}>Go Home</StyledLink>
+    <StyledLink to="/">Go Home</StyledLink>
   </Container>
 );
 
