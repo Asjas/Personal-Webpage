@@ -1,11 +1,17 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { StaticQuery } from 'gatsby';
 import 'normalize.css/normalize.css';
+import { StaticQuery } from 'gatsby';
+import { setupLogRocketReact } from '../utils/logrocket';
+
+import '../layouts/index.css';
+
 import Navbar from '../layouts/navbar';
 import Footer from '../layouts/footer';
-import '../layouts/index.css';
+
+// Start logrocket
+setupLogRocketReact();
 
 const Layout = ({ children }) => (
   /* eslint no-undef: "off" */
