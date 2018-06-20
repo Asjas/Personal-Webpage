@@ -4,7 +4,6 @@
   "version": "2.0.0",
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
-    "babel-plugin-add-react-displayname": "^0.0.5",
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "next",
     "gatsby-image": "next",

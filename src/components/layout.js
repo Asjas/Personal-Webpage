@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import 'normalize.css/normalize.css';
 import { StaticQuery } from 'gatsby';
-import { setupLogRocketReact } from '../utils/logrocket';
+import setupLogRocket from '../utils/logrocket';
 
 import '../layouts/index.css';
 
@@ -11,7 +11,7 @@ import Navbar from '../layouts/navbar';
 import Footer from '../layouts/footer';
 
 // Start logrocket
-setupLogRocketReact();
+setupLogRocket();
 
 const Layout = ({ children }) => (
   /* eslint no-undef: "off" */
