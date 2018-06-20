@@ -35,9 +35,10 @@
     "react-helmet": "^5.2.0",
     "react-social-icons": "^3.0.0",
     "react-typography": "^0.16.13",
+    "rollbar": "^2.4.1",
+    "snyk": "^1.83.0",
     "styled-components": "^3.3.2",
-    "typography": "^0.16.17",
-    "snyk": "^1.83.0"
+    "typography": "^0.16.17"
   },
   "keywords": [
     "gatsby"
