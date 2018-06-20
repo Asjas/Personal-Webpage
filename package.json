@@ -4,6 +4,7 @@
   "version": "2.0.0",
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
+    "babel-plugin-add-react-displayname": "^0.0.5",
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "next",
     "gatsby-image": "next",
@@ -24,6 +25,8 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-source-prismic": "^1.0.1",
     "gatsby-transformer-sharp": "^1.6.27",
+    "logrocket": "^0.6.16",
+    "logrocket-react": "^1.0.0",
     "node-sass": "^4.9.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
