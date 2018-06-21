@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   ResponsiveNavMenu,
   ResponsiveStyledLink,
-} from '../ui/components/responsivenav';
+} from '../../ui/components/navbar/responsivenav';
 
 class ResponsiveNav extends Component {
   constructor(props) {

@@ -1,5 +1,10 @@
 import React from 'react';
-import { Navigation, Name, NavMenu, StyledLink } from '../ui/components/nav';
+import {
+  Navigation,
+  Name,
+  NavMenu,
+  StyledLink,
+} from '../../ui/components/navbar/nav';
 
 const Nav = () => (
   <Navigation>

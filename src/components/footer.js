@@ -1,5 +1,9 @@
 import React from 'react';
-import { FooterStyled, Paragraph, StyledSocialIcon } from '../ui/layout/footer';
+import {
+  FooterStyled,
+  Paragraph,
+  StyledSocialIcon,
+} from '../ui/components/footer';
 
 const Footer = () => (
   <FooterStyled>
