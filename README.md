@@ -1,4 +1,5 @@
 ## This is my Personal Webpage
+[![Build Status](https://travis-ci.org/Asjas/Personal-Webpage.svg?branch=master)](https://travis-ci.org/Asjas/Personal-Webpage)
 
 ### This project was built using the following
 
