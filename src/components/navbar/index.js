@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Nav from '../components/nav';
-import ResponsiveNav from '../components/responsivenav';
+import Nav from './nav';
+import ResponsiveNav from './responsivenav';
 
 const Navbar = () => (
   <Fragment>
