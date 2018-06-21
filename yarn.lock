@@ -5126,9 +5126,9 @@ gatsby-source-filesystem@^1.5.39:
     slash "^1.0.0"
     valid-url "^1.0.9"
 
-gatsby-source-prismic@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-prismic/-/gatsby-source-prismic-1.0.1.tgz#ddead48ad8208cc3c0af2d73c2b19df816b58745"
+gatsby-source-prismic@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-source-prismic/-/gatsby-source-prismic-1.0.2.tgz#cf0e8b5b23ef9e4fcc3783655b732c3381c90509"
   dependencies:
     asyncro "^3.0.0"
     gatsby-node-helpers "^0.3.0"
@@ -9023,6 +9023,13 @@ prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.1:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+prop-types@^15.6.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
+  dependencies:
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 proto-list@~1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/proto-list/-/proto-list-1.2.4.tgz#212d5bfe1318306a420f6402b8e26ff39647a849"
@@ -10954,9 +10961,9 @@ style-loader@^0.19.1:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
-styled-components@^3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.3.2.tgz#087b96830ee3d60d9a8b5ef17c132b4f29cc71df"
+styled-components@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.3.3.tgz#09e702055ab11f7a8eab8229b1c0d0b855095686"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
