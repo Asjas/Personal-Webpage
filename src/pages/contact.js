@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import { Container, StyledImg } from '../ui/pages/contact';
 import ContactForm from '../components/form';
@@ -15,6 +16,10 @@ const ContactPage = ({ data }) => (
     </Container>
   </Layout>
 );
+
+ContactPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default ContactPage;
 /* eslint no-undef: "off" */

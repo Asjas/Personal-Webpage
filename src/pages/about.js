@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import {
   Container,
@@ -29,6 +30,10 @@ const About = ({ data }) => (
     </Container>
   </Layout>
 );
+
+About.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`

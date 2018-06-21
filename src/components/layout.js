@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import 'normalize.css/normalize.css';
 import { StaticQuery } from 'gatsby';
+import 'normalize.css/normalize.css';
+
+import '../styles/index.css';
+
+import Navbar from './navbar';
+import Footer from './footer';
+
 import setupLogRocket from '../utils/logrocket';
-
-import '../layouts/index.css';
-
-import Navbar from '../layouts/navbar';
-import Footer from '../layouts/footer';
 
 // Start logrocket
 setupLogRocket();
@@ -50,7 +51,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.element.isRequired,
 };
 
 export default Layout;

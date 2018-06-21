@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import { Container } from '../ui/pages/portfolio';
 import Project from '../components/project';
@@ -12,6 +13,10 @@ const PortfolioPage = ({ data }) => (
     </Container>
   </Layout>
 );
+
+PortfolioPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 /* eslint no-undef: "off" */
 export const projectQuery = graphql`

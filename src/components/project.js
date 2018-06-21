@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Content,
   Card,
@@ -28,5 +29,9 @@ const Project = ({ projectQuery }) => (
     </Card>
   </Content>
 );
+
+Project.propTypes = {
+  projectQuery: PropTypes.object.isRequired,
+};
 
 export default Project;
