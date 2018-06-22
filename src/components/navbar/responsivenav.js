@@ -28,13 +28,16 @@ class ResponsiveNav extends Component {
   // Tip: You probably want to hide either/both default icons if using a custom icon
   // See https://github.com/negomi/react-burger-menu#custom-icons
   toggleMenu = () => {
-    this.setState({ menuOpen: !this.state.menuOpen });
+    const { menuOpen } = this.state;
+    this.setState(() => ({ menuOpen }));
   };
 
   render() {
+    const { menuOpen } = this.state;
+
     return (
       <ResponsiveNavMenu
-        isOpen={this.state.menuOpen}
+        isOpen={menuOpen}
         onStateChange={state => this.handleStateChange(state)}
         right
       >
