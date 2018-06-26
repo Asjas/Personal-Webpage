@@ -34,7 +34,7 @@
     "react-helmet": "^5.2.0",
     "react-social-icons": "^3.0.0",
     "react-typography": "^0.16.13",
-    "snyk": "^1.83.0",
+    "snyk": "^1.85.0",
     "styled-components": "^3.3.3",
     "typography": "^0.16.17"
   },
@@ -46,7 +46,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "eslint . --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -58,5 +60,6 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
     "prettier": "^1.13.5"
-  }
+  },
+  "snyk": true
 }
