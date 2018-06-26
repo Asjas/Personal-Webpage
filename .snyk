@@ -36,3 +36,8 @@ patch:
         patched: '2018-06-20T10:01:11.958Z'
     - gatsby-plugin-sass > node-sass > node-gyp > request > hawk > sntp > hoek:
         patched: '2018-06-20T10:01:11.958Z'
+  'npm:tunnel-agent:20170305':
+    - gatsby-plugin-sass > node-sass > request > tunnel-agent:
+        patched: '2018-06-26T04:50:35.022Z'
+    - node-sass > request > tunnel-agent:
+        patched: '2018-06-26T04:50:35.022Z'
