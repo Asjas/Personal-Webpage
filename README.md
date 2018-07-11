@@ -27,3 +27,7 @@ yarn run develop
 ```
 
 This will start a local server on `http://localhost:8000` that you can open to run a local version of my website.
+
+### Tested with BrowserStack
+
+[![BrowserStack Image](static/Browserstack-logo.svg)](https://www.browserstack.com)
