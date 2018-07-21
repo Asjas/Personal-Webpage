@@ -30,6 +30,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-burger-menu": "^2.5.2",
+    "gatsby-plugin-nprogress": "^1.0.14",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-social-icons": "^3.0.0",
