@@ -48,24 +48,24 @@ module.exports = {
           'MC5Xd3RHTXlNQUFDVUF4UmZu.akYjFnIY77-977-9Be-_ve-_ve-_vX7vv73vv73vv70-77-977-9Ou-_vUDvv73vv73vv71Tc0xp77-977-977-9',
       },
     },
-    {
-      resolve: 'gatsby-source-datocms',
-      options: {
-        // You can find your read-only API token under the Settings > API tokens
-        // section of your administrative area:
-        apiToken: '177d19f4a5a4abbfb0d264eac16ab3',
+    // {
+    //   resolve: 'gatsby-source-datocms',
+    //   options: {
+    //     // You can find your read-only API token under the Settings > API tokens
+    //     // section of your administrative area:
+    //     apiToken: '177d19f4a5a4abbfb0d264eac16ab3',
 
-        // If you are working on development/staging environment, you might want to
-        // preview the latest version of records instead of the published one:
-        previewMode: false,
+    //     // If you are working on development/staging environment, you might want to
+    //     // preview the latest version of records instead of the published one:
+    //     previewMode: false,
 
-        // Disable automatic reloading of content when some change occurs on DatoCMS:
-        disableLiveReload: false,
+    //     // Disable automatic reloading of content when some change occurs on DatoCMS:
+    //     disableLiveReload: false,
 
-        // Custom API base URL
-        apiUrl: 'https://site-api.datocms.com',
-      },
-    },
+    //     // Custom API base URL
+    //     apiUrl: 'https://site-api.datocms.com',
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-netlify',
       options: {
