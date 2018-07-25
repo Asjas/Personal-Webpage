@@ -22,7 +22,11 @@ const Project = ({ projectQuery }) => (
       <Description>{projectQuery.data.description.text}</Description>
       <LinkDescription>
         Link to the project:
-        <StyledLink href={projectQuery.data.link.url} target="_blank">
+        <StyledLink
+          href={projectQuery.data.link.url}
+          target="_blank"
+          rel="noopener"
+        >
           {projectQuery.data.link.url}
         </StyledLink>
       </LinkDescription>
