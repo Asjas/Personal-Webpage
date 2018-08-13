@@ -4,10 +4,10 @@
   "version": "2.0.0",
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
-    "@storybook/addon-actions": "^3.4.8",
-    "@storybook/addon-links": "^3.4.8",
-    "@storybook/addons": "^3.4.8",
-    "@storybook/react": "^3.4.8",
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-links": "^3.4.10",
+    "@storybook/addons": "^3.4.10",
+    "@storybook/react": "^3.4.10",
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "next",
     "gatsby-image": "next",
@@ -28,19 +28,19 @@
     "gatsby-source-prismic": "^1.0.2",
     "gatsby-transformer-sharp": "^1.6.27",
     "logrocket": "^0.6.16",
-    "logrocket-react": "^1.0.0",
-    "node-sass": "^4.9.2",
+    "logrocket-react": "^2.0.0",
+    "node-sass": "^4.9.3",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
+    "react": "^16.4.2",
     "react-burger-menu": "^2.5.2",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
     "react-social-icons": "^3.0.0",
     "react-typography": "^0.16.13",
     "selenium-webdriver": "^4.0.0-alpha.1",
-    "snyk": "^1.89.0",
-    "styled-components": "^3.3.3",
+    "snyk": "^1.90.2",
+    "styled-components": "^3.4.2",
     "typography": "^0.16.17"
   },
   "keywords": [
@@ -62,10 +62,10 @@
     "eslint": "4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
-    "prettier": "^1.13.7"
+    "prettier": "^1.14.2"
   }
 }
