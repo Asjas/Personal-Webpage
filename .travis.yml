@@ -18,5 +18,5 @@ before_install:
 sudo: false
 
 script:
-  - "yarn format"
+  - "yarn lint"
   - "yarn build"
