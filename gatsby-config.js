@@ -3,7 +3,8 @@ module.exports = {
     title: 'Personal Portfolio| A-J Roos',
     siteUrl: 'https://asjasroos.co.za',
     description: 'This is the Personal Portfolio of A-J Roos.',
-    keywords: 'Personal Portfolio, A-J Roos, React.js, Node.js, GatsbyJS ',
+    keywords:
+      'Personal Portfolio, A-J Roos, Asjas, GatsbyJS, React Developer, Node Developer, South Africa',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -39,7 +40,6 @@ module.exports = {
         // Example: 'gatsby-source-prismic-test-site' if your prismic.io address
         // is 'gatsby-source-prismic-test-site.prismic.io'.
         repositoryName: 'portfolio-site',
-
         // An API access token to your prismic.io repository. This is required.
         // You can generate an access token in the "API & Security" section of
         // your repository settings. Setting a "Callback URL" is not necessary.
@@ -101,7 +101,7 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#a2466c',
         display: 'minimal-ui',
-        icon: 'src/img/icon.png', // This path is relative to the root of the site.
+        icon: 'src/img/icon.png',
       },
     },
     'gatsby-plugin-offline',
@@ -109,11 +109,8 @@ module.exports = {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-112825816-1',
-        // Puts tracking script in the head instead of the body
         head: false,
-        // Setting this parameter is optional
         anonymize: true,
-        // Setting this parameter is also optional
         respectDNT: true,
       },
     },
