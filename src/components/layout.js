@@ -23,6 +23,7 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             siteUrl
+            googleSiteVerification
             description
             keywords
           }
@@ -35,6 +36,10 @@ const Layout = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'siteUrl', content: data.site.siteMetadata.siteUrl },
+            {
+              name: 'google-site-verification',
+              content: data.site.siteMetadata.googleSiteVerification,
+            },
             {
               name: 'description',
               content: data.site.siteMetadata.description,
