@@ -1,5 +1,7 @@
 import Typography from 'typography';
 
+const { rhythm, scale } = typography;
+
 const typography = new Typography({
   baseFontSize: '10px',
   baseLineHeight: 1.45,
@@ -7,4 +9,4 @@ const typography = new Typography({
   bodyFontFamily: ['Montserrat'],
 });
 
-export default typography;
+export { rhythm, scale, typography as default };
