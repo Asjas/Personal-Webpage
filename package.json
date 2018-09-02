@@ -4,10 +4,6 @@
   "version": "2.0.0",
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
-    "@storybook/addon-actions": "^3.4.10",
-    "@storybook/addon-links": "^3.4.10",
-    "@storybook/addons": "^3.4.10",
-    "@storybook/react": "^3.4.10",
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "next",
     "gatsby-image": "next",
@@ -52,8 +48,8 @@
     "develop": "gatsby develop",
     "lint": "eslint . --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "snyk-test": "node --max-old-space-size=4096 node_modules/.bin/snyk test --file=package.json",
+    "snyk-protect": "node --max-old-space-size=4096 node_modules/.bin/snyk protect"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
