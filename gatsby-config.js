@@ -3,7 +3,7 @@ module.exports = {
     title: 'Personal Portfolio| A-J Roos',
     siteUrl: 'https://asjas.co.za',
     description: 'This is the Personal Portfolio of A-J Roos.',
-    googleSiteVerification: '2FGpkRJ-IOXd5PUyaHc30QIBHoVYRBmr5D8CVCmAcNw',
+    googleSiteVerification: '5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0',
     keywords:
       'Personal Portfolio, A-J Roos, Asjas, GatsbyJS, React Developer, Node Developer, South Africa',
   },
