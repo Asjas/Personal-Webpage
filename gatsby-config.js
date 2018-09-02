@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Personal Portfolio| A-J Roos',
-    siteUrl: 'https://asjasroos.co.za',
+    siteUrl: 'https://asjas.co.za',
     description: 'This is the Personal Portfolio of A-J Roos.',
     googleSiteVerification: '2FGpkRJ-IOXd5PUyaHc30QIBHoVYRBmr5D8CVCmAcNw',
     keywords:
@@ -14,8 +14,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://asjasroos.co.za',
-        sitemap: 'https://asjasroos.co.za/sitemap.xml',
+        host: 'https://asjas.co.za',
+        sitemap: 'https://asjas.co.za/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
@@ -37,14 +37,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        // The name of your prismic.io repository. This is required.
-        // Example: 'gatsby-source-prismic-test-site' if your prismic.io address
-        // is 'gatsby-source-prismic-test-site.prismic.io'.
         repositoryName: 'portfolio-site',
-        // An API access token to your prismic.io repository. This is required.
-        // You can generate an access token in the "API & Security" section of
-        // your repository settings. Setting a "Callback URL" is not necessary.
-        // The token will be listed under "Permanent access tokens".
         accessToken:
           'MC5Xd3RHTXlNQUFDVUF4UmZu.akYjFnIY77-977-9Be-_ve-_ve-_vX7vv73vv73vv70-77-977-9Ou-_vUDvv73vv73vv71Tc0xp77-977-977-9',
       },
