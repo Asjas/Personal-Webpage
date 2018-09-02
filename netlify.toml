@@ -5,6 +5,6 @@ YARN_VERSION = "1.9.4"
 NODE_ENV = "production"
 
 [[redirects]]
-  from = "*asjasroos.co.za"
-  to = "https://asjas.co.za"
-  status = 200
+from = "https://asjasroos.co.za"
+to = "https://asjas.co.za"
+status = 200
