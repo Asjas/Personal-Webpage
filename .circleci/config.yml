@@ -36,8 +36,8 @@ jobs:
 
       # run linting check
       - run:
-        name: Lint Checking
-        command: yarn lint
+          name: Lint Checking
+          command: yarn lint
       - run:
-        name: Building Project
-        command: yarn build
+          name: Building Project
+          command: yarn build
