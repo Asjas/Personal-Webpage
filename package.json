@@ -40,7 +40,7 @@
     "react-testing-library": "^5.0.1",
     "react-typography": "^0.16.13",
     "selenium-webdriver": "^4.0.0-alpha.1",
-    "snyk": "^1.90.2",
+    "snyk": "^1.95.3",
     "styled-components": "^3.4.2",
     "typography": "^0.16.17"
   },
@@ -55,8 +55,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "snyk-test": "node --max-old-space-size=4096 node_modules/.bin/snyk test --file=package.json",
-    "snyk-protect": "node --max-old-space-size=4096 node_modules/.bin/snyk protect"
+    "snyk:test": "node --max-old-space-size=4096 node_modules/.bin/snyk test --file=package.json",
+    "snyk:protect": "node --max-old-space-size=4096 node_modules/.bin/snyk protect"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
