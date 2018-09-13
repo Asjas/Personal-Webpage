@@ -4,8 +4,7 @@
   "version": "2.0.0",
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.5.1",
-    "cypress": "^3.1.0",
+    "babel-jest": "^23.6.0",
     "gatsby": "next",
     "gatsby-image": "next",
     "gatsby-plugin-google-analytics": "next",
@@ -24,24 +23,16 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-source-prismic": "^1.0.2",
     "gatsby-transformer-sharp": "^1.6.27",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.6.0",
-    "jest-dom": "^1.12.0",
-    "logrocket": "^0.6.16",
+    "logrocket": "^0.6.17",
     "logrocket-react": "^2.0.0",
-    "node-sass": "^4.9.3",
     "normalize.css": "^8.0.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.2",
+    "react": "^16.5.1",
     "react-burger-menu": "^2.5.2",
-    "react-dom": "^16.4.2",
+    "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-social-icons": "^3.0.0",
-    "react-testing-library": "^5.0.1",
     "react-typography": "^0.16.13",
-    "selenium-webdriver": "^4.0.0-alpha.1",
-    "snyk": "^1.95.3",
-    "styled-components": "^3.4.2",
+    "styled-components": "^3.4.6",
     "typography": "^0.16.17"
   },
   "keywords": [
@@ -59,16 +50,55 @@
     "snyk:protect": "node --max-old-space-size=4096 node_modules/.bin/snyk protect"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "^9.0.0",
+    "babel-plugin-styled-components": "^1.7.1",
     "babel-runtime": "^6.26.0",
-    "eslint": "4.19.1",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-config-prettier": "^2.9.0",
+    "cypress": "^3.1.0",
+    "eslint": "5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
-    "eslint-plugin-react": "^7.10.0",
-    "prettier": "^1.14.2"
+    "eslint-plugin-react": "^7.11.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "jest-dom": "^1.12.0",
+    "node-sass": "^4.9.3",
+    "prettier": "^1.14.2",
+    "prop-types": "^15.6.2",
+    "react-testing-library": "^5.0.1",
+    "snyk": "^1.95.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/tests/setup/jest-preprocess.js"
+    },
+    "testRegex": "/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$",
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "testPathIgnorePatterns": [
+      "node_modules",
+      ".cache"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "testURL": "http://localhost",
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup/jest.setup.js",
+    "setupFiles": [
+      "<rootDir>/tests/setup/loadershim.js"
+    ]
   }
 }
