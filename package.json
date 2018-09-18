@@ -5,7 +5,7 @@
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
     "babel-jest": "^23.6.0",
-    "gatsby": "2.0.0",
+    "gatsby": "2.0.1",
     "gatsby-image": "2.0.5",
     "gatsby-plugin-google-analytics": "2.0.5",
     "gatsby-plugin-google-fonts": "^0.0.4",
@@ -21,7 +21,7 @@
     "gatsby-plugin-typography": "2.2.0",
     "gatsby-source-datocms": "^2.0.0-alpha.2",
     "gatsby-source-filesystem": "^2.0.1",
-    "gatsby-source-prismic": "^1.0.2",
+    "gatsby-source-prismic": "^1.2.0",
     "gatsby-transformer-sharp": "^2.1.1",
     "logrocket": "^0.6.17",
     "logrocket-react": "^3.0.0",
@@ -46,10 +46,7 @@
     "lint": "eslint . --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "snyk-test": "node --max-old-space-size=4096 node_modules/.bin/snyk test --file=package.json",
-    "snyk-protect": "node --max-old-space-size=4096 node_modules/.bin/snyk protect",
-    "prepare": "npm run snyk-protect"
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",

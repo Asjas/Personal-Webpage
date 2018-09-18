@@ -6105,7 +6105,7 @@ gatsby-source-filesystem@^2.0.1:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-source-prismic@^1.0.2:
+gatsby-source-prismic@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-prismic/-/gatsby-source-prismic-1.2.0.tgz#8fda558748f3a18603b3153f819b276a8dc15fcb"
   dependencies:
@@ -6126,9 +6126,9 @@ gatsby-transformer-sharp@^2.1.1:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
-gatsby@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0.tgz#4ffc50b39907eed589dee03fc5fb3ec2c6d900fb"
+gatsby@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.1.tgz#a1c854c1b0bc783f073f23bf19c686354e82262e"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
