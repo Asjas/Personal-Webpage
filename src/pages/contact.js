@@ -23,12 +23,12 @@ ContactPage.propTypes = {
 };
 
 export default ContactPage;
-/* eslint no-undef: "off" */
+
 export const CONTACTFORM_QUERY = graphql`
   query CONTACTFORM_QUERY {
     contactpageImage: file(relativePath: { regex: "/contactform/" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, quality: 70) {
+        fluid(maxWidth: 1200, quality: 85) {
           base64
           aspectRatio
           src

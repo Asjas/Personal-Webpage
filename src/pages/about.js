@@ -36,12 +36,11 @@ About.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-/* eslint no-undef: "off" */
 export const ABOUTPAGE_QUERY = graphql`
   query ABOUTPAGE_QUERY {
     aboutpageImage: file(relativePath: { regex: "/aboutpage/" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, quality: 92) {
+        fluid(maxWidth: 1200, quality: 85) {
           base64
           aspectRatio
           src

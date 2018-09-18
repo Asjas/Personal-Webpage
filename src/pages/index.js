@@ -32,12 +32,11 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
-/* eslint no-undef: "off" */
 export const HOMEPAGE_QUERY = graphql`
   query HOMEPAGE_QUERY {
     homepageImage: file(relativePath: { regex: "/homepage/" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, quality: 75) {
+        fluid(maxWidth: 1200, quality: 85) {
           base64
           aspectRatio
           src
