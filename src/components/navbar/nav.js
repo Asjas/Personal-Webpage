@@ -1,16 +1,12 @@
 import React from 'react';
 import {
   Navigation,
-  Name,
   NavMenu,
   StyledLink,
 } from '../../ui/components/navbar/nav';
 
 const Nav = () => (
   <Navigation>
-    <Name href="#" tabIndex={-1}>
-      Portfolio| A-J Roos
-    </Name>
     <NavMenu>
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/portfolio/">Portfolio</StyledLink>
