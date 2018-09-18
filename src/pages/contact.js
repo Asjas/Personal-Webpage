@@ -11,7 +11,7 @@ const ContactPage = ({ data }) => (
       <StyledImg
         title="Macbook in a leather bag"
         alt="Macbook sticking out of a brown leather bag"
-        fluid={data.contactpageImage.childImageSharp.fluid}
+        fixed={data.contactpageImage.childImageSharp.fixed}
       />
       <ContactForm />
     </Container>
@@ -28,8 +28,8 @@ export const CONTACTFORM_QUERY = graphql`
   query CONTACTFORM_QUERY {
     contactpageImage: file(relativePath: { regex: "/contactform/" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, quality: 85) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 1200, quality: 85) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }

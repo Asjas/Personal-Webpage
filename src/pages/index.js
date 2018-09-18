@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
       <StyledImg
         title="Table with items on it"
         alt="Candle and plates on a white background"
-        fluid={data.homepageImage.childImageSharp.fluid}
+        fixed={data.homepageImage.childImageSharp.fixed}
       />
     </Container>
   </Layout>
@@ -36,8 +36,8 @@ export const HOMEPAGE_QUERY = graphql`
   query HOMEPAGE_QUERY {
     homepageImage: file(relativePath: { regex: "/homepage/" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, quality: 85) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 1200, quality: 85) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }

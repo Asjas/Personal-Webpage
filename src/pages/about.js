@@ -26,7 +26,7 @@ const About = ({ data }) => (
       <StyledImg
         title="Home Page Image"
         alt="Candle and plates on a white background"
-        fluid={data.aboutpageImage.childImageSharp.fluid}
+        fixed={data.aboutpageImage.childImageSharp.fixed}
       />
     </Container>
   </Layout>
@@ -40,8 +40,8 @@ export const ABOUTPAGE_QUERY = graphql`
   query ABOUTPAGE_QUERY {
     aboutpageImage: file(relativePath: { regex: "/aboutpage/" }) {
       childImageSharp {
-        fluid(maxWidth: 1200, quality: 85) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 1200, quality: 85) {
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
