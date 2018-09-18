@@ -8,10 +8,18 @@ import {
 const Nav = () => (
   <Navigation>
     <NavMenu>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/portfolio/">Portfolio</StyledLink>
-      <StyledLink to="/about/">About</StyledLink>
-      <StyledLink to="/contact/">Contact</StyledLink>
+      <StyledLink activeClassName="nav__link-active" to="/">
+        Home
+      </StyledLink>
+      <StyledLink activeClassName="nav__link-active" to="/portfolio/">
+        Portfolio
+      </StyledLink>
+      <StyledLink activeClassName="nav__link-active" to="/about/">
+        About
+      </StyledLink>
+      <StyledLink activeClassName="nav__link-active" to="/contact/">
+        Contact
+      </StyledLink>
     </NavMenu>
   </Navigation>
 );
