@@ -24,7 +24,7 @@
     "gatsby-source-prismic": "^1.0.2",
     "gatsby-transformer-sharp": "^1.6.27",
     "logrocket": "^0.6.17",
-    "logrocket-react": "^2.0.0",
+    "logrocket-react": "^3.0.0",
     "normalize.css": "^8.0.0",
     "react": "^16.5.1",
     "react-burger-menu": "^2.5.2",
