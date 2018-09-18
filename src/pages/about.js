@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import {
   Container,
@@ -25,7 +26,7 @@ const About = ({ data }) => (
       <StyledImg
         title="Home Page Image"
         alt="Candle and plates on a white background"
-        sizes={data.aboutImage.sizes}
+        fluid={data.aboutpageImage.childImageSharp.fluid}
       />
     </Container>
   </Layout>
@@ -36,11 +37,18 @@ About.propTypes = {
 };
 
 /* eslint no-undef: "off" */
-export const pageQuery = graphql`
-  query AboutPageQuery {
-    aboutImage: imageSharp(id: { regex: "/aboutpage/" }) {
-      sizes(maxWidth: 1200, quality: 92) {
-        ...GatsbyImageSharpSizes
+export const ABOUTPAGE_QUERY = graphql`
+  query ABOUTPAGE_QUERY {
+    aboutpageImage: file(relativePath: { regex: "/aboutpage/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200, quality: 92) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          sizes
+        }
       }
     }
   }
