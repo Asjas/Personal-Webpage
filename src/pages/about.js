@@ -41,12 +41,7 @@ export const ABOUTPAGE_QUERY = graphql`
     aboutpageImage: file(relativePath: { regex: "/aboutpage/" }) {
       childImageSharp {
         fluid(maxWidth: 1200, quality: 85) {
-          base64
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          sizes
+          ...GatsbyImageSharpFluid
         }
       }
     }

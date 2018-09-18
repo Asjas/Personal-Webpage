@@ -29,12 +29,7 @@ export const CONTACTFORM_QUERY = graphql`
     contactpageImage: file(relativePath: { regex: "/contactform/" }) {
       childImageSharp {
         fluid(maxWidth: 1200, quality: 85) {
-          base64
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          sizes
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -37,12 +37,7 @@ export const HOMEPAGE_QUERY = graphql`
     homepageImage: file(relativePath: { regex: "/homepage/" }) {
       childImageSharp {
         fluid(maxWidth: 1200, quality: 85) {
-          base64
-          aspectRatio
-          src
-          srcSet
-          srcWebp
-          sizes
+          ...GatsbyImageSharpFluid
         }
       }
     }
