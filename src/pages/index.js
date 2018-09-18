@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import {
   Container,
@@ -19,7 +20,7 @@ const IndexPage = ({ data }) => (
       <StyledImg
         title="Table with items on it"
         alt="Candle and plates on a white background"
-        sizes={data.homepageImage.sizes}
+        fluid={data.homepageImage.childImageSharp.fluid}
       />
     </Container>
   </Layout>
@@ -32,11 +33,18 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 /* eslint no-undef: "off" */
-export const pageQuery = graphql`
-  query HomePageQuery {
-    homepageImage: imageSharp(id: { regex: "/homepage/" }) {
-      sizes(maxWidth: 1200, quality: 92) {
-        ...GatsbyImageSharpSizes
+export const HOMEPAGE_QUERY = graphql`
+  query HOMEPAGE_QUERY {
+    homepageImage: file(relativePath: { regex: "/homepage/" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200, quality: 75) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          sizes
+        }
       }
     }
   }
