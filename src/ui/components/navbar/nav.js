@@ -5,7 +5,7 @@ import { media } from '../../../utils/media';
 export const Navigation = styled.nav`
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: 0 auto;
   max-width: 1200px;
   padding: 7px 0;
@@ -14,34 +14,6 @@ export const Navigation = styled.nav`
 
   ${media.medium`
     max-width: 900px;
-  `};
-`;
-
-export const Name = styled.a`
-  color: #000;
-  cursor: default;
-  font-family: 'Playfair Display';
-  font-size: 3.5rem;
-  line-height: 4rem;
-  outline: 0;
-  pointer-events: none;
-  text-decoration: none;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2), 2px 1px 0px rgba(0, 0, 0, 0.2);
-  margin-top: 5px;
-
-  ${media.medium`
-    font-size: 3.2rem;
-    line-height: 3.4rem;
-    margin: 5px 0 0 10px;
-  `};
-
-  ${media.small`
-    font-size: 3rem;
-    line-height: 3.2rem;
-  `};
-
-  ${media.xSmall`
-    font-size: 2.6rem;
   `};
 `;
 
