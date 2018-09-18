@@ -47,9 +47,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "snyk:test": "node --max-old-space-size=4096 node_modules/.bin/snyk test --file=package.json",
-    "snyk:protect": "node --max-old-space-size=4096 node_modules/.bin/snyk protect",
-    "snyk-protect": "snyk protect",
+    "snyk-test": "node --max-old-space-size=4096 node_modules/.bin/snyk test --file=package.json",
+    "snyk-protect": "node --max-old-space-size=4096 node_modules/.bin/snyk protect",
     "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
