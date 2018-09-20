@@ -5,8 +5,8 @@
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
     "babel-jest": "^23.6.0",
-    "gatsby": "2.0.3",
-    "gatsby-image": "2.0.5",
+    "gatsby": "2.0.6",
+    "gatsby-image": "2.0.6",
     "gatsby-plugin-google-analytics": "2.0.6",
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-manifest": "2.0.2",
@@ -70,7 +70,7 @@
     "jest": "^23.6.0",
     "jest-dom": "^1.12.1",
     "node-sass": "^4.9.3",
-    "prettier": "^1.14.2",
+    "prettier": "^1.14.3",
     "prop-types": "^15.6.2",
     "react-testing-library": "^5.1.0"
   },
