@@ -5,11 +5,11 @@
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
     "babel-jest": "^23.6.0",
-    "gatsby": "2.0.6",
-    "gatsby-image": "2.0.6",
+    "gatsby": "2.0.8",
+    "gatsby-image": "2.0.9",
     "gatsby-plugin-google-analytics": "2.0.6",
     "gatsby-plugin-google-fonts": "^0.0.4",
-    "gatsby-plugin-manifest": "2.0.2",
+    "gatsby-plugin-manifest": "2.0.3",
     "gatsby-plugin-netlify": "2.0.0",
     "gatsby-plugin-netlify-cache": "^0.1.0",
     "gatsby-plugin-offline": "2.0.5",
@@ -22,7 +22,7 @@
     "gatsby-source-datocms": "^2.0.0-alpha.2",
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-source-prismic": "^1.2.0",
-    "gatsby-transformer-sharp": "^2.1.1",
+    "gatsby-transformer-sharp": "^2.1.2",
     "logrocket": "^0.6.17",
     "logrocket-react": "^3.0.0",
     "normalize.css": "^8.0.0",
@@ -32,9 +32,9 @@
     "react-helmet": "^5.2.0",
     "react-social-icons": "^3.0.0",
     "react-typography": "^0.16.13",
+    "snyk": "^1.97.1",
     "styled-components": "^3.4.9",
-    "typography": "^0.16.17",
-    "snyk": "^1.96.0"
+    "typography": "^0.16.17"
   },
   "keywords": [
     "gatsby"
@@ -59,13 +59,15 @@
     "babel-plugin-styled-components": "^1.7.1",
     "babel-runtime": "^6.26.0",
     "cypress": "^3.1.0",
+    "cypress-testing-library": "^2.2.1",
     "eslint": "5.6.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
+    "history": "^4.7.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "jest-dom": "^1.12.1",
@@ -78,6 +80,7 @@
     "transform": {
       "^.+\\.jsx?$": "<rootDir>/tests/setup/jest-preprocess.js"
     },
+    "testEnvironment": "jsdom",
     "testRegex": "/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$",
     "moduleNameMapper": {
       ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
@@ -94,7 +97,7 @@
     "globals": {
       "__PATH_PREFIX__": ""
     },
-    "testURL": "http://localhost",
+    "testURL": "https://asjas.co.za/",
     "setupTestFrameworkScriptFile": "<rootDir>/tests/setup/jest.setup.js",
     "setupFiles": [
       "<rootDir>/tests/setup/loadershim.js"
