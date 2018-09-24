@@ -7,8 +7,8 @@ import {
   Label,
   Input,
   TextArea,
-} from '../ui/components/form';
-import StyledButton from './button';
+} from './styles';
+import StyledButton from '../button';
 
 const ContactForm = () => (
   <Wrapper>
