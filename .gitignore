@@ -62,6 +62,3 @@ typings/
 .sass-cache/
 .cache/
 /public
-yarn.lock
-src/cache
-package-lock.json
