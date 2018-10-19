@@ -57,8 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
-# gatsby cache
-.gatsby-context.js
-.sass-cache/
 .cache/
-/public
+.next/
+build/
+public/
