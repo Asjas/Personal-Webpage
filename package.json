@@ -5,33 +5,20 @@
   "version": "2.0.0",
   "author": "A-J Roos <asjas@outlook.com>",
   "dependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "@zeit/next-css": "^1.0.1",
     "babel-jest": "^23.6.0",
-    "gatsby": "2.0.25",
-    "gatsby-image": "2.0.15",
-    "gatsby-plugin-google-analytics": "2.0.6",
-    "gatsby-plugin-google-fonts": "^0.0.4",
-    "gatsby-plugin-manifest": "2.0.5",
-    "gatsby-plugin-netlify": "2.0.1",
-    "gatsby-plugin-netlify-cache": "^1.0.0",
-    "gatsby-plugin-offline": "2.0.7",
-    "gatsby-plugin-react-helmet": "3.0.0",
-    "gatsby-plugin-robots-txt": "^1.3.0",
-    "gatsby-plugin-sharp": "2.0.7",
-    "gatsby-plugin-sitemap": "2.0.1",
-    "gatsby-plugin-styled-components": "^3.0.0",
-    "gatsby-plugin-typography": "2.2.0",
-    "gatsby-source-filesystem": "^2.0.4",
-    "gatsby-source-prismic": "^1.2.0",
-    "gatsby-transformer-sharp": "^2.1.4",
+    "downshift": "^3.1.1",
+    "jest-styled-components": "^6.2.1",
     "logrocket": "^0.6.17",
     "logrocket-react": "^3.0.0",
-    "normalize.css": "^8.0.0",
+    "next": "^7.0.2",
+    "nprogress": "^0.2.0",
     "react": "^16.5.2",
     "react-burger-menu": "^2.5.4",
     "react-dom": "^16.5.2",
-    "react-helmet": "^5.2.0",
     "react-social-icons": "^3.0.0",
-    "react-typography": "^0.16.13",
+    "react-transition-group": "^2.5.0",
     "snyk": "^1.104.1",
     "styled-components": "^4.0.2",
     "typography": "^0.16.17"
@@ -41,8 +28,12 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "next -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "BUNDLE_ANALYZE=both next build",
+    "analyze:server": "BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build",
     "lint": "eslint . --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -56,12 +47,14 @@
     "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
     "babel-core": "^7.0.0-0",
     "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-styled-components": "^1.8.0",
     "babel-runtime": "^6.26.0",
-    "cypress": "^3.1.0",
-    "cypress-testing-library": "^2.3.1",
     "eslint": "5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -78,33 +71,5 @@
     "prettier": "^1.14.3",
     "prop-types": "^15.6.2",
     "react-testing-library": "^5.2.0"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "<rootDir>/tests/setup/jest-preprocess.js"
-    },
-    "testEnvironment": "jsdom",
-    "testRegex": "/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$",
-    "moduleNameMapper": {
-      ".+\\.(css)$": "identity-obj-proxy",
-      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
-    },
-    "testPathIgnorePatterns": [
-      "__snapshots__",
-      "node_modules",
-      ".cache"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(gatsby)/)"
-    ],
-    "globals": {
-      "__PATH_PREFIX__": ""
-    },
-    "testURL": "https://localhost/",
-    "setupTestFrameworkScriptFile": "<rootDir>/tests/setup/jest.setup.js",
-    "setupFiles": [
-      "<rootDir>/tests/setup/loadershim.js"
-    ]
-  },
-  "snyk": true
+  }
 }

@@ -1,3 +1,7 @@
+node_modules/
+build/*
+.next/*
 public/js/*
-src/html.js
 coverage/
+static/
+.cache
