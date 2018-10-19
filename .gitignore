@@ -61,3 +61,6 @@ typings/
 .next/
 build/
 public/
+
+# Jest test results
+.jest-test-results.json
