@@ -1,5 +1,0 @@
-[build.environment]
-
-NODE_VERSION = "9"
-YARN_VERSION = "1.9.4"
-NODE_ENV = "production"
