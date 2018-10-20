@@ -1,37 +1,41 @@
 import styled from 'styled-components';
-import { SocialIcon } from 'react-social-icons';
 import { media } from '../../utils/media';
 
 export const FooterStyled = styled.footer`
-  align-items: center;
+  align-items: flex-end;
   display: flex;
-  flex-direction: column;
-  height: 150px;
+  height: 100%;
   justify-content: center;
-  letter-spacing: 0.04rem;
   width: 100%;
 
   ${media.xSmall``};
 `;
 
-export const Paragraph = styled.p`
-  color: #000;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
+export const SocialMediaIcon = styled.a`
+  cursor: pointer;
+  height: ${props => props.theme.svgL};
+  width: ${props => props.theme.svgL};
+  display: block;
+  padding: 10px 10px;
+  margin: 15px 0;
 
-  ${media.small`
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  `};
+  svg {
+    fill: ${props => props.color};
 
-  ${media.xSmall``};
-`;
+    &:hover {
+      fill: ${props => props.theme.gold};
+    }
+  }
 
-export const StyledSocialIcon = styled(SocialIcon)`
-  margin: 0 10px 0 10px;
+  &:focus {
+    svg {
+      fill: ${props => props.theme.gold};
+    }
+  }
 
-  ${media.small`
-    height: 45px !important;
-    width: 45px !important;
-  `};
+  span {
+    visibility: hidden;
+  }
+
+  ${media.small``};
 `;

@@ -1,22 +1,22 @@
 import React from 'react';
-import { Navigation, NavMenu, StyledLink } from './styles';
+import { Navigation, StyledLink } from './styles';
+import Footer from '../Footer';
 
 const Nav = () => (
   <Navigation>
-    <NavMenu>
-      <StyledLink activeClassName="nav__link-active" href="/">
-        <a>Home</a>
-      </StyledLink>
-      <StyledLink activeClassName="nav__link-active" href="/portfolio/">
-        <a>Portfolio</a>
-      </StyledLink>
-      <StyledLink activeClassName="nav__link-active" href="/about/">
-        <a>About</a>
-      </StyledLink>
-      <StyledLink activeClassName="nav__link-active" href="/contact/">
-        <a>Contact</a>
-      </StyledLink>
-    </NavMenu>
+    <StyledLink prefetch href="/">
+      Home
+    </StyledLink>
+    <StyledLink prefetch href="/portfolio/">
+      Portfolio
+    </StyledLink>
+    <StyledLink prefetch href="/about/">
+      About
+    </StyledLink>
+    <StyledLink prefetch href="/contact/">
+      Contact
+    </StyledLink>
+    <Footer />
   </Navigation>
 );
 

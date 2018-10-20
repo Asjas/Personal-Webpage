@@ -9,38 +9,32 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:8.11.4-stretch-browsers
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     working_directory: ~/repo
 
     steps:
       - checkout
+      - run:
+          name: update-npm
+          command: "sudo npm install -g npm@latest"
 
-      # Download and cache dependencies
       - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-          # fallback to using the latest cache if no exact match is found
+          key: dependency-cache-{{ checksum "package.json" }}
+
       - run:
           name: Install Dependencies
-          command: yarn install
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
+          command: npm install
 
-      # run linting check
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+
       - run:
           name: Lint Checking
-          command: yarn lint
+          command: npm run lint
       - run:
           name: Run Tests
-          command: yarn test
+          command: npm run test
       - run:
-          name: Building Project
-          command: yarn build
+          name: Build Project
+          command: npm run build
