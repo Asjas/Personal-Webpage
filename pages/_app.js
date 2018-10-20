@@ -1,7 +1,7 @@
 import App, { Container } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import Layout from '../src/components/Layout';
 import { theme, GlobalStyles } from './styles/theme';
+import Page from '../src/components/Page';
 
 class MyApp extends App {
   render() {
@@ -12,9 +12,9 @@ class MyApp extends App {
         <ThemeProvider theme={theme}>
           <>
             <GlobalStyles />
-            <Layout>
+            <Page>
               <Component />
-            </Layout>
+            </Page>
           </>
         </ThemeProvider>
       </Container>

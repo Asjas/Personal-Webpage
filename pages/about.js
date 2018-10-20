@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Container,
   Wrapper,
@@ -7,7 +6,6 @@ import {
   Paragraph1,
   Paragraph2,
   Paragraph3,
-  StyledImg,
 } from './styles/about';
 
 const About = () => (

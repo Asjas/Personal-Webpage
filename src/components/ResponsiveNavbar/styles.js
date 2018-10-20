@@ -1,6 +1,6 @@
 import Menu from 'react-burger-menu/lib/menus/slide';
 import styled from 'styled-components';
-import Link from 'next/link';
+import Link from '../Link';
 import { media } from '../../utils/media';
 import '../../styles/ResponsiveNav.css';
 

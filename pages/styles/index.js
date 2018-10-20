@@ -6,8 +6,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1200px;
-  overflow: hidden;
+  grid-area: main;
 
   ${media.medium`
       max-width: 918px;
