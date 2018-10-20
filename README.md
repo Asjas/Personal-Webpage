@@ -1,34 +1,41 @@
-## This is my Personal Webpage
+## This is my Personal Website
+
 [![CircleCI](https://circleci.com/gh/Asjas/Personal-Webpage.svg?style=shield)](https://circleci.com/gh/Asjas/Personal-Webpage)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=TTJqTEZDclFuV3c1UHVpeGNCL1hsaGZXbXU3OG04VzFuNjNDRExxdFRiND0tLVV1N2ZsOGo4N211dGptaTFHaEhCYlE9PQ==--451520ee32398ab5e14c4e497ba8651498182be5)](https://www.browserstack.com/automate/public-build/<badge_key>)
 
-### This project was built using the following
+This project uses the following tech stack:
 
-* Front-End
-  * GatsbyJS v2
-  * Styled Components
-  * GraphQL
-* Back-End
-  * Prismic Headless CMS (https://prismic.io/)
+- Front-End
+  - Next.js
+  - Styled Components
+  - Downshift
+  - React Testing Library
+  - Storybook
 
-###
+### Getting Started
 
-To get the website up and running you can clone this repo.
+To get the website up and running locally, you can clone this repo using the following command.
 
 ```git
 git clone git@github.com:Asjas/Personal-Webpage.git
 ```
 
-And then run the following commands.
+Then execute the following commands to get it installed and running.
 
 ```sh
 cd Personal-Webpage
-yarn
-yarn run develop
+npm install
+npm run dev
 ```
 
-This will start a local server on `http://localhost:8000` that you can open to run a local version of my website.
+This will start a local server on `http://localhost:3000` that you can open in your browser.
 
-### Tested with BrowserStack
+### Storybook
 
-[![BrowserStack Image](static/Browserstack-logo.svg)](https://www.browserstack.com)
+This project uses Storybook.js. To run storybook you can use the following command.
+
+```sh
+npm run storybook
+```
+
+This will open a new tab in your browser on `http://localhost:9000`. You can then use Storybook to see how the components appear in each story.
