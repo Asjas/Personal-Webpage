@@ -9,6 +9,7 @@ This project uses the following tech stack:
   - Next.js
   - Styled Components
   - Downshift
+  - Formik
   - React Testing Library
   - Storybook
 
