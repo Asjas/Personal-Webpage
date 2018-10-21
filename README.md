@@ -25,6 +25,7 @@ Then execute the following commands to get it installed and running.
 
 ```sh
 cd Personal-Webpage
+git checkout feat/move-to-nextjs
 npm install
 npm run dev
 ```
