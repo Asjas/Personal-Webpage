@@ -2,19 +2,9 @@ import styled from 'styled-components';
 import { media } from '../../utils/media';
 
 export const Button = styled.button`
-  background-image: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.15) 25%,
-    rgba(0, 0, 0, 0) 25%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.15) 75%,
-    rgba(0, 0, 0, 0) 75%,
-    rgba(0, 0, 0, 0)
-  );
-  background-color: #579af2;
+  background-color: ${props => props.theme.grey};
   background-size: 20px 20px;
-  border: solid 1px #579af2;
+  border: ${props => props.theme.blackBorderSm};
   border-bottom-width: 3px;
   color: #fff;
   border-radius: 4px;
@@ -29,11 +19,11 @@ export const Button = styled.button`
   z-index: 1;
 
   &:hover {
-    background-size: 40px 40px;
+    outline: ${props => props.theme.goldBorderMd};
   }
 
   &:focus {
-    outline: 2px solid black;
+    outline: ${props => props.theme.goldBorderMd};
   }
 
   ${media.small`

@@ -21,9 +21,6 @@ const nextConfig = {
       localIdentName: '[local]___[hash:base64:5]',
     },
   },
-  webpack(config) {
-    return config;
-  },
 };
 
 module.exports = withBundleAnalyzer(withCSS(nextConfig));

@@ -1,5 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { Form, Field, ErrorMessage } from 'formik';
 import { media } from '../../utils/media';
+
+const loading = keyframes`
+  from {
+    background-position: 0 0;
+    /* rotate: 0; */
+  }
+
+  to {
+    background-position: 100% 100%;
+    /* rotate: 360deg; */
+  }
+`;
 
 export const Wrapper = styled.div`
   margin: 40px auto;
@@ -25,132 +38,76 @@ export const Heading = styled.h2`
   `};
 `;
 
-export const Form = styled.form`
-  max-width: 550px;
+export const StyledForm = styled(Form)`
+  width: 600px;
 `;
 
-export const FormBlock = styled.div`
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
-  display: block;
-  margin: 0 auto;
-  max-width: 450px;
-  padding: 30px;
-  position: relative;
+export const Container = styled.fieldset`
+  display: grid;
+  grid-gap: 30px;
   width: 100%;
 
-  &:before,
-  &:after {
-    background: #fff;
-    border-radius: 5px;
-    border: solid 1px #e6e6e6;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: scale(0.9) translate(0, 0);
-    transition: all 0.3s ease;
-    width: 100%;
-    z-index: -1;
+  &[disabled] {
+    opacity: 0.5;
   }
-
-  &:after {
-    transition-delay: 0.05s;
-  }
-
-  &:hover::before {
-    transform: scale(0.96) translate(0, 16px);
-    z-index: -1;
-  }
-
-  &:hover::after {
-    transform: scale(0.92) translate(0, 32px);
-    z-index: -2;
-  }
-
-  ${media.small`
-    max-width: 350px;
-  `};
-`;
-
-export const Paragraph = styled.p`
-  display: hidden;
 `;
 
 export const Label = styled.label`
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-
-  ${media.small`
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  `};
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 `;
 
-export const Input = styled.input`
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-bottom-width: 3px;
-  border-radius: 5px;
-  display: inline-block;
-  font-size: 1.4rem;
+export const LabelText = styled.span`
+  color: ${props => props.theme.black};
+  letter-spacing: 0.03rem;
+  margin-bottom: 5px;
+`;
+
+export const StyledField = styled(Field)`
+  color: ${props => props.theme.black};
+  border: ${props => props.theme.blackBorderMd};
+  border-radius: 4px;
   height: 50px;
-  line-height: 1.6rem;
-  margin: 3px 0 20px 0;
-  outline: none;
-  padding: 0 20px;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  grid-column: 1/-1;
+  grid-row: 2;
+  padding: 0 0 0 20px;
   width: 100%;
 
   &:active {
-    border-color: #ccc;
+    border: ${props => props.theme.goldBorderMd};
   }
 
   &:focus {
-    border-color: #ccc;
+    border: ${props => props.theme.goldBorderMd};
   }
-
-  ${media.small`
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-  `};
 `;
 
 export const TextArea = styled.textarea`
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-bottom-width: 3px;
-  border-radius: 5px;
-  display: inline-block;
-  height: 50px;
-  line-height: 1.6px;
-  outline: none;
-  font-size: 1.4rem;
+  color: ${props => props.theme.black};
+  border: ${props => props.theme.blackBorderMd};
+  border-radius: 4px;
+  font-size: 1rem;
+  grid-column: 1/-1;
+  grid-row: 2;
+  min-height: 120px;
   padding: 20px;
-  transition: all 0.3s ease;
-  min-width: 390px;
-  max-width: 348px;
-  min-height: 130px;
-  max-height: 300px;
-  margin: 3px 0 20px 0;
+  resize: vertical;
+  width: 100%;
 
   &:active {
-    border-color: #ccc;
+    border: ${props => props.theme.goldBorderMd};
   }
 
   &:focus {
-    border-color: #ccc;
+    border: ${props => props.theme.goldBorderMd};
   }
+`;
 
-  ${media.small`
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-    min-width: 290px;
-    max-width: 290px;
-  `};
+export const StyledErrorMessage = styled(ErrorMessage)`
+  color: ${props => props.theme.red};
+  letter-spacing: 0.03rem;
+  margin-bottom: 5px;
+  justify-self: end;
 `;
