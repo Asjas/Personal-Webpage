@@ -14,8 +14,19 @@ const theme = {
   offWhite: '#EDEDED',
   gold: '#FFD700',
   goldBorderSm: '1px solid #FFD700',
-  goldBorderMd: '4px solid #FFD700',
-  lightGreyBorder: '1px solid rgba(255, 255, 255, 0.04)',
+  goldBorderMd: '2px solid #FFD700',
+  goldBorderL: '3px solid #FFD700',
+  goldBorderXL: '4px solid #FFD700',
+  blackBorderSm: '1px solid #393939',
+  blackBorderMd: '2px solid #393939',
+  blackBorderL: '3px solid #393939',
+  blackBorderXL: '4px solid #393939',
+  greyBorderSm: '1px solid #3A3A3A',
+  greyBorderMd: '1px solid #3A3A3A',
+  greyBorderL: '1px solid #3A3A3A',
+  greyBorderXL: '1px solid #3A3A3A',
+  lightGreyBorderSm: '1px solid rgba(255, 255, 255, 0.04)',
+  lightGreyBorderMd: '2px solid rgba(255, 255, 255, 0.04)',
 };
 
 const GlobalStyles = createGlobalStyle`
@@ -25,10 +36,6 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     font-size: 16px;
-  }
-
-  body {
-    min-height: 100vh;
   }
 
   *, *:before, *:after {

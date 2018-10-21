@@ -4,7 +4,6 @@ import { media } from '../../utils/media';
 export const FooterStyled = styled.footer`
   align-items: flex-end;
   display: flex;
-  height: 100%;
   justify-content: center;
   width: 100%;
 

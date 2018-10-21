@@ -1,13 +1,6 @@
 import React from 'react';
-import { Container, Wrapper, Heading, Paragraph } from './styles/index';
+import { Container } from './styles/index';
 
-const Home = () => (
-  <Container>
-    <Wrapper>
-      <Heading>Front-End Web Developer</Heading>
-      <Paragraph>A-J Roos</Paragraph>
-    </Wrapper>
-  </Container>
-);
+const Home = () => <Container>home page</Container>;
 
 export default Home;
