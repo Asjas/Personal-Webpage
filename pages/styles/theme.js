@@ -36,6 +36,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     font-size: 16px;
+    overflow: hidden;
   }
 
   *, *:before, *:after {
