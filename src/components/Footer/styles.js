@@ -27,6 +27,7 @@ export const SocialMediaIcon = styled.a`
   }
 
   span {
-    visibility: hidden;
+    position: absolute;
+    left: -9999px;
   }
 `;
