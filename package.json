@@ -4,22 +4,6 @@
   "private": true,
   "version": "3.0.0",
   "author": "A-J Roos <asjas@outlook.com>",
-  "dependencies": {
-    "@zeit/next-bundle-analyzer": "^0.1.2",
-    "@zeit/next-css": "^1.0.1",
-    "babel-jest": "^23.6.0",
-    "downshift": "^3.1.2",
-    "formik": "^1.3.1",
-    "jest-styled-components": "^6.2.2",
-    "next": "^7.0.2",
-    "nprogress": "^0.2.0",
-    "react": "^16.5.2",
-    "react-burger-menu": "^2.5.4",
-    "react-dom": "^16.5.2",
-    "react-transition-group": "^2.5.0",
-    "snyk": "^1.104.1",
-    "styled-components": "^4.0.2"
-  },
   "keywords": [
     "nextjs"
   ],
@@ -42,6 +26,22 @@
     "storybook": "npm-run-all --parallel test:generate-output start:storybook",
     "precommit": "npm run lint",
     "prepush": "npm run lint"
+  },
+  "dependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "@zeit/next-css": "^1.0.1",
+    "ajv": "^6.5.4",
+    "downshift": "^3.1.2",
+    "formik": "^1.3.1",
+    "graphql": "^0.13.2",
+    "next": "^7.0.2",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-burger-menu": "^2.5.4",
+    "react-dom": "^16.5.2",
+    "react-transition-group": "^2.5.0",
+    "styled-components": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -69,7 +69,6 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-styled-components": "^1.8.0",
-    "babel-runtime": "^6.26.0",
     "eslint": "5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -81,10 +80,11 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "jest-dom": "^2.1.0",
+    "jest-styled-components": "^6.2.2",
     "npm-run-all": "^4.1.3",
     "prettier": "^1.14.3",
-    "prop-types": "^15.6.2",
     "react-testing-library": "^5.2.0",
+    "snyk": "^1.104.1",
     "storybook-addon-jsx": "^5.4.0",
     "storybook-styled-components": "^1.1.2"
   }
