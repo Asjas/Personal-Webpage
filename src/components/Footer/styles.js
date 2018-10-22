@@ -33,7 +33,7 @@ export const SocialMediaIcon = styled.a`
   }
 
   span {
-    visibility: hidden;
+    display: none;
   }
 
   ${media.small``};
