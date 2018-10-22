@@ -7,9 +7,7 @@ export const Navigation = styled.nav`
   border-top: ${props => props.theme.goldBorderXL};
   border-bottom: ${props => props.theme.goldBorderXL};
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
 `;
 
 export const Section = styled.section`

@@ -2,13 +2,13 @@
 import { css } from 'styled-components';
 
 const sizes = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px',
+  mobileS: 320,
+  mobileM: 375,
+  mobileL: 425,
+  tablet: 768,
+  laptop: 1024,
+  laptopL: 1440,
+  desktop: 2560,
 };
 
 /**
@@ -17,7 +17,7 @@ const sizes = {
  */
 export const media = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
-    @media (min-width: ${sizes[label] / 16}em) {
+    @media (max-width: ${sizes[label] / 16}em) {
       ${css(...args)};
     }
   `;
