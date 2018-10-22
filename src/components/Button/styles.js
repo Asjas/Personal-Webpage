@@ -25,10 +25,4 @@ export const Button = styled.button`
   &:focus {
     outline: ${props => props.theme.goldBorderMd};
   }
-
-  ${media.small`
-    font-size: 1.5rem;
-    line-height: 1.7rem;
-    padding: 10px;
-  `};
 `;
