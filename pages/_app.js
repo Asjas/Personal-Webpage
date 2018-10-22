@@ -11,7 +11,7 @@ class MyApp extends App {
       <Container>
         <ThemeProvider theme={theme}>
           <>
-            <GlobalStyles />Z
+            <GlobalStyles />
             <Page>
               <Component />
             </Page>
