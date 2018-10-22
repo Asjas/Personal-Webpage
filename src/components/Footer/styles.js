@@ -2,24 +2,18 @@ import styled from 'styled-components';
 import { media } from '../../utils/media';
 
 export const FooterStyled = styled.footer`
-  align-items: flex-end;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  ${media.xSmall``};
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 0 0 10px;
 `;
 
 export const SocialMediaIcon = styled.a`
   cursor: pointer;
-  height: ${props => props.theme.svgL};
-  width: ${props => props.theme.svgL};
-  display: block;
-  padding: 10px 10px;
-  margin: 15px 0;
 
   svg {
     fill: ${props => props.color};
+    height: ${props => props.theme.svgL};
+    width: ${props => props.theme.svgL};
 
     &:hover {
       fill: ${props => props.theme.gold};
@@ -35,6 +29,4 @@ export const SocialMediaIcon = styled.a`
   span {
     visibility: hidden;
   }
-
-  ${media.small``};
 `;
