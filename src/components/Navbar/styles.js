@@ -10,8 +10,6 @@ export const Navigation = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  ${media.medium``};
 `;
 
 export const Section = styled.section`
