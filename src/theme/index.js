@@ -22,9 +22,9 @@ const theme = {
   blackBorderL: '3px solid #393939',
   blackBorderXL: '4px solid #393939',
   greyBorderSm: '1px solid #3A3A3A',
-  greyBorderMd: '1px solid #3A3A3A',
-  greyBorderL: '1px solid #3A3A3A',
-  greyBorderXL: '1px solid #3A3A3A',
+  greyBorderMd: '2px solid #3A3A3A',
+  greyBorderL: '3px solid #3A3A3A',
+  greyBorderXL: '4px solid #3A3A3A',
   lightGreyBorderSm: '1px solid rgba(255, 255, 255, 0.04)',
   lightGreyBorderMd: '2px solid rgba(255, 255, 255, 0.04)',
 };
