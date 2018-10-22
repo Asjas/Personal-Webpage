@@ -5,6 +5,7 @@ const theme = {
   fontL: '1.4rem',
   fontSm: '1.1rem',
   svgL: '60px',
+  svgMd: '50px',
   svgM: '40px',
   svgSm: '30px',
   red: '#FF0000',

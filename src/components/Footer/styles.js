@@ -5,6 +5,12 @@ export const FooterStyled = styled.footer`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: 0 0 0 10px;
+  max-width: 400px;
+  align-self: end;
+
+  ${media.laptopL`
+    max-width: 320px;
+  `};
 `;
 
 export const SocialMediaIcon = styled.a`
@@ -30,4 +36,11 @@ export const SocialMediaIcon = styled.a`
     position: absolute;
     left: -9999px;
   }
+
+  ${media.laptopL`
+    svg {
+      height: ${props => props.theme.svgMd};
+      width: ${props => props.theme.svgMd};
+    }
+  `};
 `;

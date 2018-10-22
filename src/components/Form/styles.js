@@ -22,18 +22,6 @@ export const Heading = styled.h2`
   font-size: 2.4rem;
   line-height: 2.6rem;
   margin-bottom: 40px;
-
-  ${media.small`
-    font-size: 2.2rem;
-    line-height: 2.4rem;
-  `};
-
-  ${media.xSmall`
-    font-size: 2rem;
-    line-height: 2.2rem;
-    margin: 0 auto 40px auto;
-    width: 70vw;
-  `};
 `;
 
 export const StyledForm = styled(Form)`

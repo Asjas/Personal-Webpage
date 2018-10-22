@@ -4,7 +4,7 @@ import { withThemes } from "storybook-styled-components";
 import { checkA11y } from "@storybook/addon-a11y";
 import { withKnobs } from "@storybook/addon-knobs/react";
 import { withTests } from "@storybook/addon-jest";
-import { theme } from '../pages/styles/theme';
+import { theme } from '../theme';
 
 // import results from "../.jest-test-results.json";
 
