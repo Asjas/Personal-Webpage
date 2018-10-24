@@ -43,3 +43,13 @@ patch:
         patched: '2018-09-18T09:17:45.091Z'
     - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
         patched: '2018-09-18T09:17:45.091Z'
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-build > download > caw > tunnel-agent:
+        patched: '2018-10-24T04:42:24.108Z'
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-10-24T04:42:24.108Z'
+    - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-10-24T04:42:24.108Z'
+    - gatsby-plugin-sharp > imagemin-pngquant > pngquant-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-10-24T04:42:24.108Z'
+    - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-10-24T04:42:24.108Z'
