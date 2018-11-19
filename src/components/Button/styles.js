@@ -3,15 +3,13 @@ import { media } from '../../utils/media';
 
 export const Button = styled.button`
   background-color: ${props => props.theme.grey};
-  background-size: 20px 20px;
   border: ${props => props.theme.blackBorderSm};
-  border-bottom-width: 3px;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   padding: 14px;
   outline: 0;
   position: relative;

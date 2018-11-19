@@ -2,18 +2,18 @@ import React from 'react';
 import { Formik } from 'formik';
 import {
   StyledForm,
-  Container,
+  Fieldset,
   Label,
   LabelText,
   StyledField,
   StyledErrorMessage,
-  TextArea,
+  StyledTextArea,
 } from './styles';
 import StyledButton from '../Button';
 
 const ContactForm = () => (
   <Formik
-    initialValues={{ name: '', email: '' }}
+    initialValues={{ name: '', email: '', textarea: '' }}
     validate={values => {
       const errors = {};
 
@@ -27,6 +27,10 @@ const ContactForm = () => (
         errors.email = 'Invalid email address';
       }
 
+      if (!values.textarea) {
+        errors.textarea = 'Required!';
+      }
+
       return errors;
     }}
     onSubmit={(values, { setSubmitting }) => {
@@ -38,7 +42,7 @@ const ContactForm = () => (
   >
     {({ isSubmitting }) => (
       <StyledForm>
-        <Container disabled={isSubmitting} aria-busy={isSubmitting}>
+        <Fieldset disabled={isSubmitting} aria-busy={isSubmitting}>
           <Label>
             <LabelText>Enter your name:</LabelText>
             <StyledErrorMessage name="name" component="span" />
@@ -51,11 +55,15 @@ const ContactForm = () => (
           </Label>
           <Label>
             <LabelText>Enter a message:</LabelText>
-            <StyledErrorMessage name="message" component="span" />
-            <TextArea name="textarea" placeholder="type your message here." />
+            <StyledErrorMessage name="textarea" component="span" />
+            <StyledTextArea
+              component="textarea"
+              name="textarea"
+              placeholder="type your message here"
+            />
           </Label>
           <StyledButton />
-        </Container>
+        </Fieldset>
       </StyledForm>
     )}
   </Formik>

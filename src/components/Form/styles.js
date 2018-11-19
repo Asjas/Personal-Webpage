@@ -12,23 +12,12 @@ const loading = keyframes`
   }
 `;
 
-export const Wrapper = styled.div`
-  margin: 40px auto;
-  padding: 55px 0;
-  position: absolute;
-`;
-
-export const Heading = styled.h2`
-  font-size: 2.4rem;
-  line-height: 2.6rem;
-  margin-bottom: 40px;
-`;
-
 export const StyledForm = styled(Form)`
-  width: 600px;
+  width: 500px;
+  margin: 0 auto;
 `;
 
-export const Container = styled.fieldset`
+export const Fieldset = styled.fieldset`
   display: grid;
   grid-gap: 30px;
   width: 100%;
@@ -70,7 +59,7 @@ export const StyledField = styled(Field)`
   }
 `;
 
-export const TextArea = styled.textarea`
+export const StyledTextArea = styled(Field)`
   color: ${props => props.theme.black};
   border: ${props => props.theme.blackBorderMd};
   border-radius: 4px;
