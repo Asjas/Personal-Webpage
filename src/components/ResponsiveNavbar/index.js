@@ -38,32 +38,16 @@ class ResponsiveNav extends Component {
         onStateChange={state => this.handleStateChange(state)}
         right
       >
-        <ResponsiveStyledLink
-          prefetch
-          href="/"
-          onClick={() => this.closeMenu()}
-        >
+        <ResponsiveStyledLink prefetch href="/" onClick={() => this.closeMenu()}>
           Home
         </ResponsiveStyledLink>
-        <ResponsiveStyledLink
-          prefetch
-          href="/portfolio/"
-          onClick={() => this.closeMenu()}
-        >
+        <ResponsiveStyledLink prefetch href="/portfolio/" onClick={() => this.closeMenu()}>
           Portfolio
         </ResponsiveStyledLink>
-        <ResponsiveStyledLink
-          prefetch
-          href="/about/"
-          onClick={() => this.closeMenu()}
-        >
+        <ResponsiveStyledLink prefetch href="/about/" onClick={() => this.closeMenu()}>
           About
         </ResponsiveStyledLink>
-        <ResponsiveStyledLink
-          prefetch
-          href="/contact/"
-          onClick={() => this.closeMenu()}
-        >
+        <ResponsiveStyledLink prefetch href="/contact/" onClick={() => this.closeMenu()}>
           Contact
         </ResponsiveStyledLink>
       </ResponsiveNavMenu>

@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Content,
-  Card,
-  Title,
-  Description,
-  LinkDescription,
-} from './styles.js';
+import { Content, Card, Title, Description, LinkDescription } from './styles.js';
 
 const Project = ({ projectQuery }) => (
   <Content>

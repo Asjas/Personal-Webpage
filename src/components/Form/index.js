@@ -23,9 +23,7 @@ const ContactForm = () => (
 
       if (!values.email) {
         errors.email = 'Required!';
-      } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-      ) {
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
         errors.email = 'Invalid email address';
       }
 
@@ -49,11 +47,7 @@ const ContactForm = () => (
           <Label>
             <LabelText>Enter your email:</LabelText>
             <StyledErrorMessage name="email" component="span" />
-            <StyledField
-              type="email"
-              name="email"
-              placeholder="example@gmail.com"
-            />
+            <StyledField type="email" name="email" placeholder="example@gmail.com" />
           </Label>
           <Label>
             <LabelText>Enter a message:</LabelText>
