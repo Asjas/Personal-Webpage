@@ -11,7 +11,7 @@ const nextConfig = {
     },
     browser: {
       analyzerMode: 'static',
-      reportFilename: './bundles/client.html',
+      reportFilename: '../bundles/client.html',
     },
   },
   cssLoaderOptions: {
