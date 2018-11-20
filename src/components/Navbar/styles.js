@@ -18,8 +18,8 @@ export const Section = styled.section`
 
 export const StyledLink = styled(Link)`
   color: ${props => props.theme.offWhite};
-  font-size: ${props => props.theme.fontL};
-  line-height: ${props => props.theme.fontL};
+  font-size: ${props => props.theme.fontSm};
+  line-height: ${props => props.theme.fontSm};
   border-top: ${props => props.theme.lightGreyBorderMd};
   border-bottom: ${props => props.theme.lightGreyBorderMd};
   cursor: pointer;
@@ -34,7 +34,8 @@ export const StyledLink = styled(Link)`
   }
 
   &:focus {
-    color: ${props => props.theme.gold};
     border: ${props => props.theme.goldBorderMd};
+    color: ${props => props.theme.gold};
+    outline: none;
   }
 `;

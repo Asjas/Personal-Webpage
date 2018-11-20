@@ -1,9 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 const theme = {
-  fontXL: '1.7rem',
-  fontL: '1.4rem',
-  fontSm: '1.1rem',
+  fontXL: '1.9rem',
+  fontL: '1.6rem',
+  fontSm: '1.3rem',
+  fontXs: '1.1rem',
   svgL: '60px',
   svgMd: '50px',
   svgM: '40px',
