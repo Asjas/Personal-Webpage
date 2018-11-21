@@ -8,7 +8,7 @@ const ContactPage = () => (
       <Heading>
         Don't be a stranger
         <br />
-        <StyledSpan> say hello.</StyledSpan>
+        <StyledSpan>and say hello.</StyledSpan>
       </Heading>
       <Paragraph>
         Feel free to get in touch with me. I am always open to discussing new projects or

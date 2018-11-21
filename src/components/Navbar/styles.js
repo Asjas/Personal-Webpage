@@ -18,8 +18,8 @@ export const Section = styled.section`
 
 export const StyledLink = styled(Link)`
   color: ${props => props.theme.offWhite};
-  font-size: ${props => props.theme.fontSm};
-  line-height: ${props => props.theme.fontSm};
+  font-size: ${props => props.theme.heading4};
+  line-height: ${props => props.theme.heading4};
   border-top: ${props => props.theme.lightGreyBorderMd};
   border-bottom: ${props => props.theme.lightGreyBorderMd};
   cursor: pointer;

@@ -1,14 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 const theme = {
-  fontXL: '1.9rem',
-  fontL: '1.6rem',
-  fontSm: '1.3rem',
-  fontXs: '1.1rem',
-  svgL: '60px',
-  svgMd: '50px',
-  svgM: '40px',
-  svgSm: '30px',
+  heading1: '6.0rem',
+  heading2: '4.5rem',
+  heading3: '3.2rem',
+  heading4: '2.2rem',
+  fontL: '1.7rem',
+  fontMd: '1.6rem',
+  fontSm: '1.5rem',
+  svgL: '5.5rem',
+  svgMd: '5rem',
+  svgM: '4.5rem',
   red: '#FF0000',
   black: '#393939',
   grey: '#3A3A3A',
@@ -37,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 10px;
   }
 
   *, *:before, *:after {

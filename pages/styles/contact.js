@@ -10,20 +10,21 @@ export const Container = styled.div`
 
 export const Heading = styled.h1`
   color: ${props => props.theme.red};
-  font-size: ${props => props.theme.fontXL};
+  font-size: ${props => props.theme.heading1};
 `;
 
 export const StyledSpan = styled.span`
   color: ${props => props.theme.black};
-  font-size: ${props => props.theme.fontL};
+  font-size: ${props => props.theme.heading2};
 `;
 
 export const Paragraph = styled.p`
   color: ${props => props.theme.black};
+  font-size: ${props => props.theme.fontL};
   padding: 20px 0;
   width: 90%;
 
   a {
-    color: ${props => props.theme.gold};
+    color: ${props => props.theme.red};
   }
 `;
