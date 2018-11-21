@@ -16,7 +16,7 @@ const ContactPage = () => (
       </Paragraph>
       <Paragraph>
         You can also send me an <a href="mailto:asjas@outlook.com">e-mail</a> or give me a call on{' '}
-        <a href="tel:+27662969827">+27 66 296 9827.</a>
+        <a href="tel:+27662969827">+27 66 296 9827</a>.
       </Paragraph>
     </section>
     <ContactForm />

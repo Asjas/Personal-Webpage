@@ -2,18 +2,15 @@ import styled from 'styled-components';
 import { media } from '../../utils/media';
 
 export const Button = styled.button`
-  background-color: ${props => props.theme.grey};
-  border: ${props => props.theme.blackBorderSm};
-  color: #fff;
+  background-color: ${props => props.theme.purple};
   border-radius: 4px;
+  border: ${props => props.theme.purple};
+  color: #fff;
   cursor: pointer;
   font-size: ${props => props.theme.fontL};
   font-size: ${props => props.theme.fontL};
-  padding: 14px;
   outline: 0;
-  position: relative;
-  transition: all 0.3s ease;
-  z-index: 1;
+  padding: 14px;
   width: 100%;
 
   &:hover {
