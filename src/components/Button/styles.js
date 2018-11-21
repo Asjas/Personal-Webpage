@@ -7,14 +7,14 @@ export const Button = styled.button`
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
-  display: inline-block;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
+  font-size: ${props => props.theme.fontL};
+  font-size: ${props => props.theme.fontL};
   padding: 14px;
   outline: 0;
   position: relative;
   transition: all 0.3s ease;
   z-index: 1;
+  width: 100%;
 
   &:hover {
     outline: ${props => props.theme.goldBorderMd};

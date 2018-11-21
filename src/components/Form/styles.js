@@ -31,25 +31,25 @@ export const Fieldset = styled.fieldset`
 export const Label = styled.label`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-size: ${props => props.theme.fontXs};
   grid-template-rows: 1fr;
 `;
 
 export const LabelText = styled.span`
   color: ${props => props.theme.black};
-  font-size: ${props => props.theme.fontXs};
-  letter-spacing: 0.03rem;
+  font-size: ${props => props.theme.fontMd};
+  letter-spacing: 0.02rem;
   margin-bottom: 5px;
 `;
 
 export const StyledField = styled(Field)`
-  color: ${props => props.theme.black};
-  border: ${props => props.theme.blackBorderMd};
   border-radius: 4px;
-  height: 50px;
-  font-size: ${props => props.theme.fontXs};
+  border: ${props => props.theme.blackBorderMd};
+  color: ${props => props.theme.black};
+  font-size: ${props => props.theme.fontMd};
   grid-column: 1/-1;
   grid-row: 2;
+  height: 50px;
+  letter-spacing: 0.02rem;
   padding: 0 0 0 20px;
   width: 100%;
 
@@ -67,9 +67,10 @@ export const StyledTextArea = styled(Field)`
   border-radius: 4px;
   border: ${props => props.theme.blackBorderMd};
   color: ${props => props.theme.black};
-  font-size: ${props => props.theme.fontXs};
+  font-size: ${props => props.theme.fontMd};
   grid-column: 1/-1;
   grid-row: 2;
+  letter-spacing: 0.02rem;
   min-height: 120px;
   outline: none;
   padding: 20px;
@@ -87,7 +88,7 @@ export const StyledTextArea = styled(Field)`
 
 export const StyledErrorMessage = styled(ErrorMessage)`
   color: ${props => props.theme.red};
-  font-size: ${props => props.theme.fontXs};
+  font-size: ${props => props.theme.fontMd};
   letter-spacing: 0.03rem;
   margin-bottom: 5px;
   justify-self: end;
