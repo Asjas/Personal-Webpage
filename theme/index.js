@@ -12,6 +12,8 @@ const theme = {
   svgMd: '5rem',
   svgM: '4.5rem',
   red: '#FF0000',
+  maroon: '#D2006B',
+  purple: '#3E13AF',
   black: '#393939',
   grey: '#3A3A3A',
   lightGrey: '#E1E1E1',
@@ -31,6 +33,8 @@ const theme = {
   greyBorderXL: '4px solid #3A3A3A',
   lightGreyBorderSm: '1px solid rgba(255, 255, 255, 0.04)',
   lightGreyBorderMd: '2px solid rgba(255, 255, 255, 0.04)',
+  purpleAnchorLight: 'rgba(24.3, 7.5, 68.6, 0.35)',
+  purpleAnchor: ' rgba(24.3, 7.5, 68.6, 1)',
 };
 
 const GlobalStyles = createGlobalStyle`

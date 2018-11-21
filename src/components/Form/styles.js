@@ -13,9 +13,10 @@ const loading = keyframes`
 `;
 
 export const StyledForm = styled(Form)`
-  width: 500px;
-  margin: 0 auto;
   align-self: center;
+  margin: 0 auto;
+  padding: 25px 0;
+  width: 500px;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -87,7 +88,7 @@ export const StyledTextArea = styled(Field)`
 `;
 
 export const StyledErrorMessage = styled(ErrorMessage)`
-  color: ${props => props.theme.red};
+  color: ${props => props.theme.maroon};
   font-size: ${props => props.theme.fontMd};
   letter-spacing: 0.03rem;
   margin-bottom: 5px;
