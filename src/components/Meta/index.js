@@ -8,7 +8,7 @@ const Meta = () => (
     <meta name="description" content="This is the Personal Website of A-J Roos." />
     <meta
       name="keywords"
-      content="JavaScript, React.js, Next.js, Gatsby.js, GraphQL, Node.js, Web Developer"
+      content="JavaScript, React.js, Node.js, Web Development, Web Developer, South Africa"
     />
     <meta name="author" content="A-J Roos" />
 
