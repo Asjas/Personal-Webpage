@@ -58,10 +58,7 @@ typings/
 .env
 
 .cache/
-.next/
-build/
 public/
-bundles/
 
 # Jest test results
 .jest-test-results.json

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Router from 'next/router';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
 import Nprogress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyles } from '../../../theme';
@@ -8,31 +9,27 @@ import { Section, Aside, Main } from './styles';
 import Meta from '../Meta';
 import Navbar from '../Sidebar';
 
-Router.onRouteChangeStart = () => {
-  Nprogress.start();
-};
-
-Router.onRouteChangeComplete = () => {
-  Nprogress.done();
-};
-
-Router.onRouteChangeError = () => {
-  Nprogress.done();
-};
-
-class Layout extends Component {
-  static propTypes = {
-    children: PropTypes.element.isRequired,
-  };
-
-  render() {
-    const { children } = this.props;
-
-    return (
+const Layout = ({ children }) => (
+  /* eslint no-undef: "off" */
+  <StaticQuery
+    query={graphql`
+      query LayoutQuery {
+        site {
+          siteMetadata {
+            title
+            siteUrl
+            googleSiteVerification
+            description
+            keywords
+          }
+        }
+      }
+    `}
+    render={data => (
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
-          <Meta />
+          {/* <Meta /> */}
           <Section>
             <Aside>
               <Navbar />
@@ -41,8 +38,12 @@ class Layout extends Component {
           </Section>
         </>
       </ThemeProvider>
-    );
-  }
-}
+    )}
+  />
+);
+
+Layout.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
 export default Layout;
