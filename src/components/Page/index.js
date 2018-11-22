@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Router from 'next/router';
 import Nprogress from 'nprogress';
+import { ThemeProvider } from 'styled-components';
+import { theme, GlobalStyles } from '../../../theme';
 import { Section, Aside, Main } from './styles';
 import Meta from '../Meta';
 import Navbar from '../Sidebar';
@@ -27,15 +29,18 @@ class Layout extends Component {
     const { children } = this.props;
 
     return (
-      <>
-        <Meta />
-        <Section>
-          <Aside>
-            <Navbar />
-          </Aside>
-          <Main>{children}</Main>
-        </Section>
-      </>
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <Meta />
+          <Section>
+            <Aside>
+              <Navbar />
+            </Aside>
+            <Main>{children}</Main>
+          </Section>
+        </>
+      </ThemeProvider>
     );
   }
 }
