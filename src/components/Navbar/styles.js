@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Link from '../Link';
+import { Link } from 'gatsby';
 import { media } from '../../utils/media';
 
 export const Navigation = styled.nav`

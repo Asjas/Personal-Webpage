@@ -5,16 +5,16 @@ import Footer from '../Footer';
 const Nav = () => (
   <Navigation>
     <Section>
-      <StyledLink prefetch href="/">
+      <StyledLink prefetch to="/">
         Home
       </StyledLink>
-      <StyledLink prefetch href="/portfolio/">
+      <StyledLink prefetch to="/portfolio/">
         Portfolio
       </StyledLink>
-      <StyledLink prefetch href="/about/">
+      <StyledLink prefetch to="/about/">
         About
       </StyledLink>
-      <StyledLink prefetch href="/contact/">
+      <StyledLink prefetch to="/contact/">
         Contact
       </StyledLink>
     </Section>

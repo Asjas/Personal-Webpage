@@ -65,6 +65,8 @@ module.exports = {
     "react/react-in-jsx-scope": 0,
     "react/prefer-stateless-function": 0,
     "react/forbid-prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "react/no-danger": 0,
     "react/no-unescaped-entities": 0,
     "react/jsx-max-props-per-line": [2, {
       "maximum": 1,
