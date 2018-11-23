@@ -8,7 +8,7 @@ const sizes = {
   tablet: 768,
   laptop: 1024,
   laptopL: 1440,
-  desktop: 2560,
+  desktop: 1920,
 };
 
 /**

@@ -6,7 +6,6 @@ import Nprogress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyles } from '../../../theme';
 import { Section, Aside, Main } from './styles';
-import Meta from '../Meta';
 import Navbar from '../Sidebar';
 
 const Layout = ({ children }) => (
