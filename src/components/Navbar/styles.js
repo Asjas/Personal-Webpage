@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import ExportedLink from '../Link';
 import { media } from '../../utils/media';
 
 export const Navigation = styled.nav`
@@ -16,7 +16,7 @@ export const Section = styled.section`
   flex-direction: column;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(ExportedLink)`
   color: ${props => props.theme.offWhite};
   font-size: ${props => props.theme.heading4};
   line-height: ${props => props.theme.heading4};
