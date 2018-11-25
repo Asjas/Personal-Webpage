@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Nprogress from 'nprogress';
 import { ThemeProvider } from 'styled-components';
-import { theme, GlobalStyles } from '../../../theme';
+import { theme, GlobalStyles } from '../../theme';
 import { Section, Aside, Main } from './styles';
 import Navbar from '../Sidebar';
 

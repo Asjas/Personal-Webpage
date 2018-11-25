@@ -1,11 +1,14 @@
 import React from 'react';
-import { Container } from './styles/portfolio';
+import { Container, Heading, Showcase } from './styles/portfolio';
 import Layout from '../components/Layout';
 import Project from '../components/Project';
 
 const PortfolioPage = () => (
   <Container>
-    <Layout>portfolio page</Layout>
+    <Layout>
+      <Heading>Here are some of the projects that I have worked on.</Heading>
+      <Showcase>test</Showcase>
+    </Layout>
   </Container>
 );
 

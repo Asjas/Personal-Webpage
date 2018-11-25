@@ -7,7 +7,7 @@ const Nav = () => (
     <Section>
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/portfolio/">Portfolio</StyledLink>
-      <StyledLink to="/about/">About</StyledLink>
+      <StyledLink to="/services/">Services</StyledLink>
       <StyledLink to="/contact/">Contact</StyledLink>
     </Section>
     <Footer />
