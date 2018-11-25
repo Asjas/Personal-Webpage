@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FooterStyled, SocialMediaIcon } from './styles.js';
 
-const Footer = ({ color }) => (
+const Footer = React.memo(({ color }) => (
   <FooterStyled>
     <SocialMediaIcon
       href="https://twitter.com/asjasroos"
@@ -60,7 +60,7 @@ const Footer = ({ color }) => (
       <span>Link to codepen profile</span>
     </SocialMediaIcon>
   </FooterStyled>
-);
+));
 
 Footer.defaultProps = {
   color: '#EDEDED',
