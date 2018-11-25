@@ -14,10 +14,10 @@ export const Button = styled.button`
   width: 100%;
 
   &:hover {
-    outline: ${props => props.theme.goldBorderMd};
+    outline: ${props => props.theme.blackBorderMd};
   }
 
   &:focus {
-    outline: ${props => props.theme.goldBorderMd};
+    outline: ${props => props.theme.blackBorderMd};
   }
 `;
