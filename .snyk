@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -43,3 +43,11 @@ patch:
         patched: '2018-09-18T09:17:45.091Z'
     - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
         patched: '2018-09-18T09:17:45.091Z'
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-build > download > caw > tunnel-agent:
+        patched: '2018-11-28T14:18:09.488Z'
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-11-28T14:18:09.488Z'
+    - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-11-28T14:18:09.488Z'
+    - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-11-28T14:18:09.488Z'
