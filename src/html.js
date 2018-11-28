@@ -12,14 +12,14 @@ export default class HTML extends React.Component {
           <link rel="shortcut icon" href="../static/favicon.png" />
           <link rel="stylesheet" type="text/css" href="../static/normalize.min.css" />
           <link rel="stylesheet" type="text/css" href="../static/nprogress.min.css" />
+          <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
-          <script async src="https://cdn.polyfill.io/v2/polyfill.min.js" />
-          <script async src="../../../static/fullstory.js" type="text/javascript" />
+          <script src="../static/fullstory.js" type="text/javascript" />
         </body>
       </html>
     );
