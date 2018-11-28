@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { Container } from './styles/about';
+import { Container } from '../styles/about';
 
 const About = () => (
   <Container>
