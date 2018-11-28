@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import { Container, Heading, Paragraph, StyledLink } from './styles/404';
+import { Container, Heading, Paragraph, StyledLink } from '../styles/404';
 
 const FourOhFour = () => (
   <Layout>

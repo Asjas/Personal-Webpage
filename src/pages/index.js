@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Heading } from './styles/index';
+import { Container, Heading } from '../styles/index';
 import Layout from '../components/Layout';
 
 const IndexPage = () => (
