@@ -16,12 +16,13 @@ export const Container = styled.div`
 export const Heading = styled.h1`
   color: ${props => props.theme.maroon};
   font-size: ${props => props.theme.heading1};
-  padding: 0 0 30px 0;
+  padding: 0 0 30px 30px;
   width: 90%;
 
   ${media.laptopL`
     font-size: ${props => props.theme.heading2};
     margin: 0 auto;
+    padding: 0 0 30px 0;
     width: 500px;
   `};
 `;

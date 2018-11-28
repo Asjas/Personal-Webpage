@@ -5,9 +5,7 @@ import Footer from '../Footer';
 const Nav = () => (
   <Navigation>
     <Section>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/portfolio/">Portfolio</StyledLink>
-      <StyledLink to="/about/">About</StyledLink>
+      <StyledLink to="/">Landing Page</StyledLink>
       <StyledLink to="/contact/">Contact</StyledLink>
     </Section>
     <Footer />
