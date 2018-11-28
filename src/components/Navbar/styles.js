@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Link from '../Link';
+import ExportedLink from '../Link';
 import { media } from '../../utils/media';
 
 export const Navigation = styled.nav`
@@ -16,10 +16,10 @@ export const Section = styled.section`
   flex-direction: column;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(ExportedLink)`
   color: ${props => props.theme.offWhite};
-  font-size: ${props => props.theme.fontL};
-  line-height: ${props => props.theme.fontL};
+  font-size: ${props => props.theme.heading4};
+  line-height: ${props => props.theme.heading4};
   border-top: ${props => props.theme.lightGreyBorderMd};
   border-bottom: ${props => props.theme.lightGreyBorderMd};
   cursor: pointer;
@@ -34,7 +34,8 @@ export const StyledLink = styled(Link)`
   }
 
   &:focus {
-    color: ${props => props.theme.gold};
     border: ${props => props.theme.goldBorderMd};
+    color: ${props => props.theme.gold};
+    outline: none;
   }
 `;

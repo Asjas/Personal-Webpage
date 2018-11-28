@@ -12,26 +12,19 @@ const loading = keyframes`
   }
 `;
 
-export const Wrapper = styled.div`
-  margin: 40px auto;
-  padding: 55px 0;
-  position: absolute;
-`;
-
-export const Heading = styled.h2`
-  font-size: 2.4rem;
-  line-height: 2.6rem;
-  margin-bottom: 40px;
-`;
-
 export const StyledForm = styled(Form)`
-  width: 600px;
+  margin: 0 auto;
+  padding: 25px 0;
+  width: 500px;
+  border-radius: 4px;
 `;
 
-export const Container = styled.fieldset`
+export const Fieldset = styled.fieldset`
   display: grid;
-  grid-gap: 30px;
   width: 100%;
+  padding: 20px;
+  border: ${props => props.theme.blackBorderSm};
+  border-radius: 6px;
 
   &[disabled] {
     opacity: 0.5;
@@ -41,23 +34,25 @@ export const Container = styled.fieldset`
 export const Label = styled.label`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
 `;
 
 export const LabelText = styled.span`
   color: ${props => props.theme.black};
-  letter-spacing: 0.03rem;
+  font-size: ${props => props.theme.fontMd};
+  letter-spacing: 0.02rem;
   margin-bottom: 5px;
 `;
 
 export const StyledField = styled(Field)`
-  color: ${props => props.theme.black};
-  border: ${props => props.theme.blackBorderMd};
   border-radius: 4px;
-  height: 50px;
-  font-size: 1rem;
+  border: ${props => props.theme.blackBorderMd};
+  color: ${props => props.theme.black};
+  font-size: ${props => props.theme.fontMd};
   grid-column: 1/-1;
   grid-row: 2;
+  height: 50px;
+  letter-spacing: 0.02rem;
+  margin: 0 0 30px 0;
   padding: 0 0 0 20px;
   width: 100%;
 
@@ -67,17 +62,21 @@ export const StyledField = styled(Field)`
 
   &:focus {
     border: ${props => props.theme.goldBorderMd};
+    outline: none;
   }
 `;
 
-export const TextArea = styled.textarea`
-  color: ${props => props.theme.black};
-  border: ${props => props.theme.blackBorderMd};
+export const StyledTextArea = styled(Field)`
   border-radius: 4px;
-  font-size: 1rem;
+  border: ${props => props.theme.blackBorderMd};
+  color: ${props => props.theme.black};
+  font-size: ${props => props.theme.fontMd};
   grid-column: 1/-1;
   grid-row: 2;
+  letter-spacing: 0.02rem;
+  margin: 0 0 30px 0;
   min-height: 120px;
+  outline: none;
   padding: 20px;
   resize: vertical;
   width: 100%;
@@ -92,7 +91,8 @@ export const TextArea = styled.textarea`
 `;
 
 export const StyledErrorMessage = styled(ErrorMessage)`
-  color: ${props => props.theme.red};
+  color: ${props => props.theme.maroon};
+  font-size: ${props => props.theme.fontMd};
   letter-spacing: 0.03rem;
   margin-bottom: 5px;
   justify-self: end;

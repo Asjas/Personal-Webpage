@@ -58,8 +58,6 @@ typings/
 .env
 
 .cache/
-.next/
-build/
 public/
 
 # Jest test results

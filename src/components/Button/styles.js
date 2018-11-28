@@ -2,27 +2,22 @@ import styled from 'styled-components';
 import { media } from '../../utils/media';
 
 export const Button = styled.button`
-  background-color: ${props => props.theme.grey};
-  background-size: 20px 20px;
-  border: ${props => props.theme.blackBorderSm};
-  border-bottom-width: 3px;
-  color: #fff;
+  background-color: ${props => props.theme.purple};
   border-radius: 4px;
+  border: ${props => props.theme.purple};
+  color: #fff;
   cursor: pointer;
-  display: inline-block;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  padding: 14px;
+  font-size: ${props => props.theme.fontL};
+  font-size: ${props => props.theme.fontL};
   outline: 0;
-  position: relative;
-  transition: all 0.3s ease;
-  z-index: 1;
+  padding: 14px;
+  width: 100%;
 
   &:hover {
-    outline: ${props => props.theme.goldBorderMd};
+    outline: ${props => props.theme.blackBorderMd};
   }
 
   &:focus {
-    outline: ${props => props.theme.goldBorderMd};
+    outline: ${props => props.theme.blackBorderMd};
   }
 `;

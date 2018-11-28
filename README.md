@@ -6,7 +6,7 @@
 This project uses the following tech stack:
 
 - Front-End
-  - Next.js
+  - Gatsby.js
   - Styled Components
   - Downshift
   - Formik
@@ -25,12 +25,11 @@ Then execute the following commands to get it installed and running.
 
 ```sh
 cd Personal-Webpage
-git checkout feat/move-to-nextjs
 npm install
 npm run dev
 ```
 
-This will start a local server on `http://localhost:3000` that you can open in your browser.
+This will start a local server on `http://localhost:8000` that you can open in your browser.
 
 ### Storybook
 
