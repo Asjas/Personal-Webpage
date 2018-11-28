@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Heading, Paragraph, StyledLink } from './styles/404';
+import { Container, Heading, Paragraph, StyledLink } from '../styles/404';
 
 const NotFoundPage = () => (
   <Container>
