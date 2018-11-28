@@ -22,9 +22,7 @@
     "prebuild:storybook": "npm run test:generate-output",
     "build:storybook": "build-storybook -c .storybook -o build/",
     "start:storybook": "start-storybook -p 9000 -c .storybook",
-    "storybook": "npm-run-all --parallel test:generate-output start:storybook",
-    "precommit": "npm run lint",
-    "prepush": "npm run lint"
+    "storybook": "npm-run-all --parallel test:generate-output start:storybook"
   },
   "dependencies": {
     "formik": "^1.3.2",
@@ -90,5 +88,11 @@
     "snyk": "^1.110.2",
     "storybook-addon-jsx": "^5.4.0",
     "storybook-styled-components": "^1.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
   }
 }
