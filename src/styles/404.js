@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
+mport { Link } from 'gatsby';
 import styled from 'styled-components';
 import { media } from '../utils/media';
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,25 +11,24 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.h1`
-  font-size: 4rem;
-  line-height: 4.2rem;
+  font-size: ${props => props.theme.heading1};
+  color: ${props => props.theme.black};
 `;
 
 export const Paragraph = styled.p`
-  font-size: 2.5rem;
-  line-height: 2.7rem;
+  font-size: ${props => props.theme.heading3};
+  color: ${props => props.theme.black};
 `;
 
 export const StyledLink = styled(Link)`
-  font-size: 1.8rem;
-  line-height: 2rem;
+  font-size: ${props => props.theme.fontL};
   text-decoration: none;
-  color: darkblue;
+  color: ${props => props.theme.maroon};
   padding: 3px;
   &:hover {
     color: lightcoral;
   }
   &:focus {
-    outline: 1px solid darkblue;
+    outline: 1px solid ${props => props.theme.maroon};
   }
 `;
