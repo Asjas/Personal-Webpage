@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Heading, Showcase } from './styles/portfolio';
+import { Container, Heading, Showcase } from '../styles/portfolio';
 import Layout from '../components/Layout';
 import Project from '../components/Project';
 
