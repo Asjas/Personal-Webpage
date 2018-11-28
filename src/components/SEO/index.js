@@ -8,14 +8,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
     query={query}
     render={({
       site: {
-        siteMetadata: {
-          defaultTitle,
-          titleTemplate,
-          defaultDescription,
-          siteUrl,
-          defaultImage,
-          twitterUsername,
-        },
+        siteMetadata: { defaultTitle, defaultDescription, siteUrl, defaultImage, twitterUsername },
       },
     }) => {
       const seo = {
@@ -27,7 +20,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
 
       return (
         <>
-          <Helmet title={seo.title} titleTemplate={titleTemplate}>
+          <Helmet title={seo.title}>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
@@ -70,9 +63,8 @@ const query = graphql`
     site {
       siteMetadata {
         defaultTitle: title
-        titleTemplate
         defaultDescription: description
-        siteUrl: url
+        siteUrl: siteUrl
         defaultImage: image
         twitterUsername
       }
