@@ -2,18 +2,18 @@ import React from 'react';
 import { Formik } from 'formik';
 import {
   StyledForm,
-  Container,
+  Fieldset,
   Label,
   LabelText,
   StyledField,
   StyledErrorMessage,
-  TextArea,
+  StyledTextArea,
 } from './styles';
 import StyledButton from '../Button';
 
 const ContactForm = () => (
   <Formik
-    initialValues={{ name: '', email: '' }}
+    initialValues={{ name: '', email: '', textarea: '' }}
     validate={values => {
       const errors = {};
 
@@ -23,10 +23,12 @@ const ContactForm = () => (
 
       if (!values.email) {
         errors.email = 'Required!';
-      } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-      ) {
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
         errors.email = 'Invalid email address';
+      }
+
+      if (!values.textarea) {
+        errors.textarea = 'Required!';
       }
 
       return errors;
@@ -40,7 +42,7 @@ const ContactForm = () => (
   >
     {({ isSubmitting }) => (
       <StyledForm>
-        <Container disabled={isSubmitting} aria-busy={isSubmitting}>
+        <Fieldset disabled={isSubmitting} aria-busy={isSubmitting}>
           <Label>
             <LabelText>Enter your name:</LabelText>
             <StyledErrorMessage name="name" component="span" />
@@ -49,19 +51,19 @@ const ContactForm = () => (
           <Label>
             <LabelText>Enter your email:</LabelText>
             <StyledErrorMessage name="email" component="span" />
-            <StyledField
-              type="email"
-              name="email"
-              placeholder="example@gmail.com"
-            />
+            <StyledField type="email" name="email" placeholder="example@gmail.com" />
           </Label>
           <Label>
             <LabelText>Enter a message:</LabelText>
-            <StyledErrorMessage name="message" component="span" />
-            <TextArea name="textarea" placeholder="type your message here." />
+            <StyledErrorMessage name="textarea" component="span" />
+            <StyledTextArea
+              component="textarea"
+              name="textarea"
+              placeholder="type your message here"
+            />
           </Label>
           <StyledButton />
-        </Container>
+        </Fieldset>
       </StyledForm>
     )}
   </Formik>

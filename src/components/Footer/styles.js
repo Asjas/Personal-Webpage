@@ -16,6 +16,10 @@ export const FooterStyled = styled.footer`
 export const SocialMediaIcon = styled.a`
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+
   svg {
     fill: ${props => props.color};
     height: ${props => props.theme.svgL};
