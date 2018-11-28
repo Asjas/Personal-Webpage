@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Heading, StyledSpan, Paragraph } from './styles/contact';
+import { Container, Heading, StyledSpan, Paragraph } from '../styles/contact';
 import Layout from '../components/Layout';
 import ContactForm from '../components/Form';
 
