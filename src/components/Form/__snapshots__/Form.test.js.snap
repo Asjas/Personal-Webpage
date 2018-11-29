@@ -82,9 +82,11 @@ exports[`Contact form renders correctly 1`] = `
     <fieldset
       aria-busy="false"
       class="c1"
+      data-testid="form-disabled"
     >
       <label
         class="c2"
+        for="name"
       >
         <span
           class="c3"
@@ -93,6 +95,7 @@ exports[`Contact form renders correctly 1`] = `
         </span>
         <input
           class="c4"
+          id="name"
           name="name"
           placeholder="full name"
           type="text"
@@ -101,6 +104,7 @@ exports[`Contact form renders correctly 1`] = `
       </label>
       <label
         class="c2"
+        for="email"
       >
         <span
           class="c3"
@@ -109,6 +113,7 @@ exports[`Contact form renders correctly 1`] = `
         </span>
         <input
           class="c4"
+          id="email"
           name="email"
           placeholder="example@gmail.com"
           type="email"
@@ -117,6 +122,7 @@ exports[`Contact form renders correctly 1`] = `
       </label>
       <label
         class="c2"
+        for="message"
       >
         <span
           class="c3"
@@ -125,7 +131,8 @@ exports[`Contact form renders correctly 1`] = `
         </span>
         <textarea
           class="c5"
-          name="textarea"
+          id="message"
+          name="message"
           placeholder="type your message here"
         />
       </label>
