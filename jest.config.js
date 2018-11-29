@@ -1,17 +1,20 @@
 const { defaults } = require('jest-config');
 
 module.exports = {
-  setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js',
-  preset: 'jest-puppeteer',
+  setupTestFrameworkScriptFile: '<rootDir>/jest/jest.setup.js',
   testPathIgnorePatterns: [...defaults.testPathIgnorePatterns, '<rootDir>/.cache'],
+  transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   transform: {
-    '.(js)': 'babel-jest',
+    '.(js)': '<rootDir>/jest/jest-preprocess.js',
   },
-  testEnvironment: 'jsdom',
+  globals: {
+    __PATH_PREFIX__: '',
+  },
   testURL: 'http://localhost/',
+  setupFiles: ['<rootDir>/jest/loadershim.js'],
   moduleNameMapper: {
     '.+\\.(css)$': 'identity-obj-proxy',
-    '.+\\.(jpg|jpeg|png|webp|svg)$': '<rootDir>/__mocks__/empty-module.js',
+    '.+\\.(jpg|jpeg|png|webp|svg)$': '<rootDir>/__mocks__/fileMock.js',
   },
   testRegex: '\\.test\\.js',
   moduleFileExtensions: ['js', 'json'],
@@ -19,15 +22,10 @@ module.exports = {
     '!.eslintrc.js',
     '!jest.config.js',
     '!jest.setup.js',
-    '!next.config.js',
     '!.storybook/**',
-    '!.next/**',
     '!node_modules/**',
     '!coverage/**',
-    '!i18n/**',
     '!static/**',
-    '!theme/**',
-    '!pages/_app.js',
-    '!pages/_document.js',
+    '!src/theme/**',
   ],
 };
