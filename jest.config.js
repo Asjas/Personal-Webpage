@@ -1,18 +1,9 @@
+const { defaults } = require('jest-config');
+
 module.exports = {
   setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js',
-  testPathIgnorePatterns: [
-    '__snapshots__',
-    '<rootDir>/.next',
-    '<rootDir>/node_modules/*',
-    '<rootDir>/coverage/*',
-    '<rootDir>/.storybook/*',
-    '<rootDir>/static/*',
-    '<rootDir>/theme/*',
-    '<rootDir>/i18n/*',
-    '<rootDir>/jest-preprocess.js',
-    '<rootDir>/jest.config.js',
-    '<rootDir>/.eslintrc.js',
-  ],
+  preset: 'jest-puppeteer',
+  testPathIgnorePatterns: [...defaults.testPathIgnorePatterns, '<rootDir>/.cache'],
   transform: {
     '.(js)': 'babel-jest',
   },

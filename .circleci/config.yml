@@ -21,6 +21,10 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
 
       - run:
+          name: Workaround for GoogleChrome/puppeteer#290
+          command: "sh .circleci/setup_puppeteer.sh"
+
+      - run:
           name: Install Dependencies
           command: npm install
 
