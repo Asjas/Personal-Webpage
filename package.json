@@ -54,6 +54,7 @@
     "typography": "^0.16.17"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
     "@storybook/addon-a11y": "^4.0.9",
     "@storybook/addon-actions": "^4.0.9",
     "@storybook/addon-centered": "^4.0.8",
@@ -67,9 +68,11 @@
     "@storybook/addon-viewport": "^4.0.9",
     "@storybook/addons": "^4.0.9",
     "@storybook/react": "^4.0.9",
-    "babel-core": "^7.0.0-0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "babel-plugin-styled-components": "^1.9.1",
+    "babel-preset-gatsby": "^0.1.4",
     "eslint": "5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -86,7 +89,6 @@
     "jest-styled-components": "^6.3.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.2",
-    "puppeteer": "^1.10.0",
     "react-testing-library": "^5.3.1",
     "snyk": "^1.111.0",
     "storybook-addon-jsx": "^6.0.0",
