@@ -13,7 +13,7 @@ import StyledButton from '../Button';
 
 const ContactForm = () => (
   <Formik
-    initialValues={{ name: '', email: '', textarea: '' }}
+    initialValues={{ name: '', email: '', message: '' }}
     validate={values => {
       const errors = {};
 
@@ -27,8 +27,8 @@ const ContactForm = () => (
         errors.email = 'Invalid email address';
       }
 
-      if (!values.textarea) {
-        errors.textarea = 'Required!';
+      if (!values.message) {
+        errors.message = 'Required!';
       }
 
       return errors;
@@ -42,23 +42,24 @@ const ContactForm = () => (
   >
     {({ isSubmitting }) => (
       <StyledForm>
-        <Fieldset disabled={isSubmitting} aria-busy={isSubmitting}>
-          <Label>
+        <Fieldset data-testid="form-disabled" disabled={isSubmitting} aria-busy={isSubmitting}>
+          <Label htmlFor="name">
             <LabelText>Enter your name:</LabelText>
             <StyledErrorMessage name="name" component="span" />
-            <StyledField type="text" name="name" placeholder="full name" />
+            <StyledField id="name" type="text" name="name" placeholder="full name" />
           </Label>
-          <Label>
+          <Label htmlFor="email">
             <LabelText>Enter your email:</LabelText>
             <StyledErrorMessage name="email" component="span" />
-            <StyledField type="email" name="email" placeholder="example@gmail.com" />
+            <StyledField id="email" type="email" name="email" placeholder="example@gmail.com" />
           </Label>
-          <Label>
+          <Label htmlFor="message">
             <LabelText>Enter a message:</LabelText>
-            <StyledErrorMessage name="textarea" component="span" />
+            <StyledErrorMessage name="message" component="span" />
             <StyledTextArea
               component="textarea"
-              name="textarea"
+              id="message"
+              name="message"
               placeholder="type your message here"
             />
           </Label>

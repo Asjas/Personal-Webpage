@@ -2,7 +2,7 @@ const { defaults } = require('jest-config');
 
 module.exports = {
   setupTestFrameworkScriptFile: '<rootDir>/jest/jest.setup.js',
-  testPathIgnorePatterns: [...defaults.testPathIgnorePatterns, '<rootDir>/.cache'],
+  testPathIgnorePatterns: [...defaults.testPathIgnorePatterns, '__snapshots__', '<rootDir>/.cache'],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   transform: {
     '.(js)': '<rootDir>/jest/jest-preprocess.js',
@@ -22,6 +22,7 @@ module.exports = {
     '!.eslintrc.js',
     '!jest.config.js',
     '!jest.setup.js',
+    '!__snapshots__/**',
     '!.storybook/**',
     '!node_modules/**',
     '!coverage/**',
