@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  extends: ["airbnb"],
   settings: {
     "import/core-modules": ["gatsby"]
   },
@@ -94,20 +94,6 @@ module.exports = {
         allowTemplateLiterals: true
       }
     ],
-    "prettier/prettier": [
-      "error",
-      {
-        trailingComma: "all",
-        singleQuote: true,
-        printWidth: 100,
-        semi: true,
-        bracketSpacing: true,
-        jsxBracketSameLine: false,
-        arrowParens: "avoid",
-        useTabs: false,
-        tabWidth: 2
-      }
-    ],
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/anchor-is-valid": [
       "warn",
@@ -115,6 +101,5 @@ module.exports = {
         aspects: ["invalidHref"]
       }
     ]
-  },
-  plugins: ["prettier"]
+  }
 };
