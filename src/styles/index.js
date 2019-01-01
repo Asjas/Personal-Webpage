@@ -2,28 +2,14 @@ import styled from 'styled-components';
 import { media } from '../utils/media';
 
 export const Container = styled.div`
-  <<<<<<<HEAD
+  align-items: center;
   display: flex;
+  height: 100vh;
+  justify-content: center;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
-
-export const Heading = styled.h1`
-  font-size: ${props => props.theme.heading2};
-  color: ${props => props.theme.maroon};
-  width: 60%;
-  word-wrap: wrap;
-  text-align: center;
-  =======width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const Paragraph = styled.p`
   font-size: ${props => props.theme.heading3};
->>>>>>> feat/move-to-nextjs
+  color: ${props => props.theme.black};
 `;
