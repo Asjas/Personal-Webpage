@@ -1,8 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import setupLogRocket from './utils/logrocket';
-
-setupLogRocket();
 
 export default class HTML extends React.Component {
   render() {

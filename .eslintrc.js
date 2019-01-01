@@ -21,6 +21,7 @@ module.exports = {
     'no-debugger': 0,
     'no-alert': 0,
     'prefer-arrow-callback': 0,
+    'arrow-parens': 0,
     'no-unused-vars': [
       1,
       {
