@@ -14,6 +14,7 @@ const theme = {
   red: '#FF0000',
   maroon: '#D2006B',
   purple: '#3E13AF',
+  pink: 'pink',
   black: '#222',
   offWhite: '#EDEDED',
   gold: '#FFD700',
