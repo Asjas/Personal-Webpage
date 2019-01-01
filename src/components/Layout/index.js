@@ -5,6 +5,10 @@ import { theme, GlobalStyles } from '../../theme';
 import { Container, Sidebar, Main } from './styles';
 import Navbar from '../Navbar';
 
+import setupLogRocket from '../../utils/logrocket';
+
+setupLogRocket();
+
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>

@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import setupLogRocket from './utils/logrocket';
+
+setupLogRocket();
 
 export default class HTML extends React.Component {
   render() {
@@ -22,7 +25,6 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script src="../static/fullstory.js" type="text/javascript" />
         </body>
       </html>
     );
