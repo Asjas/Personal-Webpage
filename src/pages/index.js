@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Heading } from '../styles/index';
+import { Container, Paragraph } from '../styles/index';
 import Layout from '../components/Layout';
 
 const IndexPage = () => (
   <Layout>
     <Container>
-      <Heading>This is the soon to be release of my new website</Heading>
+      <Paragraph>Soon to be my new webpage</Paragraph>
     </Container>
   </Layout>
 );

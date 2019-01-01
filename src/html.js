@@ -11,13 +11,16 @@ export default class HTML extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="shortcut icon" href="../static/favicon.png" />
           <link rel="stylesheet" type="text/css" href="../static/normalize.min.css" />
-          <link rel="stylesheet" type="text/css" href="../static/nprogress.min.css" />
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
-          <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+          <div
+            key="body"
+            id="___gatsby"
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
+          />
           {this.props.postBodyComponents}
           <script src="../static/fullstory.js" type="text/javascript" />
         </body>

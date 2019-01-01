@@ -4,6 +4,8 @@ module.exports = {
     siteUrl: 'https://asjas.co.za',
     description: 'This is the Personal Portfolio of A-J Roos.',
     googleSiteVerification: '5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0',
+    twitterUsername: '_asjas',
+    image: 'link',
     keywords:
       'JavaScript, React.js, Node.js, Web Development, Web Developer, Bloemfontein, South Africa',
   },

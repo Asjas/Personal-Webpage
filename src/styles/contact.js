@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { media } from '../utils/media';
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
