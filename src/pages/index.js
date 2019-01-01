@@ -1,13 +1,13 @@
 import React from 'react';
-import { Container } from '../styles/index';
+import { Container, Paragraph } from '../styles/index';
 import Layout from '../components/Layout';
 
 const IndexPage = () => (
-  <Container>
-    <Layout>
-      <p>Homepage</p>
-    </Layout>
-  </Container>
+  <Layout>
+    <Container>
+      <Paragraph>Soon to be my new webpage</Paragraph>
+    </Container>
+  </Layout>
 );
 
 export default IndexPage;
