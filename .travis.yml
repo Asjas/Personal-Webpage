@@ -1,0 +1,14 @@
+dist: trusty
+language: node_js
+
+node_js:
+  - 'lts/*'
+  - '9'
+
+cache: npm
+
+sudo: false
+
+script:
+  - 'npm run lint'
+  - 'npm run build'
