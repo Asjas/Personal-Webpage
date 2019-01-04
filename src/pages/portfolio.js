@@ -11,6 +11,7 @@ const PortfolioPage = ({
 }) => (
   <Layout>
     <Container>
+      {console.log(edges)}
       <Paragraph>To be added</Paragraph>
     </Container>
   </Layout>
@@ -29,7 +30,7 @@ PortfolioPage.propTypes = {
               website_url: PropTypes.object.isRequired,
               github_url: PropTypes.object.isRequired,
             }).isRequired,
-            slugs: PropTypes.array.isRequired,
+            slugs: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
           }).isRequired,
         }).isRequired,
       ).isRequired,
