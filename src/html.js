@@ -10,7 +10,11 @@ export default class HTML extends React.Component {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="shortcut icon" href="../static/favicon.png" />
-          <link rel="stylesheet" type="text/css" href="../static/normalize.min.css" />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          />
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
           {this.props.headComponents}
         </head>
