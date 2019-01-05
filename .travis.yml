@@ -1,4 +1,4 @@
-dist: trusty
+dist: precise
 language: node_js
 
 node_js:
@@ -6,6 +6,9 @@ node_js:
   - 'lts/*'
 
 cache: npm
+
+before_script:
+  - cd client
 
 script:
   - 'npm run lint'
