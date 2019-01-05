@@ -1,13 +1,16 @@
-dist: precise
+dist: trusty
 language: node_js
 
 node_js:
   - '9'
   - 'lts/*'
+  - node
 
-cache: npm
+cache:
+  directories:
+    - client/node_modules
 
-before_script:
+before_install:
   - cd client
 
 script:
