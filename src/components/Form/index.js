@@ -33,15 +33,14 @@ const ContactForm = () => (
 
       return errors;
     }}
-    onSubmit={(values, { setSubmitting }) => {
+    onSubmit={(values, { resetForm }) => {
       setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-        setSubmitting(false);
-      }, 400);
+        resetForm();
+      }, 600);
     }}
   >
     {({ isSubmitting }) => (
-      <StyledForm>
+      <StyledForm name="contact-form" method="POST" netlify>
         <Fieldset
           data-testid="form-disabled"
           disabled={isSubmitting}
