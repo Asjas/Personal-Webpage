@@ -4,14 +4,9 @@ language: node_js
 node_js:
   - '9'
   - 'lts/*'
-  - node
+  - 'node'
 
-cache:
-  directories:
-    - client/node_modules
-
-before_install:
-  - cd client
+cache: npm
 
 script:
   - 'npm run lint'
