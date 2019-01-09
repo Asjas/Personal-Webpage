@@ -52,17 +52,6 @@ module.exports = {
         optimizeId: 'GTM-NGT5XDP',
       },
     },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'A-J Roos | Web Developer',
-        short_name: 'Portfolio',
-        start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
-        display: 'minimal-ui',
-      },
-    },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
   ],
 };
