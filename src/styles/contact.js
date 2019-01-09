@@ -44,12 +44,12 @@ export const Paragraph = styled.p`
   width: 90%;
 
   a {
-    color: ${props => props.theme.purple};
-    text-decoration-color: ${props => props.theme.purpleAnchorLight};
+    color: ${props => props.theme.maroon};
+    text-decoration-color: ${props => props.theme.maroon};
 
     &:hover,
     &:focus {
-      text-decoration-color: ${props => props.theme.purpleAnchor};
+      text-decoration-color: ${props => props.theme.maroon};
     }
   }
 

@@ -1,16 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Form, Field, ErrorMessage } from 'formik';
 import { media } from '../../utils/media';
-
-const loading = keyframes`
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 100% 100%;
-  }
-`;
 
 export const StyledForm = styled(Form)`
   margin: 0 auto;
@@ -38,8 +28,9 @@ export const Label = styled.label`
 
 export const LabelText = styled.span`
   color: ${props => props.theme.black};
-  font-size: ${props => props.theme.fontMd};
-  letter-spacing: 0.02rem;
+  font-size: ${props => props.theme.fontL};
+  font-family: Contender;
+  letter-spacing: 0.04rem;
   margin-bottom: 5px;
 `;
 
@@ -47,7 +38,8 @@ export const StyledField = styled(Field)`
   border-radius: 4px;
   border: ${props => props.theme.blackBorderMd};
   color: ${props => props.theme.black};
-  font-size: ${props => props.theme.fontMd};
+  font-family: Contender;
+  font-size: ${props => props.theme.fontL};
   grid-column: 1/-1;
   grid-row: 2;
   height: 50px;
@@ -70,10 +62,11 @@ export const StyledTextArea = styled(Field)`
   border-radius: 4px;
   border: ${props => props.theme.blackBorderMd};
   color: ${props => props.theme.black};
-  font-size: ${props => props.theme.fontMd};
+  font-family: Contender;
+  font-size: ${props => props.theme.fontL};
   grid-column: 1/-1;
   grid-row: 2;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.04rem;
   margin: 0 0 30px 0;
   min-height: 120px;
   outline: none;
@@ -92,8 +85,9 @@ export const StyledTextArea = styled(Field)`
 
 export const StyledErrorMessage = styled(ErrorMessage)`
   color: ${props => props.theme.maroon};
-  font-size: ${props => props.theme.fontMd};
-  letter-spacing: 0.03rem;
+  font-size: ${props => props.theme.fontL};
+  font-family: Contender;
+  letter-spacing: 0.04rem;
   margin-bottom: 5px;
   justify-self: end;
 `;
