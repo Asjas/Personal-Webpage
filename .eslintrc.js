@@ -21,6 +21,10 @@ module.exports = {
     'no-alert': 0,
     'prefer-arrow-callback': 0,
     'object-curly-newline': 0,
+    'react/require-default-props': 0,
+    'implicit-arrow-linebreak': 0,
+    'function-paren-newline': 0,
+    'react/jsx-one-expression-per-line': 0,
     'arrow-parens': 0,
     'no-unused-vars': [
       1,
