@@ -1,13 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'A-J Roos | Web Developer',
+    title: 'A-J Roos | Home',
     siteUrl: 'https://asjas.co.za',
-    description: 'This is the Personal Portfolio of A-J Roos.',
+    description:
+      'This is my personal website that includes my portfolio, blogs and contact information. I am Front-End Web Developer based in Bloemfontein, South Africa. I enjoy working with Front-End Technologies such as React, JavaScript, Gatsby.js and CSS-in-JS.',
     googleSiteVerification: '5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0',
     twitterUsername: '_asjas',
-    image: 'link',
-    keywords:
-      'JavaScript, React.js, Node.js, Web Development, Web Developer, Bloemfontein, South Africa',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -44,32 +42,6 @@ module.exports = {
           'MC5Xd3RHTXlNQUFDVUF4UmZu.akYjFnIY77-977-9Be-_ve-_ve-_vX7vv73vv73vv70-77-977-9Ou-_vUDvv73vv73vv71Tc0xp77-977-977-9',
       },
     },
-    {
-      resolve: 'gatsby-plugin-netlify',
-      options: {
-        headers: {},
-        allPageHeaders: [
-          'Content-Security-Policy: frame-ancestors asjas.co.za',
-          'Referrer-Policy: strict-origin',
-          'Strict-Transport-Security: max-age=31536000',
-          'X-Content-Type-Options: nosniff',
-          'X-Frame-Options: DENY',
-          'X-XSS-Protection: 1; mode=block',
-          'proxy_hide_header: X-Powered-By',
-        ],
-        mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
-        mergeCachingHeaders: true,
-        generateMatchPathRewrites: true,
-      },
-    },
-    'gatsby-plugin-netlify-cache',
-    // {
-    //   resolve: 'gatsby-plugin-google-fonts',
-    //   options: {
-    //     fonts: ['Playfair Display', 'Montserrat'],
-    //   },
-    // },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
