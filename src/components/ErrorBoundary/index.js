@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import hub from '../../utils/sentry';
 
-class ErrorBoundary extends Component {
+class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     hub.withScope(scope => {
       Object.keys(errorInfo).forEach(key => {
@@ -17,5 +18,9 @@ class ErrorBoundary extends Component {
     return children;
   }
 }
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
 export default ErrorBoundary;
