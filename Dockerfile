@@ -33,7 +33,6 @@ WORKDIR /etc/cloudflared
 RUN wget -O- -q https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz | tar xz
 COPY docker/cert.pem /etc/cloudflared
 COPY docker/config.yaml /etc/cloudflared
-RUN /etc/cloudflared/cloudflared install
 
 # Clone website from github
 WORKDIR /www
