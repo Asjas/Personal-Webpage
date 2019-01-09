@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import Fourohfour from '../pages/404';
+import Fourohfour from '../../pages/404';
 
 describe('Fourohfour', () => {
   it('renders correctly', () => {

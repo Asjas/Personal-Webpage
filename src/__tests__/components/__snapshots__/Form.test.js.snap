@@ -25,15 +25,17 @@ exports[`Contact form renders correctly 1`] = `
 }
 
 .c3 {
-  -webkit-letter-spacing: 0.02rem;
-  -moz-letter-spacing: 0.02rem;
-  -ms-letter-spacing: 0.02rem;
-  letter-spacing: 0.02rem;
+  font-family: Contender;
+  -webkit-letter-spacing: 0.04rem;
+  -moz-letter-spacing: 0.04rem;
+  -ms-letter-spacing: 0.04rem;
+  letter-spacing: 0.04rem;
   margin-bottom: 5px;
 }
 
 .c4 {
   border-radius: 4px;
+  font-family: Contender;
   grid-column: 1/-1;
   grid-row: 2;
   height: 50px;
@@ -52,12 +54,13 @@ exports[`Contact form renders correctly 1`] = `
 
 .c5 {
   border-radius: 4px;
+  font-family: Contender;
   grid-column: 1/-1;
   grid-row: 2;
-  -webkit-letter-spacing: 0.02rem;
-  -moz-letter-spacing: 0.02rem;
-  -ms-letter-spacing: 0.02rem;
-  letter-spacing: 0.02rem;
+  -webkit-letter-spacing: 0.04rem;
+  -moz-letter-spacing: 0.04rem;
+  -ms-letter-spacing: 0.04rem;
+  letter-spacing: 0.04rem;
   margin: 0 0 30px 0;
   min-height: 120px;
   outline: none;
@@ -70,8 +73,10 @@ exports[`Contact form renders correctly 1`] = `
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
+  font-family: Contender;
   outline: 0;
-  padding: 14px;
+  padding: 7px;
+  text-transform: capitalize;
   width: 100%;
 }
 
