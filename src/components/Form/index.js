@@ -40,7 +40,7 @@ const ContactForm = () => (
     }}
   >
     {({ isSubmitting }) => (
-      <StyledForm name="contact-form" method="POST" netlify>
+      <StyledForm>
         <Fieldset
           data-testid="form-disabled"
           disabled={isSubmitting}

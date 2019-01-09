@@ -5,6 +5,7 @@ import { theme, GlobalStyles } from '../../theme';
 import { Container, Main } from './styles';
 import ErrorBoundary from '../ErrorBoundary';
 import Sidebar from '../Sidebar';
+import '../../styles/global.css';
 
 const Layout = ({ children }) => (
   <ErrorBoundary>
@@ -21,7 +22,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.array.isRequired,
 };
 
 export default Layout;

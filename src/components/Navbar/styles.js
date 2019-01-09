@@ -18,12 +18,13 @@ export const Section = styled.section`
 
 export const StyledLink = styled(CustomLink)`
   color: ${props => props.theme.offWhite};
-  font-size: ${props => props.theme.heading4};
-  line-height: ${props => props.theme.heading4};
+  font-size: ${props => props.theme.fontXL};
+  font-family: 'Contender';
+  line-height: ${props => props.theme.fontXL};
   border-top: ${props => props.theme.lightGreyBorderMd};
   border-bottom: ${props => props.theme.lightGreyBorderMd};
   cursor: pointer;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.04rem;
   padding: 20px 0;
   text-align: center;
   text-decoration: none;

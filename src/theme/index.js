@@ -5,6 +5,7 @@ const theme = {
   heading2: '4.5rem',
   heading3: '3.2rem',
   heading4: '2.2rem',
+  fontXL: '3rem',
   fontL: '1.7rem',
   fontMd: '1.6rem',
   fontSm: '1.5rem',
@@ -44,5 +45,4 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
 `;
-
 export { theme, GlobalStyles };
