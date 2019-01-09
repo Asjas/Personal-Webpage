@@ -6,16 +6,13 @@ const theme = {
   heading3: '3.2rem',
   heading4: '2.2rem',
   fontXL: '3rem',
-  fontL: '1.7rem',
-  fontMd: '1.6rem',
+  fontL: '2rem',
+  fontMd: '1.7rem',
   fontSm: '1.5rem',
   svgL: '5.5rem',
   svgMd: '5rem',
   svgM: '4.5rem',
-  red: '#FF0000',
   maroon: '#D2006B',
-  purple: '#3E13AF',
-  pink: 'pink',
   black: '#222',
   offWhite: '#EDEDED',
   gold: '#FFD700',
@@ -29,8 +26,6 @@ const theme = {
   blackBorderXL: '4px solid #393939',
   lightGreyBorderSm: '1px solid rgba(255, 255, 255, 0.04)',
   lightGreyBorderMd: '2px solid rgba(255, 255, 255, 0.04)',
-  purpleAnchorLight: 'rgba(24.3, 7.5, 68.6, 0.35)',
-  purpleAnchor: ' rgba(24.3, 7.5, 68.6, 1)',
 };
 
 const GlobalStyles = createGlobalStyle`
