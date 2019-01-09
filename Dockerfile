@@ -26,6 +26,7 @@ COPY docker/supervisord.conf /etc/supervisord.conf
 
 # Nginx
 COPY docker/nginx.conf /etc/nginx/nginx.conf
+RUN mkdir -p /data/nginx/cache
 
 # Cloudflared Argo Tunnel
 WORKDIR /etc/cloudflared
