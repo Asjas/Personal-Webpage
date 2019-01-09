@@ -1,44 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Container, Paragraph } from '../styles/portfolio';
+import SEO from '../components/SEO';
 import Layout from '../components/Layout';
+import { Container, Paragraph } from '../styles/portfolio';
 
-const PortfolioPage = ({
-  data: {
-    allPrismicProjects: { edges },
-  },
-}) => (
-  <Layout>
-    <Container>
-      {console.log(edges)}
-      <Paragraph>To be added</Paragraph>
-    </Container>
-  </Layout>
-);
-
-PortfolioPage.propTypes = {
-  data: PropTypes.shape({
-    allPrismicProjects: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            data: PropTypes.shape({
-              title: PropTypes.object.isRequired,
-              description: PropTypes.object.isRequired,
-              image: PropTypes.object.isRequired,
-              website_url: PropTypes.object.isRequired,
-              github_url: PropTypes.object.isRequired,
-            }).isRequired,
-            slugs: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-          }).isRequired,
-        }).isRequired,
-      ).isRequired,
-    }).isRequired,
-  }).isRequired,
-};
-
-/* eslint no-undef: "off" */
 export const GET_PRISMIC_PROJECTS = graphql`
   query GET_PRISMIC_PROJECTS {
     allPrismicProjects {
@@ -73,5 +39,40 @@ export const GET_PRISMIC_PROJECTS = graphql`
     }
   }
 `;
+
+const PortfolioPage = ({
+  data: {
+    allPrismicProjects: { edges },
+  },
+}) => (
+  <Layout>
+    <SEO title="A-J Roos | Portfolio" />
+    <Container>
+      {console.log(edges)}
+      <Paragraph>To be added</Paragraph>
+    </Container>
+  </Layout>
+);
+
+PortfolioPage.propTypes = {
+  data: PropTypes.shape({
+    allPrismicProjects: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            data: PropTypes.shape({
+              title: PropTypes.object.isRequired,
+              description: PropTypes.object.isRequired,
+              image: PropTypes.object.isRequired,
+              website_url: PropTypes.object.isRequired,
+              github_url: PropTypes.object.isRequired,
+            }).isRequired,
+            slugs: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+          }).isRequired,
+        }).isRequired,
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default PortfolioPage;

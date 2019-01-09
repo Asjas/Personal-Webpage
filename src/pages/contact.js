@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container, Heading, StyledSpan, Paragraph } from '../styles/contact';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import ContactForm from '../components/Form';
+import { Container, Heading, StyledSpan, Paragraph } from '../styles/contact';
 
 const ContactPage = () => (
   <Layout>
+    <SEO title="A-J Roos | Contact" />
     <Container>
       <section>
         <Heading>
