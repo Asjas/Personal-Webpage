@@ -5,7 +5,10 @@ import { theme, GlobalStyles } from '../../theme';
 import { Container, Main } from './styles';
 import ErrorBoundary from '../ErrorBoundary';
 import Sidebar from '../Sidebar';
+import setupLogRocket from '../../utils/logrocket';
 import '../../styles/global.css';
+
+setupLogRocket();
 
 const Layout = ({ children }) => (
   <ErrorBoundary>
