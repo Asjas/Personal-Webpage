@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import setupLogRocket from './utils/logrocket';
+
+setupLogRocket();
 
 export default class HTML extends React.Component {
   render() {
@@ -9,7 +12,7 @@ export default class HTML extends React.Component {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="shortcut icon" href="../static/favicon.png" />
+          <link rel="shortcut icon" href="../favicon.ico" />
           <link
             rel="stylesheet"
             type="text/css"
