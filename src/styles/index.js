@@ -10,6 +10,6 @@ export const Container = styled.div`
 `;
 
 export const Paragraph = styled.p`
-  font-size: ${props => props.theme.heading3};
   color: ${props => props.theme.black};
+  font-size: ${props => props.theme.heading3};
 `;

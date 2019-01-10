@@ -44,6 +44,7 @@ const seo = {
   title: 'A-J Roos | Portfolio',
   description:
     'This is a collection of some of my Web Development projects. My complete collection of projects can be found on my Github Page at https://github.com/asjas.',
+  siteUrl: 'https://asjas.co.za/portfolio',
 };
 
 const PortfolioPage = ({
@@ -52,7 +53,7 @@ const PortfolioPage = ({
   },
 }) => (
   <Layout>
-    <SEO title="A-J Roos | Portfolio" />
+    <SEO title={seo.title} description={seo.description} siteUrl={seo.siteUrl} />
     <Container>
       {console.log(edges)}
       <Paragraph>To be added</Paragraph>

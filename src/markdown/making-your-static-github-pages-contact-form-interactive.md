@@ -1,5 +1,5 @@
 ---
-title: Adding interactive forms to your static Github pages using formspree.io
+title: Making your static Github Pages contact form interactive with Formspree.io
 date: '18-10-2017'
 ---
 

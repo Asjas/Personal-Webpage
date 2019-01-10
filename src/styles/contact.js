@@ -17,23 +17,24 @@ export const Heading = styled.h1`
   color: ${props => props.theme.maroon};
   font-family: Contender;
   font-size: ${props => props.theme.heading1};
-  font-weight: 500;
-  width: 90%;
+  font-weight: 300;
+  margin: 0;
   padding: 0 0 0 36px;
+  width: 90%;
 
   ${media.laptopL`
     font-size: ${props => props.theme.heading1};
-    padding: 0;
     margin: 0 auto;
+    padding: 0;
     width: 500px;
   `};
 `;
 
 export const StyledSpan = styled.span`
   color: ${props => props.theme.black};
-  font-size: ${props => props.theme.heading2};
   font-family: Contender;
-  font-weight: 500;
+  font-size: ${props => props.theme.heading2};
+  font-weight: 300;
 
   ${media.laptopL`
     font-size: ${props => props.theme.heading2};
@@ -52,11 +53,12 @@ export const Paragraph = styled.p`
     color: ${props => props.theme.maroon};
     font-family: Abberwick;
     font-size: ${props => props.theme.fontMd};
-    text-decoration-color: ${props => props.theme.maroon};
+    text-decoration: none;
 
     &:hover,
     &:focus {
-      text-decoration-color: ${props => props.theme.black};
+      color: ${props => props.theme.maroon};
+      text-decoration: underline overline;
     }
   }
 

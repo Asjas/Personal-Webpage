@@ -9,7 +9,7 @@ const GET_SEO_METADATA = graphql`
       siteMetadata {
         defaultTitle: title
         defaultDescription: description
-        siteUrl
+        defaultUrl: siteUrl
         googleSiteVerification
         twitterUsername
       }
@@ -17,7 +17,7 @@ const GET_SEO_METADATA = graphql`
   }
 `;
 
-const SEO = ({ title, description }) => (
+const SEO = ({ title, description, siteUrl }) => (
   <StaticQuery
     query={GET_SEO_METADATA}
     render={({
@@ -25,7 +25,7 @@ const SEO = ({ title, description }) => (
         siteMetadata: {
           defaultTitle,
           defaultDescription,
-          siteUrl,
+          defaultUrl,
           googleSiteVerification,
           twitterUsername,
         },
@@ -34,7 +34,7 @@ const SEO = ({ title, description }) => (
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        siteUrl,
+        siteUrl: siteUrl || defaultUrl,
         googleSiteVerification,
         twitterUsername,
       };
@@ -68,14 +68,16 @@ const SEO = ({ title, description }) => (
   />
 );
 
-export default SEO;
-
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  siteUrl: PropTypes.string,
 };
 
 SEO.defaultProps = {
   title: 'A-J Roos | Personal Website',
   description: null,
+  siteUrl: 'https://asjas.co.za/',
 };
+
+export default SEO;

@@ -8,11 +8,12 @@ const seo = {
   title: 'A-J Roos | Contact',
   description:
     'Do you have an interesting project or opportunity to discuss with me? Do you have a random question that you want to ask me? Feel free to use the contact details or contact form provided to get in touch with me.',
+  siteUrl: 'https://asjas.co.za/contact',
 };
 
 const ContactPage = () => (
   <Layout>
-    <SEO title={seo.title} description={seo.description} />
+    <SEO title={seo.title} description={seo.description} siteUrl={seo.siteUrl} />
     <Container>
       <section>
         <Heading>

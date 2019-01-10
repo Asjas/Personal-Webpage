@@ -39,7 +39,7 @@ export const StyledField = styled(Field)`
   border: ${props => props.theme.blackBorderMd};
   color: ${props => props.theme.black};
   font-family: Abberwick;
-  font-size: ${props => props.theme.fontMd};
+  font-size: ${props => props.theme.fontSm};
   grid-column: 1/-1;
   grid-row: 2;
   height: 50px;
@@ -63,7 +63,7 @@ export const StyledTextArea = styled(Field)`
   border: ${props => props.theme.blackBorderMd};
   color: ${props => props.theme.black};
   font-family: Abberwick;
-  font-size: ${props => props.theme.fontMd};
+  font-size: ${props => props.theme.fontSm};
   grid-column: 1/-1;
   grid-row: 2;
   letter-spacing: 0.04rem;
