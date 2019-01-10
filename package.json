@@ -31,10 +31,12 @@
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-sitemap": "^2.0.4",
     "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-plugin-typography": "^2.2.5",
     "gatsby-remark-autolink-headers": "^2.0.12",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-remark-responsive-iframe": "^2.0.8",
+    "gatsby-remark-social-cards": "^0.4.0",
     "gatsby-source-filesystem": "^2.0.13",
     "gatsby-source-prismic": "^2.2.0",
     "gatsby-transformer-remark": "^2.2.0",
@@ -48,7 +50,10 @@
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-transition-group": "^2.5.2",
-    "styled-components": "^4.1.3"
+    "react-typography": "^0.16.18",
+    "styled-components": "^4.1.3",
+    "typography": "^0.16.18",
+    "typography-breakpoint-constants": "^0.16.18"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

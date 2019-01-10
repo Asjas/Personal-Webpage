@@ -4,7 +4,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import { Container, Heading } from '../styles/post';
+import { Container } from '../styles/post';
 
 export const GET_POST = graphql`
   query GET_POST($slug: String!) {
@@ -38,7 +38,7 @@ const Post = ({ data }) => {
     <Layout>
       <SEO {...seo} />
       <Container>
-        <Heading>{seo.title}</Heading>
+        <h1>{seo.title}</h1>
         <MDXRenderer>{post.code.body}</MDXRenderer>
       </Container>
     </Layout>

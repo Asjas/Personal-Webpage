@@ -1,17 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import {
-  Container,
-  Post,
-  StyledLink,
-  Heading,
-  Date,
-  ReadingTime,
-  Paragraph,
-} from '../styles/blog';
+import { Container, Post, StyledLink } from '../styles/blog';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
@@ -48,11 +41,11 @@ const BlogPage = ({ data }) => (
       {data.allMdx.edges.map(({ node }) => (
         <Post key={node.id}>
           <StyledLink to={`/blog${node.fields.slug}`}>
-            <Heading>{node.frontmatter.title}</Heading>
+            <h2>{node.frontmatter.title}</h2>
           </StyledLink>
-          <Date>{node.frontmatter.date}</Date>
-          <ReadingTime>Time to read: {node.timeToRead} minutes</ReadingTime>
-          <Paragraph>{node.excerpt}</Paragraph>
+          <span>{node.frontmatter.date}</span>
+          <span>Time to read: {node.timeToRead} min</span>
+          <p>{node.excerpt}</p>
         </Post>
       ))}
     </Container>

@@ -9,6 +9,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-remark-social-cards',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     {
@@ -20,10 +21,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-nprogress',
+      resolve: 'gatsby-plugin-typography',
       options: {
-        color: '#FFD700',
-        showSpinner: false,
+        pathToConfigModule: 'src/utils/typography',
+        omitGoogleFont: true,
       },
     },
     {

@@ -1,5 +1,5 @@
 const theme = {
-  heading1: '6.0rem',
+  heading1: '5.5rem',
   heading2: '4.5rem',
   heading3: '3.2rem',
   heading4: '2.2rem',
