@@ -4,9 +4,10 @@ import { media } from '../utils/media';
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 `;
 
 export const Paragraph = styled.p`
