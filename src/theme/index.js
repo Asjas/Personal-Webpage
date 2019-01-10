@@ -1,5 +1,3 @@
-import { createGlobalStyle } from 'styled-components';
-
 const theme = {
   heading1: '6.0rem',
   heading2: '4.5rem',
@@ -28,16 +26,4 @@ const theme = {
   lightGreyBorderMd: '2px solid rgba(255, 255, 255, 0.04)',
 };
 
-const GlobalStyles = createGlobalStyle`
-  html,
-  body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-  }
-
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-`;
-export { theme, GlobalStyles };
+export { theme };

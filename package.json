@@ -28,7 +28,6 @@
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-sitemap": "^2.0.4",
     "gatsby-plugin-styled-components": "^3.0.4",
-    "gatsby-plugin-typography": "^2.2.5",
     "gatsby-source-filesystem": "^2.0.13",
     "gatsby-source-prismic": "^2.2.0",
     "gatsby-transformer-sharp": "^2.1.10",
@@ -40,9 +39,7 @@
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-transition-group": "^2.5.2",
-    "react-typography": "^0.16.18",
-    "styled-components": "^4.1.3",
-    "typography": "^0.16.18"
+    "styled-components": "^4.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
