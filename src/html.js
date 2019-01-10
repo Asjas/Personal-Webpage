@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import setupLogRocket from './utils/logrocket';
 
-setupLogRocket();
-
-export default class HTML extends React.Component {
+class HTML extends React.Component {
   render() {
     return (
       <html lang="en" {...this.props.htmlAttributes}>
@@ -46,3 +43,5 @@ HTML.propTypes = {
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
 };
+
+export default HTML;
