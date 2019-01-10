@@ -22,7 +22,7 @@ export const GET_PRISMIC_PROJECTS = graphql`
               localFile {
                 childImageSharp {
                   fluid(maxWidth: 1350, quality: 92) {
-                    ...GatsbyImageSharpFluid_tracedSVG
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
