@@ -1,6 +1,5 @@
 ---
 title: The Programmers Oath
-slug: the-programmers-oath
 date: 30-10-2017
 ---
 
