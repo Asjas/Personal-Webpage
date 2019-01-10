@@ -16,7 +16,7 @@ const ContactPage = () => (
         </Heading>
         <Paragraph>
           Feel free to get in touch with me. I am always open to discussing new projects
-          or opportunities to be a part of your visions.
+          or opportunities.
         </Paragraph>
         <Paragraph>
           You can also send me an <a href="mailto:asjas@outlook.com">e-mail</a> or give me

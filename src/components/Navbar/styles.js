@@ -19,7 +19,7 @@ export const Section = styled.section`
 export const StyledLink = styled(CustomLink)`
   color: ${props => props.theme.offWhite};
   font-size: ${props => props.theme.fontXL};
-  font-family: 'Contender';
+  font-family: Contender;
   line-height: ${props => props.theme.fontXL};
   border-top: ${props => props.theme.lightGreyBorderMd};
   border-bottom: ${props => props.theme.lightGreyBorderMd};

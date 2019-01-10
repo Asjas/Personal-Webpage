@@ -28,8 +28,8 @@ export const Label = styled.label`
 
 export const LabelText = styled.span`
   color: ${props => props.theme.black};
-  font-size: ${props => props.theme.fontL};
-  font-family: Contender;
+  font-size: ${props => props.theme.fontMd};
+  font-family: Abberwick;
   letter-spacing: 0.04rem;
   margin-bottom: 5px;
 `;
@@ -38,8 +38,8 @@ export const StyledField = styled(Field)`
   border-radius: 4px;
   border: ${props => props.theme.blackBorderMd};
   color: ${props => props.theme.black};
-  font-family: Contender;
-  font-size: ${props => props.theme.fontL};
+  font-family: Abberwick;
+  font-size: ${props => props.theme.fontMd};
   grid-column: 1/-1;
   grid-row: 2;
   height: 50px;
@@ -62,8 +62,8 @@ export const StyledTextArea = styled(Field)`
   border-radius: 4px;
   border: ${props => props.theme.blackBorderMd};
   color: ${props => props.theme.black};
-  font-family: Contender;
-  font-size: ${props => props.theme.fontL};
+  font-family: Abberwick;
+  font-size: ${props => props.theme.fontMd};
   grid-column: 1/-1;
   grid-row: 2;
   letter-spacing: 0.04rem;
@@ -85,9 +85,9 @@ export const StyledTextArea = styled(Field)`
 
 export const StyledErrorMessage = styled(ErrorMessage)`
   color: ${props => props.theme.maroon};
-  font-size: ${props => props.theme.fontL};
-  font-family: Contender;
-  letter-spacing: 0.04rem;
+  font-size: ${props => props.theme.fontMd};
+  font-family: Abberwick;
+  letter-spacing: 0.03rem;
   margin-bottom: 5px;
   justify-self: end;
 `;
