@@ -19,9 +19,11 @@ export const Heading = styled.h1`
   font-size: ${props => props.theme.heading1};
   font-weight: 500;
   width: 90%;
+  padding: 0 0 0 36px;
 
   ${media.laptopL`
     font-size: ${props => props.theme.heading1};
+    padding: 0;
     margin: 0 auto;
     width: 500px;
   `};
@@ -54,7 +56,7 @@ export const Paragraph = styled.p`
 
     &:hover,
     &:focus {
-      text-decoration-color: ${props => props.theme.maroon};
+      text-decoration-color: ${props => props.theme.black};
     }
   }
 

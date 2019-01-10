@@ -40,6 +40,12 @@ export const GET_PRISMIC_PROJECTS = graphql`
   }
 `;
 
+const seo = {
+  title: 'A-J Roos | Portfolio',
+  description:
+    'This is a collection of some of my Web Development projects. My complete collection of projects can be found on my Github Page at https://github.com/asjas.',
+};
+
 const PortfolioPage = ({
   data: {
     allPrismicProjects: { edges },

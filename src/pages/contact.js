@@ -4,9 +4,15 @@ import SEO from '../components/SEO';
 import ContactForm from '../components/Form';
 import { Container, Heading, StyledSpan, Paragraph } from '../styles/contact';
 
+const seo = {
+  title: 'A-J Roos | Contact',
+  description:
+    'Do you have an interesting project or opportunity to discuss with me? Do you have a random question that you want to ask me? Feel free to use the contact details or contact form provided to get in touch with me.',
+};
+
 const ContactPage = () => (
   <Layout>
-    <SEO title="A-J Roos | Contact" />
+    <SEO title={seo.title} description={seo.description} />
     <Container>
       <section>
         <Heading>
@@ -15,12 +21,12 @@ const ContactPage = () => (
           <StyledSpan>and say hello.</StyledSpan>
         </Heading>
         <Paragraph>
-          Feel free to get in touch with me. I am always open to discussing new projects
-          or opportunities.
+          I am always open to discussing new projects or opportunities. Feel free to get
+          in touch with me by using the provided contact form.
         </Paragraph>
         <Paragraph>
-          You can also send me an <a href="mailto:asjas@outlook.com">e-mail</a> or give me
-          a call on <a href="tel:+27662969827">+27 66 296 9827</a>.
+          You can also send me an e-mail at{' '}
+          <a href="mailto:asjas@outlook.com">asjas@outlook.com</a>.
         </Paragraph>
       </section>
       <ContactForm />
