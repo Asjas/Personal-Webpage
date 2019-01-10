@@ -76,6 +76,6 @@ SEO.propTypes = {
 };
 
 SEO.defaultProps = {
-  title: null,
+  title: 'A-J Roos | Personal Website',
   description: null,
 };
