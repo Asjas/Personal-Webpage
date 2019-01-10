@@ -14,11 +14,6 @@ export const Container = styled.section`
 `;
 
 export const Heading = styled.h1`
-  color: ${props => props.theme.maroon};
-  font-family: Contender;
-  font-size: ${props => props.theme.heading1};
-  font-weight: 300;
-  margin: 0;
   padding: 0 0 0 36px;
   width: 90%;
 
@@ -31,7 +26,6 @@ export const Heading = styled.h1`
 `;
 
 export const StyledSpan = styled.span`
-  color: ${props => props.theme.black};
   font-family: Contender;
   font-size: ${props => props.theme.heading2};
   font-weight: 300;
@@ -42,9 +36,6 @@ export const StyledSpan = styled.span`
 `;
 
 export const Paragraph = styled.p`
-  color: ${props => props.theme.black};
-  font-family: Abberwick;
-  font-size: ${props => props.theme.fontMd};
   margin: 0 auto;
   padding: 10px 0;
   width: 90%;

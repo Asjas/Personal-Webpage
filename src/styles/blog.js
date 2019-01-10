@@ -15,11 +15,6 @@ export const Post = styled.div`
 `;
 
 export const Heading = styled.h2`
-  color: ${props => props.theme.maroon};
-  font-family: Contender;
-  font-size: ${props => props.theme.heading2};
-  font-weight: 300;
-  letter-spacing: 0.04rem;
   margin: 10px 0;
 `;
 
@@ -34,22 +29,16 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Paragraph = styled.p`
-  font-family: Abberwick;
   font-size: ${props => props.theme.fontMd};
-  letter-spacing: 0.03rem;
 `;
 
 export const Date = styled.span`
   display: block;
-  font-family: Abberwick;
   font-size: ${props => props.theme.fontSm};
   font-style: italic;
-  letter-spacing: 0.03rem;
 `;
 
 export const ReadingTime = styled.span`
   display: block;
-  font-family: Abberwick;
   font-size: ${props => props.theme.fontSm};
-  letter-spacing: 0.03rem;
 `;

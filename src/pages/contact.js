@@ -13,7 +13,7 @@ const seo = {
 
 const ContactPage = () => (
   <Layout>
-    <SEO title={seo.title} description={seo.description} siteUrl={seo.siteUrl} />
+    <SEO {...seo} />
     <Container>
       <section>
         <Heading>

@@ -13,9 +13,9 @@ import {
   Paragraph,
 } from '../styles/blog';
 
-export const GET_ALL_BLOGPOSTS = graphql`
-  query GET_ALL_BLOGPOSTS {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+export const GET_ALL_POSTS = graphql`
+  query GET_ALL_POSTS {
+    mdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
@@ -43,9 +43,9 @@ const seo = {
 
 const BlogPage = ({ data }) => (
   <Layout>
-    <SEO title={seo.title} description={seo.description} siteUrl={seo.siteUrl} />
+    <SEO {...seo} />
     <Container>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
+      {data.allMdx.edges.map(({ node }) => (
         <Post key={node.id}>
           <StyledLink to={`/blog${node.fields.slug}`}>
             <Heading>{node.frontmatter.title}</Heading>

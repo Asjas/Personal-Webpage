@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import { Container, Heading } from '../styles/post';
 
-export const GET_BLOGPOST = graphql`
-  query GET_BLOGPOST($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+export const GET_POST = graphql`
+  query GET_POST($slug: String!) {
+    mdx(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
       excerpt(pruneLength: 350)
@@ -21,8 +23,8 @@ export const GET_BLOGPOST = graphql`
   }
 `;
 
-const BlogPost = ({ data }) => {
-  const post = data.markdownRemark;
+const Post = ({ data }) => {
+  const post = data.mdx;
 
   const seo = {
     title: post.frontmatter.title,
@@ -33,13 +35,15 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={seo.title} description={seo.description} siteUrl={seo.siteUrl} />
-      <h1>{seo.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Container>
+        <Heading>{seo.title}</Heading>
+        <MDXRenderer>{post.code.body}</MDXRenderer> />
+      </Container>
     </Layout>
   );
 };
 
-BlogPost.propTypes = {
+Post.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       html: PropTypes.string.isRequired,
@@ -56,4 +60,4 @@ BlogPost.propTypes = {
   }).isRequired,
 };
 
-export default BlogPost;
+export default Post;

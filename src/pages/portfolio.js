@@ -53,7 +53,7 @@ const PortfolioPage = ({
   },
 }) => (
   <Layout>
-    <SEO title={seo.title} description={seo.description} siteUrl={seo.siteUrl} />
+    <SEO {...seo} />
     <Container>
       {console.log(edges)}
       <Paragraph>To be added</Paragraph>

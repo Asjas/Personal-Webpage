@@ -1,41 +1,63 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: 'markdown' });
-    createNodeField({ node, name: 'slug', value: slug });
+  if (node.internal.type === 'Mdx') {
+    const value = createFilePath({ node, getNode });
+    createNodeField({
+      name: 'slug',
+      node,
+      value: `/blog${value}`,
+    });
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  return graphql(`
+  const results = await graphql(`
     {
-      allMarkdownRemark {
+      posts: allFile(
+        filter: { relativePath: { glob: "*.{md,mdx}" } }
+        sort: { fields: relativePath, order: DESC }
+      ) {
         edges {
           node {
-            fields {
-              slug
+            childMarkdownRemark {
+              id
+              frontmatter {
+                title
+                date
+              }
             }
           }
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      throw result.errors;
-    }
+  `);
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: `/blog${node.fields.slug}`,
-        component: path.resolve('./src/templates/BlogPost.js'),
-        context: { slug: node.fields.slug },
-      });
+  if (results.errors) {
+    throw results.errors;
+  }
+
+  const posts = results.data.posts.edges.map(({ node }) => node);
+
+  posts.forEach(post => {
+    if (
+      !post.childMarkdownRemark.frontmatter.title ||
+      !post.childMarkdownRemark.frontmatter.date
+    ) {
+      throw Error('All posts require a `title` and `date` field in the frontmatter.');
+    }
+  });
+
+  posts.forEach(post => {
+    createPage({
+      path: `/blog${post.childMarkdownRemark.fields.slug}`,
+      component: path.resolve('./src/templates/post.js'),
+      context: { slug: post.childMarkdownRemark.fields.slug },
     });
   });
 };
