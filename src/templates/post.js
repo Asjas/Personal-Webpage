@@ -9,7 +9,6 @@ import { Container, Heading } from '../styles/post';
 export const GET_POST = graphql`
   query GET_POST($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
-      html
       timeToRead
       excerpt(pruneLength: 350)
       frontmatter {
@@ -18,6 +17,9 @@ export const GET_POST = graphql`
       }
       fields {
         slug
+      }
+      code {
+        body
       }
     }
   }
@@ -34,10 +36,10 @@ const Post = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={seo.title} description={seo.description} siteUrl={seo.siteUrl} />
+      <SEO {...seo} />
       <Container>
         <Heading>{seo.title}</Heading>
-        <MDXRenderer>{post.code.body}</MDXRenderer> />
+        <MDXRenderer>{post.code.body}</MDXRenderer>
       </Container>
     </Layout>
   );

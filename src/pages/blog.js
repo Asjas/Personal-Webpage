@@ -15,7 +15,7 @@ import {
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    mdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx {
       edges {
         node {
           id

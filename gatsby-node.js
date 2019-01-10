@@ -17,47 +17,41 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const results = await graphql(`
+  return graphql(`
     {
-      posts: allFile(
-        filter: { relativePath: { glob: "*.{md,mdx}" } }
-        sort: { fields: relativePath, order: DESC }
-      ) {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
-            childMarkdownRemark {
-              id
-              frontmatter {
-                title
-                date
-              }
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              date
             }
           }
         }
       }
     }
-  `);
-
-  if (results.errors) {
-    throw results.errors;
-  }
-
-  const posts = results.data.posts.edges.map(({ node }) => node);
-
-  posts.forEach(post => {
-    if (
-      !post.childMarkdownRemark.frontmatter.title ||
-      !post.childMarkdownRemark.frontmatter.date
-    ) {
-      throw Error('All posts require a `title` and `date` field in the frontmatter.');
+  `).then(results => {
+    if (results.errors) {
+      throw results.errors;
     }
-  });
+    const posts = results.data.allMdx.edges.map(({ node }) => node);
 
-  posts.forEach(post => {
-    createPage({
-      path: `/blog${post.childMarkdownRemark.fields.slug}`,
-      component: path.resolve('./src/templates/post.js'),
-      context: { slug: post.childMarkdownRemark.fields.slug },
+    posts.forEach(post => {
+      if (!post.frontmatter.title || !post.frontmatter.date) {
+        throw Error('All posts require a `title` and `date` field in the frontmatter.');
+      }
+    });
+
+    posts.forEach(post => {
+      createPage({
+        path: `/blog${post.fields.slug}`,
+        component: path.resolve('./src/templates/post.js'),
+        context: { slug: post.fields.slug },
+      });
     });
   });
 };
