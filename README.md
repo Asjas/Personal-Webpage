@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Asjas/Personal-Webpage.svg?branch=master)](https://travis-ci.org/Asjas/Personal-Webpage)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style)](https://cypress.io)
 
 This project uses the following tech stack:
 
