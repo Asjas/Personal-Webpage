@@ -5,8 +5,8 @@ const typography = new Typography({
   baseFontSize: '10px',
   baseLineHeight: 1.45,
   scaleRatio: 5 / 2,
-  headerFontFamily: ['Contender'],
-  bodyFontFamily: ['Abberwick'],
+  headerFontFamily: ['Contender', 'Roboto'],
+  bodyFontFamily: ['Abberwick', 'Roboto'],
   headerWeight: 500,
   bodyWeight: 400,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
@@ -44,6 +44,7 @@ const typography = new Typography({
       color: '#d2006b',
       letterSpacing: '0.02rem',
       margin: 0,
+      fontDisplay: 'swap',
       marginTop: rhythm(2),
       marginBottom: rhythm(1),
     },
@@ -60,9 +61,10 @@ const typography = new Typography({
       fontSize: '2.2rem',
     },
     'p, span': {
+      fontDisplay: 'swap',
       fontSize: '1.6rem',
     },
-    'mark,ins': {
+    'mark, ins': {
       background: '#007acc',
       color: 'white',
       padding: `${rhythm(1 / 16)} ${rhythm(1 / 8)}`,
