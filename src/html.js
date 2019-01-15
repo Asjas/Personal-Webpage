@@ -13,11 +13,6 @@ class HTML extends React.Component {
             rel="shortcut icon"
             href="https://storage.googleapis.com/asjas.co.za/favicon.ico"
           />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-          />
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
           {this.props.headComponents}
         </head>
