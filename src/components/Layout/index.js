@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import ErrorBoundary from '../ErrorBoundary';
 import Sidebar from '../Sidebar';
-import setupLogRocket from '../../utils/logrocket';
 import { theme } from '../../theme';
 import { Container, Main } from './styles';
 import '../../styles/global.css';
-
-setupLogRocket();
 
 const Layout = ({ children }) => (
   <ErrorBoundary>
