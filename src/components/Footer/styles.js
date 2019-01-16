@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { media } from '../../utils/media';
 
 export const FooterStyled = styled.footer`
