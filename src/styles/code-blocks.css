@@ -1,11 +1,13 @@
 /**
- * Based on copypasta from Remy Bach and Sarah Drasner
+ * Based on Cobalt2 from Wesbos 🔥
  */
+
 code[class*='language-'],
 pre[class*='language-'] {
-  color: white;
+  color: #ffffff;
+  font-size: 1.6rem;
   background: none;
-  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-family: Operator;
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;
@@ -33,25 +35,25 @@ pre[class*='language-'] {
 
 pre[class*='language-']::-moz-selection {
   /* Firefox */
-  background: hsl(207, 4%, 16%);
+  background: #193549;
 }
 
 pre[class*='language-']::selection {
   /* Safari */
-  background: hsl(207, 4%, 16%);
+  background: #193549;
 }
 
 /* Text Selection colour */
 pre[class*='language-']::-moz-selection,
 pre[class*='language-'] ::-moz-selection {
   text-shadow: none;
-  background: hsla(0, 0%, 100%, 0.15);
+  background: #1f4662;
 }
 
 pre[class*='language-']::selection,
 pre[class*='language-'] ::selection {
   text-shadow: none;
-  background: hsla(0, 0%, 100%, 0.15);
+  background: #1f4662;
 }
 
 /* Inline code */
@@ -63,11 +65,6 @@ pre[class*='language-'] ::selection {
   white-space: normal;
 }
 
-.token.attr-name {
-  color: rgb(173, 219, 103);
-  font-style: italic;
-}
-
 .token.comment {
   color: rgb(99, 119, 119);
 }
@@ -77,8 +74,13 @@ pre[class*='language-'] ::selection {
   color: rgb(173, 219, 103);
 }
 
+.token.attr-value {
+  color: #80ffbb;
+}
+
+.token.attr-name,
 .token.variable {
-  color: rgb(214, 222, 235);
+  color: #ffc600;
 }
 
 .token.number {
@@ -106,10 +108,12 @@ pre[class*='language-'] ::selection {
   color: rgb(255, 203, 139);
 }
 
-.token.tag,
+.token.tag {
+  color: #80fcff;
+}
 .token.operator,
 .token.keyword {
-  color: #ffa7c4;
+  color: #ffc600;
 }
 
 .token.boolean {
@@ -130,7 +134,7 @@ pre[data-line] {
 }
 
 .gatsby-highlight-code-line {
-  background-color: hsla(207, 95%, 15%, 1);
+  background-color: #193549;
   display: block;
   margin-right: -1em;
   margin-left: -1em;
@@ -142,7 +146,7 @@ pre[data-line] {
 .gatsby-highlight {
   margin-bottom: 1.75rem;
   border-radius: 10px;
-  background: #011627;
+  background: #193549;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
 }

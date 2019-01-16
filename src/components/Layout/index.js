@@ -6,6 +6,7 @@ import Sidebar from '../Sidebar';
 import { theme } from '../../theme';
 import { Container, Main } from './styles';
 import '../../styles/global.css';
+import '../../styles/code-blocks.css';
 
 const Layout = ({ children }) => (
   <ErrorBoundary>
