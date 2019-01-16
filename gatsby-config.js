@@ -72,6 +72,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-fullstory',
+      options: {
+        fs_org: 'FQ01H',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: 'GTM-NGT5XDP',
@@ -84,7 +90,7 @@ module.exports = {
         trackingId: 'UA-112825816-1',
         head: false,
         anonymize: true,
-        respectDNT: false,
+        respectDNT: true,
       },
     },
     'gatsby-plugin-remove-serviceworker',
