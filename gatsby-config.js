@@ -34,11 +34,11 @@ module.exports = {
         name: 'posts',
       },
     },
+    'gatsby-plugin-catch-links',
     {
-      resolve: 'gatsby-mdx',
+      resolve: 'gatsby-transformer-remark',
       options: {
-        extensions: ['.mdx', '.md'],
-        gatsbyRemarkPlugins: [
+        plugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -56,7 +56,8 @@ module.exports = {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',
-              inlineCodeMarker: '÷',
+              inlineCodeMarker: '>',
+              showLineNumbers: true,
             },
           },
         ],

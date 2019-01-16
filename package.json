@@ -21,12 +21,10 @@
     "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^0.16.6",
-    "@mdx-js/tag": "^0.16.6",
     "@sentry/browser": "^4.5.1",
     "formik": "^1.4.2",
     "gatsby": "^2.0.91",
-    "gatsby-mdx": "^0.3.4",
+    "gatsby-plugin-catch-links": "^2.0.9",
     "gatsby-plugin-fullstory": "^2.0.2",
     "gatsby-plugin-google-gtag": "^1.0.8",
     "gatsby-plugin-react-helmet": "^3.0.5",

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -8,9 +7,10 @@ import { Container } from '../styles/post';
 
 export const GET_POST = graphql`
   query GET_POST($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       timeToRead
       excerpt(pruneLength: 350)
+      html
       frontmatter {
         title
         date
@@ -18,15 +18,12 @@ export const GET_POST = graphql`
       fields {
         slug
       }
-      code {
-        body
-      }
     }
   }
 `;
 
 const Post = ({ data }) => {
-  const post = data.mdx;
+  const post = data.markdownRemark;
 
   const seo = {
     title: post.frontmatter.title,
@@ -39,7 +36,7 @@ const Post = ({ data }) => {
       <SEO {...seo} />
       <Container>
         <h1>{seo.title}</h1>
-        <MDXRenderer>{post.code.body}</MDXRenderer>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </Container>
     </Layout>
   );

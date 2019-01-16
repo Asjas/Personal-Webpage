@@ -8,7 +8,7 @@ import { Container, Post, StyledLink } from '../styles/blog';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    allMdx {
+    allMarkdownRemark {
       edges {
         node {
           id
@@ -38,7 +38,7 @@ const BlogPage = ({ data }) => (
   <Layout>
     <SEO {...seo} />
     <Container>
-      {data.allMdx.edges.map(({ node }) => (
+      {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post key={node.id}>
           <StyledLink to={`/blog${node.fields.slug}`}>
             <h2>{node.frontmatter.title}</h2>
