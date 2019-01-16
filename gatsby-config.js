@@ -37,6 +37,7 @@ module.exports = {
     {
       resolve: 'gatsby-mdx',
       options: {
+        extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
@@ -51,10 +52,10 @@ module.exports = {
               wrapperStyle: 'margin-bottom: 1.0725rem',
             },
           },
-          { resolve: 'gatsby-remark-autolink-headers' },
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
+              classPrefix: 'language-',
               inlineCodeMarker: '÷',
             },
           },

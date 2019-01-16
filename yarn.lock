@@ -1049,42 +1049,42 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@sentry/browser@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.5.0.tgz#ae8f876efa1c22a011c5051d050570e3fdacd08b"
-  integrity sha512-Ubx/0XTSiKr98RKOdxIPcD+0ZDQwDUB3MzOFDo4KFReQ3gk5W5EvwatHDiYf0H3VedCA0UEmk2ZXK2sOSSFonQ==
+"@sentry/browser@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-4.5.1.tgz#a095f9636c3fd88f97086b6888c6f32f445c8fe8"
+  integrity sha512-sI/EGbKpHiBYcgVoJl3oxdCc8OpIL3SKjdSpgk7njBFdPJZbkbvi+N/iaJdm70dTeZAgKEmm8jiwNf845gzybQ==
   dependencies:
-    "@sentry/core" "4.5.0"
+    "@sentry/core" "4.5.1"
     "@sentry/types" "4.5.0"
-    "@sentry/utils" "4.5.0"
+    "@sentry/utils" "4.5.1"
     tslib "^1.9.3"
 
-"@sentry/core@4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-4.5.0.tgz#0dfb82ea6421681916ce73e6f833de17ae86ac86"
-  integrity sha512-+uzJelvAYQTd60aJ2y8PovqP+CmLFoX3a30yh2Qt9fXomwqYupaAPE+kYtOJMYuXFpVMUTxCxxNPmaC/bwUUIg==
+"@sentry/core@4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-4.5.1.tgz#bfc98a276974a670e25ca5873ba7ac078bf5410d"
+  integrity sha512-ml4Z1PZ7GjsJip5vYkRMkqCLpK5u3jxUYtECOWVsYHIHgVlvERV+HWCdyH0PoiEwr97ZU+4mjnc9Av8P7a18Mw==
   dependencies:
-    "@sentry/hub" "4.5.0"
-    "@sentry/minimal" "4.5.0"
+    "@sentry/hub" "4.5.1"
+    "@sentry/minimal" "4.5.1"
     "@sentry/types" "4.5.0"
-    "@sentry/utils" "4.5.0"
+    "@sentry/utils" "4.5.1"
     tslib "^1.9.3"
 
-"@sentry/hub@4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.5.0.tgz#f61da6fa33d8b5a90c4324eda220f720d064fbf0"
-  integrity sha512-z9K4YYkMR5x7SdVTGVsWAdWh/PdSJyavar9Nk3I674RRjXS6IewFw7A+cgYDWTuMjB5MslbwoH2S9Pc+xRPKdg==
+"@sentry/hub@4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-4.5.1.tgz#979c0a826a9abfa567516b0da0e6f4017130def9"
+  integrity sha512-msftpMDSvWaENdYMHX8GPBQ5jTLxClWCprtAlE0AFZ90WHFrwvA0bHpGLzseFDjYwGUKoG2psxejoSstoBy53A==
   dependencies:
     "@sentry/types" "4.5.0"
-    "@sentry/utils" "4.5.0"
+    "@sentry/utils" "4.5.1"
     tslib "^1.9.3"
 
-"@sentry/minimal@4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.5.0.tgz#5f4dd50772920af5a44d52a8f1c86e7b37172913"
-  integrity sha512-nH6kL7+I7cL/t7GEK3nv60e2PDg1DGZtakQ1GuqloP19phPj+6BsxjT+Njt1KLcSPsQPWwwK0C6rm0NsamPnpQ==
+"@sentry/minimal@4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-4.5.1.tgz#a6128aab2a3967d8eb99afb3029057e1b4d9aaa5"
+  integrity sha512-/PaBrzuGkL6c137KRz5iIpmIfCj1FY/rYOffBAYrZADmmZyVrHfP2cNreneze+9OYy5dCFylBFEQpNOCMDdARw==
   dependencies:
-    "@sentry/hub" "4.5.0"
+    "@sentry/hub" "4.5.1"
     "@sentry/types" "4.5.0"
     tslib "^1.9.3"
 
@@ -1093,10 +1093,10 @@
   resolved "https://registry.yarnpkg.com/@sentry/types/-/types-4.5.0.tgz#59e2a27d48b01b44e8959aa5c8a30514fe1086a9"
   integrity sha512-IstPjFoebQGrQWdM732D/+S0BTovmDgezyplk4kLEb87+/B+YK0hlhziUa7B2byTFJGgQQKXy7h2sKZBrA3GUA==
 
-"@sentry/utils@4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-4.5.0.tgz#44e33773dc631cc22240a327942a8e4b97d42850"
-  integrity sha512-H05lcDUL3D01f6egjglDO7ICAQ6nOroNHCol9Q3z7lutveGirh4aWFTpw8XU9H7/jnGGZorc0wSrLQtq8vWm7A==
+"@sentry/utils@4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-4.5.1.tgz#23f8a8fbe84e06d2546d3f1a72e30b34cbc2a3d8"
+  integrity sha512-ihzvgKBuvHBjKtbjz3EtuTW0OAJH5nw1L3tNVOCi+fbEdp10DiyL0i3hQKdE87CLoNEAt/SPRmTrG1cP2dNa7Q==
   dependencies:
     "@sentry/types" "4.5.0"
     tslib "^1.9.3"
@@ -6364,10 +6364,10 @@ gatsby-link@^2.0.8:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-mdx@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/gatsby-mdx/-/gatsby-mdx-0.3.3.tgz#5379d35b377b4a71d098a6a9aec86145a25f2d07"
-  integrity sha512-v9v3DNMgRUaiEsAeOlbO7QSYiFN63ZDKehwwiyw1We+Rzw3rdZ6Kc+IqcLK3FBXTX4VXLDLyDjVFcO6hhBkwIg==
+gatsby-mdx@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/gatsby-mdx/-/gatsby-mdx-0.3.4.tgz#f88010a399e5dc85757055cbcf4859f0b58d3fb9"
+  integrity sha512-/8fXl+UxwWU+Htg47hQDxcO8vyw8Bvipy9UwpT0xmoi55s5M8XbGG0nri6pijYuyLohtx1+FlU4e+ALlP7qweA==
   dependencies:
     "@babel/plugin-proposal-object-rest-spread" "^7.0.0"
     debug "^4.0.1"
@@ -6555,7 +6555,7 @@ gatsby-remark-social-cards@^0.4.0:
     jimp "^0.5.0"
     path "^0.12.7"
 
-gatsby-source-filesystem@^2.0.1, gatsby-source-filesystem@^2.0.13:
+gatsby-source-filesystem@^2.0.1:
   version "2.0.13"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.13.tgz#c0c814c79065f63dc28b0d96fffcebba59c6aa2d"
   integrity sha512-aAzwvVjhrrZ1IFyNgLBTdzPHxjQdy1zRhmUizdzt7VCqTPiMD3vtLtVGqe9fFRNzZ+2kUMJOd2cGwjMHoTtLmA==
@@ -6570,6 +6570,27 @@ gatsby-source-filesystem@^2.0.1, gatsby-source-filesystem@^2.0.13:
     md5-file "^3.1.1"
     mime "^2.2.0"
     pretty-bytes "^4.0.2"
+    read-chunk "^3.0.0"
+    slash "^1.0.0"
+    valid-url "^1.0.9"
+    xstate "^3.1.0"
+
+gatsby-source-filesystem@^2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.16.tgz#d2d0ed731c07739b66bef3862b2fa6a78a17c3eb"
+  integrity sha512-cq9NGoO9BqBsopBRDh7vVZF9HuUzEFKyssKUlbbgkdC4U1OyYI7JP6rjNrcK9J5VoLhcYze6isFRhPdLKkTiLQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    better-queue "^3.8.7"
+    bluebird "^3.5.0"
+    chokidar "^1.7.0"
+    file-type "^10.2.0"
+    fs-extra "^5.0.0"
+    got "^7.1.0"
+    md5-file "^3.1.1"
+    mime "^2.2.0"
+    pretty-bytes "^4.0.2"
+    progress "^1.1.8"
     read-chunk "^3.0.0"
     slash "^1.0.0"
     valid-url "^1.0.9"
@@ -12483,10 +12504,10 @@ react-testing-library@^5.4.2:
   dependencies:
     dom-testing-library "^3.13.1"
 
-react-transition-group@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.5.2.tgz#9457166a9ba6ce697a3e1b076b3c049b9fb2c408"
-  integrity sha512-vwHP++S+f6KL7rg8V1mfs62+MBKtbMeZDR8KiNmD7v98Gs3UPGsDZDahPJH2PVprFW5YHJfh6cbNim3zPndaSQ==
+react-transition-group@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.5.3.tgz#26de363cab19e5c88ae5dbae105c706cf953bb92"
+  integrity sha512-2DGFck6h99kLNr8pOFk+z4Soq3iISydwOFeeEVPjTN6+Y01CmvbWmnN02VuTWyFdnRtIDPe+wy2q6Ui8snBPZg==
   dependencies:
     dom-helpers "^3.3.1"
     loose-envify "^1.4.0"

@@ -14,7 +14,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return graphql(`
@@ -30,15 +30,19 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               date
             }
+            code {
+              scope
+            }
           }
         }
       }
     }
-  `).then(results => {
-    if (results.errors) {
-      throw results.errors;
+  `).then(result => {
+    if (result.errors) {
+      throw result.errors;
     }
-    const posts = results.data.allMdx.edges.map(({ node }) => node);
+
+    const posts = result.data.allMdx.edges;
 
     posts.forEach(post => {
       if (!post.frontmatter.title || !post.frontmatter.date) {
