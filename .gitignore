@@ -62,3 +62,7 @@ public/
 
 # Jest test results
 .jest-test-results.json
+
+# Cypress
+cypress/videos
+cypress/screenshots
