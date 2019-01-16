@@ -72,13 +72,19 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-NGT5XDP',
+        includeInDevelopment: false,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-112825816-1',
         head: false,
         anonymize: true,
-        respectDNT: true,
-        optimizeId: 'GTM-NGT5XDP',
+        respectDNT: false,
       },
     },
     'gatsby-plugin-remove-serviceworker',
