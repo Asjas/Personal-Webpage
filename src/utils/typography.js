@@ -25,7 +25,8 @@ const typography = new Typography({
       fontStyle: 'italic',
       paddingLeft: rhythm(13 / 16),
       marginLeft: rhythm(-1),
-      borderLeft: `${rhythm(3 / 16)} solid #222`,
+      marginBottom: '50px',
+      borderLeft: `${rhythm(3 / 16)} solid rgba(209, 0, 108, 0.9)`,
     },
     'ul,ol': {
       marginLeft: 0,
@@ -52,7 +53,7 @@ const typography = new Typography({
       fontSize: '5.5rem',
     },
     h2: {
-      fontSize: '4.5rem',
+      fontSize: '4.2rem',
     },
     h3: {
       fontSize: '3.2rem',
@@ -61,6 +62,7 @@ const typography = new Typography({
       fontSize: '2.2rem',
     },
     'p, span': {
+      paddingTop: rhythm(13 / 16),
       fontDisplay: 'swap',
       fontSize: '1.6rem',
     },

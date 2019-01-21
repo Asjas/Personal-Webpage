@@ -93,5 +93,4 @@ should always look to learn going forward and how to implement what you learned.
 of these promises are practical at all times. But they should be followed as closely as
 possible.
 
-Thank you for taking the time to read this. As someone new to blogging and web development
-I am still learning a lot myself.
+Thank you for taking the time to read this.
