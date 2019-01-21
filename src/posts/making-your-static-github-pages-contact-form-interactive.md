@@ -12,26 +12,3 @@ and voila!
 
 Formspree.io is free for the first 1000 form submissions per month that they forward to
 you. After which you will need to sign up for their Gold account.
-
-```js
-const b = a;
-
-const b = {};
-
-var x = 'test';
-```
-
-```bash
-# npm
-npm i tippy.js
-
-# Yarn
-yarn add tippy.js
-```
-
-<!-- prettier-ignore -->
-```html
-<div id="example" style="display: none;">
-  <strong>Bolded content</strong>
-</div>
-```
