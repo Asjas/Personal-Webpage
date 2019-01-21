@@ -95,7 +95,7 @@ pre[class*='language-'] ::selection {
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: #fff;
 }
 
 .token.selector,
