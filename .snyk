@@ -1,6 +1,24 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
-ignore: {}
+version: v1.13.3
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:braces:20180219':
+    - gatsby-source-filesystem > chokidar > anymatch > micromatch > braces:
+        reason: None given
+        expires: '2019-02-21T16:33:55.990Z'
+    - gatsby > gatsby-plugin-page-creator > chokidar > anymatch > micromatch > braces:
+        reason: None given
+        expires: '2019-02-21T16:33:55.990Z'
+    - gatsby-source-prismic > gatsby-source-filesystem > chokidar > anymatch > micromatch > braces:
+        reason: None given
+        expires: '2019-02-21T16:33:55.990Z'
+  'npm:mem:20180117':
+    - gatsby > gatsby-cli > yargs > os-locale > mem:
+        reason: None given
+        expires: '2019-02-21T16:33:55.990Z'
+    - gatsby > relay-compiler > yargs > os-locale > mem:
+        reason: None given
+        expires: '2019-02-21T16:33:55.990Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:hoek:20180212':
