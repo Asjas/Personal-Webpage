@@ -3,7 +3,7 @@ const theme = {
   heading2: '4.5rem',
   heading3: '3.2rem',
   heading4: '2.2rem',
-  fontXL: '3rem',
+  fontXL: '2.7rem',
   fontL: '2rem',
   fontMd: '1.7rem',
   fontSm: '1.5rem',
