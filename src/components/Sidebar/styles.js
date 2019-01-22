@@ -6,8 +6,13 @@ export const Aside = styled.section`
   height: 100vh;
   position: fixed;
   grid-area: aside;
+  transform: translateX(0);
 
   ${media.laptopL`
     max-width: 320px;
+  `};
+
+  ${media.laptop`
+    transform: translateX(-320px);
   `};
 `;
