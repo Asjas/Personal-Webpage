@@ -1,15 +1,15 @@
 import React from 'react';
-import { Navigation, StyledLink, Section } from './styles';
+import { Navigation, StyledLink, PageSection } from './styles';
 import Footer from '../Footer';
 
 const Nav = () => (
   <Navigation>
-    <Section>
+    <PageSection>
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/portfolio/">Portfolio</StyledLink>
       <StyledLink to="/blog/">Blog</StyledLink>
       <StyledLink to="/contact/">Contact</StyledLink>
-    </Section>
+    </PageSection>
     <Footer />
   </Navigation>
 );

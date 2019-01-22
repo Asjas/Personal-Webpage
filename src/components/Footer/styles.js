@@ -3,16 +3,15 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { media } from '../../utils/media';
 
 export const FooterStyled = styled.footer`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
   margin: 0 auto;
-  gap: 10px;
+  justify-content: space-around;
+  width: 100%;
   align-self: end;
 
   ${media.laptop`
     align-self: center;
     max-width: 320px;
-    gap: 10px;
   `};
 `;
 
