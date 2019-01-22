@@ -1,7 +1,7 @@
 const theme = {
   heading1: '5.5rem',
   heading2: '4.5rem',
-  heading3: '3.2rem',
+  heading3: '3.7rem',
   heading4: '2.2rem',
   fontXL: '2.7rem',
   fontL: '2rem',

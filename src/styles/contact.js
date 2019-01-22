@@ -10,6 +10,7 @@ export const Container = styled.section`
   ${media.laptopL`
     grid-template-columns: 1fr;
     height: 100%;
+    padding: 20px 0;
   `};
 `;
 
@@ -21,17 +22,17 @@ export const Heading = styled.h1`
     font-size: ${props => props.theme.heading1};
     margin: 0 auto;
     padding: 0;
-    width: 500px;
+    max-width: 500px;
   `};
 `;
 
 export const StyledSpan = styled.span`
   font-family: Contender;
-  font-size: ${props => props.theme.heading2};
+  font-size: ${props => props.theme.heading3};
   font-weight: 300;
 
   ${media.laptopL`
-    font-size: ${props => props.theme.heading2};
+    font-size: ${props => props.theme.heading3};
   `};
 `;
 
