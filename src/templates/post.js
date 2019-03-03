@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import { Container } from '../styles/post';
 
 export const GET_POST = graphql`
   query GET_POST($slug: String!) {
@@ -34,10 +33,10 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <SEO {...seo} />
-      <Container>
-        <h1>{seo.title}</h1>
+      <section>
+        <h1 className="post-heading">{seo.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Container>
+      </section>
     </Layout>
   );
 };

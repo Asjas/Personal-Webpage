@@ -4,3 +4,4 @@ public
 coverage
 LICENSE
 .cache
+src/posts/*

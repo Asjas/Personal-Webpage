@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-import { Container, Paragraph } from '../styles/portfolio';
 
 export const GET_PRISMIC_PROJECTS = graphql`
   query GET_PRISMIC_PROJECTS {
@@ -54,10 +53,10 @@ const PortfolioPage = ({
 }) => (
   <Layout>
     <SEO {...seo} />
-    <Container>
+    <section>
       {console.log(edges)}
-      <Paragraph>To be added</Paragraph>
-    </Container>
+      <p>To be added</p>
+    </section>
   </Layout>
 );
 

@@ -1,0 +1,17 @@
+.homepage {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+
+  &-quote {
+    font-family: $handwritingFontFamily;
+    font-size: $heading3;
+  }
+
+  &-image {
+    width: 400px;
+    height: auto;
+  }
+}

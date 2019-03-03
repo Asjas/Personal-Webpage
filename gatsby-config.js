@@ -3,14 +3,13 @@ module.exports = {
     title: 'A-J Roos | Home',
     siteUrl: 'https://asjas.co.za',
     description:
-      'This is my personal website that includes my portfolio, blogs and contact information. I am Front-End Web Developer based in Bloemfontein, South Africa. I enjoy working with Front-End Technologies such as React, JavaScript, Gatsby.js and CSS-in-JS.',
+      'My name is A-J Roos. This is my personal website that includes my portfolio, blogs and contact information. I am Front-End Web Developer based in Bloemfontein, South Africa. I enjoy working with Front-End Technologies such as React, JavaScript, Gatsby.js and CSS-in-JS.',
     googleSiteVerification: '5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0',
     twitterUsername: '_asjas',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-remark-social-cards',
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -21,10 +20,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: 'gatsby-plugin-sass',
       options: {
-        pathToConfigModule: 'src/utils/typography',
-        omitGoogleFont: true,
+        includePaths: [`${__dirname}/src/styles/main.scss`],
+        sourceComments: false,
+        sourceMap: false,
       },
     },
     {

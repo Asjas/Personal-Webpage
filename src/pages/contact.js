@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ContactForm from '../components/Form';
-import { Container, Heading, StyledSpan, Paragraph } from '../styles/contact';
 
 const seo = {
   title: 'A-J Roos | Contact',
@@ -14,24 +13,24 @@ const seo = {
 const ContactPage = () => (
   <Layout>
     <SEO {...seo} />
-    <Container>
+    <section>
       <section>
-        <Heading>
+        <h1>
           Don't be a stranger
           <br />
-          <StyledSpan>and say hello.</StyledSpan>
-        </Heading>
-        <Paragraph>
+          <span>and say hello.</span>
+        </h1>
+        <p>
           I am always open to discussing new projects or opportunities. Feel free to get
           in touch with me by using the provided contact form.
-        </Paragraph>
-        <Paragraph>
+        </p>
+        <p>
           You can also send me an e-mail at{' '}
           <a href="mailto:asjas@outlook.com">asjas@outlook.com</a>.
-        </Paragraph>
+        </p>
       </section>
       <ContactForm />
-    </Container>
+    </section>
   </Layout>
 );
 

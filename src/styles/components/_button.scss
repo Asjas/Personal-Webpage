@@ -1,0 +1,22 @@
+.submit-button {
+  background-color: $orange;
+  border-radius: 4px;
+  border: 2px solid $orange;
+  color: $white;
+  cursor: pointer;
+  font-family: $headingFontFamily;
+  font-size: $heading5;
+  outline: 0;
+  text-transform: capitalize;
+  height: 40px;
+  width: 100%;
+  transition: all ease-in 0.12s;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $orange;
+    border: 2px solid $orange;
+    box-shadow: 1px 1px $orange, 1px 1px $orange;
+  }
+}

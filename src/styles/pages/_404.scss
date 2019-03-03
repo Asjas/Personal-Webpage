@@ -1,0 +1,22 @@
+section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+a {
+  font-family: Contender;
+  padding: 3px;
+  text-decoration: none;
+
+  &:hover {
+    color: lightcoral;
+    text-decoration: underline overline;
+  }
+}

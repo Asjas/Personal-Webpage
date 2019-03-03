@@ -1,0 +1,48 @@
+footer {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  width: 100%;
+  align-self: end;
+
+  // ${media.laptop`
+  //   align-self: center;
+  //   max-width: 320px;
+  // `};
+}
+
+a {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  svg {
+    fill: $white;
+    height: 5rem;
+    width: 5rem;
+
+    &:hover {
+      fill: $orange;
+    }
+  }
+
+  &:focus {
+    svg {
+      fill: $orange;
+    }
+  }
+
+  span {
+    position: absolute;
+    left: -9999px;
+  }
+
+  // ${media.laptopL`
+  //   svg {
+  //     height: ${props => props.theme.svgMd};
+  //     width: ${props => props.theme.svgMd};
+  //   }
+  // `};
+}

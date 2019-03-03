@@ -1,0 +1,19 @@
+.page-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-gap: 20px;
+  grid-template-areas: 'aside main';
+
+  // ${media.laptopL`
+  //   grid-template-columns: 320px 1fr;
+  // `};
+
+  @media screen and (max-width: $laptop) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'main';
+  }
+}
+
+.main {
+  grid-area: main;
+}

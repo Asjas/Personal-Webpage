@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Contender;
+  src: url('../assets/Contender.woff2') format('woff2'),
+    url('../assets/Contender.woff') format('woff'),
+    url('../assets/Contender.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Goldsmith;
+  src: url('../assets/Goldsmith-Thin.woff2') format('woff2'),
+    url('../assets/Goldsmith-Thin.woff') format('woff'),
+    url('../assets/Goldsmith-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Operator;
+  src: url('../assets/Operator-Mono-Light.woff2') format('woff2'),
+    url('../assets/Operator-Mono-Light.woff') format('woff'),
+    url('../assets/Operator-Mono-Light.ttf') format('truetype');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Pastelyn;
+  src: url('../assets/Pastelyn-Regular.woff2') format('woff2'),
+    url('../assets/Pastelyn-Regular.woff') format('woff'),
+    url('../assets/Pastelyn-Regular.ttf') format('truetype');
+  font-display: fallback;
+}
+
+html,
+body {
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingFontFamily;
+}
+
+h1 {
+  font-size: $heading1;
+}
+
+h2 {
+  font-size: $heading2;
+}
+
+h3 {
+  font-size: $heading3;
+}
+
+h4 {
+  font-size: $heading3;
+}
+
+blockquote {
+  font-size: $fontSmall;
+  font-style: italic;
+  font-family: $bodyFontFamily;
+}
+
+mark,
+ins {
+  text-decoration: none;
+}
+
+p,
+span,
+input,
+label {
+  font-family: $bodyFontFamily;
+  font-size: $fontMedium;
+}

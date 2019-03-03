@@ -1,14 +1,22 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import { Container, Paragraph } from '../styles/index';
+import MessyDeskImage from '../assets/messy-desk.jpg';
 
 const IndexPage = () => (
   <Layout>
     <SEO />
-    <Container>
-      <Paragraph>Soon to be my new webpage</Paragraph>
-    </Container>
+    <section className="homepage">
+      <p className="homepage-quote">
+        "There are only two hard things in Computer Science: cache invalidation and naming
+        things" - Phil Karlton
+      </p>
+      <img
+        className="homepage-image"
+        src={MessyDeskImage}
+        alt="A messy desk with a computer."
+      />
+    </section>
   </Layout>
 );
 

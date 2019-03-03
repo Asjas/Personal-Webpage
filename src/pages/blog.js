@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import { Container, Post, StyledLink } from '../styles/blog';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
@@ -36,18 +35,18 @@ const seo = {
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO {...seo} />
-    <Container>
+    <section>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Post key={node.id}>
-          <StyledLink to={`/blog${node.fields.slug}`}>
-            <h2>{node.frontmatter.title}</h2>
-          </StyledLink>
+        <div key={node.id}>
+          <a to={`/blog${node.fields.slug}`}>
+            <h1>{node.frontmatter.title}</h1>
+          </a>
           <span>{node.frontmatter.date}</span>
           <span>Time to read: {node.timeToRead} min</span>
           <p>{node.excerpt}</p>
-        </Post>
+        </div>
       ))}
-    </Container>
+    </section>
   </Layout>
 );
 

@@ -1,3 +1,0 @@
-hostname: asjas.co.za
-url: http://localhost:80
-logfile: /var/log/cloudflared.log

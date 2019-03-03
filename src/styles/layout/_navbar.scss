@@ -1,0 +1,84 @@
+.aside {
+  width: 360px;
+  height: 100vh;
+  position: fixed;
+  grid-area: aside;
+  transform: translateX(0);
+  padding: 0;
+  left: 0;
+  transition: all ease-in-out 0.5s;
+
+  @media screen and (max-width: $laptopL) {
+    max-width: 320px;
+  }
+
+  @media screen and (max-width: $laptop) {
+    transform: translateX(-320px);
+  }
+
+  &.show-nav {
+    transform: translateX(0);
+  }
+}
+
+.hamburger-menu,
+.hamburger-close {
+  position: absolute;
+  display: block;
+  right: 30px;
+  top: 15px;
+  height: 25px;
+  width: 25px;
+  z-index: 10;
+  cursor: pointer;
+
+  @media screen and (min-width: $laptop) {
+    display: none;
+  }
+}
+
+.navbar {
+  background: $navbarBg;
+  border-bottom: 3px solid $orange;
+  border-top: 3px solid $orange;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  padding-top: 40px;
+
+  a {
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+    color: $white;
+    cursor: pointer;
+    font-family: Contender;
+    font-size: $heading3;
+    letter-spacing: 0.04rem;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus {
+      border: 2px solid $orange;
+      color: $orange;
+      outline: none;
+    }
+  }
+
+  [aria-current] {
+    color: $orange;
+  }
+}

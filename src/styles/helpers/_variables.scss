@@ -1,0 +1,36 @@
+// Fonts
+$headingFontFamily: Contender;
+$bodyFontFamily: Goldsmith;
+$codeFontFamily: Operator;
+$handwritingFontFamily: Pastelyn;
+
+// Heading font size
+$heading1: 4rem;
+$heading2: 3.6rem;
+$heading3: 3.2rem;
+$heading4: 2.8rem;
+$heading5: 2.4rem;
+$heading6: 2rem;
+
+// Font size (p, span, input, label)
+$fontLarge: 1.7rem;
+$fontMedium: 1.6rem;
+$fontSmall: 1.5rem;
+
+// Colors
+$headingColor: hsl(23, 100%, 56%);
+$bodyColor: hsl(0, 0%, 13%);
+$errorColor: hsl(1, 73%, 46%);
+$navbarBg: hsl(182, 77%, 46%);
+$black: hsl(0, 0%, 13%);
+$orange: hsl(23, 100%, 56%);
+$white: #fff;
+
+// Media Query sizes
+$mobileS: 320;
+$mobileM: 375px;
+$mobileL: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+$laptopL: 1440px;
+$desktop: 1920px;

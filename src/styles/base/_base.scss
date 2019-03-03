@@ -1,0 +1,58 @@
+html,
+body {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $headingColor;
+  margin: 0;
+}
+
+blockquote {
+  margin: 0;
+  background-color: hsl(23, 100%, 90%);
+  color: $bodyColor;
+  padding-left: 5px;
+  margin-left: 0;
+  margin-bottom: 50px;
+  border-left: 2px solid $orange;
+}
+
+ul,
+ol {
+  margin-left: 0;
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+
+mark,
+ins {
+  background: #007acc;
+  color: $white;
+}
+
+p,
+span,
+input,
+label {
+  color: $bodyColor;
+}
