@@ -46,6 +46,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: 500;
   font-family: $headingFontFamily;
 }
 
@@ -82,4 +83,9 @@ input,
 label {
   font-family: $bodyFontFamily;
   font-size: $fontMedium;
+}
+
+a {
+  font-family: $bodyFontFamily;
+  text-decoration: none;
 }

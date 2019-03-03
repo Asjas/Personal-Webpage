@@ -1,27 +1,35 @@
-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.contactpage {
+  display: flex;
+  flex-direction: row;
   height: 100vh;
-  padding: 20px 20px 0 10px;
-}
-
-h1 {
-  padding: 0 0 0 36px;
   width: 90%;
+  margin: 0 auto;
+
+  @media screen and (max-width: $laptopL) {
+    flex-direction: column;
+  }
 }
 
-span {
-  font-family: Contender;
-  font-weight: 300;
+.contactpage-heading {
+  font-size: $heading1;
+  width: 100%;
+
+  span {
+    font-family: $headingFontFamily;
+    font-size: $heading2;
+    color: $headingColor;
+    font-weight: 500;
+    width: 100%;
+  }
 }
 
-p {
+.contactpage-paragraph {
   margin: 0 auto;
   padding: 10px 0;
-  width: 90%;
+  width: 100%;
 
   a {
-    font-family: Abberwick;
+    font-family: Goldsmith;
     text-decoration: none;
 
     &:hover,
