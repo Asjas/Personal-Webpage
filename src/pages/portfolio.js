@@ -42,7 +42,7 @@ export const GET_PRISMIC_PROJECTS = graphql`
 const seo = {
   title: 'A-J Roos | Portfolio',
   description:
-    'This is a collection of some of my Web Development projects. My complete collection of projects can be found on my Github Page at https://github.com/asjas.',
+    'This is a collection of some of my Web Development projects. A complete collection of my projects can be found on my Github page at https://github.com/asjas.',
   siteUrl: 'https://asjas.co.za/portfolio',
 };
 

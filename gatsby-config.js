@@ -3,7 +3,7 @@ module.exports = {
     title: 'A-J Roos | Home',
     siteUrl: 'https://asjas.co.za',
     description:
-      'My name is A-J Roos. This is my personal website that includes my portfolio, blogs and contact information. I am Front-End Web Developer based in Bloemfontein, South Africa. I enjoy working with Front-End Technologies such as React, JavaScript, Gatsby.js and CSS-in-JS.',
+      'Hey, my name is A-J Roos. I am a freelance JavaScript Web Developer based in Bloemfontein, South Africa. I enjoy working with HTML5, CSS3, JavaScript, React.js, Gatsby.js and Node.js.',
     googleSiteVerification: '5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0',
     twitterUsername: '_asjas',
   },
@@ -23,8 +23,8 @@ module.exports = {
       resolve: 'gatsby-plugin-sass',
       options: {
         includePaths: [`${__dirname}/src/styles/main.scss`],
-        sourceComments: false,
-        sourceMap: false,
+        sourceComments: true,
+        sourceMap: true,
       },
     },
     {

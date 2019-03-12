@@ -28,7 +28,7 @@ export const GET_ALL_POSTS = graphql`
 const seo = {
   title: 'A-J Roos | Blog',
   description:
-    'I am a Front-End Web Developer that blogs about JavaScript, React, Gatsby.js and Web Development in general. This is where I keep my collection of blogs.',
+    'This is where I blog about different Web Development topics. I blog about HTML5, CSS3, JavaScript, React.js and Node.js. You can signup for my newsletter as well.',
   siteUrl: 'https://asjas.co.za/blog',
 };
 
