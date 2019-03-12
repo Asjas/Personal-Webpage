@@ -1,4 +1,5 @@
 const path = require('path');
+const chalk = require('chalk');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -15,7 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
         edges {
           node {
             id
@@ -25,30 +26,51 @@ exports.createPages = ({ graphql, actions }) => {
             frontmatter {
               title
               date
+              tags
+              published
             }
           }
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      throw result.errors;
-    }
-
-    const posts = result.data.allMarkdownRemark.edges.map(({ node }) => node);
-
-    posts.forEach(post => {
-      if (!post.frontmatter.title || !post.frontmatter.date) {
-        throw Error('All posts require a `title` and `date` field in the frontmatter.');
+  `)
+    .then(result => {
+      if (result.errors) {
+        throw result.errors;
       }
-    });
 
-    posts.forEach(post => {
-      createPage({
-        path: `/blog${post.fields.slug}`,
-        component: path.resolve('./src/templates/post.js'),
-        context: { slug: post.fields.slug },
+      const posts = result.data.allMarkdownRemark.edges.map(({ node }) => node);
+
+      posts.forEach(post => {
+        if (!post.frontmatter.title || !post.frontmatter.date) {
+          throw Error(`Post ${post.fields.slug} is missing a title in the frontmatter.`);
+        }
+
+        if (!post.frontmatter.date) {
+          throw Error(`Post ${post.fields.slug} is missing a date in the frontmatter.`);
+        }
+
+        if (!post.frontmatter.tags) {
+          throw Error(`Post ${post.fields.slug} is missing tags in the frontmatter.`);
+        }
       });
+
+      const publishedBlogPosts = posts.filter(
+        post => post.frontmatter.published === true,
+      );
+
+      console.log(publishedBlogPosts);
+
+      publishedBlogPosts.forEach(post => {
+        createPage({
+          path: `/blog${post.fields.slug}`,
+          component: path.resolve('./src/templates/post.js'),
+          context: { slug: post.fields.slug },
+        });
+      });
+    })
+    .catch(error => {
+      console.error(chalk.black.bgRed(error));
+      process.exit(1);
     });
-  });
 };

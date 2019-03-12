@@ -1,6 +1,8 @@
 ---
 title: The Programmers Oath
 date: 30-10-2017
+published: false
+tags: development freecodecamp
 ---
 
 As more developers get their start through Freecodecamp, Codecademy or any of the multiple
