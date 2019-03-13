@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ContactForm from '../components/Form';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const seo = {
   title: 'A-J Roos | Contact',
@@ -25,7 +26,9 @@ const ContactPage = () => (
           <a href="mailto:asjas@outlook.com">asjas@outlook.com</a>.
         </p>
       </section>
-      <ContactForm />
+      <ErrorBoundary>
+        <ContactForm />
+      </ErrorBoundary>
     </div>
   </Layout>
 );

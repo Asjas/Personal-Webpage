@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Newsletter from '../components/Newsletter';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
@@ -38,19 +39,23 @@ const BlogPage = ({ data }) => (
     <SEO {...seo} />
     <section className="blog">
       <h1 className="blog-heading">My collection of blog posts.</h1>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <article className="blogpost-article" key={node.id}>
-          <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
-            <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
-          </Link>
-          <span className="blogpost-date">Published: {node.frontmatter.date}</span>
-          <span className="blogpost-readingtime">
-            Time to read: {node.timeToRead} min
-          </span>
-          <p className="blogpost-excerpt">{node.excerpt}</p>
-        </article>
-      ))}
-      <Newsletter />
+      <ErrorBoundary>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <article className="blogpost-article" key={node.id}>
+            <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
+              <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
+            </Link>
+            <span className="blogpost-date">Published: {node.frontmatter.date}</span>
+            <span className="blogpost-readingtime">
+              Time to read: {node.timeToRead} min
+            </span>
+            <p className="blogpost-excerpt">{node.excerpt}</p>
+          </article>
+        ))}
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Newsletter />
+      </ErrorBoundary>
     </section>
   </Layout>
 );
