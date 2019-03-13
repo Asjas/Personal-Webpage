@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import hub from '../utils/sentry';
 
 class ErrorBoundary extends React.Component {
@@ -39,9 +38,5 @@ class ErrorBoundary extends React.Component {
     return children;
   }
 }
-
-ErrorBoundary.propTypes = {
-  children: PropTypes.element.isRequired,
-};
 
 export default ErrorBoundary;

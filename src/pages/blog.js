@@ -75,6 +75,8 @@ BlogPage.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
+              tags: PropTypes.string.isRequired,
+              updated: PropTypes.string.isRequired,
             }).isRequired,
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,

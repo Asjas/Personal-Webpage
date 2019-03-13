@@ -15,7 +15,6 @@ export const GET_POST = graphql`
         title
         date
         tags
-        published
         updated
       }
       fields {
@@ -56,6 +55,8 @@ Post.propTypes = {
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
+        tags: PropTypes.string.isRequired,
+        updated: PropTypes.string.isRequired,
       }).isRequired,
       fields: PropTypes.shape({
         slug: PropTypes.string.isRequired,
