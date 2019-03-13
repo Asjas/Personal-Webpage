@@ -1,0 +1,25 @@
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  background: hsl(182, 77%, 90%);
+  padding: 20px;
+  border-radius: 5px;
+  align-self: center;
+}
+
+.newsletter-form {
+  padding: 0;
+}
+
+.newsletter-heading {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.newsletter-content {
+  font-size: $fontMedium;
+}
+
+.newsletter-input {
+  font-size: $fontSmall;
+}
