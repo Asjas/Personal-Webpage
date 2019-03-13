@@ -1,6 +1,7 @@
 ---
 title: How does Node nextTick work?
 date: '03-02-2019'
+updated: 13-03-2019
 published: true
 tags: node javascript
 ---

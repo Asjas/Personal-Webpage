@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -11,12 +12,16 @@ const seo = {
 const FourOhFour = () => (
   <Layout>
     <SEO {...seo} />
-    <section>
-      <h1 data-testid="404-heading">PAGE NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      <a to="/" data-testid="404-link">
+    <section className="fourohfour">
+      <h1 className="fourohfour-heading" data-testid="404-heading">
+        PAGE NOT FOUND
+      </h1>
+      <p className="fourohfour-text">
+        You just hit a route that doesn&#39;t exist... the sadness.
+      </p>
+      <Link to="/" className="fourohfour-link" data-testid="404-link">
         Go Home
-      </a>
+      </Link>
     </section>
   </Layout>
 );

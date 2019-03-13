@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Newsletter from '../components/Newsletter';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
@@ -10,7 +11,7 @@ export const GET_ALL_POSTS = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 350)
+          excerpt(pruneLength: 250)
           timeToRead
           frontmatter {
             title
@@ -42,13 +43,14 @@ const BlogPage = ({ data }) => (
           <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
             <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
           </Link>
-          <span className="blogpost-date">{node.frontmatter.date}</span>
+          <span className="blogpost-date">Published: {node.frontmatter.date}</span>
           <span className="blogpost-readingtime">
             Time to read: {node.timeToRead} min
           </span>
           <p className="blogpost-excerpt">{node.excerpt}</p>
         </article>
       ))}
+      <Newsletter />
     </section>
   </Layout>
 );

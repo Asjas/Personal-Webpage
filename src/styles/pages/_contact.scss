@@ -1,40 +1,33 @@
-.contactpage {
+.contact {
   display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 90%;
+  flex-direction: column;
+  width: 480px;
   margin: 0 auto;
+  justify-content: flex-start;
 
   @media screen and (max-width: $laptopL) {
     flex-direction: column;
   }
 }
 
-.contactpage-heading {
-  font-size: $heading1;
+.contact-heading {
   width: 100%;
-
-  span {
-    font-family: $headingFontFamily;
-    font-size: $heading2;
-    color: $headingColor;
-    font-weight: 500;
-    width: 100%;
-  }
+  margin: 30px 0;
 }
 
-.contactpage-paragraph {
+.contact-paragraph {
   margin: 0 auto;
+  font-size: $fontLarge;
   padding: 10px 0;
   width: 100%;
 
   a {
-    font-family: Goldsmith;
+    color: $purple;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      text-decoration: underline overline;
+      text-decoration: underline;
     }
   }
 }

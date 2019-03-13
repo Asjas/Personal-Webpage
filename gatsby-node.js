@@ -28,6 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
               date
               tags
               published
+              updated
             }
           }
         }
@@ -42,7 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
       const posts = result.data.allMarkdownRemark.edges.map(({ node }) => node);
 
       posts.forEach(post => {
-        if (!post.frontmatter.title || !post.frontmatter.date) {
+        if (!post.frontmatter.title) {
           throw Error(`Post ${post.fields.slug} is missing a title in the frontmatter.`);
         }
 
@@ -58,8 +59,6 @@ exports.createPages = ({ graphql, actions }) => {
       const publishedBlogPosts = posts.filter(
         post => post.frontmatter.published === true,
       );
-
-      console.log(publishedBlogPosts);
 
       publishedBlogPosts.forEach(post => {
         createPage({

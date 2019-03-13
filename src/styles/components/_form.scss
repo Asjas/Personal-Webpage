@@ -1,37 +1,30 @@
 form {
-  border-radius: 4px;
   margin: 0 auto;
   padding: 25px 0;
   width: 480px;
 }
 
-// export const Fieldset = styled.fieldset`
-//   border-radius: 6px;
-//   border: ${props => props.theme.inputBorderSm};
-//   display: flex;
-//   flex-direction: column;
-//   padding: 20px;
-//   width: 100%;
+fieldset {
+  border-radius: 6px;
+  border: 2px solid $black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
 
-//   &[disabled] {
-//     opacity: 0.5;
-//   }
-// `;
+label {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 
-// export const Label = styled.label`
-//   display: flex;
-//   flex-wrap: wrap;
-//   width: 100%;
-// `;
-
-// export const LabelText = styled.span`
-//   color: ${props => props.theme.black};
-//   font-family: Abberwick;
-//   font-size: ${props => props.theme.fontMd};
-//   letter-spacing: 0.04rem;
-//   margin-bottom: 5px;
-//   width: 50%;
-// `;
+  & span {
+    font-size: $fontMedium;
+    letter-spacing: 0.04rem;
+    margin-bottom: 5px;
+    width: 50%;
+  }
+}
 
 // export const StyledErrorMessage = styled(ErrorMessage)`
 //   color: ${props => props.theme.errorColor};
@@ -46,10 +39,8 @@ form {
 
 input {
   border-radius: 4px;
-  // border: ${props => props.theme.inputBorderMd};
-  // color: ${props => props.theme.black};
-  font-family: Abberwick;
-  // font-size: ${props => props.theme.fontSm};
+  border: 1px solid $black;
+  font-size: $fontSmall;
   height: 50px;
   letter-spacing: 0.02rem;
   margin: 0 0 30px 0;
@@ -62,12 +53,11 @@ input {
   // }
 }
 
-input {
+textarea {
   border-radius: 4px;
-  // border: ${props => props.theme.inputBorderMd};
-  // color: ${props => props.theme.black};
+  border: 1px solid $black;
   font-family: Abberwick;
-  // font-size: ${props => props.theme.fontSm};
+  font-size: $fontSmall;
   letter-spacing: 0.04rem;
   margin: 0 0 30px 0;
   min-height: 120px;

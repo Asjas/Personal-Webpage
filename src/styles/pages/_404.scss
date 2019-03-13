@@ -1,4 +1,4 @@
-section {
+.fourohfour {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -6,17 +6,17 @@ section {
   justify-content: center;
 }
 
-p {
-  font-size: 1.6rem;
+.fourohfour-text {
+  font-size: $fontLarge;
 }
 
-a {
-  font-family: Contender;
+.fourohfour-link {
   padding: 3px;
+  font-size: $fontLarge;
   text-decoration: none;
 
   &:hover {
-    color: lightcoral;
-    text-decoration: underline overline;
+    color: $headingColor;
+    text-decoration: underline;
   }
 }

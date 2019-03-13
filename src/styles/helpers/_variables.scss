@@ -1,13 +1,16 @@
 // Fonts
-$headingFontFamily: Contender;
+$headingFontFamily: Pastelyn;
 $bodyFontFamily: Goldsmith;
 $codeFontFamily: Operator;
 $handwritingFontFamily: Pastelyn;
 
+// Navigation Link size
+$navbarLinkLarge: 3rem;
+
 // Heading font size
-$heading1: 4.5rem;
-$heading2: 3.6rem;
-$heading3: 3.2rem;
+$heading1: 4rem;
+$heading2: 3rem;
+$heading3: 2.7rem;
 $heading4: 2.8rem;
 $heading5: 2.4rem;
 $heading6: 2rem;
@@ -15,15 +18,16 @@ $heading6: 2rem;
 // Font size (p, span, input, label)
 $fontLarge: 1.7rem;
 $fontMedium: 1.6rem;
-$fontSmall: 1.5rem;
+$fontSmall: 1.4rem;
 
 // Colors
-$headingColor: hsl(289, 89%, 45%);
+$headingColor: hsl(0, 0%, 13%);
+$subHeadingColor: hsl(289, 89%, 45%);
 $bodyColor: hsl(0, 0%, 13%);
 $errorColor: hsl(1, 73%, 46%);
 $navbarBg: hsl(182, 77%, 46%);
 $black: hsl(0, 0%, 13%);
-$orange: hsl(289, 89%, 45%);
+$purple: hsl(289, 89%, 45%);
 $white: #fff;
 
 // Media Query sizes

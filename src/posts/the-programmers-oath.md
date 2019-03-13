@@ -1,7 +1,8 @@
 ---
 title: The Programmers Oath
 date: 30-10-2017
-published: false
+updated: 16-02-2019
+published: true
 tags: development freecodecamp
 ---
 

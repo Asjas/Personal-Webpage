@@ -1,5 +1,6 @@
 /* Helpers */
 @import 'helpers/_variables.scss';
+@import 'helpers/_prism.scss';
 
 /* Base */
 @import 'base/_reset.scss';
@@ -9,10 +10,12 @@
 /* Layout */
 @import 'layout/_layout.scss';
 @import 'layout/_navbar.scss';
+@import 'layout/_footer.scss';
 
 /* Pages */
 @import 'pages/_home.scss';
 @import 'pages/_blog.scss';
+@import 'pages/_post.scss';
 @import 'pages/_contact.scss';
 @import 'pages/_portfolio.scss';
 @import 'pages/_404.scss';
@@ -20,4 +23,4 @@
 /* Components */
 @import 'components/_button.scss';
 @import 'components/_form.scss';
-@import 'layout/_footer.scss';
+@import 'components/_newsletter.scss';

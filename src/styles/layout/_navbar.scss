@@ -39,8 +39,8 @@
 
 .navbar {
   background: $navbarBg;
-  border-bottom: 3px solid $orange;
-  border-top: 3px solid $orange;
+  border-bottom: 3px solid $purple;
+  border-top: 3px solid $purple;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -60,7 +60,7 @@
     color: $white;
     cursor: pointer;
     font-family: Contender;
-    font-size: $heading3;
+    font-size: $navbarLinkLarge;
     letter-spacing: 0.04rem;
     padding: 10px 0;
     text-align: center;
@@ -68,18 +68,18 @@
     width: 100%;
 
     &:hover {
-      color: $orange;
+      color: $purple;
       text-decoration: none;
     }
 
     &:focus {
-      border: 2px solid $orange;
-      color: $orange;
+      border: 2px solid $purple;
+      color: $purple;
       outline: none;
     }
   }
 
   [aria-current] {
-    color: $orange;
+    color: $purple;
   }
 }

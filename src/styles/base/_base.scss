@@ -13,24 +13,52 @@ body {
   box-sizing: inherit;
 }
 
-h1,
+::selection {
+  color: $white;
+  background: $purple;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $purple;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
+  color: $subHeadingColor;
+  margin: 0;
+}
+
+h1 {
+  font-size: $heading1;
   color: $headingColor;
   margin: 0;
 }
 
+h2 {
+  font-size: $heading2;
+}
+
+h3 {
+  font-size: $heading3;
+}
+
+h4 {
+  font-size: $heading4;
+}
+
 blockquote {
   margin: 0;
-  background-color: hsl(23, 100%, 90%);
+  background-color: hsl(182, 77%, 90%);
   color: $bodyColor;
-  padding-left: 5px;
+  padding: 0 20px;
   margin-left: 0;
   margin-bottom: 50px;
-  border-left: 2px solid $orange;
+  border-left: 4px solid $purple;
+  width: 100%;
 }
 
 ul,
@@ -38,21 +66,10 @@ ol {
   margin-left: 0;
 }
 
-blockquote {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-}
-
-mark,
-ins {
-  background: #007acc;
-  color: $white;
-}
-
 p,
 span,
 input,
+textarea,
 label {
   color: $bodyColor;
 }

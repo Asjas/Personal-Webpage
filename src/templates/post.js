@@ -33,10 +33,10 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <SEO {...seo} />
-      <section>
-        <h1 className="post-heading">{seo.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </section>
+      <article className="post">
+        <h1 className="post-heading">{post.frontmatter.title}</h1>
+        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+      </article>
     </Layout>
   );
 };

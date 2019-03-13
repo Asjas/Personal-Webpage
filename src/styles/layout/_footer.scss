@@ -24,13 +24,13 @@ a {
     width: 5rem;
 
     &:hover {
-      fill: $orange;
+      fill: $purple;
     }
   }
 
   &:focus {
     svg {
-      fill: $orange;
+      fill: $purple;
     }
   }
 
