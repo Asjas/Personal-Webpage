@@ -1,18 +1,21 @@
-div {
+.blog {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
   justify-items: center;
-  width: 100%;
 }
 
-div {
+.blog-heading {
+  color: $headingColor;
+  font-size: $heading1;
+}
+
+.blogpost-article {
   width: 90%;
 }
 
-h2 {
-  color: #fff;
-  font-size: 16px;
+.blogpost-heading {
+  color: $headingColor;
+  font-size: $heading2;
 }
 
 a {

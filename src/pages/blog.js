@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -26,25 +26,28 @@ export const GET_ALL_POSTS = graphql`
 `;
 
 const seo = {
-  title: 'A-J Roos | Blog',
+  title: 'A-J Roos | Blog Posts',
   description:
-    'This is where I blog about different Web Development topics. I blog about HTML5, CSS3, JavaScript, React.js and Node.js. You can signup for my newsletter as well.',
+    'This is where I blog about different Web Development topics. I write blog posts about HTML5, CSS3, JavaScript, React.js and Node.js. You can signup for my newsletter as well.',
   siteUrl: 'https://asjas.co.za/blog',
 };
 
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO {...seo} />
-    <section>
+    <section className="blog">
+      <h1 className="blog-heading">My collection of blog posts.</h1>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <a to={`/blog${node.fields.slug}`}>
-            <h1>{node.frontmatter.title}</h1>
-          </a>
-          <span>{node.frontmatter.date}</span>
-          <span>Time to read: {node.timeToRead} min</span>
-          <p>{node.excerpt}</p>
-        </div>
+        <article className="blogpost-article" key={node.id}>
+          <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
+            <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
+          </Link>
+          <span className="blogpost-date">{node.frontmatter.date}</span>
+          <span className="blogpost-readingtime">
+            Time to read: {node.timeToRead} min
+          </span>
+          <p className="blogpost-excerpt">{node.excerpt}</p>
+        </article>
       ))}
     </section>
   </Layout>
