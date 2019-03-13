@@ -17,6 +17,9 @@ export const GET_ALL_POSTS = graphql`
           frontmatter {
             title
             date
+            tags
+            published
+            updated
           }
           fields {
             slug

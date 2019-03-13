@@ -9,11 +9,14 @@ export const GET_POST = graphql`
   query GET_POST($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       timeToRead
-      excerpt(pruneLength: 350)
+      excerpt(pruneLength: 250)
       html
       frontmatter {
         title
         date
+        tags
+        published
+        updated
       }
       fields {
         slug
