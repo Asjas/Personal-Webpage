@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 480px;
   margin: 0 auto;
+  height: 100%;
   justify-content: flex-start;
 
   @media screen and (max-width: $laptopL) {
@@ -22,7 +23,7 @@
   width: 100%;
 
   a {
-    color: $purple;
+    color: $mainAccent;
     text-decoration: none;
 
     &:hover,

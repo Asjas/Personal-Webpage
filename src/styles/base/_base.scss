@@ -14,13 +14,13 @@ body {
 }
 
 ::selection {
-  color: $white;
-  background: $purple;
+  color: $altAccent;
+  background: $mainAccent;
 }
 
 ::-moz-selection {
-  color: $white;
-  background: $purple;
+  color: $altAccent;
+  background: $mainAccent;
 }
 
 h2,
@@ -52,12 +52,12 @@ h4 {
 
 blockquote {
   margin: 0;
-  background-color: hsl(182, 77%, 90%);
+  background-color: $altAccent;
   color: $bodyColor;
   padding: 0 20px;
   margin-left: 0;
   margin-bottom: 50px;
-  border-left: 4px solid $purple;
+  border-left: 4px solid $mainAccent;
   width: 100%;
 }
 

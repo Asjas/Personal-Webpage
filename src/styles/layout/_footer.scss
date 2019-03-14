@@ -24,13 +24,13 @@ a {
     width: 5rem;
 
     &:hover {
-      fill: $purple;
+      fill: $mainAccent;
     }
   }
 
   &:focus {
     svg {
-      fill: $purple;
+      fill: $mainAccent;
     }
   }
 

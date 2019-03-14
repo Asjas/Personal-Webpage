@@ -39,8 +39,8 @@
 
 .navbar {
   background: $navbarBg;
-  border-bottom: 3px solid $purple;
-  border-top: 3px solid $purple;
+  border-bottom: 3px solid $mainAccent;
+  border-top: 3px solid $mainAccent;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -68,18 +68,18 @@
     width: 100%;
 
     &:hover {
-      color: $purple;
+      color: $mainAccent;
       text-decoration: none;
     }
 
     &:focus {
-      border: 2px solid $purple;
-      color: $purple;
+      border: 2px solid $mainAccent;
+      color: $mainAccent;
       outline: none;
     }
   }
 
   [aria-current] {
-    color: $purple;
+    color: $mainAccent;
   }
 }
