@@ -5,7 +5,7 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'Mdx') {
     const value = createFilePath({ node, getNode });
     createNodeField({ name: 'slug', node, value });
   }
@@ -16,7 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+      allMdx(sort: { fields: [frontmatter___date], order: ASC }) {
         edges {
           node {
             id
@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
         throw result.errors;
       }
 
-      const posts = result.data.allMarkdownRemark.edges.map(({ node }) => node);
+      const posts = result.data.allMdx.edges.map(({ node }) => node);
 
       posts.forEach(post => {
         if (!post.frontmatter.title) {
@@ -60,11 +60,14 @@ exports.createPages = ({ graphql, actions }) => {
         post => post.frontmatter.published === true,
       );
 
-      publishedBlogPosts.forEach(post => {
+      publishedBlogPosts.forEach((post, index) => {
+        const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+        const next = index === 0 ? null : posts[index - 1].node;
+
         createPage({
           path: `/blog${post.fields.slug}`,
           component: path.resolve('./src/templates/post.js'),
-          context: { slug: post.fields.slug },
+          context: { slug: post.fields.slug, previous, next },
         });
       });
     })

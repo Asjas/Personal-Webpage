@@ -11,7 +11,7 @@
   align-self: center;
 }
 
-.post-content {
+.post-content div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -25,6 +25,10 @@
 
   & p {
     font-size: $fontLarge;
+
+    & code {
+      background: $altAccent;
+    }
   }
 
   & .gatsby-highlight {

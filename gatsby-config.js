@@ -36,13 +36,13 @@ module.exports = {
     },
     'gatsby-plugin-catch-links',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-mdx',
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1380,
+              maxWidth: 590,
               withWebp: true,
             },
           },

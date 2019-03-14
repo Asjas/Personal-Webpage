@@ -23,10 +23,13 @@
     "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^0.20.3",
+    "@mdx-js/tag": "^0.20.3",
     "@sentry/browser": "^4.6.4",
     "chalk": "^2.4.2",
     "formik": "^1.5.1",
     "gatsby": "^2.1.30",
+    "gatsby-mdx": "^0.4.3",
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-fullstory": "^2.0.4",
     "gatsby-plugin-google-gtag": "^1.0.15",
@@ -43,7 +46,6 @@
     "gatsby-remark-social-cards": "^0.4.1",
     "gatsby-source-filesystem": "^2.0.24",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
-    "gatsby-transformer-remark": "^2.3.2",
     "gatsby-transformer-sharp": "^2.1.16",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
@@ -55,6 +57,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",

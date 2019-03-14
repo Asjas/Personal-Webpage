@@ -8,7 +8,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    allMarkdownRemark {
+    allMdx {
       edges {
         node {
           id
@@ -20,6 +20,9 @@ export const GET_ALL_POSTS = graphql`
             tags
             published
             updated
+          }
+          code {
+            body
           }
           fields {
             slug
@@ -43,7 +46,7 @@ const BlogPage = ({ data }) => (
     <section className="blog">
       <h1 className="blog-heading">My collection of blog posts.</h1>
       <ErrorBoundary>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {data.allMdx.edges.map(({ node }) => (
           <article className="blogpost-article" key={node.id}>
             <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
               <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
@@ -68,7 +71,7 @@ const BlogPage = ({ data }) => (
 
 BlogPage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allMdx: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({

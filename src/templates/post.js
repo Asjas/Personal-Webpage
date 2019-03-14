@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -7,10 +8,12 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 export const GET_POST = graphql`
   query GET_POST($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       timeToRead
       excerpt(pruneLength: 250)
-      html
+      code {
+        body
+      }
       frontmatter {
         title
         date
@@ -25,7 +28,7 @@ export const GET_POST = graphql`
 `;
 
 const Post = ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
 
   const seo = {
     title: post.frontmatter.title,
@@ -39,7 +42,9 @@ const Post = ({ data }) => {
         <SEO {...seo} />
         <article className="post">
           <h1 className="post-heading">{post.frontmatter.title}</h1>
-          <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div className="post-content">
+            <MDXRenderer>{post.code.body}</MDXRenderer>
+          </div>
         </article>
       </ErrorBoundary>
     </Layout>
@@ -48,7 +53,7 @@ const Post = ({ data }) => {
 
 Post.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
+    mdx: PropTypes.shape({
       html: PropTypes.string.isRequired,
       timeToRead: PropTypes.number.isRequired,
       excerpt: PropTypes.string.isRequired,
