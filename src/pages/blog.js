@@ -49,6 +49,9 @@ const BlogPage = ({ data }) => (
               <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
             </Link>
             <span className="blogpost-date">Published: {node.frontmatter.date}</span>
+            <span className="blogpost-date">
+              Last Updated: {node.frontmatter.updated}
+            </span>
             <span className="blogpost-readingtime">
               Time to read: {node.timeToRead} min
             </span>

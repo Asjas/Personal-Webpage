@@ -6,14 +6,16 @@ published: true
 tags: development freecodecamp
 ---
 
+## Introduction
+
 As more developers get their start through Freecodecamp, Codecademy or any of the multiple
 available bootcamps we all must adhere to a few principles. Ethics as it may. Not only
 should we strive to learn Web Development/Web Design, we should strive to do our best. To
 help others. And to do all work as ethically as possible.
 
-If you haven’t seen or heard of The Programmers Oath on freecodecamp’s YouTube channel I
+_If you haven’t seen or heard of The Programmers Oath on freecodecamp’s YouTube channel I
 would definitely suggest you check it out. I’ll be linking to it here if you want to skip
-this and watch the videos on YouTube instead.
+this and watch the videos on YouTube instead._
 
 ##  Promise #1
 
@@ -96,4 +98,4 @@ should always look to learn going forward and how to implement what you learned.
 of these promises are practical at all times. But they should be followed as closely as
 possible.
 
-Thank you for taking the time to read this.
+*Thank you for taking the time to read this.*
