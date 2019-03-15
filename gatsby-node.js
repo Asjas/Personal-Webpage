@@ -13,6 +13,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
+  const postPage = path.resolve('src/templates/post.js');
+  const tagPage = path.resolve('src/templates/tag.js');
 
   return graphql(`
     {
@@ -20,6 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             id
+            fileAbsolutePath
             fields {
               slug
             }
@@ -40,25 +43,35 @@ exports.createPages = ({ graphql, actions }) => {
         throw result.errors;
       }
 
+      const tagsSet = new Set();
       const posts = result.data.allMdx.edges.map(({ node }) => node);
 
       posts.forEach(post => {
         if (!post.frontmatter.title) {
-          throw Error(`Post ${post.fields.slug} is missing a title in the frontmatter.`);
+          throw Error(`${post.fileAbsolutePath} is missing a title property in the frontmatter.`);
         }
 
         if (!post.frontmatter.date) {
-          throw Error(`Post ${post.fields.slug} is missing a date in the frontmatter.`);
+          throw Error(`${post.fileAbsolutePath} is missing a date property in the frontmatter.`);
         }
 
         if (!post.frontmatter.tags) {
-          throw Error(`Post ${post.fields.slug} is missing tags in the frontmatter.`);
+          throw Error(`${post.fileAbsolutePath} is missing a tags property in the frontmatter.`);
+        } else {
+          post.frontmatter.tags.forEach(tag => {
+            tagsSet.add(tag);
+          });
+        }
+
+        if (!post.frontmatter.published) {
+          throw Error(
+            `${post.fileAbsolutePath} is missing a published property in the frontmatter.`,
+          );
         }
       });
 
-      const publishedBlogPosts = posts.filter(
-        post => post.frontmatter.published === true,
-      );
+      const publishedBlogPosts = posts.filter(post => post.frontmatter.published === true);
+      const tagList = Array.from(tagsSet);
 
       publishedBlogPosts.forEach((post, index) => {
         const previous = index === posts.length - 1 ? null : posts[index + 1].node;
@@ -66,8 +79,18 @@ exports.createPages = ({ graphql, actions }) => {
 
         createPage({
           path: `/blog${post.fields.slug}`,
-          component: path.resolve('./src/templates/post.js'),
+          component: postPage,
           context: { slug: post.fields.slug, previous, next },
+        });
+      });
+
+      tagList.forEach(tag => {
+        createPage({
+          path: `/tags/${tag}/`,
+          component: tagPage,
+          context: {
+            tag,
+          },
         });
       });
     })

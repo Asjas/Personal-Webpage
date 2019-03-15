@@ -46,21 +46,27 @@ const BlogPage = ({ data }) => (
     <section className="blog">
       <h1 className="blog-heading">My collection of blog posts.</h1>
       <ErrorBoundary>
-        {data.allMdx.edges.map(({ node }) => (
-          <article className="blogpost-article" key={node.id}>
-            <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
-              <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
-            </Link>
-            <span className="blogpost-date">Published: {node.frontmatter.date}</span>
-            <span className="blogpost-date">
-              Last Updated: {node.frontmatter.updated}
-            </span>
-            <span className="blogpost-readingtime">
-              Time to read: {node.timeToRead} min
-            </span>
-            <p className="blogpost-excerpt">{node.excerpt}</p>
-          </article>
-        ))}
+        {data.allMdx.edges.map(
+          ({ node }) =>
+            node.frontmatter.published && (
+              <article className="blogpost-article" key={node.id}>
+                <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
+                  <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
+                </Link>
+                <span className="blogpost-date">Published: {node.frontmatter.date}</span>
+                <span className="blogpost-date">Last Updated: {node.frontmatter.updated}</span>
+                <span className="blogpost-readingtime">Time to read: {node.timeToRead} min</span>
+                <div className="blogpost-tags">
+                  {node.frontmatter.tags.map(tag => (
+                    <Link key={tag} className="blogpost-tag" to={`/tags/${tag}`}>
+                      {tag}
+                    </Link>
+                  ))}
+                </div>
+                <p className="blogpost-excerpt">{node.excerpt}</p>
+              </article>
+            ),
+        )}
       </ErrorBoundary>
       <ErrorBoundary>
         <Newsletter />
@@ -81,7 +87,7 @@ BlogPage.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
-              tags: PropTypes.string.isRequired,
+              tags: PropTypes.array.isRequired,
               updated: PropTypes.string.isRequired,
             }).isRequired,
             fields: PropTypes.shape({

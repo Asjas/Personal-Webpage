@@ -1,6 +1,7 @@
 .blog {
   display: grid;
   justify-items: center;
+  min-width: 300px;
   width: 100%;
   height: 100%;
   gap: 30px;
@@ -14,6 +15,7 @@
 .blogpost-article {
   margin: 0 auto;
   background: $altAccent;
+  min-width: 300px;
   width: 90%;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -35,19 +37,39 @@
   margin: 20px 0;
 }
 
-.blogpost-date {
-  font-size: $fontSmall;
-  font-family: Goldsmith;
-  margin-right: 20px;
-  font-style: italic;
+.blogpost-tags {
+  display: inline-block;
+  height: auto;
 }
 
-.blogpost-readingtime {
-  font-size: $fontSmall;
+.blogpost-date,
+.blogpost-readingtime,
+.blogpost-tag {
+  display: inline-block;
+  font-size: $fontTags;
   font-family: Goldsmith;
+  margin: 20px 20px 0 0;
   font-style: italic;
+  background: $navbarBg;
+  font-weight: 700;
+  color: $white;
+  padding: 3px 8px;
+  border-radius: 25px;
+}
+
+.blogpost-tag {
+  font-style: normal;
+  padding: 3px 8px;
+  background: $mainAccent;
+  font-size: $fontSmall;
+}
+
+.blogpost-tag:hover {
+  background: $white;
+  color: $mainAccent;
+  cursor: pointer;
 }
 
 .blogpost-excerpt {
-  font-size: $fontLarge;
+  font-size: $fontMedium;
 }
