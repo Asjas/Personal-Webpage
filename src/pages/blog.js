@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Tags from '../components/Tags';
 import Newsletter from '../components/Newsletter';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -20,9 +21,6 @@ export const GET_ALL_POSTS = graphql`
             tags
             published
             updated
-          }
-          code {
-            body
           }
           fields {
             slug
@@ -45,6 +43,7 @@ const BlogPage = ({ data }) => (
     <SEO {...seo} />
     <section className="blog">
       <h1 className="blog-heading">My collection of blog posts.</h1>
+      <Tags />
       <ErrorBoundary>
         {data.allMdx.edges.map(
           ({ node }) =>
@@ -58,7 +57,7 @@ const BlogPage = ({ data }) => (
                 <span className="blogpost-readingtime">Time to read: {node.timeToRead} min</span>
                 <div className="blogpost-tags">
                   {node.frontmatter.tags.map(tag => (
-                    <Link key={tag} className="blogpost-tag" to={`/tags/${tag}`}>
+                    <Link key={tag} className="tag" to={`/tags/${tag}`}>
                       {tag}
                     </Link>
                   ))}

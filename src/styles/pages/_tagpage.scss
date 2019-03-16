@@ -1,0 +1,36 @@
+.tagpage {
+  width: 60%;
+  margin: 60px auto;
+
+  @media screen and (max-width: $laptop) {
+    width: 50%;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $tablet) {
+    width: 90%;
+  }
+}
+
+.tagpage-heading {
+  @media screen and (max-width: $tablet) {
+    text-align: center;
+  }
+}
+
+.tagpage-container {
+  list-style-type: none;
+  margin: 40px auto;
+  padding-left: 15px;
+  color: $mainAccent;
+}
+
+.tagpage-blog {
+  padding: 20px 0;
+}
+
+.tagpage-return {
+  font-size: $fontMedium;
+  color: $mainAccent;
+  text-decoration: underline;
+}

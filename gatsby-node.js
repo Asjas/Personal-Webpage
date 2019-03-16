@@ -13,8 +13,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const postPage = path.resolve('src/templates/post.js');
-  const tagPage = path.resolve('src/templates/tag.js');
+  const blogPostTemplate = path.resolve('src/templates/blogPostTemplate.js');
+  const tagsTemplate = path.resolve('src/templates/tagsTemplate.js');
 
   return graphql(`
     {
@@ -43,8 +43,8 @@ exports.createPages = ({ graphql, actions }) => {
         throw result.errors;
       }
 
-      const tagsSet = new Set();
       const posts = result.data.allMdx.edges.map(({ node }) => node);
+      const tagsSet = new Set();
 
       posts.forEach(post => {
         if (!post.frontmatter.title) {
@@ -71,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
       });
 
       const publishedBlogPosts = posts.filter(post => post.frontmatter.published === true);
-      const tagList = Array.from(tagsSet);
+      const tags = Array.from(tagsSet);
 
       publishedBlogPosts.forEach((post, index) => {
         const previous = index === posts.length - 1 ? null : posts[index + 1].node;
@@ -79,15 +79,15 @@ exports.createPages = ({ graphql, actions }) => {
 
         createPage({
           path: `/blog${post.fields.slug}`,
-          component: postPage,
+          component: blogPostTemplate,
           context: { slug: post.fields.slug, previous, next },
         });
       });
 
-      tagList.forEach(tag => {
+      tags.forEach(tag => {
         createPage({
           path: `/tags/${tag}/`,
-          component: tagPage,
+          component: tagsTemplate,
           context: {
             tag,
           },

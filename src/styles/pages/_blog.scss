@@ -43,31 +43,17 @@
 }
 
 .blogpost-date,
-.blogpost-readingtime,
-.blogpost-tag {
-  display: inline-block;
-  font-size: $fontTags;
-  font-family: Goldsmith;
-  margin: 20px 20px 0 0;
-  font-style: italic;
+.blogpost-readingtime {
   background: $navbarBg;
-  font-weight: 700;
-  color: $white;
-  padding: 3px 8px;
   border-radius: 25px;
-}
-
-.blogpost-tag {
-  font-style: normal;
+  color: $white;
+  display: inline-block;
+  font-family: Goldsmith;
+  font-size: $fontTags;
+  font-style: italic;
+  font-weight: 700;
+  margin: 20px 20px 0 0;
   padding: 3px 8px;
-  background: $mainAccent;
-  font-size: $fontSmall;
-}
-
-.blogpost-tag:hover {
-  background: $white;
-  color: $mainAccent;
-  cursor: pointer;
 }
 
 .blogpost-excerpt {
