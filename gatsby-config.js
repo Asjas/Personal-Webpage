@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-catch-links',
     'gatsby-remark-social-cards',
     'gatsby-plugin-sitemap',
     {
@@ -35,7 +36,6 @@ module.exports = {
         name: 'posts',
       },
     },
-    'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-mdx',
       options: {
@@ -47,20 +47,10 @@ module.exports = {
               withWebp: true,
             },
           },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1.0725rem',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: '>',
-              showLineNumbers: true,
-            },
-          },
+          { resolve: 'gatsby-remark-responsive-iframe' },
+          { resolve: 'gatsby-remark-code-titles' },
+          { resolve: 'gatsby-remark-numbered-footnotes' },
+          { resolve: 'gatsby-remark-prismjs' },
         ],
       },
     },
