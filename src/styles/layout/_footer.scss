@@ -5,6 +5,10 @@ footer {
   width: 100%;
   align-self: end;
 
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
   // ${media.laptop`
   //   align-self: center;
   //   max-width: 320px;
@@ -24,13 +28,13 @@ a {
     width: 5rem;
 
     &:hover {
-      fill: $mainAccent;
+      fill: $primaryColor;
     }
   }
 
   &:focus {
     svg {
-      fill: $mainAccent;
+      fill: $primaryColor;
     }
   }
 
@@ -38,11 +42,4 @@ a {
     position: absolute;
     left: -9999px;
   }
-
-  // ${media.laptopL`
-  //   svg {
-  //     height: ${props => props.theme.svgMd};
-  //     width: ${props => props.theme.svgMd};
-  //   }
-  // `};
 }

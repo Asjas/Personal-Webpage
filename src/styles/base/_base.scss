@@ -14,50 +14,33 @@ body {
 }
 
 ::selection {
-  color: $altAccent;
-  background: $mainAccent;
+  color: $secondaryColor;
+  background: $primaryColor;
 }
 
 ::-moz-selection {
-  color: $altAccent;
-  background: $mainAccent;
+  color: $secondaryColor;
+  background: $primaryColor;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $subHeadingColor;
+  color: $headingFontColor;
   margin: 0;
-}
-
-h1 {
-  font-size: $heading1;
-  color: $headingColor;
-  margin: 0;
-}
-
-h2 {
-  font-size: $heading2;
-}
-
-h3 {
-  font-size: $heading3;
-}
-
-h4 {
-  font-size: $heading4;
 }
 
 blockquote {
   margin: 0;
-  background-color: $altAccent;
-  color: $bodyColor;
+  background-color: $secondaryColor;
+  color: $bodyFontColor;
   padding: 0 20px;
   margin-left: 0;
   margin-bottom: 50px;
-  border-left: 4px solid $mainAccent;
+  border-left: 4px solid $primaryColor;
   width: 100%;
 }
 
@@ -71,5 +54,5 @@ span,
 input,
 textarea,
 label {
-  color: $bodyColor;
+  color: $bodyFontColor;
 }

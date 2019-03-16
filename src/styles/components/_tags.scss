@@ -12,19 +12,18 @@
 }
 
 .tag {
-  background: $mainAccent;
+  background: $primaryColor;
   border-radius: 25px;
   color: $white;
   display: inline-block;
   font-family: Goldsmith;
   font-size: $fontSmall;
-  font-weight: 700;
   margin: 20px 20px 0 0;
   padding: 3px 8px;
 
   &:hover {
     background: $white;
-    color: $mainAccent;
+    color: $primaryColor;
     cursor: pointer;
   }
 }

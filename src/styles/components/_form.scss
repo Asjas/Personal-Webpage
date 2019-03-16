@@ -20,7 +20,6 @@ label {
   width: 100%;
 
   & span {
-    font-size: $fontMedium;
     letter-spacing: 0.04rem;
     margin-bottom: 5px;
     width: 50%;
@@ -41,9 +40,7 @@ label {
 input {
   border-radius: 4px;
   border: 1px solid $black;
-  font-size: $fontSmall;
   height: 50px;
-  letter-spacing: 0.02rem;
   margin: 0 0 30px 0;
   padding: 0 0 0 20px;
   width: 100%;
@@ -57,9 +54,6 @@ input {
 textarea {
   border-radius: 4px;
   border: 1px solid $black;
-  font-family: Abberwick;
-  font-size: $fontSmall;
-  letter-spacing: 0.04rem;
   margin: 0 0 30px 0;
   min-height: 120px;
   outline: none;

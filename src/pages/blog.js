@@ -9,7 +9,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    allMdx {
+    allMdx(sort: { fields: [frontmatter___date], order: ASC }) {
       edges {
         node {
           id

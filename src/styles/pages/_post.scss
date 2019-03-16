@@ -6,7 +6,7 @@
 }
 
 .post-heading {
-  margin: 30px 0;
+  margin: 50px 0;
   text-align: center;
   align-self: center;
 }
@@ -24,10 +24,10 @@
   }
 
   & p {
-    font-size: $fontLarge;
+    font-size: $fontMedium;
 
     & code {
-      background: $altAccent;
+      background: $secondaryColor;
     }
   }
 

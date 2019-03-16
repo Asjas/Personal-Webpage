@@ -1,8 +1,8 @@
 // Fonts
-$headingFontFamily: Pastelyn;
+$headingFontFamily: Hugtophia;
 $bodyFontFamily: Goldsmith;
 $codeFontFamily: Operator;
-$handwritingFontFamily: Pastelyn;
+$handwritingFontFamily: $headingFontFamily;
 
 // Navigation Link size
 $navbarLinkLarge: 3rem;
@@ -22,18 +22,17 @@ $fontSmall: 1.4rem;
 $fontTags: 1.3rem;
 
 // Colors
-$headingColor: hsl(0, 0%, 13%);
-$subHeadingColor: hsl(319, 100%, 22%);
-$bodyColor: hsl(0, 0%, 13%);
-$errorColor: hsl(1, 73%, 46%);
-$navbarBg: hsl(38, 80%, 76%);
-$black: hsl(0, 0%, 13%);
-$mainAccent: hsl(319, 100%, 22%);
-$altAccent: hsl(38, 100%, 92%);
+$primaryColor: hsl(191, 93%, 28%);
+$black: #292522;
+$errorFontColor: hsl(1, 73%, 46%);
+$navbarBg: #292522;
+$secondaryColor: hsl(54, 57%, 86%);
 $white: #fff;
+$headingFontColor: $primaryColor;
+$bodyFontColor: $black;
 
 // Media Query sizes
-$mobileS: 320;
+$mobileS: 320px;
 $mobileM: 375px;
 $mobileL: 425px;
 $tablet: 768px;

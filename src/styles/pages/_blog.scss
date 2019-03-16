@@ -14,7 +14,7 @@
 
 .blogpost-article {
   margin: 0 auto;
-  background: $altAccent;
+  background: $secondaryColor;
   min-width: 300px;
   width: 90%;
   border-radius: 5px;
@@ -28,7 +28,7 @@
 
   &:hover {
     cursor: pointer;
-    color: $subHeadingColor;
+    color: $primaryColor;
     text-decoration: underline;
   }
 }
@@ -48,10 +48,8 @@
   border-radius: 25px;
   color: $white;
   display: inline-block;
-  font-family: Goldsmith;
   font-size: $fontTags;
   font-style: italic;
-  font-weight: 700;
   margin: 20px 20px 0 0;
   padding: 3px 8px;
 }

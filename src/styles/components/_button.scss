@@ -1,7 +1,7 @@
 .submit-button {
-  background-color: $mainAccent;
+  background-color: $primaryColor;
   border-radius: 4px;
-  border: 2px solid $mainAccent;
+  border: 2px solid $primaryColor;
   color: $white;
   cursor: pointer;
   font-family: Contender;
@@ -15,7 +15,7 @@
   &:hover,
   &:focus {
     background-color: $white;
-    color: $mainAccent;
-    border: 2px solid $mainAccent;
+    color: $primaryColor;
+    border: 2px solid $primaryColor;
   }
 }
