@@ -1,8 +1,10 @@
 .post {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: 90%;
-  height: 100%;
+  margin-bottom: 150px;
+  padding-bottom: 150px;
 }
 
 .post-heading {
@@ -11,12 +13,13 @@
   align-self: center;
 }
 
+.post-content {
+}
+
 .post-content div {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 100%;
 
   & h2 {
     margin: 20px 0;
