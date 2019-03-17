@@ -2,6 +2,10 @@
   max-width: 500px;
   text-align: center;
 
+  @media screen and (max-width: $mobileL) {
+    max-width: 400px;
+  }
+
   .tag {
     &:hover {
       background: $navbarBg;

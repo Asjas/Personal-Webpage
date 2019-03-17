@@ -18,8 +18,8 @@ const NewsletterForm = memo(function NewsletterForm(props) {
       <form className="newsletter-form" onSubmit={handleSubmit}>
         <h3 className="newsletter-heading">Subscribe to my newsletter.</h3>
         <p className="newsletter-content">
-          I send a newsletter about every 2 weeks that contains news updates surrounding
-          Web Development. I also include links to new blog posts that I write.
+          I send a newsletter on occasion that contains news updates surrounding Web Development. I
+          also include links to new blog posts that I write.
         </p>
         <label htmlFor="newsletter-input">
           Enter your email:
