@@ -7,6 +7,7 @@
   padding: 0;
   left: 0;
   transition: all ease-in-out 0.5s;
+  z-index: 10;
 
   @media screen and (max-width: $laptopL) {
     max-width: 320px;
