@@ -32,7 +32,6 @@
     "gatsby-mdx": "^0.4.3",
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-fullstory": "^2.0.4",
-    "gatsby-plugin-google-gtag": "^1.0.15",
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-robots-txt": "^1.4.0",

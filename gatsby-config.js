@@ -71,20 +71,6 @@ module.exports = {
         fs_org: 'FQ01H',
       },
     },
-    {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: ['UA-112825816-1'],
-        gtagConfig: {
-          optimize_id: 'GTM-NGT5XDP',
-          anonymize_ip: true,
-        },
-        pluginConfig: {
-          head: false,
-          respectDNT: true,
-        },
-      },
-    },
     'gatsby-plugin-remove-serviceworker',
   ],
 };

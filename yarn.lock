@@ -6711,14 +6711,6 @@ gatsby-plugin-fullstory@^2.0.4:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-google-gtag@^1.0.15:
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-1.0.15.tgz#06228737f46cac064a580059126de407275187b8"
-  integrity sha512-hWjpK5nD6VlD4ckINrH+ox4fHqn31PX4sxmTKQxKCA5YgoEwUeiwL0VEatPiBJ6lFZn4ZpN3mzfp5dHg3D/eBg==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    minimatch "^3.0.4"
-
 gatsby-plugin-page-creator@^2.0.10:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.10.tgz#5ad313242afaa21e3aefb5b570d7d10c1faa7665"
