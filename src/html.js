@@ -10,7 +10,10 @@ class HTML extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <link rel="shortcut icon" href="https://storage.googleapis.com/asjas.co.za/favicon.ico" />
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
+          <script
+            crossOrigin="anonymous"
+            src="https://polyfill.io/v3/polyfill.min.js?flags=gated&rum=true&features=IntersectionObserver%2CArray.prototype.map"
+          />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

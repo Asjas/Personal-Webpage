@@ -23,12 +23,13 @@
   width: 100%;
 
   a {
-    color: $primaryColor;
-    text-decoration: none;
+    color: $black;
+    text-decoration: underline;
+    text-decoration-color: $primaryColor;
 
     &:hover,
     &:focus {
-      text-decoration: underline;
+      color: $primaryColor;
     }
   }
 }
