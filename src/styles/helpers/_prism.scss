@@ -67,23 +67,28 @@ pre[class*='language-'] ::selection {
 
 .token.comment {
   color: rgb(99, 119, 119);
+  font-family: Operator;
 }
 
 .token.string,
 .token.url {
+  font-family: Operator;
   color: rgb(173, 219, 103);
 }
 
 .token.attr-value {
+  font-family: Operator;
   color: #80ffbb;
 }
 
 .token.attr-name,
 .token.variable {
+  font-family: Operator;
   color: #ffc600;
 }
 
 .token.number {
+  font-family: Operator;
   color: rgb(247, 140, 108);
 }
 
@@ -91,41 +96,51 @@ pre[class*='language-'] ::selection {
 .token.char,
 .token.constant,
 .token.function {
+  font-family: Operator;
   color: rgb(130, 170, 255);
 }
 
 .token.punctuation {
+  font-family: Operator;
   color: #fff;
 }
 
 .token.selector,
 .token.doctype {
+  font-family: Operator;
   color: rgb(199, 146, 234);
   font-style: 'italic';
 }
 
 .token.class-name {
+  font-family: Operator;
   color: rgb(255, 203, 139);
 }
 
 .token.tag {
+  font-family: Operator;
   color: #80fcff;
 }
+
 .token.operator,
 .token.keyword {
   color: #ffc600;
+  font-family: Operator;
 }
 
 .token.boolean {
   color: rgb(255, 88, 116);
+  font-family: Operator;
 }
 
 .token.property {
   color: rgb(128, 203, 196);
+  font-family: Operator;
 }
 
 .token.namespace {
   color: rgb(178, 204, 214);
+  font-family: Operator;
 }
 
 pre[data-line] {
@@ -135,6 +150,7 @@ pre[data-line] {
 
 .gatsby-highlight-code-line {
   background-color: #193549;
+  font-family: Operator;
   display: block;
   margin-right: -1em;
   margin-left: -1em;
@@ -146,6 +162,7 @@ pre[data-line] {
 .gatsby-highlight {
   margin-bottom: 1.75rem;
   border-radius: 10px;
+  font-family: Operator;
   background: #193549;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
@@ -156,17 +173,19 @@ pre[data-line] {
   min-width: 100%;
 }
 
-.gatsby-remark-code-title {
+.gatsby-code-title {
   margin-bottom: -0.6rem;
-  padding: 0.5em 1em;
+  font-family: Operator;
+  padding: 10px 8px;
+  font-size: $fontTags;
   font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter',
     'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco,
     'Courier New', Courier, monospace;
 
-  background-color: black;
+  background-color: $primaryColor;
   color: white;
   z-index: 0;
 
-  border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
+  border-top-left-radius: 0.9rem;
+  border-top-right-radius: 0.9rem;
 }
