@@ -1,11 +1,12 @@
-div {
-  align-items: center;
-  display: flex;
+.projects {
+  display: grid;
   height: 100vh;
-  justify-content: center;
+  gap: 40px;
   width: 100%;
 }
 
-p {
-  font-size: $heading3;
+.portfolio-heading {
+  font-size: $heading1;
+  text-align: center;
+  margin: 30px 0;
 }

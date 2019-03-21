@@ -44,6 +44,7 @@
   border-top: 3px solid $primaryColor;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
   width: 100%;
 }

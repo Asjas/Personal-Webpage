@@ -48,16 +48,12 @@ const seo = {
   siteUrl: 'https://asjas.co.za/portfolio',
 };
 
-const PortfolioPage = ({
-  data: {
-    allPrismicProjects: { edges },
-  },
-}) => (
+const PortfolioPage = ({ data }) => (
   <Layout>
     <SEO {...seo} />
-    <h1>This is a collection of projects that I have worked on.</h1>
-    <section>
-      {edges.map(({ node }) => (
+    <h1 className="portfolio-heading">This is a collection of projects that I have worked on.</h1>
+    <section className="projects">
+      {data.allPrismicProjects.edges.map(({ node }) => (
         <Project key={node.id} data={node.data} />
       ))}
     </section>

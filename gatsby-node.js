@@ -6,8 +6,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === 'Mdx') {
-    const value = createFilePath({ node, getNode });
-    createNodeField({ name: 'slug', node, value });
+    const slug = createFilePath({ node, getNode, basePath: `blog` });
+    createNodeField({ name: 'slug', node, value: slug });
   }
 };
 
@@ -21,7 +21,6 @@ exports.createPages = ({ graphql, actions }) => {
       allMdx(sort: { fields: [frontmatter___date], order: ASC }) {
         edges {
           node {
-            id
             fileAbsolutePath
             fields {
               slug
