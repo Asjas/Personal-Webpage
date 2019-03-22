@@ -12,10 +12,13 @@
   width: 100%;
   transition: all ease-in 0.12s;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $white;
     color: $primaryColor;
     border: 2px solid $primaryColor;
+  }
+
+  &:focus {
+    outline: 3px solid $outlineColor;
   }
 }

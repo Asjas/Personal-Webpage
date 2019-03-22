@@ -12,6 +12,10 @@
       color: $white;
       cursor: pointer;
     }
+
+    &:focus {
+      outline: 3px solid $outlineColor;
+    }
   }
 }
 

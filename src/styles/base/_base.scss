@@ -56,3 +56,8 @@ textarea,
 label {
   color: $bodyFontColor;
 }
+
+input:focus,
+textarea:focus {
+  outline: 3px solid $outlineColor;
+}

@@ -35,6 +35,9 @@
 
 .blogpost-heading {
   margin: 20px 0;
+  &:focus {
+    outline: 2px solid $outlineColor;
+  }
 }
 
 .blogpost-tags {

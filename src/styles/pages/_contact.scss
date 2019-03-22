@@ -30,6 +30,7 @@
     &:hover,
     &:focus {
       color: $primaryColor;
+      outline: 3px solid $outlineColor;
     }
   }
 }
