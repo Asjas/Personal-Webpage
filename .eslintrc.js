@@ -25,6 +25,7 @@ module.exports = {
     'implicit-arrow-linebreak': 0,
     'function-paren-newline': 0,
     'react/jsx-one-expression-per-line': 0,
+    'react/no-multi-comp': 0,
     'arrow-parens': 0,
     'no-unused-vars': [
       1,

@@ -8,33 +8,33 @@ footer {
   @media screen and (max-width: $tablet) {
     margin-bottom: 100px;
   }
-}
 
-a {
-  cursor: pointer;
+  a {
+    cursor: pointer;
 
-  &:focus {
-    outline: none;
-  }
-
-  svg {
-    fill: $white;
-    height: 5rem;
-    width: 5rem;
-
-    &:hover {
-      fill: $primaryColor;
+    &:focus {
+      outline: 3px solid $outlineColor;
     }
-  }
 
-  &:focus {
     svg {
-      fill: $primaryColor;
-    }
-  }
+      fill: $white;
+      height: 5rem;
+      width: 5rem;
 
-  span {
-    position: absolute;
-    left: -9999px;
+      &:hover {
+        fill: $primaryColor;
+      }
+    }
+
+    &:focus {
+      svg {
+        fill: $primaryColor;
+      }
+    }
+
+    span {
+      position: absolute;
+      left: -9999px;
+    }
   }
 }

@@ -31,6 +31,10 @@
     color: $primaryColor;
     text-decoration: underline;
   }
+
+  &:focus {
+    outline: 3px solid $outlineColor;
+  }
 }
 
 .blogpost-heading {
@@ -43,6 +47,10 @@
 .blogpost-tags {
   display: inline-block;
   height: auto;
+
+  .tag:focus {
+    outline: 3px solid $outlineColor;
+  }
 }
 
 .blogpost-date,
