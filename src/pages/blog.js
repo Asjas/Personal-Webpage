@@ -41,36 +41,38 @@ const seo = {
 const BlogPage = ({ data }) => (
   <Layout>
     <SEO {...seo} />
-    <section className="blog">
-      <h1 className="blog-heading">My collection of blog posts.</h1>
-      <Tags />
+    <div className="blog">
+      <header>
+        <h1 className="blog-heading">My collection of blog posts.</h1>
+        <Tags />
+      </header>
       <ErrorBoundary>
         {data.allMdx.edges.map(
           ({ node }) =>
             node.frontmatter.published && (
-              <article className="blogpost-article" key={node.id}>
+              <section className="blogpost-article" key={node.id}>
                 <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
                   <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
                 </Link>
                 <span className="blogpost-date">Published: {node.frontmatter.date}</span>
                 <span className="blogpost-date">Last Updated: {node.frontmatter.updated}</span>
                 <span className="blogpost-readingtime">Time to read: {node.timeToRead} min</span>
-                <div className="blogpost-tags">
+                <ul className="blogpost-tags">
                   {node.frontmatter.tags.map(tag => (
                     <Link key={tag} className="tag" to={`/tags/${tag}`}>
                       {tag}
                     </Link>
                   ))}
-                </div>
+                </ul>
                 <p className="blogpost-excerpt">{node.excerpt}</p>
-              </article>
+              </section>
             ),
         )}
       </ErrorBoundary>
       <ErrorBoundary>
         <Newsletter />
       </ErrorBoundary>
-    </section>
+    </div>
   </Layout>
 );
 

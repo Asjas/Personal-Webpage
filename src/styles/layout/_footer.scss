@@ -1,4 +1,4 @@
-footer {
+.footer {
   display: flex;
   margin: 0 auto;
   justify-content: space-around;
@@ -9,32 +9,38 @@ footer {
     margin-bottom: 100px;
   }
 
-  a {
+  .footer-link {
     cursor: pointer;
 
-    &:focus {
-      outline: 3px solid $outlineColor;
+    span {
+      position: absolute;
+      left: -9999px;
     }
 
     svg {
       fill: $white;
       height: 5rem;
       width: 5rem;
-
-      &:hover {
-        fill: $primaryColor;
-      }
     }
 
     &:focus {
+      outline: 3px solid $outlineColor;
+
       svg {
         fill: $primaryColor;
       }
     }
 
-    span {
-      position: absolute;
-      left: -9999px;
+    &:hover {
+      svg {
+        fill: $primaryColor;
+      }
+    }
+
+    &:visited {
+      svg {
+        fill: $linkVisitedColor;
+      }
     }
   }
 }

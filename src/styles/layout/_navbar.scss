@@ -1,5 +1,5 @@
-.aside {
-  grid-area: aside;
+.sidenav {
+  grid-area: sidenav;
   height: 100vh;
   left: 0;
   padding: 0;
@@ -34,7 +34,7 @@
   top: 15px;
   width: 25px;
   z-index: 10;
-  visibility: visible;
+  visibility: hidden;
 
   &:focus {
     outline: 3px solid $outlineColor;
@@ -43,6 +43,10 @@
   & span {
     position: absolute;
     left: -9999px;
+  }
+
+  @media screen and (max-width: $laptop) {
+    visibility: visible;
   }
 }
 
@@ -60,36 +64,39 @@
 .navbar-links {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
+  padding-left: 0;
   padding-top: 40px;
+  width: 100%;
 
-  & a {
-    border-bottom: 2px solid transparent;
-    border-top: 2px solid transparent;
-    color: $white;
-    cursor: pointer;
-    font-family: Contender;
-    font-size: $navbarLinkLarge;
-    letter-spacing: 0.04rem;
-    padding: 10px 0;
+  & .navbar-item {
+    align-content: center;
+    height: 60px;
+    list-style: none;
     text-align: center;
-    text-decoration: none;
     width: 100%;
 
-    &:hover {
-      color: $primaryColor;
-      text-decoration: none;
-    }
+    & .navbar-link {
+      border: 2px solid transparent;
+      color: $white;
+      cursor: pointer;
+      font-family: Contender;
+      font-size: $navbarLinkLarge;
+      height: 100%;
+      width: 100%;
 
-    &:focus {
-      border: 2px solid $primaryColor;
-      color: $primaryColor;
-      outline: none;
-    }
-  }
+      &:hover {
+        color: $primaryColor;
+      }
 
-  [aria-current] {
-    color: $primaryColor;
+      &:focus {
+        border: 2px solid $primaryColor;
+        color: $primaryColor;
+        outline: none;
+      }
+    }
+    [aria-current] {
+      color: $primaryColor;
+    }
   }
 }

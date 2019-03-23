@@ -20,7 +20,6 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO />
     <section className="homepage">
-      {console.log(data)}
       <p className="homepage-quote">
         "There are only two hard things in Computer Science: cache invalidation and naming things" -
         Phil Karlton

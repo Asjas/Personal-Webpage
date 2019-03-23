@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/assets/`,
-        name: 'assets',
+        path: `${__dirname}/src/images/`,
+        name: 'images',
       },
     },
     {
@@ -78,6 +78,44 @@ module.exports = {
         fs_org: 'FQ01H',
       },
     },
-    'gatsby-plugin-remove-serviceworker',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'A-J Roos | Personal Website',
+        short_name: 'A-J Roos',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: 'hsl(341, 79%, 45%)',
+        display: 'standalone',
+        icon: 'src/images/messy-desk.jpg', // This path is relative to the root of the site.
+        include_favicon: true, // Include favicon
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        importWorkboxFrom: 'local',
+        globDirectory: '/',
+        cacheId: 'gatsby-plugin-offline',
+        // Don't cache-bust JS or CSS files, and anything in the static directory,
+        // since these files have unique URLs and their contents will never change
+        dontCacheBustUrlsMatching: /(\.js$|\.css$\/)/,
+        runtimeCaching: [
+          {
+            // Use cacheFirst since these don't need to be revalidated (same RegExp
+            // and same reason as above)
+            urlPattern: /(\.js$|\.css$\/)/,
+            handler: 'cacheFirst',
+          },
+          {
+            // Add runtime caching of various other page resources
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|js|ttf|woff|woff2|json|css)$/,
+            handler: 'staleWhileRevalidate',
+          },
+        ],
+        skipWaiting: true,
+        clientsClaim: true,
+      },
+    },
   ],
 };

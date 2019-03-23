@@ -32,5 +32,9 @@
       color: $primaryColor;
       outline: 3px solid $outlineColor;
     }
+
+    &:visited {
+      color: $linkVisitedColor;
+    }
   }
 }

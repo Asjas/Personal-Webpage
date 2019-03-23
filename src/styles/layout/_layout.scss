@@ -1,7 +1,7 @@
 .page-layout {
   display: grid;
   grid-template-columns: 360px 1fr;
-  grid-template-areas: 'aside main';
+  grid-template-areas: 'sidenav main';
 
   @media screen and (max-width: $laptop) {
     grid-template-columns: 1fr;
