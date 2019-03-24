@@ -9,7 +9,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm-run-all clean build:gatsby",
+    "build:gatsby": "gatsby build",
+    "clean": "gatsby clean",
     "dev": "gatsby develop",
     "lint": "eslint .",
     "cy:open": "cypress open",
@@ -51,6 +53,7 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
     "gatsby-transformer-sharp": "^2.1.17",
+    "npm-run-all": "^4.1.5",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
