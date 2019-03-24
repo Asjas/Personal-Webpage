@@ -85,26 +85,6 @@ module.exports = {
         include_favicon: true,
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        importWorkboxFrom: 'local',
-        globDirectory: '/',
-        cacheId: 'gatsby-plugin-offline',
-        dontCacheBustUrlsMatching: /(\.js$|\.css$\/)/,
-        runtimeCaching: [
-          {
-            urlPattern: /(\.js$|\.css$\/)/,
-            handler: 'cacheFirst',
-          },
-          {
-            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|js|ttf|woff|woff2|json|css)$/,
-            handler: 'staleWhileRevalidate',
-          },
-        ],
-        skipWaiting: true,
-        clientsClaim: true,
-      },
-    },
+    'gatsby-plugin-offline',
   ],
 };
