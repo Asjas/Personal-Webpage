@@ -73,6 +73,16 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-112825816-1',
+        head: false,
+        anonymize: true,
+        respectDNT: false,
+        siteSpeedSampleRate: 10,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'A-J Roos | Personal Website',

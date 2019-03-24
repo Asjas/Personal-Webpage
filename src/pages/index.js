@@ -44,7 +44,6 @@ IndexPage.propTypes = {
         fixed: PropTypes.shape({
           height: PropTypes.number.isRequired,
           width: PropTypes.number.isRequired,
-          base64: PropTypes.string.isRequired,
           src: PropTypes.string.isRequired,
           srcSet: PropTypes.string.isRequired,
         }).isRequired,
