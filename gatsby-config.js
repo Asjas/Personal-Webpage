@@ -73,12 +73,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-fullstory',
-      options: {
-        fs_org: 'FQ01H',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'A-J Roos | Personal Website',
