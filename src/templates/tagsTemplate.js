@@ -53,7 +53,7 @@ function TagTemplate({ pageContext, data }) {
             );
           })}
         </ul>
-        <Link to="/blog" className="tag">
+        <Link to="/blog" className="tagpage-return">
           Go back
         </Link>
       </section>

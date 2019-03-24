@@ -12,6 +12,10 @@
     font-family: $handwritingFontFamily;
     font-size: $heading2;
     color: $primaryColor;
+
+    @media screen and (max-width: $tablet) {
+      width: 90%;
+    }
   }
 
   &-image {

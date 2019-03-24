@@ -11,15 +11,15 @@
   padding: 20px;
   max-width: 500px;
 
-  @media screen and (max-width: $laptop) {
-    max-width: 420px;
-  }
-
   @media screen and (max-width: $tablet) {
-    max-width: 340px;
+    max-width: 380px;
   }
 
   @media screen and (max-width: $mobileL) {
+    max-width: 320px;
+  }
+
+  @media screen and (max-width: $mobileS) {
     max-width: 300px;
   }
 }
@@ -27,6 +27,10 @@
 .newsletter-heading {
   margin: 20px 0;
   text-align: center;
+
+  @media screen and (max-width: $mobileL) {
+    text-align: left;
+  }
 }
 
 .newsletter-content {

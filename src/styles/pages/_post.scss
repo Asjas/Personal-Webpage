@@ -3,17 +3,15 @@
   flex-direction: column;
   margin: 0 auto;
   width: 90%;
-  margin-bottom: 150px;
-  padding-bottom: 150px;
 }
 
 .post-heading {
-  margin: 30px 0;
-  text-align: center;
+  margin: 50px 0 20px 0;
   align-self: center;
-}
 
-.post-content {
+  @media screen and (max-width: $mobileL) {
+    align-self: left;
+  }
 }
 
 .post-content div {

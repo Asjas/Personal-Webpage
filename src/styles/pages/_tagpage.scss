@@ -1,6 +1,6 @@
 .tagpage {
   width: 60%;
-  margin: 60px auto;
+  margin: 0 auto;
 
   @media screen and (max-width: $laptop) {
     width: 50%;
@@ -13,6 +13,8 @@
 }
 
 .tagpage-heading {
+  margin: 50px auto 20px auto;
+
   @media screen and (max-width: $tablet) {
     text-align: center;
   }
@@ -30,7 +32,22 @@
 }
 
 .tagpage-return {
-  font-size: $fontMedium;
-  color: $primaryColor;
-  text-decoration: underline;
+  background: $primaryColor;
+  border-radius: 25px;
+  color: $white;
+  display: inline-block;
+  font-family: Goldsmith;
+  font-size: $fontSmall;
+  margin: 20px 20px 0 0;
+  padding: 3px 8px;
+
+  &:hover {
+    background: $black;
+    color: $white;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 3px solid $outlineColor;
+  }
 }
