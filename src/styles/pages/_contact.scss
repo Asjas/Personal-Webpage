@@ -6,8 +6,17 @@
   height: 100%;
   justify-content: flex-start;
 
-  @media screen and (max-width: $laptopL) {
+  @media screen and (max-width: $tablet) {
     flex-direction: column;
+    width: 400px;
+  }
+
+  @media screen and (max-width: $mobileL) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: $mobileM) {
+    width: 300px;
   }
 }
 

@@ -15,12 +15,14 @@
   }
 
   &-image {
-    width: auto;
-    height: 200px;
+    @media screen and (max-width: $tablet) {
+      width: 300px !important;
+      height: 300px !important;
+    }
 
-    & img {
-      width: auto;
-      height: 200px;
+    @media screen and (max-width: $mobileM) {
+      width: 280px !important;
+      height: 280px !important;
     }
   }
 }

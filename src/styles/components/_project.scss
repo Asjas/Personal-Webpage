@@ -4,6 +4,22 @@
     0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   margin: 0 auto;
   width: 600px;
+
+  @media screen and (max-width: $tablet) {
+    width: 425px;
+  }
+
+  @media screen and (max-width: $mobileL) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: $mobileM) {
+    width: 320px;
+  }
+
+  @media screen and (max-width: $mobileS) {
+    width: 290px;
+  }
 }
 
 .card .card-image {
@@ -13,12 +29,33 @@
   margin: 0;
   padding: 0;
   width: 100%;
+
+  @media screen and (max-width: $tablet) {
+    width: 425px !important;
+    height: 210px !important;
+  }
+
+  @media screen and (max-width: $mobileL) {
+    width: 350px !important;
+    height: 180px !important;
+  }
+
+  @media screen and (max-width: $mobileL) {
+    width: 320px !important;
+    height: 170px !important;
+  }
+
+  @media screen and (max-width: $mobileS) {
+    width: 300px !important;
+    height: 160px !important;
+  }
 }
 
 .card .card-title {
   font-size: $heading2;
   font-weight: normal;
   padding: 24px 0 0 16px;
+  width: 100%;
 }
 
 .card .card-text {

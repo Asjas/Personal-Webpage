@@ -8,5 +8,9 @@
 .portfolio-heading {
   font-size: $heading1;
   text-align: center;
-  margin: 30px 0;
+  margin: 30px auto;
+
+  @media screen and (max-width: $tablet) {
+    width: 90%;
+  }
 }

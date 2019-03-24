@@ -31,6 +31,18 @@ pre[class*='language-'] {
 pre[class*='language-'] {
   overflow: auto;
   padding: 1em;
+
+  @media screen and (max-width: $tablet) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: $mobileL) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: $mobileM) {
+    width: 300px;
+  }
 }
 
 pre[class*='language-']::-moz-selection {

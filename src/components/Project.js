@@ -1,6 +1,7 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 function Project({ data }) {
   return (
@@ -13,22 +14,22 @@ function Project({ data }) {
       />
       <h2 className="card-title">{data.title.text}</h2>
       <p className="card-text">{data.description.text}</p>
-      <a
+      <OutboundLink
         className="card-button github"
         href={data.github_url.url}
         target="_blank"
         rel="noopener noreferrer"
       >
         <span className="button-content">Github</span>
-      </a>
-      <a
+      </OutboundLink>
+      <OutboundLink
         className="card-button website"
         href={data.website_url.url}
         target="_blank"
         rel="noopener noreferrer"
       >
         <span className="button-content">Website</span>
-      </a>
+      </OutboundLink>
     </article>
   );
 }

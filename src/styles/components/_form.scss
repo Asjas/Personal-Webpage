@@ -1,8 +1,22 @@
 form {
-  margin: 0 auto;
+  align-self: center;
   padding: 25px 0;
   width: 480px;
   height: 100%;
+
+  @media screen and (max-width: $tablet) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: $mobileL) {
+    width: 350px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media screen and (max-width: $mobileM) {
+    width: 300px;
+  }
 }
 
 fieldset {
