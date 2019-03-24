@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import ErrorBoundary from './ErrorBoundary';
 import Navbar from './Navbar';
 import '../styles/main.scss';
+import setupLogRocket from '../utils/logrocket';
+
+setupLogRocket();
 
 const Layout = ({ children }) => (
   <ErrorBoundary>

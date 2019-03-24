@@ -6869,14 +6869,6 @@ gatsby-plugin-google-analytics@^2.0.17:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-google-gtag@^1.0.16:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-1.0.16.tgz#547cd1302277e99fc7397dbf9d36d7e7a647657c"
-  integrity sha512-gkMWtLVLhakElmzKqM3gBQXdYCzaiF4jHXojxQSsmeuVvASaU1SIU8bl1iUbY6K6Atpw3ZN7TYFV0BJvUYFmKg==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    minimatch "^3.0.4"
-
 gatsby-plugin-manifest@^2.0.24:
   version "2.0.24"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.24.tgz#5a14f83d137d1978bf54c727d452af571414de65"
@@ -10453,6 +10445,16 @@ loglevel@^1.4.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
   integrity sha1-4PyVEztu8nbNyIh82vJKpvFW+Po=
+
+logrocket-react@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/logrocket-react/-/logrocket-react-3.0.0.tgz#b0e1bfa4de25ae89c5da890fbb1c18276a1ac82f"
+  integrity sha512-vjx2MkFfvKDVilGuHBUuBPyr2en3tvd7bd9rozwEeYELk/DNL5z7Aqoqaz7DLlIhJndOG7/wIv873OdupySiRQ==
+
+logrocket@^0.6.19:
+  version "0.6.19"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-0.6.19.tgz#7dfbaf3383370f0cc4fa5f61bef51541f86c628b"
+  integrity sha512-awRidM5W/hYnkezpSG4gpX0O0izioWItn7ExmLfMGg3/4WGbDRBW91HPlv1hHItB9eou68qrIDlEqNlvZYi1dQ==
 
 lokijs@^1.5.6:
   version "1.5.6"
