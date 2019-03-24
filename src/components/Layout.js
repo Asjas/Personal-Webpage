@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ErrorBoundary from './ErrorBoundary';
 import Navbar from './Navbar';
 import '../styles/main.scss';
@@ -11,5 +12,9 @@ const Layout = ({ children }) => (
     </div>
   </ErrorBoundary>
 );
+
+Layout.propTypes = {
+  children: PropTypes.element.isRequired,
+};
 
 export default Layout;

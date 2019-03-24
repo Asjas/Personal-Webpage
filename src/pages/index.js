@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
@@ -8,8 +9,8 @@ export const HOME_PAGE_IMAGE = graphql`
   query HOME_PAGE_IMAGE {
     file(relativePath: { regex: "/messy-desk.jpg/" }) {
       childImageSharp {
-        fixed(width: 400, height: 400, quality: 95) {
-          ...GatsbyImageSharpFixed
+        fixed(height: 400, quality: 95) {
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
@@ -17,21 +18,39 @@ export const HOME_PAGE_IMAGE = graphql`
 `;
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <>
     <SEO />
-    <section className="homepage">
-      <p className="homepage-quote">
-        "There are only two hard things in Computer Science: cache invalidation and naming things" -
-        Phil Karlton
-      </p>
-      <Img
-        className="homepage-image"
-        fixed={data.file.childImageSharp.fixed}
-        title="A messy desk with a computer."
-        alt="A messy desk with a computer."
-      />
-    </section>
-  </Layout>
+    <Layout>
+      <section className="homepage">
+        <p className="homepage-quote">
+          "There are only two hard things in Computer Science: cache invalidation and naming things"
+          - Phil Karlton
+        </p>
+        <Img
+          className="homepage-image"
+          fixed={data.file.childImageSharp.fixed}
+          title="A messy desk with a computer."
+          alt="A messy desk with a computer."
+        />
+      </section>
+    </Layout>
+  </>
 );
+
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    file: PropTypes.shape({
+      childImageSharp: PropTypes.shape({
+        fixed: PropTypes.shape({
+          height: PropTypes.number.isRequired,
+          width: PropTypes.number.isRequired,
+          base64: PropTypes.string.isRequired,
+          src: PropTypes.string.isRequired,
+          srcSet: PropTypes.string.isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default IndexPage;

@@ -15,7 +15,12 @@
   }
 
   &-image {
-    width: 400px;
-    height: auto;
+    width: auto;
+    height: 200px;
+
+    & img {
+      width: auto;
+      height: 200px;
+    }
   }
 }

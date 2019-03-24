@@ -10,20 +10,22 @@ const seo = {
 };
 
 const FourOhFour = () => (
-  <Layout>
+  <>
     <SEO {...seo} />
-    <section className="fourohfour">
-      <h1 className="fourohfour-heading" data-testid="404-heading">
-        PAGE NOT FOUND
-      </h1>
-      <p className="fourohfour-text">
-        You just hit a route that doesn&#39;t exist... the sadness.
-      </p>
-      <Link to="/" className="fourohfour-link" data-testid="404-link">
-        Go Home
-      </Link>
-    </section>
-  </Layout>
+    <Layout>
+      <section className="fourohfour">
+        <h1 className="fourohfour-heading" data-testid="404-heading">
+          PAGE NOT FOUND
+        </h1>
+        <p className="fourohfour-text">
+          You just hit a route that doesn&#39;t exist... the sadness.
+        </p>
+        <Link to="/" className="fourohfour-link" data-testid="404-link">
+          Go Home
+        </Link>
+      </section>
+    </Layout>
+  </>
 );
 
 export default FourOhFour;

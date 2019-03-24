@@ -49,15 +49,17 @@ const seo = {
 };
 
 const PortfolioPage = ({ data }) => (
-  <Layout>
+  <>
     <SEO {...seo} />
-    <h1 className="portfolio-heading">This is a collection of projects that I have worked on.</h1>
-    <section className="projects">
-      {data.allPrismicProjects.edges.map(({ node }) => (
-        <Project key={node.id} data={node.data} />
-      ))}
-    </section>
-  </Layout>
+    <Layout>
+      <h1 className="portfolio-heading">This is a collection of projects that I have worked on.</h1>
+      <section className="projects">
+        {data.allPrismicProjects.edges.map(({ node }) => (
+          <Project key={node.id} data={node.data} />
+        ))}
+      </section>
+    </Layout>
+  </>
 );
 
 PortfolioPage.propTypes = {
