@@ -14,7 +14,7 @@
     "clean": "gatsby clean",
     "dev": "gatsby develop",
     "lint": "eslint .",
-    "test": "snyk test && jest",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "snyk-protect": "snyk protect",
