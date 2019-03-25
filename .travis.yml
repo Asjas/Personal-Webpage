@@ -2,12 +2,11 @@ dist: trusty
 language: node_js
 
 node_js:
-  - '9'
-  - 'lts/*'
-  - 'node'
+  - "lts/*"
+  - "node"
 
 cache: yarn
 
 script:
-  - 'yarn lint'
-  - 'yarn build'
+  - "yarn lint"
+  - "yarn build"
