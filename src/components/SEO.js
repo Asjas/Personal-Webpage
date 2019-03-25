@@ -26,8 +26,8 @@ function SEO({ title, description, siteUrl, image }) {
     description: description || data.site.siteMetadata.defaultDescription,
     siteUrl: siteUrl || data.site.siteMetadata.defaultUrl,
     image: image || data.site.siteMetadata.defaultUrl,
-    googleSiteVerification: data.site.siteMetadata.googleSiteVerification,
-    twitterUsername: data.site.siteMetadata.twitterUsername,
+    googleSiteVerification: data && data.site.siteMetadata.googleSiteVerification,
+    twitterUsername: data && data.site.siteMetadata.twitterUsername,
   };
 
   const schemaOrgJSONLD = [
