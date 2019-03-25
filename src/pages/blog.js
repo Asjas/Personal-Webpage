@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Tags from '../components/Tags';
-import Newsletter from '../components/Newsletter';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 export const GET_ALL_POSTS = graphql`
@@ -69,9 +68,6 @@ const BlogPage = ({ data }) => (
                 </section>
               ),
           )}
-        </ErrorBoundary>
-        <ErrorBoundary>
-          <Newsletter />
         </ErrorBoundary>
       </div>
     </Layout>
