@@ -14,13 +14,9 @@
     "clean": "gatsby clean",
     "dev": "gatsby develop",
     "lint": "eslint .",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
     "test": "snyk test && jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cy:run",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
@@ -68,8 +64,6 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
-    "cypress": "^3.2.0",
-    "cypress-testing-library": "^2.3.6",
     "eslint": "5.15.3",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
@@ -85,8 +79,7 @@
     "logrocket-react": "^3.0.0",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
-    "react-testing-library": "^6.0.2",
-    "start-server-and-test": "^1.7.12"
+    "react-testing-library": "^6.0.2"
   },
   "husky": {
     "hooks": {
