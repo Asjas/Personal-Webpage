@@ -1,148 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Contact form renders correctly 1`] = `
-.c0 {
-  margin: 0 auto;
-  padding: 25px 0;
-  width: 500px;
-  border-radius: 4px;
-}
-
-.c1 {
-  display: grid;
-  width: 100%;
-  padding: 20px;
-  border-radius: 6px;
-}
-
-.c1[disabled] {
-  opacity: 0.5;
-}
-
-.c2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.c3 {
-  font-family: Contender;
-  -webkit-letter-spacing: 0.04rem;
-  -moz-letter-spacing: 0.04rem;
-  -ms-letter-spacing: 0.04rem;
-  letter-spacing: 0.04rem;
-  margin-bottom: 5px;
-}
-
-.c4 {
-  border-radius: 4px;
-  font-family: Contender;
-  grid-column: 1/-1;
-  grid-row: 2;
-  height: 50px;
-  -webkit-letter-spacing: 0.02rem;
-  -moz-letter-spacing: 0.02rem;
-  -ms-letter-spacing: 0.02rem;
-  letter-spacing: 0.02rem;
-  margin: 0 0 30px 0;
-  padding: 0 0 0 20px;
-  width: 100%;
-}
-
-.c4:focus {
-  outline: none;
-}
-
-.c5 {
-  border-radius: 4px;
-  font-family: Contender;
-  grid-column: 1/-1;
-  grid-row: 2;
-  -webkit-letter-spacing: 0.04rem;
-  -moz-letter-spacing: 0.04rem;
-  -ms-letter-spacing: 0.04rem;
-  letter-spacing: 0.04rem;
-  margin: 0 0 30px 0;
-  min-height: 120px;
-  outline: none;
-  padding: 20px;
-  resize: vertical;
-  width: 100%;
-}
-
-.c6 {
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-  font-family: Contender;
-  outline: 0;
-  padding: 7px;
-  text-transform: capitalize;
-  width: 100%;
-}
-
+exports[`Contact form renders correctly and matches snapshot 1`] = `
 <div>
-  <form
-    class="c0"
-  >
+  <form>
     <fieldset
       aria-busy="false"
-      class="c1"
       data-testid="form-disabled"
     >
       <label
-        class="c2"
         for="name"
       >
-        <span
-          class="c3"
-        >
+        <span>
           Enter your name:
         </span>
+        <span
+          component="span"
+          name="name"
+        />
         <input
-          class="c4"
           id="name"
           name="name"
           placeholder="full name"
           type="text"
-          value=""
         />
       </label>
       <label
-        class="c2"
         for="email"
       >
-        <span
-          class="c3"
-        >
+        <span>
           Enter your email:
         </span>
+        <span
+          component="span"
+          name="email"
+        />
         <input
-          class="c4"
           id="email"
           name="email"
           placeholder="example@gmail.com"
           type="email"
-          value=""
         />
       </label>
       <label
-        class="c2"
         for="message"
       >
-        <span
-          class="c3"
-        >
+        <span>
           Enter a message:
         </span>
+        <span
+          component="span"
+          name="message"
+        />
         <textarea
-          class="c5"
+          component="textarea"
           id="message"
           name="message"
           placeholder="type your message here"
         />
       </label>
       <button
-        class="c6"
+        class="submit-button"
         type="submit"
       >
         Submit

@@ -3,13 +3,13 @@ import { render, fireEvent } from 'react-testing-library';
 import ContactForm from '../../components/Form';
 
 describe('Contact form', () => {
-  it('renders correctly', () => {
+  it('renders correctly and matches snapshot', () => {
     const { container } = render(<ContactForm />);
 
     expect(container).toMatchSnapshot();
   });
 
-  it('updates the different input fields', () => {
+  it('updates the different input fields correctly', () => {
     const name = 'A-J Roos';
     const email = 'asjas@outlook.com';
     const message = 'This is a test message';
@@ -26,14 +26,5 @@ describe('Contact form', () => {
     expect(nameInput).toHaveTextContent(name);
     expect(emailInput).toHaveTextContent(email);
     expect(messageInput).toHaveTextContent(message);
-  });
-
-  it('is disabled when the user submits the form', () => {
-    const { getByText, getByTestId } = render(<ContactForm />);
-
-    fireEvent.click(getByText('Submit'));
-    const { disabled } = getByTestId('form-disabled');
-
-    expect(disabled).toBe(true);
   });
 });
