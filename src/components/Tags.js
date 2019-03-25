@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import ErrorBoundary from './ErrorBoundary';
 
@@ -35,21 +34,5 @@ function Tags() {
     </section>
   );
 }
-
-Tags.propTypes = {
-  data: PropTypes.shape({
-    allMdx: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              tags: PropTypes.array.isRequired,
-            }).isRequired,
-          }).isRequired,
-        }).isRequired,
-      ).isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default Tags;

@@ -27,7 +27,7 @@ export const GET_POST = graphql`
   }
 `;
 
-const Post = ({ data }) => {
+const BlogPostTemplate = ({ data }) => {
   const post = data.mdx;
 
   const seo = {
@@ -51,16 +51,18 @@ const Post = ({ data }) => {
   );
 };
 
-Post.propTypes = {
+BlogPostTemplate.propTypes = {
   data: PropTypes.shape({
     mdx: PropTypes.shape({
-      html: PropTypes.string.isRequired,
       timeToRead: PropTypes.number.isRequired,
       excerpt: PropTypes.string.isRequired,
+      code: PropTypes.shape({
+        body: PropTypes.string.isRequired,
+      }).isRequired,
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
-        tags: PropTypes.string.isRequired,
+        tags: PropTypes.array.isRequired,
         updated: PropTypes.string.isRequired,
       }).isRequired,
       fields: PropTypes.shape({
@@ -70,4 +72,4 @@ Post.propTypes = {
   }).isRequired,
 };
 
-export default Post;
+export default BlogPostTemplate;
