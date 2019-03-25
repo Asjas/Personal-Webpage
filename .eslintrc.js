@@ -1,5 +1,6 @@
 module.exports = {
   extends: ['airbnb'],
+  plugins: ['react-hooks'],
   settings: {
     'import/core-modules': ['gatsby'],
   },
@@ -108,5 +109,7 @@ module.exports = {
         aspects: ['invalidHref'],
       },
     ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
 };
