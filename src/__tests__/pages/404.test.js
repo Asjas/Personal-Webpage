@@ -2,17 +2,24 @@ import React from 'react';
 import { render } from 'react-testing-library';
 import Fourohfour from '../../pages/404';
 
-describe('Fourohfour', () => {
-  it('renders correctly', () => {
-    const linkText = 'Go Home';
-    const headingText = 'PAGE NOT FOUND';
-    const location = {
-      pathname: '/404',
-    };
+describe('Fourohfour page', () => {
+  it('renders correctly and matches snapshot', () => {
+    const { container } = render(<Fourohfour />);
 
-    const { container, getByTestId } = render(<Fourohfour location={location} />);
-    expect(getByTestId('404-heading')).toHaveTextContent(headingText);
-    expect(getByTestId('404-link')).toHaveTextContent(linkText);
     expect(container).toMatchSnapshot();
+  });
+
+  it('has a heading that says `page not found`', () => {
+    const headingText = 'PAGE NOT FOUND';
+    const { getByTestId } = render(<Fourohfour />);
+
+    expect(getByTestId('404-heading')).toHaveTextContent(headingText);
+  });
+
+  it('has a link back to the main website', () => {
+    const url = 'http://localhost';
+    const { getByTestId } = render(<Fourohfour />);
+
+    expect(getByTestId('404-link').href).toMatch(url);
   });
 });
