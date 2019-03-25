@@ -70,22 +70,22 @@ function Nav() {
         <nav className="navbar">
           <ul className="navbar-links">
             <li className="navbar-item">
-              <Link className="navbar-link" to="/">
+              <Link className="navbar-link" activeClassName="navbar-link--active" to="/">
                 Home
               </Link>
             </li>
             <li className="navbar-item">
-              <Link className="navbar-link" to="/portfolio/">
+              <Link className="navbar-link" activeClassName="navbar-link--active" to="/portfolio/">
                 Portfolio
               </Link>
             </li>
             <li className="navbar-item">
-              <Link className="navbar-link" to="/blog/">
+              <Link className="navbar-link" activeClassName="navbar-link--active" to="/blog/">
                 Blog
               </Link>
             </li>
             <li className="navbar-item">
-              <Link className="navbar-link" to="/contact/">
+              <Link className="navbar-link" activeClassName="navbar-link--active" to="/contact/">
                 Contact
               </Link>
             </li>

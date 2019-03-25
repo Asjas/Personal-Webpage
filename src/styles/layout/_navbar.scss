@@ -95,7 +95,8 @@
         outline: none;
       }
     }
-    [aria-current] {
+
+    & .navbar-link--active {
       color: $primaryColor;
     }
   }
