@@ -26,12 +26,7 @@ const IndexPage = ({ data }) => (
           "There are only two hard things in Computer Science: cache invalidation and naming things"
           - Phil Karlton
         </p>
-        <Img
-          className="homepage-image"
-          fixed={data.file.childImageSharp.fixed}
-          title="A messy desk with a computer."
-          alt="A messy desk with a computer."
-        />
+        <Img className="homepage-image" fixed={data.file.childImageSharp.fixed} alt="" />
       </section>
     </Layout>
   </>
