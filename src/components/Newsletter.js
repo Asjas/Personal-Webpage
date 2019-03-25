@@ -1,4 +1,5 @@
 import React, { useState, memo } from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 function NewsletterSubscribed() {
@@ -37,6 +38,11 @@ const NewsletterForm = memo(function NewsletterForm(props) {
     </section>
   );
 });
+
+NewsletterForm.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+};
 
 function Newsletter() {
   const [email, setEmail] = useState('');

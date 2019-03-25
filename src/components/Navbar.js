@@ -24,13 +24,12 @@ const HamburgerIcon = memo(function HamburgerIcon({ handleClick, handleKeyDown }
   );
 });
 
-const CloseIcon = memo(function CloseIcon({ handleClick, handleKeyDown, handleBlur }) {
+const CloseIcon = memo(function CloseIcon({ handleClick, handleKeyDown }) {
   return (
     <a
       className="hamburger-close"
       onClick={handleClick}
       onKeyDown={handleKeyDown}
-      onBlur={handleBlur}
       tabIndex={0}
       role="button"
       aria-labelledby="menu"

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import hub from '../utils/sentry';
 
 class ErrorBoundary extends React.Component {
@@ -29,8 +30,8 @@ class ErrorBoundary extends React.Component {
       // You can render any custom fallback UI
       return (
         <p className="errorboundary-content">
-          Something went wrong displaying this section of the website. A log of the error
-          has been sent to the website owner.
+          Something went wrong displaying this section of the website. A log of the error has been
+          sent to the website owner.
         </p>
       );
     }
@@ -38,5 +39,9 @@ class ErrorBoundary extends React.Component {
     return children;
   }
 }
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired,
+};
 
 export default ErrorBoundary;

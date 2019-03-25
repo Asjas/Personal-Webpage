@@ -34,4 +34,37 @@ function Project({ data }) {
   );
 }
 
+Project.propTypes = {
+  data: PropTypes.shape({
+    image: PropTypes.shape({
+      alt: PropTypes.string.isRequired,
+      localFile: PropTypes.shape({
+        childImageSharp: PropTypes.shape({
+          fixed: PropTypes.shape({
+            height: PropTypes.number.isRequired,
+            width: PropTypes.number.isRequired,
+            src: PropTypes.string.isRequired,
+            srcSet: PropTypes.string.isRequired,
+            srcSetWebp: PropTypes.string.isRequired,
+            srcWebp: PropTypes.string.isRequired,
+            tracedSVG: PropTypes.string.isRequired,
+          }),
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+    title: PropTypes.shape({
+      text: PropTypes.string.isRequired,
+    }).isRequired,
+    description: PropTypes.shape({
+      text: PropTypes.string.isRequired,
+    }).isRequired,
+    github_url: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+    }).isRequired,
+    website_url: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+    }).isRequired,
+  }),
+};
+
 export default Project;
