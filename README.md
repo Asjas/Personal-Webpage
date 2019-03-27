@@ -4,7 +4,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8ab2545d29604ca98093f304a2612e95)](https://www.codacy.com/app/Asjas/Personal-Webpage?utm_source=github.com&utm_medium=referral&utm_content=Asjas/Personal-Webpage&utm_campaign=Badge_Grade)
 [![Maintainability](https://api.codeclimate.com/v1/badges/aeb0308fc860db634f77/maintainability)](https://codeclimate.com/github/Asjas/Personal-Webpage/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/aeb0308fc860db634f77/test_coverage)](https://codeclimate.com/github/Asjas/Personal-Webpage/test_coverage)
+[![Coverage Status](https://coveralls.io/repos/github/Asjas/Personal-Webpage/badge.svg?branch=master)](https://coveralls.io/github/Asjas/Personal-Webpage?branch=master)
 
 This project uses the following tech stack:
 
