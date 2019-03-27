@@ -1,5 +1,6 @@
 ## This is my Personal Website
 
+![GitHub](https://img.shields.io/github/license/Asjas/Personal-Webpage.svg?color=informational)
 [![Build Status](https://travis-ci.org/Asjas/Personal-Webpage.svg?branch=master)](https://travis-ci.org/Asjas/Personal-Webpage)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8ab2545d29604ca98093f304a2612e95)](https://www.codacy.com/app/Asjas/Personal-Webpage?utm_source=github.com&utm_medium=referral&utm_content=Asjas/Personal-Webpage&utm_campaign=Badge_Grade)
