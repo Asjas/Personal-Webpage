@@ -1,14 +1,15 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' https://portfolio-site.prismic.io/api/v2 https://portfolio-site.cdn.prismic.io/api/v2/documents/search; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn.polyfill.com ajax.cloudflare.com sentry.io fullstory.com analytics.asjas.co.za; img-src 'self' portfolio-site.cdn.prismic.io analytics.asjas.co.za; style-src 'self' 'unsafe-inline'; font-src 'self' data:; form-action 'none'; report-uri https://asjas.report-uri.com/r/d/csp/enforce;"
-    Expect-CT = "max-age=604800, report-uri=https://asjas.report-uri.com/r/d/ct/enforce;"
-    Referrer-Policy = "same-origin;"
+    Content-Security-Policy = "default-src 'self' https://portfolio-site.prismic.io/api/v2 https://portfolio-site.cdn.prismic.io/api/v2/documents/search https://storage.googleapis.com https://www.google-analytics.com https://polyfill.io https://cdn.logrocket.io https://r.logrocket.io https://d33wubrfki0l68.cloudfront.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://polyfill.io https://cdn.logrocket.io https://ajax.cloudflare.com https://d33wubrfki0l68.cloudfront.net https://sentry.io https://www.google-analytics.com; img-src 'self' data: https://portfolio-site.cdn.prismic.io https://storage.googleapis.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com/ads; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://d33wubrfki0l68.cloudfront.net; form-action 'none'; worker-src 'self' blob: data:; report-uri https://asjas.report-uri.com/r/d/csp/reportOnly; report-to default"
+    X-Content-Security-Policy = "default-src 'self' https://portfolio-site.prismic.io/api/v2 https://portfolio-site.cdn.prismic.io/api/v2/documents/search https://storage.googleapis.com https://www.google-analytics.com https://polyfill.io https://cdn.logrocket.io https://r.logrocket.io https://d33wubrfki0l68.cloudfront.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://polyfill.io https://cdn.logrocket.io https://ajax.cloudflare.com https://d33wubrfki0l68.cloudfront.net https://sentry.io https://www.google-analytics.com; img-src 'self' data: https://portfolio-site.cdn.prismic.io https://storage.googleapis.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com/ads; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://d33wubrfki0l68.cloudfront.net; form-action 'none'; worker-src 'self' blob: data:; report-uri https://asjas.report-uri.com/r/d/csp/reportOnly; report-to default"
+    Expect-CT = "max-age=604800, report-uri https://asjas.report-uri.com/r/d/ct/reportOnly; report-to default"
+    Referrer-Policy = "same-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubdomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block; report-uri https://asjas.report-uri.com/r/d/xss/reportOnly"
     Report-To = "{'group':'default','max_age':31536000,'endpoints':[{'url':'https://asjas.report-uri.com/a/d/g'}],'include_subdomains':true}"
-    Strict-Transport-Security = "max-age=31536000; includeSubdomains; preload;"
-    X-Content-Type-Options = "nosniff;"
-    X-Frame-Options = "SAMEORIGIN;"
-    X-XSS-Protection = "1; mode=block; rport=https://asjas.report-uri.com/r/d/xss/enforce;"
 
 [[headers]]
   for = "/*.html"
