@@ -46,15 +46,15 @@ exports.createPages = ({ graphql, actions }) => {
       const tagsSet = new Set();
 
       posts.forEach(post => {
-        if (!post.frontmatter.title) {
+        if (post.frontmatter.title === undefined || post.frontmatter.title === null) {
           throw Error(`${post.fileAbsolutePath} is missing a title property in the frontmatter.`);
         }
 
-        if (!post.frontmatter.date) {
+        if (post.frontmatter.date === undefined || post.frontmatter.date === null) {
           throw Error(`${post.fileAbsolutePath} is missing a date property in the frontmatter.`);
         }
 
-        if (!post.frontmatter.tags) {
+        if (post.frontmatter.tags === undefined || post.frontmatter.tags === null) {
           throw Error(`${post.fileAbsolutePath} is missing a tags property in the frontmatter.`);
         } else {
           post.frontmatter.tags.forEach(tag => {
@@ -62,7 +62,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
         }
 
-        if (!post.frontmatter.published) {
+        if (post.frontmatter.published === undefined || post.frontmatter.published === null) {
           throw Error(
             `${post.fileAbsolutePath} is missing a published property in the frontmatter.`,
           );
