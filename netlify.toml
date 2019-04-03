@@ -17,9 +17,9 @@
     Cache-Control = "public, max-age=0, must-revalidate;"
 
 [[headers]]
-  for = "/sw.js"
+  for = "sw.js"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate;"
+    Cache-Control = "no-cache, no-store, max-age=0, must-revalidate;"
 
 [[headers]]
   for = "/*.js|*.css"
