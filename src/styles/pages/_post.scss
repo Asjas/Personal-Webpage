@@ -5,7 +5,7 @@
   width: 90%;
 }
 
-.post-heading {
+.post__heading {
   margin: 50px 0 20px 0;
   align-self: center;
 
@@ -14,7 +14,7 @@
   }
 }
 
-.post-content div {
+.post__content div {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;

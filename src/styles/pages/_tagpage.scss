@@ -1,37 +1,40 @@
 .tagpage {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 
   @media screen and (max-width: $laptop) {
-    width: 50%;
-    text-align: center;
+    width: 80%;
   }
 
   @media screen and (max-width: $tablet) {
-    width: 90%;
+    width: 80%;
   }
 }
 
-.tagpage-heading {
+.tagpage__heading {
   margin: 50px auto 20px auto;
+  text-align: center;
 
   @media screen and (max-width: $tablet) {
     text-align: center;
   }
 }
 
-.tagpage-container {
+.blogpost__list {
   list-style-type: none;
   margin: 40px auto;
-  padding-left: 15px;
+  padding: 0;
   color: $primaryColor;
 }
 
-.tagpage-blog {
-  padding: 20px 0;
+.blogpost__entry {
+  padding: 20px;
+  border-radius: 8px;
+  background: $secondaryColor;
+  margin-bottom: 30px;
 }
 
-.tagpage-return {
+.tagpage__return {
   background: $primaryColor;
   border-radius: 25px;
   color: $white;

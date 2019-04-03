@@ -43,28 +43,28 @@ const BlogPage = ({ data }) => (
     <Layout>
       <div className="blog">
         <header>
-          <h1 className="blog-heading">My collection of blog posts.</h1>
+          <h1 className="blog__heading">My collection of blog posts.</h1>
           <Tags />
         </header>
         <ErrorBoundary>
           {data.allMdx.edges.map(
             ({ node }) =>
               node.frontmatter.published && (
-                <section className="blogpost-article" key={node.id}>
-                  <Link className="blogpost-link" to={`/blog${node.fields.slug}`}>
-                    <h2 className="blogpost-heading">{node.frontmatter.title}</h2>
+                <section className="blogpost__section" key={node.id}>
+                  <Link className="blogpost__link" to={`/blog${node.fields.slug}`}>
+                    <h2 className="blogpost__heading">{node.frontmatter.title}</h2>
                   </Link>
-                  <span className="blogpost-date">Published: {node.frontmatter.date}</span>
-                  <span className="blogpost-date">Last Updated: {node.frontmatter.updated}</span>
-                  <span className="blogpost-readingtime">Time to read: {node.timeToRead} min</span>
-                  <ul className="blogpost-tags">
+                  <span className="blogpost__date">Published: {node.frontmatter.date}</span>
+                  <span className="blogpost__date">Last Updated: {node.frontmatter.updated}</span>
+                  <span className="blogpost__readingtime">Time to read: {node.timeToRead} min</span>
+                  <ul className="blogpost__tags">
                     {node.frontmatter.tags.map(tag => (
-                      <Link key={tag} className="tag" to={`/tags/${tag}`}>
+                      <Link key={tag} className="blogpost__tag" to={`/tags/${tag}`}>
                         {tag}
                       </Link>
                     ))}
                   </ul>
-                  <p className="blogpost-excerpt">{node.excerpt}</p>
+                  <p className="blogpost__excerpt">{node.excerpt}</p>
                 </section>
               ),
           )}

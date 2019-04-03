@@ -9,7 +9,7 @@ setupLogRocket();
 
 const Layout = ({ children }) => (
   <ErrorBoundary>
-    <div className="page-layout">
+    <div className="layout">
       <Navbar />
       <main className="main">{children}</main>
     </div>

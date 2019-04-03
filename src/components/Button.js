@@ -1,7 +1,7 @@
 import React from 'react';
 
 const StyledButton = () => (
-  <button className="submit-button" type="submit">
+  <button className="button button__primary" type="submit">
     Submit
   </button>
 );

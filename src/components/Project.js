@@ -5,32 +5,32 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 function Project({ data }) {
   return (
-    <article className="card">
+    <section className="card">
       <Img
-        className="card-image"
+        className="card__image"
         title={data.title.text}
         alt={data.image.alt}
         fixed={data.image.localFile.childImageSharp.fixed}
       />
-      <h2 className="card-title">{data.title.text}</h2>
-      <p className="card-text">{data.description.text}</p>
+      <h2 className="card__title">{data.title.text}</h2>
+      <p className="card__text">{data.description.text}</p>
       <OutboundLink
-        className="card-button github"
+        className="card__button github"
         href={data.github_url.url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span className="button-content">Github</span>
+        <span className="button__content">Github</span>
       </OutboundLink>
       <OutboundLink
-        className="card-button website"
+        className="card__button website"
         href={data.website_url.url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span className="button-content">Website</span>
+        <span className="button__content">Website</span>
       </OutboundLink>
-    </article>
+    </section>
   );
 }
 

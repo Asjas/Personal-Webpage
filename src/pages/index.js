@@ -22,11 +22,11 @@ const IndexPage = ({ data }) => (
     <SEO />
     <Layout>
       <section className="homepage">
-        <p className="homepage-quote">
+        <p className="homepage__quote">
           "There are only two hard things in Computer Science: cache invalidation and naming things"
           - Phil Karlton
         </p>
-        <Img className="homepage-image" fixed={data.file.childImageSharp.fixed} alt="" />
+        <Img className="homepage__image" fixed={data.file.childImageSharp.fixed} alt="" />
       </section>
     </Layout>
   </>

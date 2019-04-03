@@ -52,12 +52,14 @@ const PortfolioPage = ({ data }) => (
   <>
     <SEO {...seo} />
     <Layout>
-      <h1 className="portfolio-heading">This is a collection of projects that I have worked on.</h1>
-      <section className="projects">
+      <h1 className="portfolio__heading">
+        This is a collection of projects that I have worked on.
+      </h1>
+      <div className="projects">
         {data.allPrismicProjects.edges.map(({ node }) => (
           <Project key={node.id} data={node.data} />
         ))}
-      </section>
+      </div>
     </Layout>
   </>
 );

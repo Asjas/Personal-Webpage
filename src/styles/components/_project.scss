@@ -22,7 +22,7 @@
   }
 }
 
-.card .card-image {
+.card__image {
   background-repeat: no-repeat;
   border-radius: 2px 2px 0 0;
   height: auto;
@@ -51,20 +51,20 @@
   }
 }
 
-.card .card-title {
+.card__title {
   font-size: $heading2;
   font-weight: normal;
   padding: 24px 0 0 16px;
   width: 100%;
 }
 
-.card .card-text {
+.card__text {
   font-size: $fontMedium;
   padding: 0 0 8px 16px;
   width: 90%;
 }
 
-.card .card-button {
+.card__button {
   border-radius: 2px;
   border-width: 0;
   width: 80px;
@@ -81,25 +81,25 @@
   text-decoration: none;
 }
 
-.card .card-button.github {
+.card__button.github {
   background-color: #333;
 }
 
-.card .card-button.website {
+.card__button.website {
   background-color: #4078c0;
 }
 
-.card .card-button.github:hover,
-.card .card-button.github:focus {
+.card__button.github:hover,
+.card__button.github:focus {
   background-color: #333;
 }
 
-.card .card-button.website:hover,
-.card .card-button.website:focus {
+.card__button.website:hover,
+.card__button.website:focus {
   background-color: #4078c0;
 }
 
-.card .card-button:before {
+.card__button:before {
   background-color: rgba(236, 240, 241, 0.3);
   border-radius: 100%;
   content: '';
@@ -112,13 +112,13 @@
   width: 0;
 }
 
-.card .card-button:active:before {
+.card__button:active:before {
   padding-top: 120%;
   transition: width 0.2s ease-out, padding-top 0.2s ease-out;
   width: 120%;
 }
 
-.card .card-button .button-content {
+.card__button .button__content {
   display: block;
   padding: 12px 24px;
   color: #ecf0f1;

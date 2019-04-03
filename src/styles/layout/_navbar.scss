@@ -18,21 +18,21 @@
     visibility: hidden;
   }
 
-  &.show-nav {
+  &.sidenav--show {
     transform: translateX(0);
     visibility: visible;
   }
 }
 
-.hamburger-menu,
-.hamburger-close {
+.hamburger__menu,
+.hamburger__close {
   cursor: pointer;
   display: block;
-  height: 25px;
+  height: 32px;
   position: fixed;
   right: 30px;
   top: 15px;
-  width: 25px;
+  width: 32px;
   z-index: 10;
   visibility: hidden;
 
@@ -61,7 +61,7 @@
   width: 100%;
 }
 
-.navbar-links {
+.navbar__links {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,14 +69,14 @@
   padding-top: 40px;
   width: 100%;
 
-  & .navbar-item {
+  & .navbar__item {
     align-content: center;
     height: 60px;
     list-style: none;
     text-align: center;
     width: 100%;
 
-    & .navbar-link {
+    & .navbar__link {
       border: 2px solid transparent;
       color: $white;
       cursor: pointer;
@@ -96,7 +96,7 @@
       }
     }
 
-    & .navbar-link--active {
+    & .navbar__link--active {
       color: $primaryColor;
     }
   }

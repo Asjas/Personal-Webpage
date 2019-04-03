@@ -7,12 +7,12 @@
   gap: 30px;
 }
 
-.blog-heading {
+.blog__heading {
   margin: 50px auto 20px auto;
   text-align: center;
 }
 
-.blogpost-article {
+.blogpost__section {
   margin: 0 auto;
   background: $secondaryColor;
   min-width: 300px;
@@ -20,10 +20,9 @@
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 20px;
-  height: 100%;
 }
 
-.blogpost-link {
+.blogpost__link {
   text-decoration: none;
 
   &:hover {
@@ -37,27 +36,27 @@
   }
 }
 
-.blogpost-heading {
-  margin: 20px 0;
+.blogpost__heading {
+  margin: 5px 0;
 
   &:focus {
     outline: 2px solid $outlineColor;
   }
 }
 
-.blogpost-tags {
+.blogpost__tags {
   display: block;
   height: auto;
   padding-left: 0;
   margin: 0;
 
-  .tag:focus {
+  .blogpost__tag:focus {
     outline: 3px solid $outlineColor;
   }
 }
 
-.blogpost-date,
-.blogpost-readingtime {
+.blogpost__date,
+.blogpost__readingtime {
   background: $navbarBg;
   border-radius: 25px;
   color: $white;
@@ -68,6 +67,7 @@
   padding: 3px 8px;
 }
 
-.blogpost-excerpt {
+.blogpost__excerpt {
   font-size: $fontMedium;
+  margin: 20px 0;
 }

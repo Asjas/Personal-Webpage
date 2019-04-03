@@ -14,13 +14,13 @@ const FourOhFour = () => (
     <SEO {...seo} />
     <Layout>
       <section className="fourohfour">
-        <h1 className="fourohfour-heading" data-testid="404-heading">
+        <h1 className="fourohfour__heading" data-testid="404-heading">
           PAGE NOT FOUND
         </h1>
-        <p className="fourohfour-text">
+        <p className="fourohfour__text">
           You just hit a route that doesn&#39;t exist... the sadness.
         </p>
-        <Link to="/" className="fourohfour-link" data-testid="404-link">
+        <Link to="/" className="fourohfour__link" data-testid="404-link">
           Go Home
         </Link>
       </section>

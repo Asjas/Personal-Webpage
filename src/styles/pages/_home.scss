@@ -5,28 +5,28 @@
   height: 100vh;
   justify-content: center;
   width: 100%;
+}
 
-  &-quote {
-    max-width: 600px;
-    text-align: center;
-    font-family: $handwritingFontFamily;
-    font-size: $heading2;
-    color: $primaryColor;
+.homepage__quote {
+  max-width: 600px;
+  text-align: center;
+  font-family: $handwritingFontFamily;
+  font-size: $heading2;
+  color: $primaryColor;
 
-    @media screen and (max-width: $tablet) {
-      width: 90%;
-    }
+  @media screen and (max-width: $tablet) {
+    width: 90%;
+  }
+}
+
+.homepage__image {
+  @media screen and (max-width: $tablet) {
+    width: 300px !important;
+    height: 300px !important;
   }
 
-  &-image {
-    @media screen and (max-width: $tablet) {
-      width: 300px !important;
-      height: 300px !important;
-    }
-
-    @media screen and (max-width: $mobileM) {
-      width: 280px !important;
-      height: 280px !important;
-    }
+  @media screen and (max-width: $mobileM) {
+    width: 280px !important;
+    height: 280px !important;
   }
 }

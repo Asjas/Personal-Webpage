@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <OutboundLink
-        className="footer-link"
+        className="footer__link"
         href="https://twitter.com/_asjas"
         target="_blank"
         rel="noopener noreferrer"
@@ -17,7 +17,7 @@ function Footer() {
         <span id="twitter-icon">Link to twitter profile</span>
       </OutboundLink>
       <OutboundLink
-        className="footer-link"
+        className="footer__link"
         href="https://github.com/asjas"
         target="_blank"
         rel="noopener noreferrer"
@@ -29,7 +29,7 @@ function Footer() {
         <span id="github-icon">Link to github profile</span>
       </OutboundLink>
       <OutboundLink
-        className="footer-link"
+        className="footer__link"
         href="https://medium.com/@asjas"
         target="_blank"
         rel="noopener noreferrer"
@@ -41,7 +41,7 @@ function Footer() {
         <span id="medium-icon">Link to medium profile</span>
       </OutboundLink>
       <OutboundLink
-        className="footer-link"
+        className="footer__link"
         href="https://www.linkedin.com/in/asjasroos/"
         target="_blank"
         rel="noopener noreferrer"
@@ -53,7 +53,7 @@ function Footer() {
         <span id="linkedin-icon">Link to linkedin profile</span>
       </OutboundLink>
       <OutboundLink
-        className="footer-link"
+        className="footer__link"
         href="https://drive.google.com/open?id=19cfXz9GIPEPstCI_W_OWAiv1SmAwGM9l"
         rel="noopener noreferrer"
         target="_blank"

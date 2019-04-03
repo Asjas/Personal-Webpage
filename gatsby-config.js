@@ -11,7 +11,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
-    'gatsby-remark-social-cards',
     'gatsby-plugin-twitter',
     'gatsby-plugin-sitemap',
     {
@@ -55,6 +54,7 @@ module.exports = {
               withWebp: true,
             },
           },
+          // { resolve: 'gatsby-remark-social-cards' },
           { resolve: 'gatsby-remark-responsive-iframe' },
           { resolve: 'gatsby-remark-code-titles' },
           { resolve: 'gatsby-remark-numbered-footnotes' },

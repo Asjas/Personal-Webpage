@@ -6,7 +6,7 @@
     max-width: 400px;
   }
 
-  .tag {
+  .blogpost__tag {
     &:hover {
       background: $navbarBg;
       color: $white;
@@ -19,7 +19,7 @@
   }
 }
 
-.tag {
+.blogpost__tag {
   background: $primaryColor;
   border-radius: 25px;
   color: $white;

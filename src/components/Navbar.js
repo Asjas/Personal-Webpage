@@ -6,7 +6,7 @@ import Footer from './Footer';
 const HamburgerIcon = memo(function HamburgerIcon({ handleClick, handleKeyDown }) {
   return (
     <a
-      className="hamburger-menu"
+      className="hamburger__menu"
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       tabIndex={0}
@@ -27,7 +27,7 @@ const HamburgerIcon = memo(function HamburgerIcon({ handleClick, handleKeyDown }
 const CloseIcon = memo(function CloseIcon({ handleClick, handleKeyDown }) {
   return (
     <a
-      className="hamburger-close"
+      className="hamburger__close"
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       tabIndex={0}
@@ -66,26 +66,30 @@ function Nav() {
     <>
       {!showNav && <HamburgerIcon handleClick={handleClick} handleKeyDown={handleKeyDown} />}
       {showNav && <CloseIcon handleClick={handleClick} handleKeyDown={handleKeyDown} />}
-      <div className={showNav ? 'sidenav show-nav' : 'sidenav'}>
+      <div className={showNav ? 'sidenav sidenav--show' : 'sidenav'}>
         <nav className="navbar">
-          <ul className="navbar-links">
-            <li className="navbar-item">
-              <Link className="navbar-link" activeClassName="navbar-link--active" to="/">
+          <ul className="navbar__links">
+            <li className="navbar__item">
+              <Link className="navbar__link" activeClassName="navbar__link--active" to="/">
                 Home
               </Link>
             </li>
-            <li className="navbar-item">
-              <Link className="navbar-link" activeClassName="navbar-link--active" to="/portfolio/">
+            <li className="navbar__item">
+              <Link
+                className="navbar__link"
+                activeClassName="navbar__link--active"
+                to="/portfolio/"
+              >
                 Portfolio
               </Link>
             </li>
-            <li className="navbar-item">
-              <Link className="navbar-link" activeClassName="navbar-link--active" to="/blog/">
+            <li className="navbar__item">
+              <Link className="navbar__link" activeClassName="navbar__link--active" to="/blog/">
                 Blog
               </Link>
             </li>
-            <li className="navbar-item">
-              <Link className="navbar-link" activeClassName="navbar-link--active" to="/contact/">
+            <li className="navbar__item">
+              <Link className="navbar__link" activeClassName="navbar__link--active" to="/contact/">
                 Contact
               </Link>
             </li>

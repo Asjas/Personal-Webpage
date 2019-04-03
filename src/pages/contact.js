@@ -16,13 +16,13 @@ const ContactPage = () => (
     <SEO {...seo} />
     <Layout>
       <div className="contact">
-        <section className="contact-details">
-          <h1 className="contact-heading">Don't be a stranger and say hello.</h1>
-          <p className="contact-paragraph">
+        <section className="contact__details">
+          <h1 className="contact__heading">Don't be a stranger and say hello.</h1>
+          <p className="contact__paragraph">
             I am always open to discussing new projects or opportunities. Feel free to get in touch
             with me by using the provided contact form.
           </p>
-          <p className="contact-paragraph">
+          <p className="contact__paragraph">
             You can also send me an e-mail at{' '}
             <a href="mailto:contact@asjas.co.za">contact@asjas.co.za</a>.
           </p>
