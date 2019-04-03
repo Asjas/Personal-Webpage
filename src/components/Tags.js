@@ -9,6 +9,7 @@ const GET_ALL_TAGS = graphql`
         node {
           frontmatter {
             tags
+            published
           }
         }
       }
@@ -24,11 +25,14 @@ function Tags() {
       <h2 className="tags__heading">Tags</h2>
       <ErrorBoundary>
         {data.allMdx.edges.map(({ node }) =>
-          node.frontmatter.tags.map(tag => (
-            <Link key={tag} className="blogpost__tag" to={`/tags/${tag}`}>
-              {tag}
-            </Link>
-          )),
+          node.frontmatter.tags.map(
+            tag =>
+              node.frontmatter.published && (
+                <Link key={tag} className="blogpost__tag" to={`/tags/${tag}`}>
+                  {tag}
+                </Link>
+              ),
+          ),
         )}
       </ErrorBoundary>
     </section>
