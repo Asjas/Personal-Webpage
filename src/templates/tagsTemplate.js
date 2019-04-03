@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
+import capitalize from '../utils/capitalize';
 
 export const GET_TAG_PAGES = graphql`
   query GET_TAG_PAGES($tag: String) {
@@ -19,6 +20,8 @@ export const GET_TAG_PAGES = graphql`
           }
           frontmatter {
             title
+            date
+            updated
           }
         }
       }
@@ -29,7 +32,9 @@ export const GET_TAG_PAGES = graphql`
 function TagTemplate({ pageContext, data }) {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMdx;
-  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged as "${tag}"`;
+  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged as "${capitalize(
+    tag,
+  )}"`;
   const seo = {
     title: `Posts tagged as "${tag}"`,
   };
@@ -38,22 +43,24 @@ function TagTemplate({ pageContext, data }) {
     <Layout>
       <SEO {...seo} />
       <section className="tagpage">
-        <h1 className="tagpage-heading">{tagHeader}</h1>
-        <ul className="tagpage-container">
+        <h1 className="tagpage__heading">{tagHeader}</h1>
+        <ul className="blogpost__list">
           {edges.map(({ node }) => {
             const { slug } = node.fields;
-            const { title } = node.frontmatter;
+            const { title, date, updated } = node.frontmatter;
 
             return (
-              <li key={slug} className="tagpage-blog">
-                <Link to={`/blog${slug}`}>
-                  <h2 className="tagpage-blog--heading">{title}</h2>
+              <li key={slug} className="blogpost__entry">
+                <Link className="blogpost__link" to={`/blog${slug}`}>
+                  <h2 className="blogpost__heading">{title}</h2>
                 </Link>
+                <span className="blogpost__date">Published: {date}</span>
+                <span className="blogpost__date">Last Updated: {updated}</span>
               </li>
             );
           })}
         </ul>
-        <Link to="/blog" className="tagpage-return">
+        <Link to="/blog" className="tagpage__return">
           Go back
         </Link>
       </section>
