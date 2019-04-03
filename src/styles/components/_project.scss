@@ -70,15 +70,28 @@
   width: 80px;
   height: 35px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  margin: 10px 16px;
+  margin: 0 16px 10px 16px;
   display: inline-block;
-  font-size: $fontMedium;
   outline: none;
   overflow: hidden;
   padding: 0;
   position: relative;
   transition: background-color 0.3s;
   text-decoration: none;
+
+  &:focus {
+    outline: 3px solid $outlineColor;
+  }
+}
+
+.card__button .button__content {
+  display: block;
+  font-size: $fontLarge;
+  font-family: Contender;
+  text-align: center;
+  padding-top: 6px;
+  color: #ecf0f1;
+  text-transform: uppercase;
 }
 
 .card__button.github {
@@ -116,11 +129,4 @@
   padding-top: 120%;
   transition: width 0.2s ease-out, padding-top 0.2s ease-out;
   width: 120%;
-}
-
-.card__button .button__content {
-  display: block;
-  padding: 12px 24px;
-  color: #ecf0f1;
-  text-transform: uppercase;
 }

@@ -19,6 +19,8 @@ function Project({ data }) {
         href={data.github_url.url}
         target="_blank"
         rel="noopener noreferrer"
+        tabindex="0"
+        role="button"
       >
         <span className="button__content">Github</span>
       </OutboundLink>
@@ -27,6 +29,8 @@ function Project({ data }) {
         href={data.website_url.url}
         target="_blank"
         rel="noopener noreferrer"
+        tabindex="0"
+        role="button"
       >
         <span className="button__content">Website</span>
       </OutboundLink>
