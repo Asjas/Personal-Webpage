@@ -59,7 +59,7 @@ exports[`Contact form renders correctly and matches snapshot 1`] = `
         />
       </label>
       <button
-        class="submit-button"
+        class="button button__primary"
         type="submit"
       >
         Submit

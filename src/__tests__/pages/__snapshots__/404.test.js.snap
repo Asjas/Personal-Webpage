@@ -3,14 +3,14 @@
 exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
 <div>
   <div
-    class="page-layout"
+    class="layout"
   >
     <a
       aria-controls="menu"
       aria-expanded="false"
       aria-labelledby="menu"
       aria-pressed="false"
-      class="hamburger-menu"
+      class="hamburger__menu"
       role="button"
       tabindex="0"
     >
@@ -38,43 +38,43 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
         class="navbar"
       >
         <ul
-          class="navbar-links"
+          class="navbar__links"
         >
           <li
-            class="navbar-item"
+            class="navbar__item"
           >
             <a
-              class="navbar-link"
+              class="navbar__link"
               href="/"
             >
               Home
             </a>
           </li>
           <li
-            class="navbar-item"
+            class="navbar__item"
           >
             <a
-              class="navbar-link"
+              class="navbar__link"
               href="/portfolio/"
             >
               Portfolio
             </a>
           </li>
           <li
-            class="navbar-item"
+            class="navbar__item"
           >
             <a
-              class="navbar-link"
+              class="navbar__link"
               href="/blog/"
             >
               Blog
             </a>
           </li>
           <li
-            class="navbar-item"
+            class="navbar__item"
           >
             <a
-              class="navbar-link"
+              class="navbar__link"
               href="/contact/"
             >
               Contact
@@ -86,7 +86,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
         >
           <a
             aria-labelledby="twitter-icon"
-            class="footer-link"
+            class="footer__link"
             href="https://twitter.com/_asjas"
             rel="noopener noreferrer"
             target="_blank"
@@ -100,6 +100,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
               />
             </svg>
             <span
+              class="sr-only"
               id="twitter-icon"
             >
               Link to twitter profile
@@ -107,7 +108,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
           </a>
           <a
             aria-labelledby="github-icon"
-            class="footer-link"
+            class="footer__link"
             href="https://github.com/asjas"
             rel="noopener noreferrer"
             target="_blank"
@@ -121,6 +122,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
               />
             </svg>
             <span
+              class="sr-only"
               id="github-icon"
             >
               Link to github profile
@@ -128,7 +130,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
           </a>
           <a
             aria-labelledby="medium-icon"
-            class="footer-link"
+            class="footer__link"
             href="https://medium.com/@asjas"
             rel="noopener noreferrer"
             target="_blank"
@@ -142,6 +144,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
               />
             </svg>
             <span
+              class="sr-only"
               id="medium-icon"
             >
               Link to medium profile
@@ -149,7 +152,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
           </a>
           <a
             aria-labelledby="linkedin-icon"
-            class="footer-link"
+            class="footer__link"
             href="https://www.linkedin.com/in/asjasroos/"
             rel="noopener noreferrer"
             target="_blank"
@@ -163,6 +166,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
               />
             </svg>
             <span
+              class="sr-only"
               id="linkedin-icon"
             >
               Link to linkedin profile
@@ -170,7 +174,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
           </a>
           <a
             aria-labelledby="resume-icon"
-            class="footer-link"
+            class="footer__link"
             href="https://drive.google.com/open?id=19cfXz9GIPEPstCI_W_OWAiv1SmAwGM9l"
             rel="noopener noreferrer"
             target="_blank"
@@ -184,6 +188,7 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
               />
             </svg>
             <span
+              class="sr-only"
               id="resume-icon"
             >
               Link to resume
@@ -199,18 +204,18 @@ exports[`Fourohfour page renders correctly and matches snapshot 1`] = `
         class="fourohfour"
       >
         <h1
-          class="fourohfour-heading"
+          class="fourohfour__heading"
           data-testid="404-heading"
         >
           PAGE NOT FOUND
         </h1>
         <p
-          class="fourohfour-text"
+          class="fourohfour__text"
         >
           You just hit a route that doesn't exist... the sadness.
         </p>
         <a
-          class="fourohfour-link"
+          class="fourohfour__link"
           data-testid="404-link"
           href="/"
         >
