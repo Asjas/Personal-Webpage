@@ -22,8 +22,8 @@ export const GET_PRISMIC_PROJECTS = graphql`
               alt
               localFile {
                 childImageSharp {
-                  fixed(width: 600, quality: 92) {
-                    ...GatsbyImageSharpFixed_withWebp_tracedSVG
+                  fluid(maxWidth: 600, quality: 92) {
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }

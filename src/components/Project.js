@@ -10,7 +10,7 @@ function Project({ data }) {
         className="card__image"
         title={data.title.text}
         alt={data.image.alt}
-        fixed={data.image.localFile.childImageSharp.fixed}
+        fluid={data.image.localFile.childImageSharp.fluid}
       />
       <h2 className="card__title">{data.title.text}</h2>
       <p className="card__text">{data.description.text}</p>
@@ -44,9 +44,8 @@ Project.propTypes = {
       alt: PropTypes.string.isRequired,
       localFile: PropTypes.shape({
         childImageSharp: PropTypes.shape({
-          fixed: PropTypes.shape({
-            height: PropTypes.number.isRequired,
-            width: PropTypes.number.isRequired,
+          fluid: PropTypes.shape({
+            sizes: PropTypes.string.isRequired,
             src: PropTypes.string.isRequired,
             srcSet: PropTypes.string.isRequired,
             srcSetWebp: PropTypes.string.isRequired,
