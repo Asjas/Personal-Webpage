@@ -18,14 +18,14 @@
     Cache-Control = "public, max-age=0, must-revalidate;"
 
 [[headers]]
-  for = "sw.js"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, max-age=0, must-revalidate;"
-
-[[headers]]
   for = "/*.js|*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable;"
+
+[[headers]]
+  for = "sw.js"
+  [headers.values]
+    Cache-Control = "no-cache, no-store;"
 
 [[headers]]
   for = "/*.jpg|*.jpeg|*.webp|*.svg"
