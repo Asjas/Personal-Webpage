@@ -22,7 +22,7 @@ export const GET_PRISMIC_PROJECTS = graphql`
               alt
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 600, quality: 92) {
+                  fluid(maxWidth: 600, quality: 98) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
@@ -72,11 +72,34 @@ PortfolioPage.propTypes = {
           node: PropTypes.shape({
             id: PropTypes.string.isRequired,
             data: PropTypes.shape({
-              title: PropTypes.object.isRequired,
-              description: PropTypes.object.isRequired,
-              image: PropTypes.object.isRequired,
-              website_url: PropTypes.object.isRequired,
-              github_url: PropTypes.object.isRequired,
+              title: PropTypes.shape({
+                text: PropTypes.string.isRequired,
+              }).isRequired,
+              description: PropTypes.shape({
+                text: PropTypes.string.isRequired,
+              }).isRequired,
+              image: PropTypes.shape({
+                alt: PropTypes.string.isRequired,
+                localFile: PropTypes.shape({
+                  childImageSharp: PropTypes.shape({
+                    fluid: PropTypes.shape({
+                      aspectRatio: PropTypes.number.isRequired,
+                      sizes: PropTypes.string.isRequired,
+                      src: PropTypes.string.isRequired,
+                      srcSet: PropTypes.string.isRequired,
+                      srcSetWebp: PropTypes.string.isRequired,
+                      srcWebp: PropTypes.string.isRequired,
+                      tracedSVG: PropTypes.string.isRequired,
+                    }).isRequired,
+                  }).isRequired,
+                }).isRequired,
+              }).isRequired,
+              website_url: PropTypes.shape({
+                url: PropTypes.string.isRequired,
+              }).isRequired,
+              github_url: PropTypes.shape({
+                url: PropTypes.string.isRequired,
+              }).isRequired,
             }).isRequired,
           }).isRequired,
         }).isRequired,

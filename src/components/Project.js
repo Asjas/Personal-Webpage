@@ -40,11 +40,18 @@ function Project({ data }) {
 
 Project.propTypes = {
   data: PropTypes.shape({
+    title: PropTypes.shape({
+      text: PropTypes.string.isRequired,
+    }).isRequired,
+    description: PropTypes.shape({
+      text: PropTypes.string.isRequired,
+    }).isRequired,
     image: PropTypes.shape({
       alt: PropTypes.string.isRequired,
       localFile: PropTypes.shape({
         childImageSharp: PropTypes.shape({
           fluid: PropTypes.shape({
+            aspectRatio: PropTypes.number.isRequired,
             sizes: PropTypes.string.isRequired,
             src: PropTypes.string.isRequired,
             srcSet: PropTypes.string.isRequired,
@@ -54,12 +61,6 @@ Project.propTypes = {
           }),
         }).isRequired,
       }).isRequired,
-    }).isRequired,
-    title: PropTypes.shape({
-      text: PropTypes.string.isRequired,
-    }).isRequired,
-    description: PropTypes.shape({
-      text: PropTypes.string.isRequired,
     }).isRequired,
     github_url: PropTypes.shape({
       url: PropTypes.string.isRequired,
