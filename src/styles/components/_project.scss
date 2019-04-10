@@ -29,26 +29,6 @@
   margin: 0;
   padding: 0;
   width: 100%;
-
-  @media screen and (max-width: $tablet) {
-    width: 425px !important;
-    height: 210px !important;
-  }
-
-  @media screen and (max-width: $mobileL) {
-    width: 350px !important;
-    height: 180px !important;
-  }
-
-  @media screen and (max-width: $mobileL) {
-    width: 320px !important;
-    height: 170px !important;
-  }
-
-  @media screen and (max-width: $mobileS) {
-    width: 300px !important;
-    height: 160px !important;
-  }
 }
 
 .card__title {
