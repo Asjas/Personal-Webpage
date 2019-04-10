@@ -8,7 +8,7 @@
     Strict-Transport-Security = "max-age=31536000; includeSubdomains; preload"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block; report-uri https://asjas.report-uri.com/r/d/xss/reportOnly"
+    X-XSS-Protection = "1; mode=block"
     Report-To = "{'group':'default','max_age':31536000,'endpoints':[{'url':'https://asjas.report-uri.com/a/d/g'}],'include_subdomains':true}"
 
 [[headers]]
