@@ -7,7 +7,7 @@
     Referrer-Policy = "same-origin"
     Strict-Transport-Security = "max-age=31536000; includeSubdomains; preload"
     X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "SAMEORIGIN"
+    X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Feature-Policy = "geolocation 'none'; camera 'none'; payment 'none'; usb 'none'; midi 'none'"
     Report-To = "{'group':'default','max_age':31536000,'endpoints':[{'url':'https://asjas.report-uri.com/a/d/g'}],'include_subdomains':true}"
