@@ -1,8 +1,8 @@
 @font-face {
   font-family: Contender;
-  src: url('../assets/Contender.woff2') format('woff2'),
-    url('../assets/Contender.woff') format('woff'),
-    url('../assets/Contender.ttf') format('truetype');
+  src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.woff2') format('woff2'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.woff') format('woff'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -10,9 +10,9 @@
 
 @font-face {
   font-family: Goldsmith;
-  src: url('../assets/Goldsmith_Regular.woff2') format('woff2'),
-    url('../assets/Goldsmith_Regular.woff') format('woff'),
-    url('../assets/Goldsmith_Regular.ttf') format('truetype');
+  src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Goldsmith_Regular.woff2') format('woff2'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Goldsmith_Regular.woff') format('woff'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Goldsmith_Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -20,18 +20,18 @@
 
 @font-face {
   font-family: Operator;
-  src: url('../assets/Operator-Light.woff2') format('woff2'),
-    url('../assets/Operator-Light.woff') format('woff'),
-    url('../assets/Operator-Light.ttf') format('truetype');
+  src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Operator-Light.woff2') format('woff2'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Operator-Light.woff') format('woff'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Operator-Light.ttf') format('truetype');
   font-weight: 400;
   font-display: fallback;
 }
 
 @font-face {
   font-family: Hugtophia;
-  src: url('../assets/Hugtophia.woff2') format('woff2'),
-    url('../assets/Hugtophia.woff') format('woff'),
-    url('../assets/Hugtophia.ttf') format('truetype');
+  src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Hugtophia.woff2') format('woff2'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Hugtophia.woff') format('woff'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Hugtophia.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -51,6 +51,7 @@ h5,
 h6 {
   font-weight: 500;
   font-family: $headingFontFamily;
+  text-shadow: 2px 2px 3px #aaa;
 }
 
 h1 {
