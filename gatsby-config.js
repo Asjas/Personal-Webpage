@@ -7,6 +7,9 @@ module.exports = {
     googleSiteVerification: '5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0',
     image: 'https://asjas.sfo2.cdn.digitaloceanspaces.com/messy-desk.jpg',
     twitterUsername: '_asjas',
+    author: {
+      name: 'A-J Roos',
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',

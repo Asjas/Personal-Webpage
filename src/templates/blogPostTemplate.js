@@ -34,12 +34,17 @@ const BlogPostTemplate = ({ data }) => {
     title: post.frontmatter.title,
     description: post.excerpt,
     siteUrl: `https://asjas.co.za/blog${post.fields.slug}`,
+    isBlogPost: true,
   };
 
   return (
     <Layout>
       <ErrorBoundary>
-        <SEO {...seo} />
+        <SEO
+          {...seo}
+          datePublished={post.frontmatter.date}
+          dateModified={post.frontmatter.updated}
+        />
         <article className="post">
           <h1 className="post__heading">{post.frontmatter.title}</h1>
           <div className="post__content">

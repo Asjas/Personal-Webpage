@@ -34,7 +34,7 @@ const seo = {
   title: 'A-J Roos | Blog Posts',
   description:
     'This is where I blog about different Web Development topics. I write blog posts about HTML5, CSS3, JavaScript, React.js and Node.js. You can signup for my newsletter as well.',
-  siteUrl: 'https://asjas.co.za/blog',
+  blogUrl: 'https://asjas.co.za/blog',
 };
 
 const BlogPage = ({ data }) => (
