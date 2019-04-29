@@ -54,8 +54,12 @@ const BlogPage = ({ data }) => (
                   <Link className="blogpost__link" to={`/blog${node.fields.slug}`}>
                     <h2 className="blogpost__heading">{node.frontmatter.title}</h2>
                   </Link>
-                  <span className="blogpost__date">Published: {node.frontmatter.date}</span>
-                  <span className="blogpost__date">Last Updated: {node.frontmatter.updated}</span>
+                  <span className="blogpost__date">
+                    Published: <time>{node.frontmatter.date}</time>
+                  </span>
+                  <span className="blogpost__date">
+                    Last Updated: <time>{node.frontmatter.updated}</time>
+                  </span>
                   <span className="blogpost__readingtime">Time to read: {node.timeToRead} min</span>
                   <ul className="blogpost__tags">
                     {node.frontmatter.tags.map(tag => (
