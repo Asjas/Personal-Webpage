@@ -2,9 +2,12 @@
 
 exports[`Contact form renders correctly and matches snapshot 1`] = `
 <div>
-  <form>
+  <form
+    data-netlify="true"
+    data-netlify-recaptcha="true"
+    name="contact"
+  >
     <fieldset
-      aria-busy="false"
       data-testid="form-disabled"
     >
       <label
