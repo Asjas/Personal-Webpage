@@ -1,6 +1,11 @@
+// / <reference types="Cypress" />
+
+// Disable undef error on `cy` usage
+/* eslint no-undef: 0 */
 describe('Hamburger menu', function() {
   beforeEach(function() {
     cy.visit('/');
+    cy.viewport(700, 660);
   });
 
   it('should exist and be visible on smaller screens', function() {
@@ -10,7 +15,7 @@ describe('Hamburger menu', function() {
       .should('be.visible');
   });
 
-  it('should toggle side navigation when clicked', function() {
+  it('should open and close the side navigation when clicked', function() {
     cy.get('.sidenav')
       .find('.navbar')
       .should('not.be.visible');
