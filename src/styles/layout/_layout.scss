@@ -14,11 +14,25 @@
   margin: 60px 0;
 }
 
-.modal {
-  background-color: #000;
-  width: 100vw;
+.sw-modal {
+  display: flex;
+  background-color: $primaryColor;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.sw-content {
+  color: #fff;
+  flex: 1 1 auto;
+  padding-left: 15px;
+}
+
+.sw-button {
+  border: none;
+  background: $navbarBg;
+  width: 65px;
+  font-size: 1.6rem;
+  color: $white;
 }

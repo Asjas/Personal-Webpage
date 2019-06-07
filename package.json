@@ -12,6 +12,7 @@
     "build": "npm-run-all clean build:gatsby",
     "build:gatsby": "gatsby build",
     "clean": "gatsby clean",
+    "serve": "gatsby serve",
     "dev": "gatsby develop",
     "cy": "cypress",
     "lint": "eslint .",
