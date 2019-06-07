@@ -15,7 +15,8 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
-    'gatsby-plugin-sitemap',
+    'gatsby-plugin-advanced-sitemap',
+    'gatsby-plugin-polyfill-io',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
