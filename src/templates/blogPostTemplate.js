@@ -46,10 +46,7 @@ const BlogPostTemplate = ({ data }) => {
           dateModified={post.frontmatter.updated_at}
         />
         <article className="post">
-          <h1 className="post__heading">{post.frontmatter.title}</h1>
-          <div className="post__content">
-            <MDXRenderer>{post.code.body}</MDXRenderer>
-          </div>
+          <MDXRenderer>{post.code.body}</MDXRenderer>
         </article>
       </ErrorBoundary>
     </Layout>

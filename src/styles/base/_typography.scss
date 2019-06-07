@@ -56,10 +56,12 @@ h6 {
 
 h1 {
   font-size: $heading1;
+  margin: 12px 0;
 }
 
 h2 {
   font-size: $heading2;
+  margin: 8px 0;
 }
 
 h3 {
@@ -83,6 +85,7 @@ textarea,
 label {
   font-family: $bodyFontFamily;
   font-size: $fontMedium;
+  margin: 6px 0;
 }
 
 a {

@@ -91,7 +91,7 @@ BlogPage.propTypes = {
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
               tags: PropTypes.array.isRequired,
-              updated: PropTypes.string.isRequired,
+              updated_at: PropTypes.string.isRequired,
             }).isRequired,
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,

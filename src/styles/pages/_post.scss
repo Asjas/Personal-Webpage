@@ -1,43 +1,28 @@
 .post {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0 auto;
-  width: 90%;
-}
+  display: grid;
+  grid-template-columns:
+    minmax(1.2rem, 1fr)
+    minmax(auto, 120ch)
+    minmax(1.2rem, 1fr);
 
-.post__heading {
-  margin: 50px 0 20px 0;
-  align-self: center;
-
-  @media screen and (max-width: $mobileL) {
-    align-self: left;
-  }
-}
-
-.post__content div {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  & h2 {
-    margin: 20px 0;
-    font-size: $heading2;
+  & > * {
+    grid-column: 2;
   }
 
-  & p {
-    font-size: $fontMedium;
-
-    & code {
-      background: $secondaryColor;
-    }
+  img {
+    width: 100%;
+    justify-self: center;
   }
 
-  & .gatsby-highlight {
-    height: auto;
+  .gatsby-code-title {
+    margin-top: 12px;
+  }
 
-    & pre {
-      flex: 1;
-    }
+  .gatsby-code-title,
+  .gatsby-highlight {
+    grid-column: 1 / 4 !important;
+    width: 100%;
+    justify-self: center;
+    max-width: 700px;
   }
 }
