@@ -19,7 +19,7 @@ export const GET_ALL_POSTS = graphql`
             date
             tags
             published
-            updated
+            updated_at
           }
           fields {
             slug
@@ -58,7 +58,7 @@ const BlogPage = ({ data }) => (
                     Published: <time>{node.frontmatter.date}</time>
                   </span>
                   <span className="blogpost__date">
-                    Last Updated: <time>{node.frontmatter.updated}</time>
+                    Last Updated: <time>{node.frontmatter.updated_at}</time>
                   </span>
                   <span className="blogpost__readingtime">Time to read: {node.timeToRead} min</span>
                   <ul className="blogpost__tags">

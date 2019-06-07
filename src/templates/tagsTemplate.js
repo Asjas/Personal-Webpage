@@ -21,7 +21,7 @@ export const GET_TAG_PAGES = graphql`
           frontmatter {
             title
             date
-            updated
+            updated_at
           }
         }
       }
@@ -47,7 +47,7 @@ function TagTemplate({ pageContext, data }) {
         <ul className="blogpost__list">
           {edges.map(({ node }) => {
             const { slug } = node.fields;
-            const { title, date, updated } = node.frontmatter;
+            const { title, date, updated_at } = node.frontmatter;
 
             return (
               <li key={slug} className="blogpost__entry">
@@ -55,7 +55,7 @@ function TagTemplate({ pageContext, data }) {
                   <h2 className="blogpost__heading">{title}</h2>
                 </Link>
                 <span className="blogpost__date">Published: {date}</span>
-                <span className="blogpost__date">Last Updated: {updated}</span>
+                <span className="blogpost__date">Last Updated: {updated_at}</span>
               </li>
             );
           })}

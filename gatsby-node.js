@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
               date
               tags
               published
-              updated
+              updated_at
             }
           }
         }

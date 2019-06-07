@@ -18,7 +18,7 @@ export const GET_POST = graphql`
         title
         date
         tags
-        updated
+        updated_at
       }
       fields {
         slug
@@ -43,7 +43,7 @@ const BlogPostTemplate = ({ data }) => {
         <SEO
           {...seo}
           datePublished={post.frontmatter.date}
-          dateModified={post.frontmatter.updated}
+          dateModified={post.frontmatter.updated_at}
         />
         <article className="post">
           <h1 className="post__heading">{post.frontmatter.title}</h1>
@@ -68,7 +68,7 @@ BlogPostTemplate.propTypes = {
         title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
         tags: PropTypes.array.isRequired,
-        updated: PropTypes.string.isRequired,
+        updated_at: PropTypes.string.isRequired,
       }).isRequired,
       fields: PropTypes.shape({
         slug: PropTypes.string.isRequired,
