@@ -14,6 +14,7 @@ class HTML extends React.Component {
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+          <div id="___modal" />
           {this.props.postBodyComponents}
         </body>
       </html>
