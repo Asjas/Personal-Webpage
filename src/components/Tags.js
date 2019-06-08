@@ -22,14 +22,14 @@ function Tags() {
 
   return (
     <section className="tags">
-      <h2 className="tags__heading">Tags</h2>
+      <h2 className="tags__heading">All Tags</h2>
       <ErrorBoundary>
         {data.allMdx.edges.map(({ node }) =>
           node.frontmatter.tags.map(
             tag =>
               node.frontmatter.published && (
                 <Link key={tag} className="blogpost__tag" to={`/tags/${tag}`}>
-                  {tag}
+                  {`#${tag}`}
                 </Link>
               ),
           ),

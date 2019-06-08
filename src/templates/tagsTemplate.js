@@ -4,8 +4,9 @@ import { graphql, Link } from 'gatsby';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
-import capitalize from '../utils/capitalize';
+import Tags from '../components/Tags';
 import BlogEntryCard from '../components/BlogEntryCard';
+import capitalize from '../utils/capitalize';
 
 export const GET_TAG_PAGES = graphql`
   query GET_TAG_PAGES($tag: String) {
@@ -49,6 +50,7 @@ function TagTemplate({ pageContext, data }) {
       <SEO {...seo} />
       <section className="tagpage">
         <h1 className="tagpage__heading">{tagHeader}</h1>
+        <Tags />
         <ul className="blogpost__list">
           {edges.map(
             ({ node }) => node.frontmatter.published && <BlogEntryCard key={node.id} node={node} />,
