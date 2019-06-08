@@ -12,12 +12,7 @@
 }
 
 .tagpage__heading {
-  margin: 50px auto 20px auto;
   text-align: center;
-
-  @media screen and (max-width: $tablet) {
-    text-align: center;
-  }
 }
 
 .blogpost__list {

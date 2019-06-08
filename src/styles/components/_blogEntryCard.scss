@@ -1,0 +1,46 @@
+.blogpost__section {
+  background: $secondaryColor;
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.blogpost__link {
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    color: $primaryColor;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 3px solid $outlineColor;
+  }
+}
+
+.blogpost__heading:focus {
+  outline: 2px solid $outlineColor;
+}
+
+.blogpost__date {
+  background: $black;
+  border-radius: 25px;
+  color: $white;
+  display: inline-block;
+  font-size: $fontTags;
+  margin: 20px 20px 0 0;
+  padding: 3px 8px;
+}
+
+.blogpost__tags {
+  display: block;
+  font-style: italic;
+  height: auto;
+  padding-left: 0;
+  margin: 0;
+
+  .blogpost__tag:focus {
+    outline: 3px solid $outlineColor;
+  }
+}

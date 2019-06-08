@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
+
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import capitalize from '../utils/capitalize';
+import BlogEntryCard from '../components/BlogEntryCard';
 
 export const GET_TAG_PAGES = graphql`
   query GET_TAG_PAGES($tag: String) {
@@ -15,12 +17,15 @@ export const GET_TAG_PAGES = graphql`
       totalCount
       edges {
         node {
+          id
           fields {
             slug
           }
           frontmatter {
             title
             date
+            tags
+            published
             updated_at
           }
         }
@@ -45,20 +50,9 @@ function TagTemplate({ pageContext, data }) {
       <section className="tagpage">
         <h1 className="tagpage__heading">{tagHeader}</h1>
         <ul className="blogpost__list">
-          {edges.map(({ node }) => {
-            const { slug } = node.fields;
-            const { title, date, updated_at } = node.frontmatter;
-
-            return (
-              <li key={slug} className="blogpost__entry">
-                <Link className="blogpost__link" to={`/blog${slug}`}>
-                  <h2 className="blogpost__heading">{title}</h2>
-                </Link>
-                <span className="blogpost__date">Published: {date}</span>
-                <span className="blogpost__date">Last Updated: {updated_at}</span>
-              </li>
-            );
-          })}
+          {edges.map(
+            ({ node }) => node.frontmatter.published && <BlogEntryCard key={node.id} node={node} />,
+          )}
         </ul>
         <Link to="/blog" className="tagpage__return">
           Go back

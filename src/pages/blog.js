@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
+
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Tags from '../components/Tags';
+import BlogEntryCard from '../components/BlogEntryCard';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 export const GET_ALL_POSTS = graphql`
@@ -12,17 +14,15 @@ export const GET_ALL_POSTS = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
-          timeToRead
+          fields {
+            slug
+          }
           frontmatter {
             title
             date
             tags
             published
             updated_at
-          }
-          fields {
-            slug
           }
         }
       }
@@ -48,29 +48,7 @@ const BlogPage = ({ data }) => (
         </header>
         <ErrorBoundary>
           {data.allMdx.edges.map(
-            ({ node }) =>
-              node.frontmatter.published && (
-                <section className="blogpost__section" key={node.id}>
-                  <Link className="blogpost__link" to={`/blog${node.fields.slug}`}>
-                    <h2 className="blogpost__heading">{node.frontmatter.title}</h2>
-                  </Link>
-                  <span className="blogpost__date">
-                    Published: <time>{node.frontmatter.date}</time>
-                  </span>
-                  <span className="blogpost__date">
-                    Last Updated: <time>{node.frontmatter.updated_at}</time>
-                  </span>
-                  <span className="blogpost__readingtime">Time to read: {node.timeToRead} min</span>
-                  <ul className="blogpost__tags">
-                    {node.frontmatter.tags.map(tag => (
-                      <Link key={tag} className="blogpost__tag" to={`/tags/${tag}`}>
-                        {tag}
-                      </Link>
-                    ))}
-                  </ul>
-                  <p className="blogpost__excerpt">{node.excerpt}</p>
-                </section>
-              ),
+            ({ node }) => node.frontmatter.published && <BlogEntryCard key={node.id} node={node} />,
           )}
         </ErrorBoundary>
       </div>
@@ -85,16 +63,14 @@ BlogPage.propTypes = {
         PropTypes.shape({
           node: PropTypes.shape({
             id: PropTypes.string.isRequired,
-            excerpt: PropTypes.string.isRequired,
-            timeToRead: PropTypes.number.isRequired,
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }).isRequired,
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
               tags: PropTypes.array.isRequired,
               updated_at: PropTypes.string.isRequired,
-            }).isRequired,
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
             }).isRequired,
           }).isRequired,
         }).isRequired,
