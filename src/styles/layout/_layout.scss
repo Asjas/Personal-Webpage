@@ -14,25 +14,39 @@
   margin: 60px 0;
 }
 
-.sw-modal {
+.modal {
   display: flex;
   background-color: $primaryColor;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 30px;
   left: 0;
+  width: 90%;
   right: 0;
+  border-radius: 4px;
+  margin: 0 auto;
 }
 
-.sw-content {
+.modal__content {
   color: #fff;
   flex: 1 1 auto;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
-.sw-button {
-  border: none;
-  background: $navbarBg;
+.modal__button {
   width: 65px;
-  font-size: 1.6rem;
   color: $white;
+
+  &--primary {
+    background: $black;
+    border: none;
+    font-size: $fontMedium;
+  }
+
+  &--secondary {
+    border-radius: 0 4px 4px 0;
+    border: 1px solid $primaryColor;
+    background: $primaryColor;
+    width: 40px;
+    font-size: 25px;
+  }
 }
