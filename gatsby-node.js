@@ -35,11 +35,11 @@ exports.createPages = ({ graphql, actions }) => {
                 childImageSharp {
                   fluid {
                     base64
-                    srcWebp
                     aspectRatio
+                    src
                     srcSet
+                    srcWebp
                     srcSetWebp
-                    sizes
                   }
                 }
               }

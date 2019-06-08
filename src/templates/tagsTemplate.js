@@ -28,6 +28,13 @@ export const GET_TAG_PAGES = graphql`
             tags
             published
             updated_at
+            featured_image {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 98) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
         }
       }
