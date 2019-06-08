@@ -33,20 +33,14 @@
     &:focus {
       outline: 3px solid $outlineColor;
 
-      svg {
-        fill: $primaryColor;
+      svg > * {
+        fill: $primaryColor !important;
       }
     }
 
     &:hover {
-      svg {
-        fill: $primaryColor;
-      }
-    }
-
-    &:visited {
-      svg {
-        fill: $linkVisitedColor;
+      svg > * {
+        fill: $primaryColor !important;
       }
     }
   }
