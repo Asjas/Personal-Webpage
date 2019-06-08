@@ -23,6 +23,13 @@ export const GET_ALL_POSTS = graphql`
             tags
             published
             updated_at
+            featured_image {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 98) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
         }
       }

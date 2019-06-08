@@ -31,6 +31,18 @@ exports.createPages = ({ graphql, actions }) => {
               tags
               published
               updated_at
+              featured_image {
+                childImageSharp {
+                  fluid {
+                    base64
+                    srcWebp
+                    aspectRatio
+                    srcSet
+                    srcSetWebp
+                    sizes
+                  }
+                }
+              }
             }
           }
         }
@@ -52,6 +64,15 @@ exports.createPages = ({ graphql, actions }) => {
 
         if (post.frontmatter.date === undefined || post.frontmatter.date === null) {
           throw Error(`${post.fileAbsolutePath} is missing a date property in the frontmatter.`);
+        }
+
+        if (
+          post.frontmatter.featured_image === undefined ||
+          post.frontmatter.featured_image === null
+        ) {
+          throw Error(
+            `${post.fileAbsolutePath} is missing a featured_image property in the frontmatter.`,
+          );
         }
 
         if (post.frontmatter.tags === undefined || post.frontmatter.tags === null) {

@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import { format, formatDistance } from 'date-fns';
 
 function BlogEntryCard({ node }) {
   return (
     <section className="blogpost__section" key={node.id}>
+      <Img
+        className="blogpost__image"
+        fluid={node.frontmatter.featured_image.childImageSharp.fluid}
+        alt=""
+      />
       <Link className="blogpost__link" to={`/blog${node.fields.slug}`}>
         <h2 className="blogpost__heading">{node.frontmatter.title}</h2>
       </Link>

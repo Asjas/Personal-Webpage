@@ -51,17 +51,15 @@ h5,
 h6 {
   font-weight: 500;
   font-family: $headingFontFamily;
-  text-shadow: 2px 2px 3px #aaa;
+  text-shadow: 1px 2px 2px #aaa;
 }
 
 h1 {
   font-size: $heading1;
-  margin: 12px 0;
 }
 
 h2 {
   font-size: $heading2;
-  margin: 8px 0;
 }
 
 h3 {

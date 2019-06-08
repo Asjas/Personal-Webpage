@@ -1,13 +1,16 @@
 html,
 body {
   box-sizing: border-box;
+  text-rendering: optimizelegibility;
+  hyphens: auto;
+  -ms-hyphens: auto;
+  font-feature-settings: 'liga1' on;
+  -moz-font-feature-settings: 'liga' on;
+  -webkit-hyphens: auto;
   -moz-osx-font-smoothing: grayscale;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 }
 
 *,

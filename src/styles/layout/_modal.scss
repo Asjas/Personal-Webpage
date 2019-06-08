@@ -13,6 +13,10 @@
   @media screen and (max-width: $laptop) {
     width: 90%;
   }
+
+  @media screen and (max-width: $tablet) {
+    width: 95%;
+  }
 }
 
 .modal__content {
