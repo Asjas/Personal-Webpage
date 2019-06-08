@@ -14,10 +14,7 @@ const Layout = ({ children }) => (
   <ErrorBoundary>
     <div className="layout">
       <Navbar />
-      <main className="main">
-        {children}
-        <div id="___modal" />
-      </main>
+      <main className="main">{children}</main>
     </div>
   </ErrorBoundary>
 );

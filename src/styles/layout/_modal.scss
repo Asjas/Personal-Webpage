@@ -4,10 +4,15 @@
   position: fixed;
   bottom: 30px;
   left: 0;
-  width: 90%;
   right: 0;
+  width: 80%;
   border-radius: 4px;
   margin: 0 auto;
+  z-index: 10;
+
+  @media screen and (max-width: $laptop) {
+    width: 90%;
+  }
 }
 
 .modal__content {
