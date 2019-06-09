@@ -36,40 +36,47 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/images/`,
-        name: 'images',
+        path: `${__dirname}/static/assets`,
+        name: 'assets',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/posts/`,
-        name: 'posts',
+        path: `${__dirname}/content/blog`,
+        name: 'blog',
       },
     },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-mdx',
       options: {
         gatsbyRemarkPlugins: [
+          'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
               quality: 95,
-              tracedSVG: true,
               withWebp: true,
+              backgroundColor: 'transparent',
             },
           },
           // { resolve: 'gatsby-remark-social-cards' },
           { resolve: 'gatsby-remark-responsive-iframe' },
           { resolve: 'gatsby-remark-code-titles' },
-          { resolve: 'gatsby-remark-numbered-footnotes' },
           { resolve: 'gatsby-remark-prismjs' },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: `${__dirname}/static`,
+            },
+          },
         ],
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-prismic',
       options: {
@@ -96,7 +103,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: 'hsl(341, 79%, 45%)',
         display: 'standalone',
-        icon: 'src/images/messy-desk.jpg',
+        icon: 'static/assets/messy-desk.jpg',
         include_favicon: true,
       },
     },

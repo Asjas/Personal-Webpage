@@ -1,9 +1,12 @@
 const path = require('path');
 const chalk = require('chalk');
 const { createFilePath } = require('gatsby-source-filesystem');
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
+
+  fmImagesToRelative(node);
 
   if (node.internal.type === 'Mdx') {
     const slug = createFilePath({ node, getNode, basePath: `blog` });
@@ -26,23 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
               slug
             }
             frontmatter {
-              title
-              date
               tags
-              published
-              updated_at
-              featured_image {
-                childImageSharp {
-                  fluid {
-                    base64
-                    aspectRatio
-                    src
-                    srcSet
-                    srcWebp
-                    srcSetWebp
-                  }
-                }
-              }
             }
           }
         }
@@ -58,42 +45,16 @@ exports.createPages = ({ graphql, actions }) => {
       const tagsSet = new Set();
 
       posts.forEach(post => {
-        if (post.frontmatter.title === undefined || post.frontmatter.title === null) {
-          throw Error(`${post.fileAbsolutePath} is missing a title property in the frontmatter.`);
-        }
-
-        if (post.frontmatter.date === undefined || post.frontmatter.date === null) {
-          throw Error(`${post.fileAbsolutePath} is missing a date property in the frontmatter.`);
-        }
-
-        if (
-          post.frontmatter.featured_image === undefined ||
-          post.frontmatter.featured_image === null
-        ) {
-          throw Error(
-            `${post.fileAbsolutePath} is missing a featured_image property in the frontmatter.`,
-          );
-        }
-
-        if (post.frontmatter.tags === undefined || post.frontmatter.tags === null) {
-          throw Error(`${post.fileAbsolutePath} is missing a tags property in the frontmatter.`);
+        if (!post.frontmatter.tags) {
+          throw Error(`${post.fileAbsolutePath} is missing tags in the frontmatter.`);
         } else {
           post.frontmatter.tags.forEach(tag => {
             tagsSet.add(tag);
           });
         }
-
-        if (post.frontmatter.published === undefined || post.frontmatter.published === null) {
-          throw Error(
-            `${post.fileAbsolutePath} is missing a published property in the frontmatter.`,
-          );
-        }
       });
 
-      const publishedBlogPosts = posts.filter(post => post.frontmatter.published === true);
-      const tags = Array.from(tagsSet);
-
-      publishedBlogPosts.forEach((post, index) => {
+      posts.forEach((post, index) => {
         const previous = index === posts.length - 1 ? null : posts[index + 1].node;
         const next = index === 0 ? null : posts[index - 1].node;
 
@@ -104,7 +65,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
       });
 
-      tags.forEach(tag => {
+      Array.from(tagsSet).forEach(tag => {
         createPage({
           path: `/tags/${tag}/`,
           component: tagsTemplate,
