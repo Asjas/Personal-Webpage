@@ -1,16 +1,20 @@
 .tags {
   max-width: 500px;
-  background: $secondaryColor;
   text-align: center;
   padding: 10px 20px 20px 20px;
   border-radius: 5px;
+  box-shadow: $cardBoxShadow;
 
-  @media screen and (max-width: $mobileL) {
+  @media (max-width: $mobileL) {
     max-width: 400px;
   }
 
+  .tags__heading {
+    margin: 10px 0 20px 0;
+  }
+
   .blogpost__tag {
-    margin: 20px 4px;
+    margin: 5px 4px;
     font-style: italic;
 
     &:hover {

@@ -1,5 +1,4 @@
 .blogpost__section {
-  background: $secondaryColor;
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-template-rows: repeat(4, min-content);
@@ -9,6 +8,7 @@
   justify-items: left;
   gap: 0 20px;
   will-change: transform;
+  box-shadow: $cardBoxShadow;
 
   @media (max-width: $tablet) {
     grid-template-columns: 1fr 1fr;

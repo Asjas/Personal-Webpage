@@ -1,7 +1,7 @@
 .portfolio__heading {
   font-size: $heading1;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 25px 0;
 
   @media screen and (max-width: $tablet) {
     width: 90%;

@@ -35,6 +35,11 @@
     margin: 6px 0 6px 0;
   }
 
+  .language-text {
+    font-family: $bodyFontFamily;
+    background-color: $outlineColor;
+  }
+
   .gatsby-code-title {
     margin-top: 12px;
   }
