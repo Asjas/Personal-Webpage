@@ -8,7 +8,7 @@ class HTML extends React.Component {
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <link rel="shortcut icon" href="https://storage.googleapis.com/asjas.co.za/favicon.ico" />
+
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>

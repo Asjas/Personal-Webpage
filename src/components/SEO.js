@@ -85,6 +85,7 @@ function SEO({
       <meta name="image" content={seo.image} />
       <link rel="canonical" href={seo.siteUrl} />
       <meta name="google-site-verification" content={seo.googleSiteVerification} />
+      <link rel="shortcut icon" href="https://storage.googleapis.com/asjas.co.za/favicon.ico" />
 
       {/* Schema.org tags */}
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
@@ -106,6 +107,21 @@ function SEO({
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
+
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+
+      {/* Netlify CMS Redirect on Login */}
+      <script>
+        {window &&
+          window.netlifyIdentity &&
+          window.netlifyIdentity.on('init', user => {
+            if (!user) {
+              window.netlifyIdentity.on('login', () => {
+                document.location.href = '/admin/';
+              });
+            }
+          })}
+      </script>
     </Helmet>
   );
 }
