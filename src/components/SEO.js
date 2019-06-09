@@ -112,8 +112,7 @@ function SEO({
 
       {/* Netlify CMS Redirect on Login */}
       <script>
-        {window &&
-          window.netlifyIdentity &&
+        {typeof window !== 'undefined' &&
           window.netlifyIdentity.on('init', user => {
             if (!user) {
               window.netlifyIdentity.on('login', () => {
