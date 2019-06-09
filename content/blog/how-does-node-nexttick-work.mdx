@@ -1,0 +1,52 @@
+---
+title: How does Node nextTick work?
+date: 2019-02-03T14:30:21.617Z
+updated_at: 2019-06-09T14:30:21.679Z
+featured_image: /assets/node-nextick-image.jpeg
+tags:
+  - javascript
+  - node
+---
+# How does Node nextTick work?
+
+_**tldr**: A function or functions passed to `process.nextTick()` will be executed **before** the next tick of the JS engine and **not in** the following tick. It can be intuitive to assume that `nextTick` means the following tick but it does in fact execute code before next tick._
+
+## Preface: What is a tick in JavaScript?
+
+Every time the event loop takes a full trip, we call it a tick.
+
+## An explanation of what nextTick does
+
+It's a way that we can tell the JS engine to process a function asynchronously (after the current function), but as soon as possible. There is no way to tell when the function will be executed, but it will always happen before the next `tick`.
+
+This allows you to execute code asynchronously while knowing that in the next tick of the event loop that code will have been executed. So if you are dependant on a function being executed before the following tick but you want it to happen asynchronously then you can use `process.nextTick()`.
+
+This is a code example of how you would use `process.nextTick()`.
+
+```js:title=index.js
+process.nextTick(() => {
+  //do something asynchronously
+})
+```
+
+And this code example shows how you would pass a function to `process.nextTick()`.
+
+```js:title=index.js
+function log() {
+  console.log("I will be run asynchronously.");
+}
+
+process.nextTick(log => {
+  log();
+})
+
+console.warn("This is a synchronous console.log.");
+```
+
+In this above code example where we pass the function `log` to `process.nextTick()` we will see warning logged first and then we will see the function being logged.
+
+## How does nextTick differ from other asynchronous methods?
+
+The Node.js `process.nextTick()` function interacts with the event loop in a different way from how `setInterval` and `setTimeout` interacts with the event loop.
+
+Calling `setTimeout` or `setInterval` will always execute the function in the next tick of the event loop, much later than `process.nextTick()`.
