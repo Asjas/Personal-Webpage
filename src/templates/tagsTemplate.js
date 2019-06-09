@@ -25,8 +25,6 @@ export const GET_TAG_PAGES = graphql`
           frontmatter {
             title
             date
-            tags
-            published
             updated_at
             featured_image {
               childImageSharp {
@@ -35,6 +33,7 @@ export const GET_TAG_PAGES = graphql`
                 }
               }
             }
+            tags
           }
         }
       }
@@ -59,9 +58,9 @@ function TagTemplate({ pageContext, data }) {
         <h1 className="tagpage__heading">{tagHeader}</h1>
         <Tags />
         <ul className="blogpost__list">
-          {edges.map(
-            ({ node }) => node.frontmatter.published && <BlogEntryCard key={node.id} node={node} />,
-          )}
+          {edges.map(({ node }) => (
+            <BlogEntryCard key={node.id} node={node} />
+          ))}
         </ul>
         <Link to="/blog" className="tagpage__return">
           Go back
@@ -81,11 +80,20 @@ TagTemplate.propTypes = {
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
             }).isRequired,
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              updated_at: PropTypes.string.isRequired,
+              featured_image: {
+                childImageSharp: PropTypes.shape({
+                  fluid: PropTypes.any.isRequired,
+                }).isRequired,
+              },
+              tags: PropTypes.array.isRequired,
             }).isRequired,
           }).isRequired,
         }).isRequired,

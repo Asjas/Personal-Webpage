@@ -20,8 +20,6 @@ export const GET_ALL_POSTS = graphql`
           frontmatter {
             title
             date
-            tags
-            published
             updated_at
             featured_image {
               childImageSharp {
@@ -30,6 +28,7 @@ export const GET_ALL_POSTS = graphql`
                 }
               }
             }
+            tags
           }
         }
       }
@@ -54,9 +53,9 @@ const BlogPage = ({ data }) => (
           <Tags />
         </header>
         <ErrorBoundary>
-          {data.allMdx.edges.map(
-            ({ node }) => node.frontmatter.published && <BlogEntryCard key={node.id} node={node} />,
-          )}
+          {data.allMdx.edges.map(({ node }) => (
+            <BlogEntryCard key={node.id} node={node} />
+          ))}
         </ErrorBoundary>
       </div>
     </Layout>
@@ -76,8 +75,13 @@ BlogPage.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
-              tags: PropTypes.array.isRequired,
               updated_at: PropTypes.string.isRequired,
+              featured_image: {
+                childImageSharp: PropTypes.shape({
+                  fluid: PropTypes.any.isRequired,
+                }).isRequired,
+              },
+              tags: PropTypes.array.isRequired,
             }).isRequired,
           }).isRequired,
         }).isRequired,

@@ -50,15 +50,7 @@ Project.propTypes = {
       alt: PropTypes.string.isRequired,
       localFile: PropTypes.shape({
         childImageSharp: PropTypes.shape({
-          fluid: PropTypes.shape({
-            aspectRatio: PropTypes.number.isRequired,
-            sizes: PropTypes.string.isRequired,
-            src: PropTypes.string.isRequired,
-            srcSet: PropTypes.string.isRequired,
-            srcSetWebp: PropTypes.string.isRequired,
-            srcWebp: PropTypes.string.isRequired,
-            tracedSVG: PropTypes.string.isRequired,
-          }),
+          fluid: PropTypes.any.isRequired,
         }).isRequired,
       }).isRequired,
     }).isRequired,

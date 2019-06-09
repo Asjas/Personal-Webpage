@@ -10,7 +10,7 @@ export const HOME_PAGE_IMAGE = graphql`
     file(relativePath: { regex: "/messy-desk.jpg/" }) {
       childImageSharp {
         fixed(height: 400, quality: 95) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+          ...GatsbyImageSharpFixed_withWebp
         }
       }
     }
@@ -36,12 +36,7 @@ IndexPage.propTypes = {
   data: PropTypes.shape({
     file: PropTypes.shape({
       childImageSharp: PropTypes.shape({
-        fixed: PropTypes.shape({
-          height: PropTypes.number.isRequired,
-          width: PropTypes.number.isRequired,
-          src: PropTypes.string.isRequired,
-          srcSet: PropTypes.string.isRequired,
-        }).isRequired,
+        fixed: PropTypes.any.isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,

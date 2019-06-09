@@ -51,8 +51,13 @@ BlogEntryCard.propTypes = {
     frontmatter: PropTypes.shape({
       title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
-      tags: PropTypes.array.isRequired,
       updated_at: PropTypes.string.isRequired,
+      featured_image: {
+        childImageSharp: PropTypes.shape({
+          fluid: PropTypes.any.isRequired,
+        }).isRequired,
+      },
+      tags: PropTypes.array.isRequired,
     }).isRequired,
   }).isRequired,
 };

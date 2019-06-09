@@ -23,15 +23,15 @@ export const GET_PRISMIC_PROJECTS = graphql`
               localFile {
                 childImageSharp {
                   fluid(maxWidth: 600, quality: 98) {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
             }
-            website_url {
+            github_url {
               url
             }
-            github_url {
+            website_url {
               url
             }
           }
@@ -82,22 +82,14 @@ PortfolioPage.propTypes = {
                 alt: PropTypes.string.isRequired,
                 localFile: PropTypes.shape({
                   childImageSharp: PropTypes.shape({
-                    fluid: PropTypes.shape({
-                      aspectRatio: PropTypes.number.isRequired,
-                      sizes: PropTypes.string.isRequired,
-                      src: PropTypes.string.isRequired,
-                      srcSet: PropTypes.string.isRequired,
-                      srcSetWebp: PropTypes.string.isRequired,
-                      srcWebp: PropTypes.string.isRequired,
-                      tracedSVG: PropTypes.string.isRequired,
-                    }).isRequired,
+                    fluid: PropTypes.any.isRequired,
                   }).isRequired,
                 }).isRequired,
               }).isRequired,
-              website_url: PropTypes.shape({
+              github_url: PropTypes.shape({
                 url: PropTypes.string.isRequired,
               }).isRequired,
-              github_url: PropTypes.shape({
+              website_url: PropTypes.shape({
                 url: PropTypes.string.isRequired,
               }).isRequired,
             }).isRequired,

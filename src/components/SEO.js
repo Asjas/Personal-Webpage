@@ -107,20 +107,6 @@ function SEO({
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
-
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-
-      {/* Netlify CMS Redirect on Login */}
-      <script>
-        {typeof window !== 'undefined' &&
-          window.netlifyIdentity.on('init', user => {
-            if (!user) {
-              window.netlifyIdentity.on('login', () => {
-                document.location.href = '/admin/';
-              });
-            }
-          })}
-      </script>
     </Helmet>
   );
 }
