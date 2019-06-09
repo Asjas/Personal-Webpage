@@ -10,7 +10,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    allMdx(sort: { fields: [frontmatter___date], order: ASC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
@@ -76,11 +76,7 @@ BlogPage.propTypes = {
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
               updated_at: PropTypes.string.isRequired,
-              featured_image: {
-                childImageSharp: PropTypes.shape({
-                  fluid: PropTypes.any.isRequired,
-                }).isRequired,
-              },
+              featured_image: PropTypes.object.isRequired,
               tags: PropTypes.array.isRequired,
             }).isRequired,
           }).isRequired,

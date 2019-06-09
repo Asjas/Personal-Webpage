@@ -3,10 +3,25 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import { format, formatDistance } from 'date-fns';
+import { useSpring, animated } from 'react-spring';
+
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 40, 1.1];
+const trans = (x, y, s) => `perspective(1200px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 function BlogEntryCard({ node }) {
+  const [{ xys }, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 5, tension: 350, friction: 40 },
+  }));
+
   return (
-    <section className="blogpost__section" key={node.id}>
+    <animated.section
+      className="blogpost__section"
+      key={node.id}
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+      onMouseLeave={() => set({ xys: [0, 0, 1] })}
+      style={{ transform: xys.interpolate(trans) }}
+    >
       <Img
         className="blogpost__image"
         fluid={node.frontmatter.featured_image.childImageSharp.fluid}
@@ -38,7 +53,7 @@ function BlogEntryCard({ node }) {
           </Link>
         ))}
       </ul>
-    </section>
+    </animated.section>
   );
 }
 
@@ -52,11 +67,7 @@ BlogEntryCard.propTypes = {
       title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
       updated_at: PropTypes.string.isRequired,
-      featured_image: {
-        childImageSharp: PropTypes.shape({
-          fluid: PropTypes.any.isRequired,
-        }).isRequired,
-      },
+      featured_image: PropTypes.object.isRequired,
       tags: PropTypes.array.isRequired,
     }).isRequired,
   }).isRequired,

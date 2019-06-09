@@ -10,7 +10,6 @@
 /* Layout */
 @import 'layout/_layout.scss';
 @import 'layout/_modal.scss';
-@import 'layout/_navbar.scss';
 
 /* Pages */
 @import 'pages/_home.scss';
@@ -22,9 +21,10 @@
 @import 'pages/_404.scss';
 
 /* Components */
-@import 'components/blogEntryCard';
+@import 'components/_blogEntryCard';
 @import 'components/_project.scss';
 @import 'components/_button.scss';
+@import 'components/_navbar.scss';
 @import 'components/_form.scss';
 @import 'components/_footer.scss';
 @import 'components/_newsletter.scss';

@@ -8,6 +8,7 @@
   transition: all ease-in-out 0.5s;
   width: 360px;
   z-index: 10;
+  will-change: transform opacity;
 
   @media screen and (max-width: $laptopL) {
     max-width: 320px;
@@ -15,12 +16,12 @@
 
   @media screen and (max-width: $laptop) {
     transform: translateX(-320px);
-    visibility: hidden;
+    opacity: 0;
   }
 
   &.sidenav--show {
     transform: translateX(0);
-    visibility: visible;
+    opacity: 1;
   }
 }
 

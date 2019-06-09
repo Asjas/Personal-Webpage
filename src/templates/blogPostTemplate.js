@@ -65,11 +65,7 @@ BlogPostTemplate.propTypes = {
         title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
         updated_at: PropTypes.string.isRequired,
-        featured_image: {
-          childImageSharp: PropTypes.shape({
-            fluid: PropTypes.any.isRequired,
-          }).isRequired,
-        },
+        featured_image: PropTypes.object.isRequired,
         tags: PropTypes.array.isRequired,
       }).isRequired,
       excerpt: PropTypes.string.isRequired,

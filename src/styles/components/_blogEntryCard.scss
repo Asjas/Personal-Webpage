@@ -8,6 +8,7 @@
   padding: 20px;
   justify-items: left;
   gap: 0 20px;
+  will-change: transform;
 
   @media (max-width: $tablet) {
     grid-template-columns: 1fr 1fr;

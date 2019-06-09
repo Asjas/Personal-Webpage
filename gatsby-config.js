@@ -65,7 +65,16 @@ module.exports = {
             },
           },
           // { resolve: 'gatsby-remark-social-cards' },
-          { resolve: 'gatsby-remark-responsive-iframe' },
+          {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              width: 600,
+              ratio: 1.77,
+              related: false,
+              noIframeBorder: true,
+            },
+          },
+          'gatsby-remark-responsive-iframe',
           { resolve: 'gatsby-remark-code-titles' },
           { resolve: 'gatsby-remark-prismjs' },
           {
