@@ -18,13 +18,7 @@ export const GET_POST = graphql`
         title
         date
         updated_at
-        featured_image {
-          childImageSharp {
-            fluid(maxWidth: 600, quality: 98) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+
         tags
       }
       excerpt(pruneLength: 250)
@@ -54,11 +48,6 @@ const BlogPostTemplate = ({ data }) => {
           dateModified={post.frontmatter.updated_at}
         />
         <article className="post">
-          <Img
-            className="blogpost__image"
-            fluid={data.frontmatter.featured_image.childImageSharp.fluid}
-            alt=""
-          />
           <MDXRenderer>{post.code.body}</MDXRenderer>
         </article>
       </ErrorBoundary>
