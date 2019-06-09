@@ -12,10 +12,15 @@
 This project uses the following tech stack:
 
 - Front-End
+
   - Gatsby.js
   - SCSS
-  - Formik
+  - React-Spring (Animation)
   - React Testing Library
+
+- Backend
+  - Netlify CMS (Blogging)
+  - Prismic (Projects)
 
 ### Getting Started
 
