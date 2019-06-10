@@ -1,5 +1,6 @@
 import React, { useState, memo } from 'react';
 import PropTypes from 'prop-types';
+import onClickOutside from 'react-onclickoutside';
 import { Link } from 'gatsby';
 import { useTransition, animated } from 'react-spring';
 
@@ -52,24 +53,26 @@ const CloseIcon = memo(function CloseIcon({ handleClick, handleKeyDown, style })
 });
 
 function Nav() {
-  const [showNav, setShow] = useState(false);
-  const transitions = useTransition(showNav, null, {
+  const [isOpen, setIsOpen] = useState(false);
+  const transitions = useTransition(isOpen, null, {
     from: { position: 'absolute', opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
   });
 
   function handleClick() {
-    setShow(!showNav);
+    setIsOpen(!isOpen);
   }
 
   function handleKeyDown(event) {
     const { keyCode } = event;
 
     if (keyCode === 13) {
-      setShow(!showNav);
+      setIsOpen(!isOpen);
     }
   }
+
+  Nav.handleClickOutside = () => setIsOpen(false);
 
   return (
     <>
@@ -91,7 +94,7 @@ function Nav() {
         ),
       )}
 
-      <div className={showNav ? 'sidenav sidenav--show' : 'sidenav'}>
+      <div className={isOpen ? 'sidenav sidenav--show' : 'sidenav'}>
         <nav className="navbar">
           <ul className="navbar__links">
             <li className="navbar__item">
@@ -126,6 +129,10 @@ function Nav() {
   );
 }
 
+const clickOutsideConfig = {
+  handleClickOutside: () => Nav.handleClickOutside,
+};
+
 HamburgerIcon.propTypes = {
   handleClick: PropTypes.func.isRequired,
   handleKeyDown: PropTypes.func.isRequired,
@@ -138,4 +145,4 @@ CloseIcon.propTypes = {
   style: PropTypes.object.isRequired,
 };
 
-export default Nav;
+export default onClickOutside(Nav, clickOutsideConfig);
