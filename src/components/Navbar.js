@@ -1,6 +1,5 @@
 import React, { useState, memo } from 'react';
 import PropTypes from 'prop-types';
-import onClickOutside from 'react-onclickoutside';
 import { Link } from 'gatsby';
 import { useTransition, animated } from 'react-spring';
 
@@ -72,8 +71,6 @@ function Nav() {
     }
   }
 
-  Nav.handleClickOutside = () => setIsOpen(false);
-
   return (
     <>
       {transitions.map(({ item, key, props }) =>
@@ -129,10 +126,6 @@ function Nav() {
   );
 }
 
-const clickOutsideConfig = {
-  handleClickOutside: () => Nav.handleClickOutside,
-};
-
 HamburgerIcon.propTypes = {
   handleClick: PropTypes.func.isRequired,
   handleKeyDown: PropTypes.func.isRequired,
@@ -145,4 +138,4 @@ CloseIcon.propTypes = {
   style: PropTypes.object.isRequired,
 };
 
-export default onClickOutside(Nav, clickOutsideConfig);
+export default Nav;
