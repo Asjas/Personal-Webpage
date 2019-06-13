@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { graphql } from 'gatsby';
 
@@ -65,7 +64,6 @@ BlogPostTemplate.propTypes = {
         title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
         updated_at: PropTypes.string.isRequired,
-        featured_image: PropTypes.object.isRequired,
         tags: PropTypes.array.isRequired,
       }).isRequired,
       excerpt: PropTypes.string.isRequired,
