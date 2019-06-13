@@ -35,7 +35,7 @@ module.exports = {
       },
     ],
     'prefer-const': [
-      'error',
+      'warn',
       {
         destructuring: 'all',
       },
@@ -53,14 +53,22 @@ module.exports = {
         props: false,
       },
     ],
-    'no-console': 0,
+    'no-console': [
+      'error',
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
     'import/prefer-default-export': 0,
     import: 0,
+    radix: 0,
+    indent: 0,
     'func-names': 0,
     'import/no-extraneous-dependencies': 0,
     'space-before-function-paren': 0,
     'comma-dangle': 0,
     'max-len': 0,
+    'no-confusing-arrow': 0,
     'import/extensions': 0,
     'no-underscore-dangle': 0,
     'consistent-return': 0,
@@ -69,6 +77,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/prefer-stateless-function': 0,
     'react/forbid-prop-types': 0,
+    'operator-linebreak': 0,
     'react/destructuring-assignment': 0,
     'react/no-danger': 0,
     'react/no-unescaped-entities': 0,
@@ -86,7 +95,6 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
     ],
-    radix: 0,
     'no-shadow': [
       2,
       {
