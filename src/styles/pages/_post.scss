@@ -9,9 +9,19 @@
     grid-column: 2;
   }
 
-  img {
-    width: 100%;
-    justify-self: center;
+  header {
+    margin-bottom: 30px;
+
+    .post__image {
+      width: 100%;
+      justify-self: center;
+    }
+
+    .post__date {
+      padding: 2px 0;
+      display: block;
+      font-size: $fontMedium;
+    }
   }
 
   h1 {

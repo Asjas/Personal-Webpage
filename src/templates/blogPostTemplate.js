@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { format, formatDistance } from 'date-fns';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -17,7 +19,13 @@ export const GET_POST = graphql`
         title
         date
         updated_at
-
+        featured_image {
+          childImageSharp {
+            fluid(maxWidth: 600, quality: 98) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         tags
       }
       excerpt(pruneLength: 250)
@@ -47,6 +55,29 @@ const BlogPostTemplate = ({ data }) => {
           dateModified={post.frontmatter.updated_at}
         />
         <article className="post">
+          <header>
+            <Img
+              className="post__image"
+              fluid={post.frontmatter.featured_image.childImageSharp.fluid}
+              alt=""
+            />
+            <span className="post__date">
+              Published:{' '}
+              <time dateTime={format(new Date(post.frontmatter.date), 'yyyy-MM-dd')}>
+                {formatDistance(new Date(post.frontmatter.date), new Date(), {
+                  addSuffix: true,
+                })}
+              </time>
+            </span>
+            <span className="post__date">
+              Last Updated:{' '}
+              <time dateTime={format(new Date(post.frontmatter.updated_at), 'yyyy-MM-dd')}>
+                {formatDistance(new Date(post.frontmatter.updated_at), new Date(), {
+                  addSuffix: true,
+                })}
+              </time>
+            </span>
+          </header>
           <MDXRenderer>{post.code.body}</MDXRenderer>
         </article>
       </ErrorBoundary>
