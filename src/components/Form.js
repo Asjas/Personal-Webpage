@@ -34,6 +34,7 @@ const ContactForm = () => (
           />
         </label>
         {typeof window !== 'undefined' &&
+          window.grecaptcha &&
           window.grecaptcha.ready(function() {
             window.grecaptcha
               .execute('6LfRSKAUAAAAAOWRrjorE2kWWLN_aRlCuhTu6x-b', { action: 'contactpage' })
