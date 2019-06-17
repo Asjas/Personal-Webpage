@@ -29,7 +29,6 @@ export const GET_POST = graphql`
         }
         tags
       }
-      excerpt(pruneLength: 250)
       code {
         body
       }
@@ -94,11 +93,12 @@ BlogPostTemplate.propTypes = {
       }).isRequired,
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
+        meta_desc: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
         updated_at: PropTypes.string.isRequired,
+        featured_image: PropTypes.object.isRequired,
         tags: PropTypes.array.isRequired,
       }).isRequired,
-      excerpt: PropTypes.string.isRequired,
       code: PropTypes.shape({
         body: PropTypes.string.isRequired,
       }).isRequired,
