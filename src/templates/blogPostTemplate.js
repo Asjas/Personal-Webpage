@@ -17,6 +17,7 @@ export const GET_POST = graphql`
       }
       frontmatter {
         title
+        meta_desc
         date
         updated_at
         featured_image {
@@ -41,7 +42,7 @@ const BlogPostTemplate = ({ data }) => {
 
   const seo = {
     title: post.frontmatter.title,
-    description: post.excerpt,
+    description: post.frontmatter.meta_desc,
     siteUrl: `https://asjas.co.za/blog${post.fields.slug}`,
     isBlogPost: true,
   };
