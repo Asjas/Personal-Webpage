@@ -13,4 +13,31 @@ tags:
   - javascript
   - ''
 ---
-Test content
+# Introduction
+
+In this blog post we will learn more about [date-fns](https://date-fns.org) and why it is such an amazing date utility library to manage your dates in JavaScript. At the time of this blog post we will be using `v2.0.0-alpha.27`. If there is a newer version you can use that as well. We will be using the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) Github repo as a starting point. At any point you can browse to my version of the project [here](https://github.com/Asjas/gatsby-date-fns-starter) on Github to see the final project.
+
+## Why use date-fns?
+
+We have always had [Moment.js](https://momentjs.com/) as the go-to library to manage dates in JavaScript but as time went on the library grew really large and there were no easy ways to split the library up into smaller pieces. Date-fns changes this. Date-fns is very modular, it supports [tree-shaking](https://webpack.js.org/guides/tree-shaking/), it uses pure functions and even supports Internationalization (I18n).
+
+## Getting Started
+
+First things first, you need to create a folder where we will be creating the starter Gatsby project. Once that has been done you can use [npx](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) to create a new Gatsby project based off the Gatsby Starter Repo.
+
+```js
+npx gatsby new gatsby-date-fns-starter https://github.com/gatsbyjs/gatsby-starter-blog
+```
+
+When you are asked to choose between `npm` or `yarn` as your package manager you can choose the one you are comfortable with. In this blog post we will be using `npm`.
+
+You can now navigate into the new project directory and start the development environment to check if everything went okay during the setup.
+
+```js
+cd gatsby-date-fns-starter
+npm run dev
+```
+
+This will start a localhost server on `http://localhost:8000`. Open the url in your browser to check if you can see the default starter template. It should look like this.
+
+![Gatsby Localhost Server](https://asjas.sfo2.cdn.digitaloceanspaces.com/images/gatsby-starter-localhost.jpg)
