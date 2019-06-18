@@ -19,13 +19,19 @@ In this blog post we will learn more about [date-fns](https://date-fns.org) and 
 
 ### Why use date-fns?
 
-We have always had [Moment.js](https://momentjs.com/) as the go-to library to manage dates in JavaScript but as time went on the library grew really large and there were no easy ways to split the library up into smaller pieces. Date-fns changes this. Date-fns is very modular, it supports [tree-shaking](https://webpack.js.org/guides/tree-shaking/), it uses pure functions and even supports Internationalization (I18n).
+We have always had the npm package [Moment.js](https://momentjs.com/) as the go-to npm library to manage dates in JavaScript but as time went on the library grew really large and there were no easy ways to split the library up into smaller pieces by using code-splitting. Date-fns changes this. Date-fns is very modular, it supports [tree-shaking](https://webpack.js.org/guides/tree-shaking/) and even supports Internationalization (I18n).
 
 ### Getting Started
 
-First things first, you need to create a folder where we will be creating the starter Gatsby project. Once that has been done you can use [npx](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) to create a new Gatsby project based off the Gatsby Starter Repo.
+First things first, you need to create a folder where we will be creating the starter Gatsby project. 
 
-```js:title=~/git
+```sh:title=/
+mkdir git
+```
+
+Once that has been done you can use [npx](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) to create a new Gatsby project based off the Gatsby Starter Repo.
+
+```js:title=/git/
 npx gatsby new gatsby-date-fns-starter https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
@@ -33,7 +39,7 @@ When you are asked to choose between `npm` or `yarn` as your package manager you
 
 You can now navigate into the new project directory and start the development environment to check if everything went okay during the setup.
 
-```js:title=~/git/
+```js:title=/git/
 cd gatsby-date-fns-starter
 npm run develop
 ```
@@ -50,7 +56,7 @@ In the same folder where you ran `npm run develop` you can run the following com
 
 Choose one of the install commands based on which package manager you are using.
 
-```js:title=~/git/gatsby-date-fns-starter
+```js:title=/git/gatsby-date-fns-starter
 npm install date-fns@next --save
 yarn add date-fns@next
 ```
