@@ -11,11 +11,11 @@
   will-change: transform opacity;
 
   @media screen and (max-width: $laptopL) {
-    max-width: 320px;
+    max-width: 300px;
   }
 
   @media screen and (max-width: $laptop) {
-    transform: translateX(-320px);
+    transform: translateX(-300px);
     opacity: 0;
   }
 
