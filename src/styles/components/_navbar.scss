@@ -72,19 +72,19 @@
 
   & .navbar__item {
     align-content: center;
-    height: 60px;
     list-style: none;
     text-align: center;
     width: 100%;
 
     & .navbar__link {
+      display: block;
       border: 2px solid transparent;
       color: $white;
       cursor: pointer;
       font-family: Contender;
       font-size: $navbarLinkLarge;
-      height: 100%;
       width: 100%;
+      padding: 6px 0;
 
       &:hover {
         color: $primaryColor;
