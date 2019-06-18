@@ -21,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(`
     {
-      allMdx(sort: { fields: [frontmatter___date], order: ASC }) {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
             fileAbsolutePath
@@ -55,8 +55,8 @@ exports.createPages = ({ graphql, actions }) => {
       });
 
       posts.forEach((post, index) => {
-        const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-        const next = index === 0 ? null : posts[index - 1].node;
+        const previous = index === posts.length - 1 ? null : posts[index + 1].fields.slug;
+        const next = index === 0 ? null : posts[index - 1].fields.slug;
 
         createPage({
           path: `/blog${post.fields.slug}`,
