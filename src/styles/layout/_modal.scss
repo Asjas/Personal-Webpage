@@ -9,6 +9,8 @@
   border-radius: 4px;
   margin: 0 auto;
   z-index: 10;
+  will-change: transform opacity;
+  animation: animateModal 0.8s cubic-bezier(0.29, 0.77, 0.85, 0.42);
 
   @media screen and (max-width: $laptop) {
     width: 90%;
@@ -17,18 +19,35 @@
   @media screen and (max-width: $tablet) {
     width: 95%;
   }
+
+  @keyframes animateModal {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    80% {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 .modal__content {
   color: #fff;
-  flex: 5 1 auto;
+  flex: 7 1 auto;
   padding: 0 15px;
   font-size: $fontSmall;
 }
 
 .modal__button {
   color: $white;
-  flex: 1 5 auto;
+  flex: 1 7 auto;
 
   &--primary {
     background: $black;
