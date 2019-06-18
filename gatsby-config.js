@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-polyfill-io',
       options: {
-        features: ['Object.values'],
+        features: ['Object.entries'],
       },
     },
     {
@@ -121,6 +121,6 @@ module.exports = {
         include_favicon: true,
       },
     },
-    'gatsby-plugin-remove-serviceworker',
+    'gatsby-plugin-offline',
   ],
 };
