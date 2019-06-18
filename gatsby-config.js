@@ -15,7 +15,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
-    'gatsby-plugin-polyfill-io',
     'gatsby-plugin-advanced-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -31,6 +30,12 @@ module.exports = {
         includePaths: [`${__dirname}/src/styles/main.scss`],
         sourceComments: true,
         sourceMap: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-polyfill-io',
+      options: {
+        features: ['Object.entries'],
       },
     },
     {
