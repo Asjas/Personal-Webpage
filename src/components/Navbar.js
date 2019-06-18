@@ -5,7 +5,7 @@ import { useTransition, animated } from 'react-spring';
 
 import Footer from './Footer';
 
-const HamburgerIcon = function HamburgerIcon({ handleClick, handleKeyDown, style }) {
+function HamburgerIcon({ handleClick, handleKeyDown, style }) {
   return (
     <animated.a
       className="hamburger__menu"
@@ -25,9 +25,9 @@ const HamburgerIcon = function HamburgerIcon({ handleClick, handleKeyDown, style
       </svg>
     </animated.a>
   );
-};
+}
 
-const CloseIcon = function CloseIcon({ handleClick, handleKeyDown, style }) {
+function CloseIcon({ handleClick, handleKeyDown, style }) {
   return (
     <animated.a
       className="hamburger__close"
@@ -49,7 +49,7 @@ const CloseIcon = function CloseIcon({ handleClick, handleKeyDown, style }) {
       </svg>
     </animated.a>
   );
-};
+}
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
