@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { format, formatDistance } from 'date-fns';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -36,13 +36,13 @@ export const GET_POST = graphql`
   }
 `;
 
-const BlogPostTemplate = ({ data }) => {
+const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.mdx;
 
   const seo = {
     title: post.frontmatter.title,
     description: post.frontmatter.meta_desc,
-    siteUrl: `https://asjas.co.za/blog${post.fields.slug}`,
+    siteUrl: `https://asjas.co.za/blog${pageContext.slug}`,
     isBlogPost: true,
   };
 
@@ -55,7 +55,7 @@ const BlogPostTemplate = ({ data }) => {
           dateModified={post.frontmatter.updated_at}
         />
         <article className="post">
-          <header>
+          <header className="post__header">
             <h1 className="post__title">{post.frontmatter.title}</h1>
             <Img
               className="post__image"
@@ -80,6 +80,18 @@ const BlogPostTemplate = ({ data }) => {
             </span>
           </header>
           <MDXRenderer>{post.code.body}</MDXRenderer>
+          <footer className="post__footer">
+            {pageContext.previous && (
+              <Link to={`/blog/${pageContext.previous}`} className="post__link previous">
+                Previous Post
+              </Link>
+            )}
+            {pageContext.next && (
+              <Link to={`/blog${pageContext.next}`} className="post__link next">
+                Next Post
+              </Link>
+            )}
+          </footer>
         </article>
       </ErrorBoundary>
     </Layout>
@@ -104,6 +116,11 @@ BlogPostTemplate.propTypes = {
         body: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
+  }).isRequired,
+  pageContext: PropTypes.shape({
+    isCreatedByStatefulCreatePages: PropTypes.bool.isRequired,
+    previous: PropTypes.string,
+    slug: PropTypes.string.isRequired,
   }).isRequired,
 };
 

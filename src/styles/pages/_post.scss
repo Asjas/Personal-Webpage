@@ -9,7 +9,7 @@
     grid-column: 2;
   }
 
-  header {
+  .post__header {
     margin-bottom: 10px;
 
     .post__title {
@@ -65,5 +65,32 @@
     width: 98%;
     justify-self: center;
     max-width: 700px;
+  }
+
+  .post__footer {
+    margin-top: 20px;
+    display: grid;
+    width: 100%;
+
+    .post__link {
+      background: $primaryColor;
+      border-radius: 25px;
+      color: $white;
+      font-size: $fontMedium;
+      padding: 3px 8px;
+      text-decoration: none;
+    }
+
+    .post__link:hover {
+      background: $black;
+    }
+
+    .previous {
+      justify-self: start;
+    }
+
+    .next {
+      justify-self: end;
+    }
   }
 }
