@@ -56,6 +56,7 @@ const BlogPostTemplate = ({ data }) => {
         />
         <article className="post">
           <header>
+            <h1 className="post__title">{post.frontmatter.title}</h1>
             <Img
               className="post__image"
               fluid={post.frontmatter.featured_image.childImageSharp.fluid}
