@@ -121,6 +121,6 @@ module.exports = {
         include_favicon: true,
       },
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
   ],
 };
