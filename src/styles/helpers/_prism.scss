@@ -70,11 +70,13 @@ pre[class*='language-'] ::selection {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  border-radius: 0.3em;
-  background: rgba(255, 229, 100, 0.2);
-  color: #1a1a1a;
-  padding: 0.15em 0.2em 0.05em;
+  color: $primaryColor;
+  font-family: $bodyFontFamily;
+  font-size: $fontXLarge;
+  background-color: $secondaryColor;
   white-space: normal;
+  border-radius: 5px;
+  padding: 0 0.2em;
 }
 
 .token.comment {
