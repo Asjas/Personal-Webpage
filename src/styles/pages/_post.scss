@@ -45,6 +45,12 @@
     margin: 6px 0 6px 0;
   }
 
+  a:hover {
+    color: $outlineColor;
+    text-decoration: underline;
+    text-decoration-color: $outlineColor;
+  }
+
   .language-text {
     font-family: $bodyFontFamily;
     background-color: $outlineColor;
