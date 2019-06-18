@@ -52,7 +52,10 @@
   }
 
   .language-text {
+    color: $white;
+    padding: 0.08em 0.2em 0.04em 0.2em;
     font-family: $bodyFontFamily;
+    font-size: $fontXLarge;
     background-color: $outlineColor;
   }
 
