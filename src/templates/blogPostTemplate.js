@@ -42,6 +42,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   const seo = {
     title: post.frontmatter.title,
     description: post.frontmatter.meta_desc,
+    image: `https://asjas.co.za${post.frontmatter.featured_image.childImageSharp.fluid.src}`,
     siteUrl: `https://asjas.co.za/blog${pageContext.slug}`,
     isBlogPost: true,
   };
