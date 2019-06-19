@@ -22,14 +22,14 @@ We have always had the npm package [Moment.js](https://momentjs.com/) as the go-
 
 First things first, you need to create a folder where we will be creating the starter Gatsby project. 
 
-```sh:title=/
+```bash:title=/
 mkdir git
 cd git
 ```
 
 Once that has been done we can use [npx](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) to create a new Gatsby project based off the Gatsby Starter Repo.
 
-```sh:title=/git/
+```bash:title=/git/
 npx gatsby new gatsby-date-fns-starter https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
@@ -37,7 +37,7 @@ When you are asked to choose between `npm` or `yarn` as your package manager you
 
 You can now navigate into the new Gatsby directory and start the development server to check if the installation succeeded.
 
-```sh:title=/git/
+```bash:title=/git/
 cd gatsby-date-fns-starter
 yarn develop
 ```
@@ -54,7 +54,7 @@ In the same folder where you started the development server you can run the foll
 
 Choose one of the package install commands based on the package manager you are using (npm or yarn).
 
-```sh:title=/git/gatsby-date-fns-starter
+```bash:title=/git/gatsby-date-fns-starter
 npm install date-fns@next --save
 yarn add date-fns@next
 ```
@@ -84,8 +84,8 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+      <Layout location={this.props.location} title={siteTitle}
+      <SEO title="All posts" />
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
