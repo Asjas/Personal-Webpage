@@ -29,7 +29,7 @@ cd git
 
 Once that has been done we can use [npx](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) to create a new Gatsby project based off the Gatsby Starter Repo.
 
-```js:title=/git/
+```sh:title=/git/
 npx gatsby new gatsby-date-fns-starter https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
@@ -37,7 +37,7 @@ When you are asked to choose between `npm` or `yarn` as your package manager you
 
 You can now navigate into the new Gatsby directory and start the development server to check if the installation succeeded.
 
-```js:title=/git/
+```sh:title=/git/
 cd gatsby-date-fns-starter
 yarn develop
 ```
@@ -54,23 +54,23 @@ In the same folder where you started the development server you can run the foll
 
 Choose one of the package install commands based on the package manager you are using (npm or yarn).
 
-```js:title=/git/gatsby-date-fns-starter
+```sh:title=/git/gatsby-date-fns-starter
 npm install date-fns@next --save
 yarn add date-fns@next
 ```
 
 ### Using the date-fns `format` function
 
-Now that we have Gatsby.js and date-fns installed we can now use date-fns to format the dates of our blog posts. In this first example we will be making the following changes to the `blog-post.js` file.
+Now that we have Gatsby.js and date-fns installed we can now use date-fns to format the dates of our blog posts. In this first example we will be making the following changes to the main landing page which is located in the `src/pages` folder.
 
 1. We need to import the `format` function from date-fns.
 2. We need to update the GraphQL query to import date without formatting it beforehand.
 3. We replace the current date with the `format` function.
 
-```js:title=src/pages/index.js{3,35,68}
+```jsx:title=src/pages/index.js{3,35,68}
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { format } from 'date-fns';
+import { format } from "date-fns";
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -140,5 +140,12 @@ export const pageQuery = graphql`
     }
   }
 `
+```
+
+If everything went great and you are receiving no error messages you should see the dates render on the homepage the same as it did before we used date-fns. You might be wondering why would need to use date-fns to only have the same result as we had before we started using it. The power comes with what date-fns allows us to do when formatting the date.
+
+Here are a few examples of different versions of the `format` function and the output you would receive.
+
+```js:title=index.js
 
 ```
