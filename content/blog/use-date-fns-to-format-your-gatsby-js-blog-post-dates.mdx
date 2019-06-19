@@ -63,11 +63,11 @@ yarn add date-fns@next
 
 Now that we have Gatsby.js and date-fns installed we can now use date-fns to format the dates of our blog posts. In this first example we will be making the following changes to the main landing page which is located in the `src/pages` folder.
 
-1. We need to import the `format` function from date-fns.
+1. We need to import the format function from date-fns.
 2. We need to update the GraphQL query to import date without formatting it beforehand.
-3. We replace the current date with the `format` function.
+3. We replace the current date with the format function.
 
-```jsx:title=src/pages/index.js{3,35,68}
+```jsx{3,35,68}:title=src/pages/index.js
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { format } from "date-fns";
@@ -147,5 +147,14 @@ If everything went great and you are receiving no error messages you should see 
 Here are a few examples of different versions of the `format` function and the output you would receive.
 
 ```js:title=index.js
+format(new Date(node.frontmatter.date), 'dd MMMM')
+// 29 May
 
+format(new Date(node.frontmatter.date), 'dd-MM-yyyy')
+// 29-05-2015
+
+format(new Date(node.frontmatter.date), 'dd MMMM yyyy', { locale: ru })
+// 29 мая 2015
 ```
+
+If you want to format dates using different locales you need to import the specific locale into the file to be able to use it. You can read more about this on their [documentation](https://date-fns.org/v2.0.0-alpha.27/docs/I18n) about Internationalization. The best part about date-fns is that because it is modular and uses pure functions only the functions and locales you import into a file will be included. This keeps your JavaScript bundles small.
