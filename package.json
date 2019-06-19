@@ -14,7 +14,10 @@
     "clean": "gatsby clean",
     "serve": "gatsby serve",
     "dev": "gatsby develop",
-    "cy": "cypress",
+    "cy:open": "cypress",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "lint": "eslint .",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -65,7 +68,8 @@
     "react-helmet": "^5.2.1",
     "react-player": "^1.11.1",
     "react-spring": "^8.0.25",
-    "snyk": "^1.179.0"
+    "snyk": "^1.179.0",
+    "start-server-and-test": "^1.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
