@@ -67,7 +67,7 @@ Now that we have Gatsby.js and date-fns installed we can now use date-fns to for
 2. We need to update the GraphQL query to import date without formatting it beforehand.
 3. We replace the current date with the format function.
 
-```jsx{3,35,68}:title=src/pages/index.js
+```jsx{3,33,64}:title=src/pages/index.js
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { format } from "date-fns";
@@ -102,8 +102,8 @@ class BlogIndex extends React.Component {
               </h3>
               <time>{format(new Date(node.frontmatter.date), 'dd MMMM yyyy')}</time>
               <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
+                dangerouslySetInnerHTML={{ 
+                  __html: node.frontmatter.description || node.excerpt, 
                 }}
               />
             </div>
