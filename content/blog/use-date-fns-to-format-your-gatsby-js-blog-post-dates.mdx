@@ -44,7 +44,7 @@ yarn develop
 
 This will start a localhost server on `http://localhost:8000`. Open the url in your browser to check if the server has started correctly. It should look like this.
 
-![Gatsby Localhost Server](/static/gatsby-starter-localhost.jpg)
+![](/static/gatsby-starter-localhost.jpg)
 
 Once you have verified that the server is running we can continue to the next section where we will be installing `date-fns`.
 
@@ -163,4 +163,85 @@ If you want to format dates using different locales you need to import the speci
 
 ### Using the date-fns formatDistance function
 
-The date-fns `formatDistance` function is different to the `format` in that it calculates the difference between 2 dates supplied to the function. You can also 
+The next date-fns function I am going to show you is called `formatDistance`. This is my personal favorite date-fns function. This function does not return the actual date but rather a relative distance described in words. The date-fns `formatDistance` function is different to the `format` in that it calculates the difference between 2 dates supplied as arguments to the function. You can also supply a `suffix` option to the function.
+
+We are going to use the same `index.js` file as the first code example but we will be swopping out `format` with the `formatDistance` function.
+
+```jsx{3,33,64}:title=src/pages/index.js
+import React from "react"
+import { Link, graphql } from "gatsby"
+import { formatDistance } from 'date-fns';
+
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { rhythm } from "../utils/typography"
+
+class BlogIndex extends React.Component {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
+
+    return (
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO title="All posts" />
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <div key={node.fields.slug}>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <time>{formatDistance(new Date(node.frontmatter.date), new Date(), { addSuffix: true })}</time>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+              />
+            </div>
+          )
+        })}
+      </Layout>
+    )
+  }
+}
+
+export default BlogIndex
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`
+```
+
+This is how it looks when it runs correctly. As you can see it returns a relative date and not the actual date.
+
+![](/static/gatsby-date-fns-formatDistance.jpg)
