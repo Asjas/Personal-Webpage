@@ -157,4 +157,10 @@ format(new Date(node.frontmatter.date), 'dd MMMM yyyy', { locale: ru })
 // 29 мая 2015
 ```
 
+I am linking to the format function on the [date-fns website](https://date-fns.org/v2.0.0-alpha.27/docs/format) so that you can read more about the different use cases of the `format` function and to see more code examples.
+
 If you want to format dates using different locales you need to import the specific locale into the file to be able to use it. You can read more about this on the date-fns [documentation](https://date-fns.org/v2.0.0-alpha.27/docs/I18n) website about Internationalization. The best part about date-fns is that because it is modular and uses pure functions only the functions and locales you import into a file will be included. This keeps your JavaScript bundles small.
+
+### Using the date-fns formatDistance function
+
+The date-fns `formatDistance` function is different to the `format` in that it calculates the difference between 2 dates supplied to the function. You can also 
