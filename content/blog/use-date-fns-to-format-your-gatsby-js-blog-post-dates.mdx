@@ -144,7 +144,7 @@ export const pageQuery = graphql`
 
 If everything went great and you are receiving no error messages you should see the dates render on the homepage the same as it did before we used date-fns. You might be wondering why would need to use date-fns to only have the same result as we had before we started using it. The power comes with what date-fns allows us to do when formatting the date.
 
-```jsx{3,33,64}:title=src/templates/blog-post.js
+```jsx{3,31,85}:title=src/templates/blog-post.js
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { format } from 'date-fns';
