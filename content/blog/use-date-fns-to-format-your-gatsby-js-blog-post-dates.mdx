@@ -65,7 +65,8 @@ Now that we have Gatsby.js and date-fns installed we can now use date-fns to for
 
 1. We need to import the format function from date-fns.
 2. We need to update the GraphQL query to import date without formatting it beforehand.
-3. We replace the current date with the format function to create a new formatted date.
+3. We pass the date to new Date() as a parameter to create a valid date for the format function.
+4. We replace the current date with the format function to create a new formatted date.
 
 ```jsx{3,33,64}:title=src/pages/index.js
 import React from "react"
@@ -238,9 +239,15 @@ export const pageQuery = graphql`
 `
 ```
 
-If everything went great and you are not receiving any error messages you should see the dates render on the homepage the same as it did before we used date-fns. You might be wondering why would need to use date-fns to only have the same result as we had before we started using it. The power comes with what date-fns allows us to do when formatting the date.
+You can checkout a copy of this code [here](https://github.com/Asjas/gatsby-date-fns-starter/tree/format-function) on the `format-function` branch if you need to compare your code.
 
-Here are a few examples of different format parameters that you can pass to the `format` function and the output you would receive. I am also linking to the format function on the [date-fns website](https://date-fns.org/v2.0.0-alpha.27/docs/format) so that you can read more about the different use cases of the `format` function and to see more code examples. There are many more configuration options that you can pass to the function.
+If everything went great and you are not receiving any error messages you should see the dates render on the homepage the same as it did before we used date-fns. This is how it should look when it is working.
+
+![](/static/format-main-page.jpg)
+
+![](/static/format-post-page.jpg)
+
+You might be wondering why would need to use date-fns to only have the same result as we had before we started using it. The power comes with what date-fns allows us to do when formatting the date. Here are a few examples of different format parameters that you can pass to the `format` function and the output you would receive.
 
 ```js:title=index.js
 format(new Date(node.frontmatter.date), 'dd MMMM')
@@ -257,7 +264,7 @@ If you want to format dates using different locales you need to import the speci
 
 ### Using the date-fns formatDistance function
 
-The next date-fns function I am going to show you is called `formatDistance`. This is my personal favorite date-fns function. This function does not return the actual date but rather a relative distance described in words. The date-fns `formatDistance` function is different to the `format` in that it calculates the difference between 2 dates supplied as arguments to the function. You can also supply a `suffix` option to the function.
+The next date-fns function I am going to show you is called `formatDistance`. This is personally my favorite date-fns function. This function does not return the actual date but rather a relative distance described in words. The date-fns `formatDistance` function is also different to the `format` in that it calculates the difference between 2 dates supplied as arguments to the function. You can also supply a `suffix` option to the function.
 
 We are going to use the same `index.js` file as the first code example but we will be swopping out `format` with the `formatDistance` function.
 
@@ -336,16 +343,12 @@ export const pageQuery = graphql`
 `
 ```
 
-This is how it looks when it runs correctly. As you can see it returns a date in a relative format and not the actual date.
-
-![](/static/gatsby-date-fns-formatDistance.jpg)
-
 We will make the same changes to the blog post page.
 
 ```jsx{3,31,85}:title=src/templates/blog-post.js
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { format } from 'date-fns';
+import { formatDistance } from 'date-fns';
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -435,3 +438,27 @@ export const pageQuery = graphql`
   }
 `
 ```
+
+You can checkout a copy of this code [here](https://github.com/Asjas/gatsby-date-fns-starter/tree/format-distance) on the `format-distance` branch if you need to compare your code. This is how it should appear on your screen when it is working correctly.
+
+![](/static/format-distance-main-page.jpg)
+
+![](/static/format-distance-post-page.jpg)
+
+Here are a few examples of what you can do with the `formatDistance` function. Something to take note of, if you want to calculate the difference between dates with the `formatDistance` function you have to first pass the previous date and then the current date as parameters to the function.
+
+```js:title=index.js
+<time>{formatDistance(new Date(node.frontmatter.date), new Date())}</time>
+// about 4 years
+
+<time>{formatDistance(new Date(node.frontmatter.date), new Date(), { addSuffix: true })}</time>
+// about 4 years ago
+
+<time>{formatDistance(new Date(node.frontmatter.date), new Date(), { addSuffix: true, locale: ru })}</time>
+// около 4 лет назад
+
+<time>{formatDistance(new Date(node.frontmatter.date), new Date(), { addSuffix: true, locale: eo })}</time>
+// antaŭ proksimume 4 jaroj
+```
+
+I am also linking to the [date-fns](https://date-fns.org/v2.0.0-alpha.27/docs/Getting-Started) website so that you can read more about the different use cases of the `format` and `formatDistance` functions as well as many of the other functions and features that they support.
