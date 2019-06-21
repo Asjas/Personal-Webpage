@@ -9,12 +9,23 @@
     grid-column: 2;
   }
 
-  .post__header {
-    margin-bottom: 10px;
+  .progress__container {
+    grid-column: -1 / 3;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 8px;
+    z-index: 20;
+  }
 
-    .post__title {
-      margin-bottom: 24px;
-    }
+  .progress__bar {
+    background: $primaryColor;
+    height: 8px;
+    width: 0%;
+  }
+
+  header {
+    margin-bottom: 30px;
 
     .post__image {
       width: 100%;

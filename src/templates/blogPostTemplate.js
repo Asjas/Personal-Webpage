@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
@@ -47,6 +47,21 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     isBlogPost: true,
   };
 
+  function handleScroll() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById('myBar').style.width = `${scrolled}%`;
+  }
+
+  useEffect(() => {
+    if (window) {
+      window.onscroll = function() {
+        handleScroll();
+      };
+    }
+  });
+
   return (
     <Layout>
       <ErrorBoundary>
@@ -56,8 +71,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           dateModified={post.frontmatter.updated_at}
         />
         <article className="post">
-          <header className="post__header">
-            <h1 className="post__title">{post.frontmatter.title}</h1>
+          <div className="progress__container">
+            <div className="progress__bar" id="myBar" />
+          </div>
+          <header>
             <Img
               className="post__image"
               fluid={post.frontmatter.featured_image.childImageSharp.fluid}
