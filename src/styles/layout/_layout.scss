@@ -3,7 +3,11 @@
   grid-template-columns: 360px 1fr;
   grid-template-areas: 'sidenav main';
 
-  @media screen and (max-width: $laptop) {
+  @media (max-width: $laptopL) {
+    grid-template-columns: 300px 1fr;
+  }
+
+  @media (max-width: $laptop) {
     grid-template-columns: 1fr;
     grid-template-areas: 'main';
   }

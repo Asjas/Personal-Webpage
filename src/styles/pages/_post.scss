@@ -10,7 +10,6 @@
   }
 
   .progress__container {
-    grid-column: -1 / 3;
     top: 0;
     position: fixed;
     width: 100%;
@@ -27,9 +26,17 @@
   header {
     margin-bottom: 30px;
 
+    .post__heading {
+      margin-bottom: 30px;
+    }
+
     .post__image {
       width: 100%;
       justify-self: center;
+
+      img {
+        border: 0;
+      }
     }
 
     .post__date {
@@ -56,14 +63,27 @@
     margin-top: 10px;
   }
 
+  img {
+    border: 2px solid $black;
+  }
+
   blockquote p {
     margin: 6px 0 6px 0;
+  }
+
+  ul,
+  ol {
+    font-size: $fontXLarge;
+  }
+
+  a {
+    color: $primaryColor;
+    text-decoration: underline;
   }
 
   a:hover {
     color: $outlineColor;
     text-decoration: underline;
-    text-decoration-color: $outlineColor;
   }
 
   .gatsby-code-title {
@@ -79,8 +99,9 @@
   }
 
   .post__footer {
-    margin-top: 20px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
     width: 100%;
 
     .post__link {

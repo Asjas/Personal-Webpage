@@ -5,17 +5,7 @@
     url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: Goldsmith;
-  src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Goldsmith_Regular.woff2') format('woff2'),
-    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Goldsmith_Regular.woff') format('woff'),
-    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Goldsmith_Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -24,17 +14,7 @@
     url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Operator-Light.woff') format('woff'),
     url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Operator-Light.ttf') format('truetype');
   font-weight: 400;
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: Hugtophia;
-  src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Hugtophia.woff2') format('woff2'),
-    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Hugtophia.woff') format('woff'),
-    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Hugtophia.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 html,
@@ -80,7 +60,9 @@ p,
 span,
 input,
 textarea,
-label {
+label,
+ul,
+ol {
   font-family: $bodyFontFamily;
   font-size: $fontMedium;
   margin: 6px 0;

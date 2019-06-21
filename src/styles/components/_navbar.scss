@@ -15,7 +15,14 @@
   }
 
   @media screen and (max-width: $laptop) {
+    max-width: 300px;
     transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  @media screen and (max-width: $mobileL) {
+    max-width: 280px;
+    transform: translateX(-280px);
     opacity: 0;
   }
 

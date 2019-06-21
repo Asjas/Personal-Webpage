@@ -29,7 +29,7 @@ pre[class*='language-'] {
 
   span {
     color: $white;
-    font-size: 1.6rem;
+    font-size: $fontMedium;
     font-family: $codeFontFamily;
   }
 }
@@ -77,7 +77,8 @@ pre[class*='language-'] ::selection {
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  color: $primaryColor;
+  color: $black;
+  font-weight: normal;
   font-family: $bodyFontFamily;
   font-size: $fontXLarge;
   background-color: $secondaryColor;
@@ -201,7 +202,7 @@ pre[data-line] {
   margin-bottom: -0.8rem;
   font-family: $bodyFontFamily;
   padding: 10px 0 10px 15px;
-  font-size: $fontMedium;
+  font-size: $fontSmall;
   background-color: $primaryColor;
   color: white;
   z-index: 0;
