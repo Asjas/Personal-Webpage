@@ -12,7 +12,7 @@ tags:
 ---
 ## Introduction
 
-In this blog post we will learn more about [date-fns](https://date-fns.org) and why it is such an amazing date utility library to manage your dates in JavaScript. At the time of this blog post we will be using `v2.0.0-alpha.27`. If there is a newer version you can use that as well. We will be using the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) Github repository as a starting point. At any point you can browse to the final project on Github [here](https://github.com/Asjas/gatsby-date-fns-starter).
+In this blog post we will learn more about [date-fns](https://date-fns.org) and why it is such an amazing date utility library to manage your dates in JavaScript. We will be using `v2.0.0-alpha.27` but if there is a newer version you can use that as well. We will be using the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) Github repository as a starting point. At any point you can browse to the final project on Github [here](https://github.com/Asjas/gatsby-date-fns-starter).
 
 ### Why use date-fns?
 
@@ -243,6 +243,8 @@ You can checkout a copy of this code [here](https://github.com/Asjas/gatsby-date
 
 If everything went great and you are not receiving any error messages you should see the dates render on the homepage the same as it did before we used date-fns. This is how it should look when it is working.
 
+#### Blog Post Page (format function)
+
 ![](/static/format-post-page.jpg)
 
 You might be wondering why would need to use date-fns to only have the same result as we had before we started using it. The power comes with what date-fns allows us to do when formatting the date. Here are a few examples of different format parameters that you can pass to the `format` function and the output you would receive.
@@ -438,6 +440,8 @@ export const pageQuery = graphql`
 ```
 
 You can checkout a copy of this code [here](https://github.com/Asjas/gatsby-date-fns-starter/tree/format-distance) on the `format-distance` branch if you need to compare your code. This is how it should appear on your screen when it is working correctly.
+
+#### Blog Post Page (formatDistance function)
 
 ![](/static/format-distance-post-page.jpg)
 
