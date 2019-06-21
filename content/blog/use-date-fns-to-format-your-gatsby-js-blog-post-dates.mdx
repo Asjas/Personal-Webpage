@@ -12,7 +12,7 @@ tags:
 ---
 ## Introduction
 
-In this blog post we will learn more about [date-fns](https://date-fns.org) and why it is such an amazing date utility library to manage your dates in JavaScript. At the time of this blog post we will be using `v2.0.0-alpha.27`. If there is a newer version you can use that as well. We will be using the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) Github repo as a starting point. At any point you can browse to the final project on [Github here](https://github.com/Asjas/gatsby-date-fns-starter).
+In this blog post we will learn more about [date-fns](https://date-fns.org) and why it is such an amazing date utility library to manage your dates in JavaScript. At the time of this blog post we will be using `v2.0.0-alpha.27`. If there is a newer version you can use that as well. We will be using the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) Github repository as a starting point. At any point you can browse to the final project on Github [here](https://github.com/Asjas/gatsby-date-fns-starter).
 
 ### Why use date-fns?
 
@@ -20,16 +20,16 @@ We have always had the npm package [Moment.js](https://momentjs.com/) as the go-
 
 ### Getting Started
 
-First things first, you need to create a folder where we will be creating the starter Gatsby project. 
+First things first, you need to create a folder where we will be creating the Gatsby project. _If you already have a folder where you keep your projects you can use that folder instead._
 
 ```bash:title=/
-mkdir git
-cd git
+mkdir projects
+cd projects
 ```
 
-Once that has been done we can use [npx](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) to create a new Gatsby project based off the Gatsby Starter Repo.
+Once that has been done we can use [npx](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) (not npm misspelled) to create a new Gatsby project based off the Gatsby Blog Starter Github repository.
 
-```bash:title=/git/
+```bash:title=/projects/
 npx gatsby new gatsby-date-fns-starter https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
@@ -37,7 +37,7 @@ When you are asked to choose between `npm` or `yarn` as your package manager you
 
 You can now navigate into the new Gatsby directory and start the development server to check if the installation succeeded.
 
-```bash:title=/git/
+```bash:title=/projects/
 cd gatsby-date-fns-starter
 yarn develop
 ```
@@ -54,18 +54,18 @@ In the same folder where you started the development server you can run the foll
 
 Choose one of the package install commands based on the package manager you are using (npm or yarn).
 
-```bash:title=/git/gatsby-date-fns-starter
+```bash:title=/projects/gatsby-date-fns-starter
 npm install date-fns@next --save
 yarn add date-fns@next
 ```
 
 ### Using the date-fns format function
 
-Now that we have Gatsby.js and date-fns installed we can now use date-fns to format the dates of our blog posts. In this first example we will be making the following changes to the main page and the individual post pages.
+Now that we have Gatsby.js and date-fns installed we can now use date-fns to format the dates of our blog posts. You can open the `gatsby-date-fns-starter` folder in your favorite text editor to continue. In this first example we will be making the following changes to the code of the `index.js` file.
 
 1. We need to import the format function from date-fns.
 2. We need to update the GraphQL query to import date without formatting it beforehand.
-3. We replace the current date with the format function.
+3. We replace the current date with the format function to create a new formatted date.
 
 ```jsx{3,33,64}:title=src/pages/index.js
 import React from "react"
@@ -142,7 +142,7 @@ export const pageQuery = graphql`
 `
 ```
 
-If everything went great and you are receiving no error messages you should see the dates render on the homepage the same as it did before we used date-fns. You might be wondering why would need to use date-fns to only have the same result as we had before we started using it. The power comes with what date-fns allows us to do when formatting the date.
+We will also update the `blog-post.js` file to use the new date-fns format function.
 
 ```jsx{3,31,85}:title=src/templates/blog-post.js
 import React from "react"
@@ -238,7 +238,9 @@ export const pageQuery = graphql`
 `
 ```
 
-Here are a few examples of different format parameters passed to the `format` function and the output you would receive.
+If everything went great and you are not receiving any error messages you should see the dates render on the homepage the same as it did before we used date-fns. You might be wondering why would need to use date-fns to only have the same result as we had before we started using it. The power comes with what date-fns allows us to do when formatting the date.
+
+Here are a few examples of different format parameters that you can pass to the `format` function and the output you would receive. I am also linking to the format function on the [date-fns website](https://date-fns.org/v2.0.0-alpha.27/docs/format) so that you can read more about the different use cases of the `format` function and to see more code examples. There are many more configuration options that you can pass to the function.
 
 ```js:title=index.js
 format(new Date(node.frontmatter.date), 'dd MMMM')
@@ -250,8 +252,6 @@ format(new Date(node.frontmatter.date), 'dd-MM-yyyy')
 format(new Date(node.frontmatter.date), 'dd MMMM yyyy', { locale: ru })
 // 29 мая 2015
 ```
-
-I am linking to the format function on the [date-fns website](https://date-fns.org/v2.0.0-alpha.27/docs/format) so that you can read more about the different use cases of the `format` function and to see more code examples.
 
 If you want to format dates using different locales you need to import the specific locale into the file to be able to use it. You can read more about this on the date-fns [documentation](https://date-fns.org/v2.0.0-alpha.27/docs/I18n) website about Internationalization. The best part about date-fns is that because it is modular and uses pure functions only the functions and locales you import into a file will be included. This keeps your JavaScript bundles small.
 
