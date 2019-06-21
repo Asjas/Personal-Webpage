@@ -7,7 +7,7 @@ pre[class*='language-'] {
   color: $white;
   font-size: $fontMedium;
   background: none;
-  font-family: Operator;
+  font-family: $codeFontFamily;
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;
@@ -15,6 +15,7 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
+  font-weight: 600;
   margin-bottom: 0;
 
   -moz-tab-size: 4;
@@ -25,6 +26,12 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+
+  span {
+    color: $white;
+    font-size: 1.6rem;
+    font-family: $codeFontFamily;
+  }
 }
 
 /* Code blocks */
@@ -81,80 +88,83 @@ pre[class*='language-'] ::selection {
 
 .token.comment {
   color: rgb(99, 119, 119);
-  font-family: Operator;
+  font-family: $codeFontFamily;
 }
 
 .token.string,
 .token.url {
-  font-family: Operator;
+  font-family: $codeFontFamily;
   color: rgb(173, 219, 103);
 }
 
 .token.attr-value {
-  font-family: Operator;
-  color: #80ffbb;
+  font-family: $codeFontFamily;
+  color: #a5ff90;
 }
 
 .token.attr-name,
 .token.variable {
-  font-family: Operator;
+  font-family: $codeFontFamily;
   color: #ffc600;
 }
 
 .token.number {
-  font-family: Operator;
-  color: rgb(247, 140, 108);
+  font-family: $codeFontFamily;
+  color: #ffee80;
 }
 
 .token.builtin,
 .token.char,
 .token.constant,
 .token.function {
-  font-family: Operator;
-  color: rgb(130, 170, 255);
+  font-family: $codeFontFamily;
+  color: #ffc600;
 }
 
 .token.punctuation {
-  font-family: Operator;
+  font-family: $codeFontFamily;
   color: #fff;
 }
 
 .token.selector,
 .token.doctype {
-  font-family: Operator;
+  font-family: $codeFontFamily;
   color: rgb(199, 146, 234);
   font-style: 'italic';
 }
 
 .token.class-name {
-  font-family: Operator;
-  color: rgb(255, 203, 139);
+  font-family: $codeFontFamily;
+  color: #fb94ff;
 }
 
 .token.tag {
-  font-family: Operator;
-  color: #80fcff;
+  font-family: $codeFontFamily;
+  color: #85ffff;
 }
 
-.token.operator,
 .token.keyword {
+  color: #ff9d00;
+}
+
+.token.operator {
   color: #ffc600;
-  font-family: Operator;
+  font-family: $codeFontFamily;
 }
 
 .token.boolean {
   color: rgb(255, 88, 116);
-  font-family: Operator;
+  font-family: $codeFontFamily;
 }
 
 .token.property {
   color: rgb(128, 203, 196);
-  font-family: Operator;
+  font-family: $codeFontFamily;
 }
 
 .token.namespace {
   color: rgb(178, 204, 214);
-  font-family: Operator;
+  font-family: $codeFontFamily;
 }
 
 pre[data-line] {
@@ -163,20 +173,20 @@ pre[data-line] {
 }
 
 .gatsby-highlight-code-line {
-  background-color: #193549;
-  font-family: Operator;
+  background-color: #21658a;
+  font-family: $codeFontFamily;
   display: block;
   margin-right: -1em;
   margin-left: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
-  border-left: 0.25em solid #ffa7c4;
+  border-left: 0.25em solid $primaryColor;
 }
 
 .gatsby-highlight {
   margin-bottom: 1.75rem;
   border-radius: 10px;
-  font-family: Operator;
+  font-family: $codeFontFamily;
   background: #193549;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
@@ -188,10 +198,10 @@ pre[data-line] {
 }
 
 .gatsby-code-title {
-  margin-bottom: -0.6rem;
+  margin-bottom: -0.8rem;
   font-family: $bodyFontFamily;
-  padding: 10px 8px;
-  font-size: $fontTags;
+  padding: 10px 0 10px 15px;
+  font-size: $fontMedium;
   background-color: $primaryColor;
   color: white;
   z-index: 0;
