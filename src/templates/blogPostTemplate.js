@@ -51,6 +51,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
+
     document.getElementById('myBar').style.width = `${scrolled}%`;
   }
 
@@ -75,6 +76,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <div className="progress__bar" id="myBar" />
           </div>
           <header>
+            <h1 className="post__heading">{seo.title}</h1>
             <Img
               className="post__image"
               fluid={post.frontmatter.featured_image.childImageSharp.fluid}
