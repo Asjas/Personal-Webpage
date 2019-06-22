@@ -113,21 +113,6 @@ function SEO({
         href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat|Playfair+Display&display=swap"
         rel="stylesheet"
       />
-      <link href="https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.woff2" rel="stylesheet" />
-      <link href="https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.woff" rel="stylesheet" />
-      <link href="https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.ttf" rel="stylesheet" />
-      <link
-        href="https://asjas.sfo2.cdn.digitaloceanspaces.com/Operator-Light.woff2"
-        rel="stylesheet"
-      />
-      <link
-        href="https://asjas.sfo2.cdn.digitaloceanspaces.com/Operator-Light.woff"
-        rel="stylesheet"
-      />
-      <link
-        href="https://asjas.sfo2.cdn.digitaloceanspaces.com/Operator-Light.ttf"
-        rel="stylesheet"
-      />
     </Helmet>
   );
 }
