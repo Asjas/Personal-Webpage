@@ -17,6 +17,17 @@
     url('https://asjas.sfo2.cdn.digitaloceanspaces.com/VictorMono-Light.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'VictorMono';
+  font-style: italic;
+  font-display: swap;
+  src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/VictorMono-ItalicLight.woff2')
+      format('woff2'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/VictorMono-ItalicLight.woff') format('woff'),
+    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/VictorMono-ItalicLight.ttf')
+      format('truetype');
+}
+
 html,
 body {
   font-size: 10px;
