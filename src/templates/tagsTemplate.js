@@ -44,11 +44,14 @@ export const GET_TAG_PAGES = graphql`
 function TagTemplate({ pageContext, data }) {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMdx;
-  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged as "${capitalize(
+  const tagHeader = `${totalCount} blog post${totalCount === 1 ? '' : 's'} tagged as "${capitalize(
     tag,
   )}"`;
+
   const seo = {
-    title: `Posts tagged as "${tag}"`,
+    title: `Blog posts tagged as "${tag}"`,
+    description: `This is all the blog posts on my website tagged as "${tag}".`,
+    siteUrl: `https://asjas.co.za/tags/${tag}`,
   };
 
   return (

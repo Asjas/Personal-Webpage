@@ -36,7 +36,7 @@ function SEO({
   const seo = {
     title: title || data.site.siteMetadata.defaultTitle,
     description: description || data.site.siteMetadata.defaultDescription,
-    siteUrl: blogUrl || siteUrl || data.site.siteMetadata.siteUrl,
+    siteUrl: blogUrl || siteUrl || data.site.siteMetadata.defaultUrl,
     image: image || data.site.siteMetadata.defaultImage,
     googleSiteVerification: data && data.site.siteMetadata.googleSiteVerification,
     twitterUsername: data && data.site.siteMetadata.twitterUsername,
