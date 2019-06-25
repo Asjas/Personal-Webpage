@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import { format, formatDistance } from 'date-fns';
 import { graphql, Link } from 'gatsby';
+import { format, formatDistance } from 'date-fns';
+import { DiscussionEmbed } from 'disqus-react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -12,6 +13,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 export const GET_POST = graphql`
   query GET_POST($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
+      id
       fields {
         slug
       }
@@ -45,6 +47,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     image: `https://asjas.co.za${post.frontmatter.featured_image.childImageSharp.fluid.src}`,
     siteUrl: `https://asjas.co.za/blog${pageContext.slug}`,
     isBlogPost: true,
+  };
+
+  const disqusConfig = {
+    shortname: 'asjas.discus.com',
+    identifier: post.id,
+    title: post.frontmatter.title,
   };
 
   function handleScroll() {
@@ -114,6 +122,9 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </footer>
         </article>
       </ErrorBoundary>
+      <ErrorBoundary>
+        <DiscussionEmbed {...disqusConfig} />
+      </ErrorBoundary>
     </Layout>
   );
 };
@@ -121,6 +132,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 BlogPostTemplate.propTypes = {
   data: PropTypes.shape({
     mdx: PropTypes.shape({
+      id: PropTypes.string.isRequired,
       fields: PropTypes.shape({
         slug: PropTypes.string.isRequired,
       }).isRequired,
