@@ -5,7 +5,7 @@ module.exports = {
     description:
       'Hey, my name is A-J Roos. I am a freelance Web Developer based in Bloemfontein, South Africa. I enjoy working with HTML5, CSS3, JavaScript, React.js, Gatsby.js and Node.js.',
     googleSiteVerification: '5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0',
-    image: 'https://asjas.co.za/static/assets/messy-desk.jpg',
+    image: 'https://asjas.sfo2.cdn.digitaloceanspaces.com/images/messy-desk.jpg',
     twitterUsername: '_asjas',
     author: {
       name: 'A-J Roos',
