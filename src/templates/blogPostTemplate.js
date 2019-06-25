@@ -50,7 +50,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   };
 
   const disqusConfig = {
-    shortname: 'asjas.discus.com',
+    shortname: 'asjas',
     identifier: post.id,
     title: post.frontmatter.title,
   };
