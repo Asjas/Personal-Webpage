@@ -120,10 +120,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
               </Link>
             )}
           </footer>
+          <ErrorBoundary>
+            <DiscussionEmbed {...disqusConfig} />
+          </ErrorBoundary>
         </article>
-      </ErrorBoundary>
-      <ErrorBoundary>
-        <DiscussionEmbed {...disqusConfig} />
       </ErrorBoundary>
     </Layout>
   );
