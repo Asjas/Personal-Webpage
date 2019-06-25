@@ -49,9 +49,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     isBlogPost: true,
   };
 
+  const disqusShortname = 'asjas';
   const disqusConfig = {
-    shortname: 'asjas',
     identifier: post.id,
+    url: seo.siteUrl,
     title: post.frontmatter.title,
   };
 
@@ -121,7 +122,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             )}
           </footer>
           <ErrorBoundary>
-            <DiscussionEmbed {...disqusConfig} />
+            <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
           </ErrorBoundary>
         </article>
       </ErrorBoundary>
