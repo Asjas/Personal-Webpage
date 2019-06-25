@@ -18,7 +18,8 @@
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
-    "lint": "eslint .",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint './src/**/*.js'",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
@@ -102,12 +103,16 @@
     "logrocket": "^1.0.0",
     "logrocket-react": "^3.0.0",
     "node-sass": "^4.12.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn lint"
+      "pre-push": "npm-run-all lint:js lint:css"
     }
   },
   "lint-staged": {
