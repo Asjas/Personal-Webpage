@@ -1,9 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+
+interface IndexProps {
+  data: {
+    file: {
+      childImageSharp: {
+        fixed: {
+          width: number;
+          height: number;
+          src: string;
+          srcSet: string;
+        };
+      };
+    };
+  };
+}
 
 export const HOME_PAGE_IMAGE = graphql`
   query HOME_PAGE_IMAGE {
@@ -17,7 +31,7 @@ export const HOME_PAGE_IMAGE = graphql`
   }
 `;
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data }: IndexProps) => (
   <>
     <SEO />
     <Layout>
@@ -31,15 +45,5 @@ const IndexPage = ({ data }) => (
     </Layout>
   </>
 );
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    file: PropTypes.shape({
-      childImageSharp: PropTypes.shape({
-        fixed: PropTypes.any.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default IndexPage;

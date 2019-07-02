@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-unused-vars */
 const React = require('react');
 
 const gatsby = jest.requireActual('gatsby');

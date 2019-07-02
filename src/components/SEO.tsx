@@ -1,7 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+
+interface Props {
+  title: string;
+  description: string;
+  siteUrl: string;
+  blogUrl: string;
+  image: string;
+  isBlogPost?: boolean;
+  datePublished?: string;
+  dateModified?: string;
+}
 
 const GET_SEO_METADATA = graphql`
   query GET_SEO_METADATA {
@@ -27,10 +37,10 @@ function SEO({
   siteUrl,
   image,
   blogUrl,
-  isBlogPost,
+  isBlogPost = false,
   datePublished,
   dateModified,
-}) {
+}: Props) {
   const data = useStaticQuery(GET_SEO_METADATA);
 
   const seo = {
@@ -82,9 +92,13 @@ function SEO({
       {/* General Tags */}
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin />
-      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin />
-      <link rel="preconnect" href="https://asjas.sfo2.cdn.digitaloceanspaces.com" crossOrigin />
+      <link rel="preconnect" href="https://storage.googleapis.com" crossOrigin="true" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
+      <link
+        rel="preconnect"
+        href="https://asjas.sfo2.cdn.digitaloceanspaces.com"
+        crossOrigin="true"
+      />
 
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
@@ -122,22 +136,5 @@ function SEO({
     </Helmet>
   );
 }
-
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  siteUrl: PropTypes.string,
-  blogUrl: PropTypes.string,
-  image: PropTypes.string,
-  isBlogPost: PropTypes.bool,
-  datePublished: PropTypes.string,
-  dateModified: PropTypes.string,
-};
-
-SEO.defaultProps = {
-  isBlogPost: false,
-  datePublished: '',
-  dateModified: '',
-};
 
 export default SEO;

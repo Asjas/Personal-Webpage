@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 
 import ErrorBoundary from './ErrorBoundary';
 import Navbar from './Navbar';
@@ -10,7 +9,11 @@ import setupLogRocket from '../utils/logrocket';
 
 setupLogRocket();
 
-const Layout = ({ children }) => (
+interface Props {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: Props) => (
   <ErrorBoundary>
     <div className="layout">
       <Navbar />
@@ -18,9 +21,5 @@ const Layout = ({ children }) => (
     </div>
   </ErrorBoundary>
 );
-
-Layout.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired,
-};
 
 export default Layout;

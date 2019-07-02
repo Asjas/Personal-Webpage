@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 import hub from '../utils/sentry';
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+interface Props {
+  children: ReactNode;
+}
+
+class ErrorBoundary extends React.Component<Props> {
+  constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
@@ -39,9 +42,5 @@ class ErrorBoundary extends React.Component {
     return children;
   }
 }
-
-ErrorBoundary.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired,
-};
 
 export default ErrorBoundary;
