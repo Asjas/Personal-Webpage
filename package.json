@@ -20,6 +20,7 @@
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "lint:js": "eslint .",
     "lint:css": "stylelint './src/**/*.js'",
+    "type-check": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
@@ -30,6 +31,13 @@
     "@mdx-js/mdx": "^1.0.21",
     "@mdx-js/react": "^1.0.21",
     "@sentry/browser": "^5.4.0",
+    "@types/jest": "^24.0.15",
+    "@types/logrocket-react": "^3.0.0",
+    "@types/node": "^12.0.10",
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-helmet": "^5.0.8",
+    "@types/styled-components": "^4.1.16",
     "babel-plugin-styled-components": "^1.10.2",
     "chalk": "^2.4.2",
     "cypress": "^3.3.1",
@@ -52,6 +60,7 @@
     "gatsby-plugin-sitemap": "^2.2.0",
     "gatsby-plugin-styled-components": "^3.1.0",
     "gatsby-plugin-twitter": "^2.1.0",
+    "gatsby-plugin-typescript": "^2.1.0",
     "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^2.1.0",
     "gatsby-remark-embed-video": "^1.7.1",
@@ -75,7 +84,8 @@
     "react-spring": "^8.0.25",
     "snyk": "^1.184.0",
     "start-server-and-test": "^1.9.1",
-    "styled-components": "^5.0.0-beta.5"
+    "styled-components": "^5.0.0-beta.5",
+    "yarn": "^1.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -83,6 +93,8 @@
     "@babel/preset-react": "^7.0.0",
     "@testing-library/cypress": "^4.0.3",
     "@testing-library/react": "^8.0.1",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
@@ -107,7 +119,8 @@
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.8.0"
+    "stylelint-processor-styled-components": "^1.8.0",
+    "typescript": "^3.5.2"
   },
   "husky": {
     "hooks": {
