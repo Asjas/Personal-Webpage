@@ -1,10 +1,10 @@
 module.exports = {
-  extends: ['airbnb'],
-  plugins: ['react-hooks'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'react-hooks'],
+  extends: ['airbnb', 'plugin:@typescript-eslint/recommended'],
   settings: {
     'import/core-modules': ['gatsby'],
   },
-  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 8,
     ecmaFeatures: {
@@ -62,7 +62,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     import: 0,
     radix: 0,
-    indent: 0,
+    indent: 'off',
     'func-names': 0,
     'import/no-extraneous-dependencies': 0,
     'space-before-function-paren': 0,
@@ -119,5 +119,6 @@ module.exports = {
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/indent': ['error', 2],
   },
 };

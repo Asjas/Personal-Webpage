@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const chalk = require('chalk');
 const { createFilePath } = require('gatsby-source-filesystem');

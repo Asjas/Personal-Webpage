@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: 'A-J Roos | Home',
@@ -16,6 +17,8 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
+    'gatsby-plugin-polyfill-io',
+    `gatsby-plugin-typescript`,
     'gatsby-plugin-advanced-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -31,12 +34,6 @@ module.exports = {
         includePaths: [`${__dirname}/src/styles/main.scss`],
         sourceComments: true,
         sourceMap: true,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-polyfill-io',
-      options: {
-        features: ['Object.entries'],
       },
     },
     {
