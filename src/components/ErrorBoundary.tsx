@@ -1,22 +1,22 @@
 import React, { ReactNode } from 'react';
 import hub from '../utils/sentry';
 
-interface Props {
-  children: ReactNode;
-}
+type Props = {
+  children: ReactNode | ReactNode[];
+};
 
-class ErrorBoundary extends React.Component<Props> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+type State = {
+  hasError: boolean;
+};
 
-  static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
+class ErrorBoundary extends React.Component<Props, State> {
+  state = { hasError: false };
+
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: object, errorInfo: any) {
     hub.withScope(scope => {
       Object.keys(errorInfo).forEach(key => {
         scope.setExtra(key, errorInfo[key]);
@@ -30,7 +30,6 @@ class ErrorBoundary extends React.Component<Props> {
     const { children } = this.props;
 
     if (hasError) {
-      // You can render any custom fallback UI
       return (
         <p className="errorboundary-content">
           Something went wrong displaying this section of the website. A log of the error has been

@@ -10,10 +10,22 @@ function NewsletterSubscribed() {
   );
 }
 
-const NewsletterForm = memo(function NewsletterForm(props) {
-  const { handleChange, handleSubmit } = props;
+function Newsletter() {
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
 
-  return (
+  function handleChange(e: React.SyntheticEvent<HTMLInputElement>) {
+    setEmail(e.currentTarget.value);
+  }
+
+  function handleSubmit(e: React.SyntheticEvent) {
+    e.preventDefault();
+    setSubscribed(true);
+  }
+
+  return subscribed ? (
+    <NewsletterSubscribed />
+  ) : (
     <section className="newsletter">
       <form className="newsletter-form" onSubmit={handleSubmit}>
         <h3 className="newsletter-heading">Subscribe to my newsletter.</h3>
@@ -36,30 +48,6 @@ const NewsletterForm = memo(function NewsletterForm(props) {
       </form>
     </section>
   );
-});
-
-NewsletterForm.propTypes = {
-  handleChange: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
-};
-
-function Newsletter() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  function handleChange(e) {
-    setEmail(e.target.value);
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    setSubscribed(true);
-  }
-
-  if (subscribed) {
-    return <NewsletterSubscribed />;
-  }
-  return <NewsletterForm handleChange={handleChange} handleSubmit={handleSubmit} />;
 }
 
 export default Newsletter;

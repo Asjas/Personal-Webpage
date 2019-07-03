@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import StyledButton from './Button';
+import Button from './Button';
 
-function handleSubmit(event) {
-  event.stopDefault();
+function handleSubmit(event: React.SyntheticEvent): void {
+  event.preventDefault();
 }
 
 const ContactForm = () => (
@@ -15,34 +15,26 @@ const ContactForm = () => (
       <fieldset data-testid="form-disabled">
         <label htmlFor="name">
           <span>Enter your name:</span>
-          <span name="name" component="span" />
           <input id="name" type="text" name="name" placeholder="full name" />
         </label>
         <label htmlFor="email">
           <span>Enter your email:</span>
-          <span name="email" component="span" />
           <input id="email" type="email" name="email" placeholder="example@gmail.com" />
         </label>
         <label htmlFor="message">
           <span>Enter a message:</span>
-          <span name="message" component="span" />
-          <textarea
-            component="textarea"
-            id="message"
-            name="message"
-            placeholder="type your message here"
-          />
+          <textarea id="message" name="message" placeholder="type your message here" />
         </label>
         {typeof window !== 'undefined' &&
           window.grecaptcha &&
           window.grecaptcha.ready(function() {
             window.grecaptcha
               .execute('6LfRSKAUAAAAAOWRrjorE2kWWLN_aRlCuhTu6x-b', { action: 'contactpage' })
-              .then(function(token) {
+              .then(function(token: any) {
                 console.warn(token);
               });
           })}
-        <StyledButton />
+        <Button />
       </fieldset>
     </form>
   </>

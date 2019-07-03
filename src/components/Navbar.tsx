@@ -1,10 +1,16 @@
 import React, { useState, memo } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import Footer from './Footer';
 
-function HamburgerIcon({ handleClick, handleKeyDown }) {
+type Props = {
+  handleClick(event: React.MouseEvent): void;
+  handleKeyDown(event: React.KeyboardEvent): void;
+};
+
+function HamburgerIcon(props: Props): React.ReactElement {
+  const { handleClick, handleKeyDown } = props;
+
   return (
     <a
       className="hamburger__menu"
@@ -25,7 +31,9 @@ function HamburgerIcon({ handleClick, handleKeyDown }) {
   );
 }
 
-function CloseIcon({ handleClick, handleKeyDown }) {
+function CloseIcon(props: Props): React.ReactElement {
+  const { handleClick, handleKeyDown } = props;
+
   return (
     <a
       className="hamburger__close"
@@ -48,14 +56,14 @@ function CloseIcon({ handleClick, handleKeyDown }) {
   );
 }
 
-function Nav() {
+function Nav(): React.ReactElement {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
     setIsOpen(!isOpen);
   }
 
-  function handleKeyDown(event) {
+  function handleKeyDown(event: React.KeyboardEvent) {
     const { keyCode } = event;
 
     if (keyCode === 13) {
@@ -105,15 +113,5 @@ function Nav() {
     </>
   );
 }
-
-HamburgerIcon.propTypes = {
-  handleClick: PropTypes.func.isRequired,
-  handleKeyDown: PropTypes.func.isRequired,
-};
-
-CloseIcon.propTypes = {
-  handleClick: PropTypes.func.isRequired,
-  handleKeyDown: PropTypes.func.isRequired,
-};
 
 export default memo(Nav);

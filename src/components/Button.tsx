@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-const StyledButton = () => (
+const Button = () => (
   <button className="button button__primary" type="submit">
     Submit
   </button>
 );
 
-export default StyledButton;
+export default Button;
