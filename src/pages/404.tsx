@@ -1,5 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'gatsby';
+
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -9,7 +10,7 @@ const seo = {
     "Oops! Something went wrong. Either the page you tried to access doesn't exist or something mysterious happened.",
 };
 
-const FourOhFour = () => (
+const FourOhFour = (): React.ReactElement => (
   <>
     <SEO {...seo} />
     <Layout>

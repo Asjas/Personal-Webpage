@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
-function Footer() {
+function Footer(): React.ReactElement {
   return (
     <footer className="footer">
       <OutboundLink

@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -36,6 +35,42 @@ export const GET_ALL_POSTS = graphql`
   }
 `;
 
+interface Props {
+  data: {
+    allMdx: {
+      edges: Node[];
+    };
+  };
+}
+
+interface Node {
+  node: {
+    id: string;
+    fields: {
+      slug: string;
+    };
+    frontmatter: {
+      title: string;
+      date: string;
+      updated_at: string;
+      tags: string[];
+      featured_image: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: number;
+            base64: string;
+            sizes: string;
+            src: string;
+            srcSet: string;
+            srcSetWebp: string;
+            srcWebp: string;
+          };
+        };
+      };
+    };
+  };
+}
+
 const seo = {
   title: 'A-J Roos | Blog Posts',
   description:
@@ -43,7 +78,7 @@ const seo = {
   blogUrl: 'https://asjas.co.za/blog',
 };
 
-const BlogPage = ({ data }) => (
+const BlogPage: React.FunctionComponent<Props> = ({ data }): React.ReactElement => (
   <>
     <SEO {...seo} />
     <Layout>
@@ -61,29 +96,5 @@ const BlogPage = ({ data }) => (
     </Layout>
   </>
 );
-
-BlogPage.propTypes = {
-  data: PropTypes.shape({
-    allMdx: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }).isRequired,
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-              date: PropTypes.string.isRequired,
-              updated_at: PropTypes.string.isRequired,
-              featured_image: PropTypes.object.isRequired,
-              tags: PropTypes.array.isRequired,
-            }).isRequired,
-          }).isRequired,
-        }).isRequired,
-      ).isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default BlogPage;

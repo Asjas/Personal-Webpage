@@ -1,14 +1,46 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import { format, formatDistance } from 'date-fns';
 import { useSpring, animated } from 'react-spring';
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 40, 1.1];
-const trans = (x, y, s) => `perspective(1200px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+interface Props {
+  node: {
+    id: string;
+    fields: {
+      slug: string;
+    };
+    frontmatter: {
+      title: string;
+      date: string;
+      updated_at: string;
+      tags: string[];
+      featured_image: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: number;
+            base64: string;
+            sizes: string;
+            src: string;
+            srcSet: string;
+            srcSetWebp: string;
+            srcWebp: string;
+          };
+        };
+      };
+    };
+  };
+}
 
-function BlogEntryCard({ node }) {
+const calc = (x: number, y: number): number[] => [
+  -(y - window.innerHeight / 2) / 20,
+  (x - window.innerWidth / 2) / 40,
+  1.1,
+];
+const trans = (x: number, y: number, s: number): string =>
+  `perspective(1200px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
+const BlogEntryCard: React.FunctionComponent<Props> = ({ node }): React.ReactElement => {
   const [{ xys }, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 },
@@ -55,22 +87,6 @@ function BlogEntryCard({ node }) {
       </ul>
     </animated.section>
   );
-}
-
-BlogEntryCard.propTypes = {
-  node: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    fields: PropTypes.shape({
-      slug: PropTypes.string.isRequired,
-    }).isRequired,
-    frontmatter: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired,
-      updated_at: PropTypes.string.isRequired,
-      featured_image: PropTypes.object.isRequired,
-      tags: PropTypes.array.isRequired,
-    }).isRequired,
-  }).isRequired,
 };
 
 export default BlogEntryCard;

@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import { graphql } from 'gatsby';
+
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import Project from '../components/Project';
@@ -41,6 +41,50 @@ export const GET_PRISMIC_PROJECTS = graphql`
   }
 `;
 
+interface Props {
+  data: {
+    allPrismicProjects: {
+      edges: Node[];
+    };
+  };
+}
+
+interface Node {
+  node: {
+    id: string;
+    data: {
+      title: {
+        text: string;
+      };
+      description: {
+        text: string;
+      };
+      image: {
+        localFile: {
+          childImageSharp: {
+            fluid: {
+              aspectRatio: number;
+              base64: string;
+              sizes: string;
+              src: string;
+              srcSet: string;
+              srcSetWebp: string;
+              srcWebp: string;
+            };
+          };
+        };
+        alt: string;
+      };
+      github_url: {
+        url: string;
+      };
+      website_url: {
+        url: string;
+      };
+    };
+  };
+}
+
 const seo = {
   title: 'A-J Roos | Portfolio',
   description:
@@ -48,8 +92,9 @@ const seo = {
   siteUrl: 'https://asjas.co.za/portfolio',
 };
 
-const PortfolioPage = ({ data }) => (
+const PortfolioPage: React.FunctionComponent<Props> = ({ data }): React.ReactElement => (
   <>
+    {console.log(data)}
     <SEO {...seo} />
     <Layout>
       <h1 className="portfolio__heading">
@@ -63,41 +108,5 @@ const PortfolioPage = ({ data }) => (
     </Layout>
   </>
 );
-
-PortfolioPage.propTypes = {
-  data: PropTypes.shape({
-    allPrismicProjects: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            data: PropTypes.shape({
-              title: PropTypes.shape({
-                text: PropTypes.string.isRequired,
-              }).isRequired,
-              description: PropTypes.shape({
-                text: PropTypes.string.isRequired,
-              }).isRequired,
-              image: PropTypes.shape({
-                alt: PropTypes.string.isRequired,
-                localFile: PropTypes.shape({
-                  childImageSharp: PropTypes.shape({
-                    fluid: PropTypes.any.isRequired,
-                  }).isRequired,
-                }).isRequired,
-              }).isRequired,
-              github_url: PropTypes.shape({
-                url: PropTypes.string.isRequired,
-              }).isRequired,
-              website_url: PropTypes.shape({
-                url: PropTypes.string.isRequired,
-              }).isRequired,
-            }).isRequired,
-          }).isRequired,
-        }).isRequired,
-      ).isRequired,
-    }).isRequired,
-  }).isRequired,
-};
 
 export default PortfolioPage;

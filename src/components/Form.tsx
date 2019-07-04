@@ -1,12 +1,13 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
+
 import Button from './Button';
 
 function handleSubmit(event: React.SyntheticEvent): void {
   event.preventDefault();
 }
 
-const ContactForm = () => (
+const ContactForm = (): React.ReactElement => (
   <>
     <Helmet>
       <script src="https://www.google.com/recaptcha/api.js?render=6LfRSKAUAAAAAOWRrjorE2kWWLN_aRlCuhTu6x-b" />

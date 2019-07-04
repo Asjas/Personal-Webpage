@@ -1,13 +1,14 @@
 import React, { ReactNode } from 'react';
+
 import hub from '../utils/sentry';
 
-type Props = {
+interface Props {
   children: ReactNode | ReactNode[];
-};
+}
 
-type State = {
+interface State {
   hasError: boolean;
-};
+}
 
 class ErrorBoundary extends React.Component<Props, State> {
   state = { hasError: false };

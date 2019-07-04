@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -31,7 +31,7 @@ const GET_SEO_METADATA = graphql`
   }
 `;
 
-function SEO({
+const SEO: React.FunctionComponent<Props> = ({
   title,
   description,
   siteUrl,
@@ -40,7 +40,7 @@ function SEO({
   isBlogPost = false,
   datePublished,
   dateModified,
-}: Props) {
+}): React.ReactElement => {
   const data = useStaticQuery(GET_SEO_METADATA);
 
   const seo = {
@@ -135,6 +135,6 @@ function SEO({
       />
     </Helmet>
   );
-}
+};
 
 export default SEO;

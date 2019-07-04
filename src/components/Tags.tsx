@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import ErrorBoundary from './ErrorBoundary';
@@ -17,7 +17,7 @@ const GET_ALL_TAGS = graphql`
   }
 `;
 
-function Tags() {
+function Tags(): React.ReactElement {
   const data = useStaticQuery(GET_ALL_TAGS);
 
   return (

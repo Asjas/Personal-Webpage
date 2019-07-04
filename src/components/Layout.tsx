@@ -13,7 +13,7 @@ interface Props {
   children: ReactNode;
 }
 
-const Layout = ({ children }: Props) => (
+const Layout: React.FunctionComponent<Props> = ({ children }): React.ReactElement => (
   <ErrorBoundary>
     <div className="layout">
       <Navbar />

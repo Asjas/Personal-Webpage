@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
+
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-interface IndexProps {
+interface Props {
   data: {
     file: {
       childImageSharp: {
@@ -31,7 +32,7 @@ export const HOME_PAGE_IMAGE = graphql`
   }
 `;
 
-const IndexPage = ({ data }: IndexProps) => (
+const IndexPage: React.FunctionComponent<Props> = ({ data }): React.ReactElement => (
   <>
     <SEO />
     <Layout>

@@ -1,4 +1,5 @@
 import React, { useState, memo } from 'react';
+
 import Button from './Button';
 
 function NewsletterSubscribed() {
@@ -10,7 +11,7 @@ function NewsletterSubscribed() {
   );
 }
 
-function Newsletter() {
+function Newsletter(): React.ReactElement {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
