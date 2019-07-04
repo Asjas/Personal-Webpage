@@ -2,17 +2,6 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-interface Props {
-  title: string;
-  description: string;
-  siteUrl: string;
-  blogUrl: string;
-  image: string;
-  isBlogPost?: boolean;
-  datePublished?: string;
-  dateModified?: string;
-}
-
 const GET_SEO_METADATA = graphql`
   query GET_SEO_METADATA {
     site {
@@ -30,6 +19,17 @@ const GET_SEO_METADATA = graphql`
     }
   }
 `;
+
+interface Props {
+  title?: string;
+  description?: string;
+  siteUrl?: string;
+  blogUrl?: string;
+  image?: string;
+  isBlogPost?: boolean;
+  datePublished?: string;
+  dateModified?: string;
+}
 
 const SEO: React.FunctionComponent<Props> = ({
   title,
