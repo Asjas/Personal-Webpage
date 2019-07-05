@@ -4,9 +4,7 @@
   "private": true,
   "version": "3.0.0",
   "author": "A-J Roos <asjas@outlook.com>",
-  "keywords": [
-    "personal website, portfolio, react, gatsbyjs"
-  ],
+  "keywords": [],
   "license": "MIT",
   "scripts": {
     "build": "npm-run-all clean build:gatsby",
