@@ -19,13 +19,7 @@
 }
 
 .homepage__image {
-  @media screen and (max-width: $tablet) {
-    width: 300px !important;
-    height: 300px !important;
-  }
-
-  @media screen and (max-width: $mobileM) {
-    width: 280px !important;
-    height: 280px !important;
-  }
+  width: 100%;
+  max-width: 540px;
+  height: auto;
 }
