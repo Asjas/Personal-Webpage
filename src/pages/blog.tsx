@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { memo } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -78,23 +78,27 @@ const seo = {
   blogUrl: 'https://asjas.co.za/blog',
 };
 
-const BlogPage: React.FunctionComponent<Props> = ({ data }): React.ReactElement => (
-  <>
-    <SEO {...seo} />
-    <Layout>
-      <div className="blog">
-        <header>
-          <h1 className="blog__heading">My collection of blog posts.</h1>
-          <Tags />
-        </header>
-        <ErrorBoundary>
-          {data.allMdx.edges.map(({ node }) => (
-            <BlogEntryCard key={node.id} node={node} />
-          ))}
-        </ErrorBoundary>
-      </div>
-    </Layout>
-  </>
+const BlogPage: React.FunctionComponent<Props> = memo(
+  ({ data }): React.ReactElement => (
+    <>
+      <SEO {...seo} />
+      <Layout>
+        <div className="blog">
+          <header>
+            <h1 className="blog__heading">My collection of blog posts.</h1>
+            <Tags />
+          </header>
+          <ErrorBoundary>
+            {data.allMdx.edges.map(({ node }) => (
+              <BlogEntryCard key={node.id} node={node} />
+            ))}
+          </ErrorBoundary>
+        </div>
+      </Layout>
+    </>
+  ),
 );
+
+BlogPage.displayName = 'BlogPage';
 
 export default BlogPage;
