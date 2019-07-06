@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
-import Project from '../components/Project';
+import SEO from '../../components/SEO';
+import Layout from '../../components/Layout/index';
+import Project from '../../components/Project';
 
 export const GET_PRISMIC_PROJECTS = graphql`
   query GET_PRISMIC_PROJECTS {

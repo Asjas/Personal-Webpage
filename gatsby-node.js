@@ -4,6 +4,25 @@ const chalk = require('chalk');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
+exports.onCreatePage = ({ page, actions }) => {
+  const { deletePage, createPage } = actions;
+
+  return new Promise(resolve => {
+    // if the page component is the index page component
+    if (page.componentPath === `${__dirname}/src/pages/index/index.tsx`) {
+      deletePage(page);
+
+      // create a new page but with '/' as path
+      createPage({
+        ...page,
+        path: '/',
+      });
+    }
+
+    resolve();
+  });
+};
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 

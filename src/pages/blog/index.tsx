@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import Tags from '../components/Tags';
-import BlogEntryCard from '../components/BlogEntryCard';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
+import Tags from '../../components/Tags';
+import BlogEntryCard from '../../components/BlogEntryCard';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
