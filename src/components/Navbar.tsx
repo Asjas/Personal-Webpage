@@ -79,6 +79,7 @@ function Nav(): React.ReactElement {
 
       <div className={isOpen ? 'sidenav sidenav--show' : 'sidenav'}>
         <nav className="navbar">
+          <img className="navbar__logo" src={'/assets/logo_transparent.png'} alt="" />
           <ul className="navbar__links">
             <li className="navbar__item">
               <Link className="navbar__link" activeClassName="navbar__link--active" to="/">

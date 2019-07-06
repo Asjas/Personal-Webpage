@@ -105,7 +105,6 @@ const SEO: React.FunctionComponent<Props> = ({
       <meta name="image" content={seo.image} />
       <link rel="canonical" href={seo.siteUrl} />
       <meta name="google-site-verification" content={seo.googleSiteVerification} />
-      <link rel="shortcut icon" href="https://storage.googleapis.com/asjas.co.za/favicon.ico" />
 
       {/* Schema.org tags */}
       <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>

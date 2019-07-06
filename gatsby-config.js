@@ -115,7 +115,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: 'hsl(341, 79%, 45%)',
         display: 'standalone',
-        icon: 'static/assets/messy-desk.jpg',
+        icon: 'static/assets/logo_transparent.png',
         include_favicon: true,
       },
     },

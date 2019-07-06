@@ -62,19 +62,25 @@
   background: $navbarBg;
   border-bottom: 3px solid $primaryColor;
   border-top: 3px solid $primaryColor;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
   height: 100vh;
   width: 100%;
+}
+
+.navbar__logo {
+  padding: 20px 0;
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .navbar__links {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: start;
   padding-left: 0;
-  padding-top: 40px;
   width: 100%;
 
   & .navbar__item {

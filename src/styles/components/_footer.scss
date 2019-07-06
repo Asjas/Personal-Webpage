@@ -6,7 +6,7 @@
   align-self: end;
 
   @media screen and (max-width: $tablet) {
-    margin-bottom: 100px;
+    align-self: start;
   }
 
   .footer__link {
