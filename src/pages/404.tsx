@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { memo } from 'react';
 import Img from 'gatsby-image';
 import { Link, graphql } from 'gatsby';
 
@@ -41,26 +41,31 @@ const seo = {
     "Oops! Something went wrong. Either the page you tried to access doesn't exist or something mysterious happened.",
 };
 
-const FourOhFour: React.FunctionComponent<Props> = ({ data }): React.ReactElement => (
-  <>
-    <SEO {...seo} />
-    <Layout>
-      <section className="fourohfour">
-        <Img className="fourohfour__image" fluid={data.file.childImageSharp.fluid} alt="" />
-        <h1 className="fourohfour__heading" data-testid="404-heading">
-          This page is a Ghost
-        </h1>
-        <p className="fourohfour__text">
-          Once alive and now dead, this ghost appears to have some unfinished business. Could it be
-          with you? Or the treasure hidden under the floorboards of the old mansion in the hills
-          that may never reach its rightful owner, a compassionate school teacher in Brooklyn.
-        </p>
-        <Link to="/" className="fourohfour__link" data-testid="404-link">
-          Go Home
-        </Link>
-      </section>
-    </Layout>
-  </>
+const FourOhFour: React.FunctionComponent<Props> = memo(
+  ({ data }): React.ReactElement => (
+    <>
+      <SEO {...seo} />
+      <Layout>
+        <section className="fourohfour">
+          <Img className="fourohfour__image" fluid={data.file.childImageSharp.fluid} alt="" />
+          <h1 className="fourohfour__heading" data-testid="404-heading">
+            This page is a Ghost
+          </h1>
+          <p className="fourohfour__text">
+            Once alive and now dead, this ghost appears to have some unfinished business. Could it
+            be with you? Or the treasure hidden under the floorboards of the old mansion in the
+            hills that may never reach its rightful owner, a compassionate school teacher in
+            Brooklyn.
+          </p>
+          <Link to="/" className="fourohfour__link" data-testid="404-link">
+            Go Home
+          </Link>
+        </section>
+      </Layout>
+    </>
+  ),
 );
+
+FourOhFour.displayName = 'FourOhFour';
 
 export default FourOhFour;
