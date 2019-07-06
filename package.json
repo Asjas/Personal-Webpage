@@ -80,6 +80,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
     "react-player": "^1.11.1",
     "react-spring": "^8.0.25",
     "snyk": "^1.184.0",

@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 10px 0;
   justify-content: space-around;
   width: 100%;
   align-self: end;
@@ -26,8 +26,8 @@
 
     svg {
       fill: $white;
-      height: 5rem;
-      width: 5rem;
+      height: 4.6rem;
+      width: 4.6rem;
     }
 
     &:focus {
