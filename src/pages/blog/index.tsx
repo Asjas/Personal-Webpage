@@ -7,6 +7,8 @@ import Tags from '../../components/Tags';
 import BlogEntryCard from '../../components/BlogEntryCard';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
+import * as Styled from './style';
+
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -83,9 +85,9 @@ const BlogPage: React.FunctionComponent<Props> = memo(
     <>
       <SEO {...seo} />
       <Layout>
-        <div className="blog">
+        <Styled.Section>
           <header>
-            <h1 className="blog__heading">My collection of blog posts.</h1>
+            <Styled.Heading>My collection of blog posts.</Styled.Heading>
             <Tags />
           </header>
           <ErrorBoundary>
@@ -93,7 +95,7 @@ const BlogPage: React.FunctionComponent<Props> = memo(
               <BlogEntryCard key={node.id} node={node} />
             ))}
           </ErrorBoundary>
-        </div>
+        </Styled.Section>
       </Layout>
     </>
   ),

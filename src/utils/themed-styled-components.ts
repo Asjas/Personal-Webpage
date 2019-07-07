@@ -1,4 +1,3 @@
-// tslint:disable:no-duplicate-imports
 import * as styledComponents from 'styled-components';
 import { ThemedStyledComponentsModule } from 'styled-components';
 import { myTheme } from './theme';
@@ -11,7 +10,6 @@ const {
   createGlobalStyle,
   keyframes,
   ThemeProvider,
-  // ... etc
 } = (styledComponents as any) as ThemedStyledComponentsModule<ITheme>;
 
 export { css, createGlobalStyle, keyframes, ThemeProvider };

@@ -1,15 +1,17 @@
-.footer {
+import styled from '../../utils/themed-styled-components';
+
+export const Footer = styled.footer`
   display: flex;
   margin: 0 auto 10px 0;
   justify-content: space-around;
   width: 100%;
   align-self: end;
 
-  @media screen and (max-width: $tablet) {
+  @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
     align-self: start;
   }
 
-  .footer__link {
+  a {
     cursor: pointer;
 
     .sr-only {
@@ -25,23 +27,23 @@
     }
 
     svg {
-      fill: $white;
+      fill: ${props => props.theme.color.white};
       height: 4.6rem;
       width: 4.6rem;
     }
 
     &:focus {
-      outline: 3px solid $outlineColor;
+      outline: 3px solid ${props => props.theme.color.outline};
 
       svg > * {
-        fill: $primaryColor !important;
+        fill: ${props => props.theme.color.primary};
       }
     }
 
     &:hover {
       svg > * {
-        fill: $primaryColor !important;
+        fill: ${props => props.theme.color.primary};
       }
     }
   }
-}
+`;

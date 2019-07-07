@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
-import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
+
+import * as Styled from './style';
 
 interface Props {
   data: {
@@ -40,13 +41,13 @@ const IndexPage: React.FunctionComponent<Props> = memo(
     <>
       <SEO />
       <Layout>
-        <section className="homepage">
-          <p className="homepage__quote">
+        <Styled.Section>
+          <Styled.Paragraph>
             "There are only two hard things in Computer Science: cache invalidation and naming
             things" - Phil Karlton
-          </p>
-          <Img className="homepage__image" fluid={data.file.childImageSharp.fluid} alt="" />
-        </section>
+          </Styled.Paragraph>
+          <Styled.Image fluid={data.file.childImageSharp.fluid} alt="" />
+        </Styled.Section>
       </Layout>
     </>
   ),

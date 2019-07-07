@@ -5,6 +5,8 @@ import SEO from '../../components/SEO';
 import Layout from '../../components/Layout/index';
 import Project from '../../components/Project';
 
+import * as Styled from './style';
+
 export const GET_PRISMIC_PROJECTS = graphql`
   query GET_PRISMIC_PROJECTS {
     allPrismicProjects {
@@ -94,17 +96,16 @@ const seo = {
 
 const PortfolioPage: React.FunctionComponent<Props> = ({ data }): React.ReactElement => (
   <>
-    {console.log(data)}
     <SEO {...seo} />
     <Layout>
-      <h1 className="portfolio__heading">
-        This is a collection of projects that I have worked on.
-      </h1>
-      <div className="projects">
-        {data.allPrismicProjects.edges.map(({ node }) => (
-          <Project key={node.id} data={node.data} />
-        ))}
-      </div>
+      <Styled.Section>
+        <Styled.Heading>This is a collection of projects that I have worked on.</Styled.Heading>
+        <Styled.Div className="projects">
+          {data.allPrismicProjects.edges.map(({ node }) => (
+            <Project key={node.id} data={node.data} />
+          ))}
+        </Styled.Div>
+      </Styled.Section>
     </Layout>
   </>
 );

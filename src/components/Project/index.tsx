@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
-import Img from 'gatsby-image';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+
+import * as Styled from './style';
 
 interface Props {
   data: {
@@ -37,16 +37,15 @@ interface Props {
 
 const Project: React.FunctionComponent<Props> = memo(
   ({ data }): React.ReactElement => (
-    <section className="card">
-      <Img
-        className="card__image"
+    <Styled.Card>
+      <Styled.Image
         title={data.title.text}
         alt={data.image.alt}
         fluid={data.image.localFile.childImageSharp.fluid}
       />
-      <h2 className="card__title">{data.title.text}</h2>
-      <p className="card__text">{data.description.text}</p>
-      <OutboundLink
+      <Styled.Heading>{data.title.text}</Styled.Heading>
+      <Styled.Paragraph>{data.description.text}</Styled.Paragraph>
+      <Styled.Button
         className="card__button github"
         href={data.github_url.url}
         target="_blank"
@@ -55,8 +54,8 @@ const Project: React.FunctionComponent<Props> = memo(
         role="button"
       >
         <span className="button__content">Github</span>
-      </OutboundLink>
-      <OutboundLink
+      </Styled.Button>
+      <Styled.Button
         className="card__button website"
         href={data.website_url.url}
         target="_blank"
@@ -65,8 +64,8 @@ const Project: React.FunctionComponent<Props> = memo(
         role="button"
       >
         <span className="button__content">Website</span>
-      </OutboundLink>
-    </section>
+      </Styled.Button>
+    </Styled.Card>
   ),
 );
 

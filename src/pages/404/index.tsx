@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
-import Img from 'gatsby-image';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
+
+import * as Styled from './style';
 
 interface Props {
   data: {
@@ -46,21 +47,19 @@ const FourOhFour: React.FunctionComponent<Props> = memo(
     <>
       <SEO {...seo} />
       <Layout>
-        <section className="fourohfour">
-          <Img className="fourohfour__image" fluid={data.file.childImageSharp.fluid} alt="" />
-          <h1 className="fourohfour__heading" data-testid="404-heading">
-            This page is a Ghost
-          </h1>
-          <p className="fourohfour__text">
+        <Styled.Section>
+          <Styled.Image fluid={data.file.childImageSharp.fluid} alt="" />
+          <Styled.Heading data-testid="404-heading">This page is a Ghost</Styled.Heading>
+          <Styled.Paragraph>
             Once alive and now dead, this ghost appears to have some unfinished business. Could it
             be with you? Or the treasure hidden under the floorboards of the old mansion in the
             hills that may never reach its rightful owner, a compassionate school teacher in
             Brooklyn.
-          </p>
-          <Link to="/" className="fourohfour__link" data-testid="404-link">
+          </Styled.Paragraph>
+          <Styled.AnchorLink to="/" data-testid="404-link">
             Go Home
-          </Link>
-        </section>
+          </Styled.AnchorLink>
+        </Styled.Section>
       </Layout>
     </>
   ),

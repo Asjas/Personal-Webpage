@@ -1,14 +1,6 @@
-.portfolio__heading {
-  font-size: $heading1;
-  text-align: center;
-  margin: 0 auto 25px 0;
+import styled from '../../utils/themed-styled-components';
 
-  @media screen and (max-width: $tablet) {
-    width: 90%;
-  }
-}
-
-.projects {
+export const Section = styled.section`
   display: grid;
   grid-template-columns:
     minmax(1.2rem, 1fr)
@@ -20,4 +12,9 @@
   & > * {
     grid-column: 2;
   }
-}
+`;
+
+export const Heading = styled.h1`
+  text-align: center;
+  margin-bottom: 25px;
+`;

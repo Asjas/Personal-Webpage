@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 
-import hub from '../utils/sentry';
+import hub from '../../utils/sentry';
+
+import * as Styled from './style';
 
 interface Props {
   children: ReactNode | ReactNode[];
@@ -32,10 +34,10 @@ class ErrorBoundary extends React.Component<Props, State> {
 
     if (hasError) {
       return (
-        <p className="errorboundary-content">
+        <Styled.ErrorBoundary>
           Something went wrong displaying this section of the website. A log of the error has been
           sent to the website owner.
-        </p>
+        </Styled.ErrorBoundary>
       );
     }
 

@@ -2,11 +2,12 @@ import * as React from 'react';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { FaTwitter, FaGithub, FaFreeCodeCamp, FaLinkedin, FaRegFileAlt } from 'react-icons/fa';
 
+import * as Styled from './style';
+
 function Footer(): React.ReactElement {
   return (
-    <footer className="footer">
+    <Styled.Footer>
       <OutboundLink
-        className="footer__link"
         href="https://twitter.com/_asjas"
         target="_blank"
         rel="noopener noreferrer"
@@ -18,7 +19,6 @@ function Footer(): React.ReactElement {
         </span>
       </OutboundLink>
       <OutboundLink
-        className="footer__link"
         href="https://github.com/asjas"
         target="_blank"
         rel="noopener noreferrer"
@@ -30,7 +30,6 @@ function Footer(): React.ReactElement {
         </span>
       </OutboundLink>
       <OutboundLink
-        className="footer__link"
         href="https://www.freecodecamp.org/asjas"
         target="_blank"
         rel="noopener noreferrer"
@@ -42,7 +41,6 @@ function Footer(): React.ReactElement {
         </span>
       </OutboundLink>
       <OutboundLink
-        className="footer__link"
         href="https://www.linkedin.com/in/asjasroos/"
         target="_blank"
         rel="noopener noreferrer"
@@ -54,7 +52,6 @@ function Footer(): React.ReactElement {
         </span>
       </OutboundLink>
       <OutboundLink
-        className="footer__link"
         href="https://drive.google.com/open?id=19cfXz9GIPEPstCI_W_OWAiv1SmAwGM9l"
         rel="noopener noreferrer"
         target="_blank"
@@ -65,7 +62,7 @@ function Footer(): React.ReactElement {
           Link to resume
         </span>
       </OutboundLink>
-    </footer>
+    </Styled.Footer>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from '../../utils/themed-styled-components';
 import { GlobalStyle, myTheme } from '../../utils/theme';
 
 import ErrorBoundary from '../ErrorBoundary';
@@ -16,15 +16,15 @@ interface Props {
 }
 
 const Layout: React.FunctionComponent<Props> = ({ children }): React.ReactElement => (
-  <ErrorBoundary>
-    <ThemeProvider theme={myTheme}>
+  <ThemeProvider theme={myTheme}>
+    <ErrorBoundary>
+      <GlobalStyle />
       <Styled.Layout>
-        <GlobalStyle />
         <Navbar />
         <Styled.Main>{children}</Styled.Main>
       </Styled.Layout>
-    </ThemeProvider>
-  </ErrorBoundary>
+    </ErrorBoundary>
+  </ThemeProvider>
 );
 
 export default Layout;
