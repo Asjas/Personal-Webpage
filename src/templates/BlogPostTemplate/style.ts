@@ -1,4 +1,7 @@
-.post {
+import styled from '../../utils/themed-styled-components';
+import { DiscussionEmbed } from 'disqus-react';
+
+export const Article = styled.article`
   display: grid;
   grid-template-columns:
     minmax(1.2rem, 1fr)
@@ -128,8 +131,8 @@
       justify-self: end;
     }
   }
-}
+`;
 
-#disqus_thread {
+export const Disqus = styled(DiscussionEmbed)`
   margin-top: 50px;
-}
+`;

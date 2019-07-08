@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { graphql, Link } from 'gatsby';
 import { format, formatDistance } from 'date-fns';
-import { DiscussionEmbed } from 'disqus-react';
 
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
-import ErrorBoundary from '../components/ErrorBoundary';
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
+import ErrorBoundary from '../../components/ErrorBoundary';
+
+import * as Styled from './style';
 
 export const GET_POST = graphql`
   query GET_POST($slug: String!) {
@@ -80,7 +80,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           datePublished={post.frontmatter.date}
           dateModified={post.frontmatter.updated_at}
         />
-        <article className="post">
+        <Styled.Article>
           <div className="progress__container">
             <div className="progress__bar" id="myBar" />
           </div>
@@ -122,39 +122,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             )}
           </footer>
           <ErrorBoundary>
-            <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+            <Styled.Disqus shortname={disqusShortname} config={disqusConfig} />
           </ErrorBoundary>
-        </article>
+        </Styled.Article>
       </ErrorBoundary>
     </Layout>
   );
-};
-
-BlogPostTemplate.propTypes = {
-  data: PropTypes.shape({
-    mdx: PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      fields: PropTypes.shape({
-        slug: PropTypes.string.isRequired,
-      }).isRequired,
-      frontmatter: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        meta_desc: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-        updated_at: PropTypes.string.isRequired,
-        featured_image: PropTypes.object.isRequired,
-        tags: PropTypes.array.isRequired,
-      }).isRequired,
-      code: PropTypes.shape({
-        body: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
-  pageContext: PropTypes.shape({
-    isCreatedByStatefulCreatePages: PropTypes.bool.isRequired,
-    previous: PropTypes.string,
-    slug: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 export default BlogPostTemplate;

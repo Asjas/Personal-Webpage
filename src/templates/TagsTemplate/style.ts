@@ -1,4 +1,7 @@
-.tagpage {
+import styled from '../../utils/themed-styled-components';
+import { Link } from 'gatsby';
+
+export const Section = styled.section`
   display: grid;
   grid-template-columns:
     minmax(1.2rem, 1fr)
@@ -10,20 +13,20 @@
   & > * {
     grid-column: 2;
   }
-}
+`;
 
-.tagpage__heading {
+export const Heading = styled.h1`
   text-align: center;
-}
+`;
 
-.blogpost__list {
+export const List = styled.ul`
   list-style-type: none;
   padding: 0;
   color: $primaryColor;
   width: 100%;
-}
+`;
 
-.tagpage__return {
+export const ReturnLink = styled(Link)`
   background: $primaryColor;
   border-radius: 25px;
   color: $white;
@@ -43,4 +46,4 @@
   &:focus {
     outline: 3px solid $outlineColor;
   }
-}
+`;

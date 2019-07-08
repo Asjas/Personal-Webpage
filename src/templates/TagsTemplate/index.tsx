@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import SEO from '../components/SEO';
-import Layout from '../components/Layout';
-import Tags from '../components/Tags';
-import BlogEntryCard from '../components/BlogEntryCard';
-import capitalize from '../utils/capitalize';
+import SEO from '../../components/SEO';
+import Layout from '../../components/Layout';
+import Tags from '../../components/Tags';
+import BlogEntryCard from '../../components/BlogEntryCard';
+import capitalize from '../../utils/capitalize';
+
+import * as Styled from './style';
 
 export const GET_TAG_PAGES = graphql`
   query GET_TAG_PAGES($tag: String) {
@@ -57,18 +59,16 @@ function TagTemplate({ pageContext, data }) {
   return (
     <Layout>
       <SEO {...seo} />
-      <section className="tagpage">
-        <h1 className="tagpage__heading">{tagHeader}</h1>
+      <Styled.Section>
+        <Styled.Heading>{tagHeader}</Styled.Heading>
         <Tags />
-        <ul className="blogpost__list">
+        <Styled.List>
           {edges.map(({ node }) => (
             <BlogEntryCard key={node.id} node={node} />
           ))}
-        </ul>
-        <Link to="/blog" className="tagpage__return">
-          Go back
-        </Link>
-      </section>
+        </Styled.List>
+        <Styled.ReturnLink to="/blog">Go back</Styled.ReturnLink>
+      </Styled.Section>
     </Layout>
   );
 }

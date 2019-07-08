@@ -1,13 +1,15 @@
-import React, { useState, memo } from 'react';
+import React, { useState } from 'react';
 
-import Button from './Button';
+import Button from '../Button';
+
+import * as Styled from './style';
 
 function NewsletterSubscribed() {
   return (
-    <section className="newsletter">
-      <h3 className="newsletter-heading">Success!</h3>
-      <p className="newsletter-content">You've been subscribed to my newsletter.</p>
-    </section>
+    <Styled.Section>
+      <Styled.Heading>Success!</Styled.Heading>
+      <Styled.Paragraph>You've been subscribed to my newsletter.</Styled.Paragraph>
+    </Styled.Section>
   );
 }
 
@@ -27,17 +29,16 @@ function Newsletter(): React.ReactElement {
   return subscribed ? (
     <NewsletterSubscribed />
   ) : (
-    <section className="newsletter">
-      <form className="newsletter-form" onSubmit={handleSubmit}>
-        <h3 className="newsletter-heading">Subscribe to my newsletter.</h3>
-        <p className="newsletter-content">
+    <Styled.Section>
+      <Styled.Form onSubmit={handleSubmit}>
+        <Styled.Heading>Subscribe to my newsletter.</Styled.Heading>
+        <Styled.Paragraph>
           I send a newsletter on occasion that contains news updates surrounding Web Development. I
           also include links to new blog posts that I write.
-        </p>
+        </Styled.Paragraph>
         <label htmlFor="newsletter-input">
           Enter your email:
-          <input
-            className="newsletter-input"
+          <Styled.Input
             id="newsletter-input"
             type="email"
             onChange={handleChange}
@@ -46,8 +47,8 @@ function Newsletter(): React.ReactElement {
           />
         </label>
         <Button />
-      </form>
-    </section>
+      </Styled.Form>
+    </Styled.Section>
   );
 }
 

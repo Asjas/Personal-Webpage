@@ -1,7 +1,3 @@
-// / <reference types="Cypress" />
-
-// Disable undef error on `cy` usage
-/* eslint no-undef: 0 */
 describe('Hamburger menu', function() {
   beforeEach(function() {
     cy.visit('/');
