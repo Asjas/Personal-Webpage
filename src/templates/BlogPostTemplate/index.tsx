@@ -61,7 +61,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
 
-    document.getElementById('myBar').style.width = `${scrolled}%`;
+    const scrollBar = document.getElementById('myBar');
+
+    if (scrollBar) {
+      scrollBar.style.width = `${scrolled}%`;
+    }
   }
 
   useEffect(() => {
