@@ -1,13 +1,31 @@
 import React, { memo } from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
-import Tags from '../../components/Tags';
-import BlogEntryCard from '../../components/BlogEntryCard';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import Tags from '../components/Tags';
+import BlogEntryCard from '../components/BlogEntryCard';
+import ErrorBoundary from '../components/ErrorBoundary';
+import styled from '../utils/themed-styled-components';
 
-import * as Styled from './style';
+export const Section = styled.section`
+  display: grid;
+  grid-template-columns:
+    minmax(1.2rem, 1fr)
+    minmax(auto, 700px)
+    minmax(1.2rem, 1fr);
+  justify-items: center;
+  gap: 40px 0;
+
+  & > * {
+    grid-column: 2;
+  }
+`;
+
+export const Heading = styled.h1`
+  text-align: center;
+  margin-bottom: 25px;
+`;
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
@@ -85,9 +103,9 @@ const BlogPage: React.FunctionComponent<Props> = memo(
     <>
       <SEO {...seo} />
       <Layout>
-        <Styled.Section>
+        <Section>
           <header>
-            <Styled.Heading>My collection of blog posts.</Styled.Heading>
+            <Heading>My collection of blog posts.</Heading>
             <Tags />
           </header>
           <ErrorBoundary>
@@ -95,7 +113,7 @@ const BlogPage: React.FunctionComponent<Props> = memo(
               <BlogEntryCard key={node.id} node={node} />
             ))}
           </ErrorBoundary>
-        </Styled.Section>
+        </Section>
       </Layout>
     </>
   ),

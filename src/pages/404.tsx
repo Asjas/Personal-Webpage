@@ -1,10 +1,44 @@
 import React, { memo } from 'react';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import styled from '../utils/themed-styled-components';
 
-import * as Styled from './style';
+export const Section = styled.section`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
+
+export const Image = styled(Img)`
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+`;
+
+export const Heading = styled.h1`
+  margin: 40px 0 20px 0;
+`;
+
+export const Paragraph = styled.p`
+  font-size: ${props => props.theme.fontSize.large};
+  width: 90%;
+`;
+
+export const AnchorLink = styled(Link)`
+  margin-top: 15px;
+  padding: 3px;
+  font-size: ${props => props.theme.fontSize.large};
+  text-decoration: none;
+
+  &:hover {
+    color: ${props => props.theme.color.primary};
+    text-decoration: underline;
+  }
+`;
 
 interface Props {
   data: {
@@ -47,19 +81,19 @@ const FourOhFour: React.FunctionComponent<Props> = memo(
     <>
       <SEO {...seo} />
       <Layout>
-        <Styled.Section>
-          <Styled.Image fluid={data.file.childImageSharp.fluid} alt="" />
-          <Styled.Heading data-testid="404-heading">This page is a Ghost</Styled.Heading>
-          <Styled.Paragraph>
+        <Section>
+          <Image fluid={data.file.childImageSharp.fluid} alt="" />
+          <Heading data-testid="404-heading">This page is a Ghost</Heading>
+          <Paragraph>
             Once alive and now dead, this ghost appears to have some unfinished business. Could it
             be with you? Or the treasure hidden under the floorboards of the old mansion in the
             hills that may never reach its rightful owner, a compassionate school teacher in
             Brooklyn.
-          </Styled.Paragraph>
-          <Styled.AnchorLink to="/" data-testid="404-link">
+          </Paragraph>
+          <AnchorLink to="/" data-testid="404-link">
             Go Home
-          </Styled.AnchorLink>
-        </Styled.Section>
+          </AnchorLink>
+        </Section>
       </Layout>
     </>
   ),

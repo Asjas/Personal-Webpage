@@ -1,10 +1,36 @@
 import React, { memo } from 'react';
+import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 
-import Layout from '../../components/Layout';
-import SEO from '../../components/SEO';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
+import styled from '../utils/themed-styled-components';
 
-import * as Styled from './style';
+export const Section = styled.section`
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const Paragraph = styled.p`
+  max-width: 600px;
+  text-align: center;
+  font-family: ${props => props.theme.font.handwriting};
+  font-size: ${props => props.theme.fontSize.heading2};
+  color: ${props => props.theme.color.primary};
+
+  @media screen and (max-width: ${props => props.theme.mobileQuery.tablet}) {
+    width: 90%;
+  }
+`;
+
+export const Image = styled(Img)`
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+`;
 
 interface Props {
   data: {
@@ -41,13 +67,13 @@ const IndexPage: React.FunctionComponent<Props> = memo(
     <>
       <SEO />
       <Layout>
-        <Styled.Section>
-          <Styled.Paragraph>
+        <Section>
+          <Paragraph>
             "There are only two hard things in Computer Science: cache invalidation and naming
             things" - Phil Karlton
-          </Styled.Paragraph>
-          <Styled.Image fluid={data.file.childImageSharp.fluid} alt="" />
-        </Styled.Section>
+          </Paragraph>
+          <Image fluid={data.file.childImageSharp.fluid} alt="" />
+        </Section>
       </Layout>
     </>
   ),

@@ -13,19 +13,11 @@ module.exports = {
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/pages`,
-        ignore: [`style.(js|ts)?(x)`],
-      },
-    },
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',
     'gatsby-plugin-polyfill-io',
-    `gatsby-plugin-typescript`,
+    'gatsby-plugin-typescript',
     'gatsby-plugin-advanced-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -33,14 +25,6 @@ module.exports = {
         host: 'https://asjas.co.za',
         sitemap: 'https://asjas.co.za/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        includePaths: [`${__dirname}/src/styles/main.scss`],
-        sourceComments: true,
-        sourceMap: true,
       },
     },
     {
@@ -57,14 +41,9 @@ module.exports = {
         name: 'blog',
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-page-creator`,
-    //   options: {
-    //     path: `${__dirname}/src/pages`,
-    //   },
-    // },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-mdx',

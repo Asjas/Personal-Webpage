@@ -1,11 +1,48 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 
-import SEO from '../../components/SEO';
-import Layout from '../../components/Layout/index';
-import Project from '../../components/Project';
+import SEO from '../components/SEO';
+import Layout from '../components/Layout/index';
+import Project from '../components/Project';
+import styled from '../utils/themed-styled-components';
 
-import * as Styled from './style';
+export const Section = styled.section`
+  display: grid;
+  grid-template-columns:
+    minmax(1.2rem, 1fr)
+    minmax(auto, 500px)
+    minmax(1.2rem, 1fr);
+  justify-items: center;
+  gap: 40px 0;
+
+  & > * {
+    grid-column: 2;
+  }
+`;
+
+export const Heading = styled.h1`
+  font-size: ${props => props.theme.fontSize.heading1};
+  text-align: center;
+  margin: 0 auto 25px 0;
+
+  @media screen and (max-width: ${props => props.theme.mobileQuery.tablet}) {
+    width: 90%;
+  }
+`;
+
+export const Div = styled.div`
+  display: grid;
+  grid-template-columns:
+    minmax(1.2rem, 1fr)
+    minmax(auto, 700px)
+    minmax(1.2rem, 1fr);
+  justify-items: center;
+  gap: 40px 0;
+
+  & > * {
+    grid-column: 2;
+  }
+`;
 
 export const GET_PRISMIC_PROJECTS = graphql`
   query GET_PRISMIC_PROJECTS {
@@ -98,14 +135,14 @@ const PortfolioPage: React.FunctionComponent<Props> = ({ data }): React.ReactEle
   <>
     <SEO {...seo} />
     <Layout>
-      <Styled.Section>
-        <Styled.Heading>This is a collection of projects that I have worked on.</Styled.Heading>
-        <Styled.Div className="projects">
+      <Section>
+        <Heading>This is a collection of projects that I have worked on.</Heading>
+        <Div className="projects">
           {data.allPrismicProjects.edges.map(({ node }) => (
             <Project key={node.id} data={node.data} />
           ))}
-        </Styled.Div>
-      </Styled.Section>
+        </Div>
+      </Section>
     </Layout>
   </>
 );
