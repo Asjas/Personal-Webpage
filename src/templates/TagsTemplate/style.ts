@@ -8,7 +8,7 @@ export const Section = styled.section`
     minmax(auto, 700px)
     minmax(1.2rem, 1fr);
   justify-items: center;
-  gap: 30px 0;
+  gap: 40px 0;
 
   & > * {
     grid-column: 2;
@@ -22,28 +22,28 @@ export const Heading = styled.h1`
 export const List = styled.ul`
   list-style-type: none;
   padding: 0;
-  color: $primaryColor;
+  color: ${props => props.theme.color.primary};
   width: 100%;
 `;
 
 export const ReturnLink = styled(Link)`
-  background: $primaryColor;
+  background: ${props => props.theme.color.primary};
   border-radius: 25px;
-  color: $white;
+  color: ${props => props.theme.color.white};
   display: inline-block;
-  font-family: Goldsmith;
-  font-size: $fontSmall;
+  font-family: ${props => props.theme.font.body};
+  font-size: ${props => props.theme.fontSize.small};
   margin: 20px 20px 0 0;
   padding: 3px 8px;
   justify-self: left;
 
   &:hover {
-    background: $black;
-    color: $white;
+    background: ${props => props.theme.color.black};
+    color: ${props => props.theme.color.white};
     cursor: pointer;
   }
 
   &:focus {
-    outline: 3px solid $outlineColor;
+    outline: 3px solid ${props => props.theme.color.outline};
   }
 `;

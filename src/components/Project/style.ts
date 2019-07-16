@@ -52,41 +52,41 @@ export const Button = styled(OutboundLink)`
     color: ${props => props.theme.color.white};
     text-transform: uppercase;
   }
+
+  &.github {
+    background-color: #333;
+  }
+
+  &.website {
+    background-color: #4078c0;
+  }
+
+  &.github:hover,
+  &.github:focus {
+    background-color: #333;
+  }
+
+  &.website:hover,
+  &.website:focus {
+    background-color: #4078c0;
+  }
+
+  &:before {
+    background-color: rgba(236, 240, 241, 0.3);
+    border-radius: 100%;
+    content: '';
+    display: block;
+    left: 50%;
+    padding-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+  }
+
+  &:active:before {
+    padding-top: 120%;
+    transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+    width: 120%;
+  }
 `;
-
-// .card__button.github {
-//   background-color: #333;
-// }
-
-// .card__button.website {
-//   background-color: #4078c0;
-// }
-
-// .card__button.github:hover,
-// .card__button.github:focus {
-//   background-color: #333;
-// }
-
-// .card__button.website:hover,
-// .card__button.website:focus {
-//   background-color: #4078c0;
-// }
-
-// .card__button:before {
-//   background-color: rgba(236, 240, 241, 0.3);
-//   border-radius: 100%;
-//   content: '';
-//   display: block;
-//   left: 50%;
-//   padding-top: 0;
-//   position: absolute;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 0;
-// }
-
-// .card__button:active:before {
-//   padding-top: 120%;
-//   transition: width 0.2s ease-out, padding-top 0.2s ease-out;
-//   width: 120%;
-// }
