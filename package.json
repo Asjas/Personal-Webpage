@@ -86,7 +86,7 @@
     "snyk": "^1.184.0",
     "start-server-and-test": "^1.9.1",
     "styled-components": "^5.0.0-beta.5",
-    "yarn": "^1.16.0"
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
