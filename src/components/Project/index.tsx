@@ -46,7 +46,7 @@ const Project: React.FunctionComponent<Props> = memo(
       <Styled.Heading>{data.title.text}</Styled.Heading>
       <Styled.Paragraph>{data.description.text}</Styled.Paragraph>
       <Styled.Button
-        className="card__button github"
+        className="github"
         href={data.github_url.url}
         target="_blank"
         rel="noopener noreferrer"
@@ -56,7 +56,7 @@ const Project: React.FunctionComponent<Props> = memo(
         <span className="button__content">Github</span>
       </Styled.Button>
       <Styled.Button
-        className="card__button website"
+        className="website"
         href={data.website_url.url}
         target="_blank"
         rel="noopener noreferrer"

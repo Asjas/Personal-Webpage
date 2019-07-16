@@ -1,8 +1,9 @@
 import React, { memo } from 'react';
-import Img from 'gatsby-image';
-import { Link } from 'gatsby';
+
 import { format, formatDistance } from 'date-fns';
-import { useSpring, animated } from 'react-spring';
+import { useSpring } from 'react-spring';
+
+import * as Styled from './style';
 
 interface Props {
   node: {
@@ -48,45 +49,40 @@ const BlogEntryCard: React.FunctionComponent<Props> = memo(
     }));
 
     return (
-      <animated.section
-        className="blogpost__section"
+      <Styled.Section
         key={node.id}
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{ transform: xys.interpolate(trans) }}
       >
-        <Img
-          className="blogpost__image"
-          fluid={node.frontmatter.featured_image.childImageSharp.fluid}
-          alt=""
-        />
-        <Link className="blogpost__link" to={`/blog${node.fields.slug}`}>
-          <h2 className="blogpost__heading">{node.frontmatter.title}</h2>
-        </Link>
-        <span className="blogpost__date">
+        <Styled.Image fluid={node.frontmatter.featured_image.childImageSharp.fluid} alt="" />
+        <Styled.BlogLink to={`/blog${node.fields.slug}`}>
+          <Styled.Heading>{node.frontmatter.title}</Styled.Heading>
+        </Styled.BlogLink>
+        <Styled.BlogDate>
           Published:{' '}
           <time dateTime={format(new Date(node.frontmatter.date), 'yyyy-MM-dd')}>
             {formatDistance(new Date(node.frontmatter.date), new Date(), {
               addSuffix: true,
             })}
           </time>
-        </span>
-        <span className="blogpost__date">
+        </Styled.BlogDate>
+        <Styled.BlogDate>
           Last Updated:{' '}
           <time dateTime={format(new Date(node.frontmatter.updated_at), 'yyyy-MM-dd')}>
             {formatDistance(new Date(node.frontmatter.updated_at), new Date(), {
               addSuffix: true,
             })}
           </time>
-        </span>
-        <ul className="blogpost__tags">
+        </Styled.BlogDate>
+        <Styled.BlogTags>
           {node.frontmatter.tags.map(tag => (
-            <Link key={tag} className="blogpost__tag" to={`/tags/${tag}`}>
+            <Styled.BlogLink key={tag} className="blogpost__tag" to={`/tags/${tag}`}>
               {`#${tag}`}
-            </Link>
+            </Styled.BlogLink>
           ))}
-        </ul>
-      </animated.section>
+        </Styled.BlogTags>
+      </Styled.Section>
     );
   },
 );
