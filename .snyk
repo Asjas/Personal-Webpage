@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.3
+version: v1.13.5
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:braces:20180219':
@@ -61,3 +61,8 @@ patch:
         patched: '2018-09-18T09:17:45.091Z'
     - gatsby-plugin-sharp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
         patched: '2018-09-18T09:17:45.091Z'
+  SNYK-JS-LODASH-450202:
+    - gatsby-plugin-page-creator > lodash:
+        patched: '2019-07-17T17:55:29.097Z'
+    - gatsby-plugin-page-creator > gatsby-page-utils > lodash:
+        patched: '2019-07-17T17:55:29.097Z'

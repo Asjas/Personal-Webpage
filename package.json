@@ -83,7 +83,7 @@
     "react-icons": "^3.7.0",
     "react-player": "^1.11.1",
     "react-spring": "^8.0.27",
-    "snyk": "^1.192.6",
+    "snyk": "^1.193.2",
     "start-server-and-test": "^1.9.1",
     "styled-components": "^4.3.2"
   },
