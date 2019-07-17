@@ -1,34 +1,36 @@
-form {
+import styled from '../../utils/themed-styled-components';
+
+export const Form = styled.form`
   align-self: center;
   padding: 25px 0;
   width: 480px;
   height: 100%;
 
-  @media screen and (max-width: $tablet) {
+  @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
     width: 400px;
   }
 
-  @media screen and (max-width: $mobileL) {
+  @media ${props => props.theme.mobileQuery.mobileL} {
     width: 350px;
     padding: 0;
     margin: 0;
   }
 
-  @media screen and (max-width: $mobileM) {
+  @media ${props => props.theme.mobileQuery.mobileM} {
     width: 300px;
   }
-}
+`;
 
-fieldset {
+export const Fieldset = styled.fieldset`
   border-radius: 6px;
-  border: 2px solid $black;
+  border: 2px solid ${props => props.theme.color.black};
   display: flex;
   flex-direction: column;
   padding: 20px;
   width: 100%;
-}
+`;
 
-label {
+export const Label = styled.label`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -38,7 +40,7 @@ label {
     margin-bottom: 5px;
     width: 50%;
   }
-}
+`;
 
 // export const StyledErrorMessage = styled(ErrorMessage)`
 //   color: ${props => props.theme.errorColor};
@@ -51,35 +53,22 @@ label {
 //   width: 50%;
 // `;
 
-input {
+export const Input = styled.input`
   border-radius: 4px;
-  border: 1px solid $black;
+  border: 1px solid ${props => props.theme.color.black};
   height: 50px;
   margin: 0 0 30px 0;
   padding: 0 0 0 20px;
   width: 100%;
+`;
 
-  // &:active,
-  // &:focus {
-  //   border: ${props => props.theme.inputHoverBorderMd};
-  // }
-}
-
-textarea {
+export const Textarea = styled.textarea`
   border-radius: 4px;
-  border: 1px solid $black;
+  border: 1px solid ${props => props.theme.color.black};
   margin: 0 0 30px 0;
   min-height: 120px;
   outline: none;
   padding: 20px;
   resize: vertical;
   width: 100%;
-
-  // &:active {
-  //   border: ${props => props.theme.inputHoverBorderMd};
-  // }
-
-  // &:focus {
-  //   border: ${props => props.theme.inputHoverBorderMd};
-  // }
-}
+`;

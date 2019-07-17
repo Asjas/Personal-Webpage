@@ -11,7 +11,6 @@ export const Contact = styled.div`
   flex-direction: column;
   width: 480px;
   margin: 0 auto;
-  min-height: 100vh;
   justify-content: flex-start;
 
   @media (max-width: ${props => props.theme.mobileQuery.laptop}) {
@@ -74,7 +73,7 @@ const ContactPage = (): React.ReactElement => (
         <section>
           <Heading>Don't be a stranger and say hello.</Heading>
           <Paragraph>
-            I am always open to discussing new projects or opportunities. Feel free to get in touch
+            I am always open to discuss new projects or opportunities. Feel free to get in touch
             with me by using the provided contact form.
           </Paragraph>
           <Paragraph className="contact__paragraph">

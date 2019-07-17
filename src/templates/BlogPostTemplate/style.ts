@@ -67,8 +67,11 @@ export const Article = styled.article`
 
   img {
     width: 100%;
-    height: auto;
     border: 2px solid ${props => props.theme.color.black};
+  }
+
+  .gatsby-resp-image-background-image {
+    padding-bottom: 0 !important;
   }
 
   blockquote p {
@@ -200,7 +203,7 @@ export const Article = styled.article`
   }
 
   /* Inline code */
-  :not(pre) > code[class*='language-'] {
+  code[class='language-text'] {
     color: ${props => props.theme.color.black};
     font-weight: normal;
     font-family: ${props => props.theme.font.body};

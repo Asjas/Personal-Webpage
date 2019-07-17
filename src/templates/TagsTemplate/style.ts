@@ -20,9 +20,11 @@ export const Heading = styled.h1`
 `;
 
 export const List = styled.ul`
+  color: ${props => props.theme.color.primary};
+  display: grid;
+  gap: 40px 0;
   list-style-type: none;
   padding: 0;
-  color: ${props => props.theme.color.primary};
   width: 100%;
 `;
 
