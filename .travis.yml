@@ -8,6 +8,8 @@ node_js:
 cache: yarn
 
 script:
-  - "yarn lint"
+  - "yarn lint:js"
+  - "yarn lint:css"
+  - "yarn type-check"
   - "yarn test"
   - "yarn build"
