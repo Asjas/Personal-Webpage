@@ -99,7 +99,6 @@ const SEO: React.FunctionComponent<Props> = ({
         href="https://asjas.sfo2.cdn.digitaloceanspaces.com"
         crossOrigin="true"
       />
-      <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css"></link>
 
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
