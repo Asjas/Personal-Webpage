@@ -81,13 +81,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-  font-family: ${props => props.theme.font.retro};
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.woff2') format('woff2'),
-    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.woff') format('woff'),
-    url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.ttf') format('truetype');
+    font-family: ${props => props.theme.font.retro};
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.woff2') format('woff2'),
+      url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.woff') format('woff'),
+      url('https://asjas.sfo2.cdn.digitaloceanspaces.com/Contender.ttf') format('truetype');
   }
 
   @font-face {
@@ -174,8 +174,17 @@ export const GlobalStyle = createGlobalStyle`
   ol {
     color: ${props => props.theme.color.black};
     font-family: ${props => props.theme.font.body};
-    font-size: ${props => props.theme.fontSize.medium};
+    font-size: ${props => props.theme.fontSize.large};
     margin: 6px 0;
+  }
+
+  p,
+  span,
+  input,
+  textarea,
+  label {
+
+    line-height: calc(${props => props.theme.fontSize.large} * 1.7);
   }
 
   a {

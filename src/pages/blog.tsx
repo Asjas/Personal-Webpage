@@ -12,7 +12,7 @@ export const Section = styled.section`
   display: grid;
   grid-template-columns:
     minmax(1.2rem, 1fr)
-    minmax(auto, 700px)
+    minmax(auto, 800px)
     minmax(1.2rem, 1fr);
   justify-items: center;
   gap: 40px 0;
