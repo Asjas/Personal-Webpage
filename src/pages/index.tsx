@@ -131,9 +131,9 @@ const IndexPage: React.FunctionComponent<Props> = memo(
               the moment. Don't worry, I know HTML and CSS too.
             </Content>
             <Content>
-              I started the journey on learning Web Development about 3 years ago. I have a
-              background in IT managing Linux Servers, Firewalls and Networking, and I have always
-              had a passion for solving complex issues.
+              I started the journey on learning Web Development in early 2017. I have a background
+              in IT managing Linux Servers, Firewalls and Networking, and I have always had a
+              passion for solving complex issues.
             </Content>
           </Section>
           <Section>
