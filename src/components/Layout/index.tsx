@@ -1,6 +1,4 @@
 import React, { ReactNode } from 'react';
-import * as firebase from 'firebase/app';
-import 'firebase/performance';
 
 import ErrorBoundary from '../ErrorBoundary';
 import Navbar from '../Navbar';
@@ -23,8 +21,13 @@ const firebaseConfig = {
   appId: '1:436200487184:web:a7cc904f69b93dd6',
 };
 
-firebase.initializeApp(firebaseConfig);
-const perf = firebase.performance();
+if (typeof window !== 'undefined') {
+  const firebase = require('firebase/app');
+  require('firebase/performance');
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.performance();
+}
 
 interface Props {
   children: ReactNode;
