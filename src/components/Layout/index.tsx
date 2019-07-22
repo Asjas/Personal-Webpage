@@ -30,7 +30,7 @@ if (typeof window !== 'undefined') {
 }
 
 interface Props {
-  children: ReactNode;
+  children: JSX.ElementChildrenAttribute;
 }
 
 const Layout: React.FunctionComponent<Props> = ({ children }): React.ReactElement => (
