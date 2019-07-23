@@ -10,33 +10,35 @@ export const Section = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
 `;
 
 export const Image = styled(Img)`
   width: 100%;
-  max-width: 480px;
+  max-width: 420px;
   height: auto;
 `;
 
 export const Heading = styled.h1`
-  margin: 40px 0 20px 0;
+  margin-top: 50px;
+  text-align: center;
 `;
 
 export const Paragraph = styled.p`
   font-size: ${props => props.theme.fontSize.large};
+  font-size: ${props => props.theme.fontSize.xLarge};
+  margin-top: 40px;
+  text-align: center;
   width: 90%;
 `;
 
 export const AnchorLink = styled(Link)`
-  margin-top: 15px;
-  padding: 3px;
-  font-size: ${props => props.theme.fontSize.large};
-  text-decoration: none;
+  font-size: ${props => props.theme.fontSize.xLarge};
+  margin-top: 55px;
+  color: ${props => props.theme.color.primary};
+  text-decoration: underline;
 
   &:hover {
-    color: ${props => props.theme.color.primary};
-    text-decoration: underline;
+    color: ${props => props.theme.color.outline};
   }
 `;
 
@@ -82,7 +84,7 @@ const FourOhFour: React.FunctionComponent<Props> = memo(
       <SEO {...seo} />
       <Layout>
         <Section>
-          <Image fluid={data.file.childImageSharp.fluid} alt="" />
+          <Image fluid={data.file.childImageSharp.fluid} alt="ghost" />
           <Heading data-testid="404-heading">This page is a Ghost</Heading>
           <Paragraph>
             Once alive and now dead, this ghost appears to have some unfinished business. Could it
