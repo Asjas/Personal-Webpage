@@ -23,15 +23,15 @@ const ContactForm = (): React.ReactElement => (
       <Styled.Fieldset data-testid="form-disabled">
         <Styled.Label htmlFor="name">
           <span>Enter your name:</span>
-          <Styled.Input id="name" type="text" name="name" placeholder="full name" />
+          <Styled.Input id="name" type="text" inputMode="text" name="name" autoCapitalize="off" autoComplete="name" placeholder="full name" required />
         </Styled.Label>
         <Styled.Label htmlFor="email">
           <span>Enter your email:</span>
-          <Styled.Input id="email" type="email" name="email" placeholder="example@gmail.com" />
+          <Styled.Input id="email" type="email" inputMode="email" name="email" autoCapitalize="off" autoComplete="email" placeholder="example@gmail.com" required />
         </Styled.Label>
         <Styled.Label htmlFor="message">
           <span>Enter a message:</span>
-          <Styled.Textarea id="message" name="message" placeholder="type your message here" />
+          <Styled.Textarea id="message" inputMode="text" name="message" placeholder="type your message here" />
         </Styled.Label>
         {typeof window !== 'undefined' &&
           window.grecaptcha &&
