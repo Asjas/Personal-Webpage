@@ -99,19 +99,6 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'A-J Roos | Personal Website',
-        short_name: 'A-J Roos',
-        start_url: '/',
-        background_color: '#ffffff',
-        theme_color: 'hsl(341, 79%, 45%)',
-        display: 'standalone',
-        icon: 'static/assets/logo_transparent.png',
-        include_favicon: true,
-      },
-    },
     'gatsby-plugin-remove-serviceworker',
   ],
 };
