@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Img from 'gatsby-image';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql, Link } from 'gatsby';
 import { format, formatDistance } from 'date-fns';
 
@@ -31,9 +31,7 @@ export const GET_POST = graphql`
         }
         tags
       }
-      code {
-        body
-      }
+      body
     }
   }
 `;
@@ -112,7 +110,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
               </time>
             </span>
           </header>
-          <MDXRenderer>{post.code.body}</MDXRenderer>
+          <MDXRenderer>{post.body}</MDXRenderer>
           <footer className="post__footer">
             {pageContext.previous && (
               <Link to={`/blog/${pageContext.previous}`} className="post__link previous">

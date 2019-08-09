@@ -46,7 +46,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-netlify-cms',
     {
-      resolve: 'gatsby-mdx',
+      resolve: 'gatsby-plugin-mdx',
       options: {
         gatsbyRemarkPlugins: [
           'gatsby-remark-relative-images',
