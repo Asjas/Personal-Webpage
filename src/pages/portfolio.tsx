@@ -1,5 +1,6 @@
-import * as React from 'react';
-import { graphql } from 'gatsby';
+import React, { useState, useEffect } from 'react';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout/index';
@@ -44,85 +45,15 @@ export const Div = styled.div`
   }
 `;
 
-export const GET_PRISMIC_PROJECTS = graphql`
-  query GET_PRISMIC_PROJECTS {
-    allPrismicProjects {
-      edges {
-        node {
-          id
-          data {
-            title {
-              text
-            }
-            description {
-              text
-            }
-            image {
-              alt
-              localFile {
-                childImageSharp {
-                  fluid(maxWidth: 600, quality: 98) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
-            github_url {
-              url
-            }
-            website_url {
-              url
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-interface Props {
-  data: {
-    allPrismicProjects: {
-      edges: Node[];
-    };
-  };
-}
-
-interface Node {
-  node: {
-    id: string;
-    data: {
-      title: {
-        text: string;
-      };
-      description: {
-        text: string;
-      };
-      image: {
-        localFile: {
-          childImageSharp: {
-            fluid: {
-              aspectRatio: number;
-              base64: string;
-              sizes: string;
-              src: string;
-              srcSet: string;
-              srcSetWebp: string;
-              srcWebp: string;
-            };
-          };
-        };
-        alt: string;
-      };
-      github_url: {
-        url: string;
-      };
-      website_url: {
-        url: string;
-      };
-    };
-  };
-}
+const firebaseConfig = {
+  apiKey: 'AIzaSyARArNM5Ps9wG-zSOS8Fe-tIzmNIu2lGBw',
+  authDomain: 'personal-website-1213.firebaseapp.com',
+  databaseURL: 'https://personal-website-1213.firebaseio.com',
+  projectId: 'personal-website-1213',
+  storageBucket: 'personal-website-1213.appspot.com',
+  messagingSenderId: '436200487184',
+  appId: '1:436200487184:web:a7cc904f69b93dd6',
+};
 
 const seo = {
   title: 'A-J Roos | Portfolio',
@@ -131,20 +62,53 @@ const seo = {
   siteUrl: 'https://asjas.co.za/portfolio',
 };
 
-const PortfolioPage: React.FunctionComponent<Props> = ({ data }): React.ReactElement => (
-  <>
-    <SEO {...seo} />
-    <Layout>
-      <Section>
-        <Heading>This is a collection of projects that I have worked on.</Heading>
-        <Div className="projects">
-          {data.allPrismicProjects.edges.map(({ node }) => (
-            <Project key={node.id} data={node.data} />
-          ))}
-        </Div>
-      </Section>
-    </Layout>
-  </>
-);
+interface IProject {
+  id: string;
+  title: string;
+  description: string;
+  image_url: string;
+  website_url: string;
+  github_url: string;
+}
+
+const PortfolioPage: React.FunctionComponent = (): React.ReactElement => {
+  const [projects, setProjects] = useState<IProject[]>([]);
+
+  useEffect(() => {
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+
+    var db = firebase.firestore();
+
+    db.collection('projects')
+      .get()
+      .then(querySnapshot => {
+        const projects: any[] = [];
+        querySnapshot.forEach(function(doc) {
+          projects.push(doc.data());
+        });
+        setProjects(projects);
+      })
+      .catch(function(error) {
+        console.error('Error getting documents: ', error);
+      });
+  }, []);
+
+  return (
+    <>
+      <SEO {...seo} />
+      <Layout>
+        <Section>
+          <Heading>This is a collection of projects that I have worked on.</Heading>
+          <Div className="projects">
+            {console.log(projects)}
+            {projects && projects.map(project => <Project key={project.id} project={project} />)}
+          </Div>
+        </Section>
+      </Layout>
+    </>
+  );
+};
 
 export default PortfolioPage;

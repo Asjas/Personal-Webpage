@@ -83,13 +83,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-prismic',
-      options: {
-        repositoryName: 'portfolio-site',
-        accessToken: process.env.PRISMIC_API_KEY,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-112825816-1',

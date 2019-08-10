@@ -2,71 +2,45 @@ import React, { memo } from 'react';
 
 import * as Styled from './style';
 
-interface Props {
-  data: {
-    title: {
-      text: string;
-    };
-    description: {
-      text: string;
-    };
-    image: {
-      localFile: {
-        childImageSharp: {
-          fluid: {
-            aspectRatio: number;
-            base64: string;
-            sizes: string;
-            src: string;
-            srcSet: string;
-            srcSetWebp: string;
-            srcWebp: string;
-          };
-        };
-      };
-      alt: string;
-    };
-    github_url: {
-      url: string;
-    };
-    website_url: {
-      url: string;
-    };
+interface IProject {
+  project: {
+    id: string;
+    title: string;
+    description: string;
+    image_url: string;
+    website_url: string;
+    github_url: string;
   };
 }
 
-const Project: React.FunctionComponent<Props> = memo(
-  ({ data }): React.ReactElement => (
-    <Styled.Card>
-      <Styled.Image
-        title={data.title.text}
-        alt={data.image.alt}
-        fluid={data.image.localFile.childImageSharp.fluid}
-      />
-      <Styled.Heading>{data.title.text}</Styled.Heading>
-      <Styled.Paragraph>{data.description.text}</Styled.Paragraph>
-      <Styled.Button
-        className="github"
-        href={data.github_url.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        tabIndex={0}
-        role="button"
-      >
-        <span className="button__content">Github</span>
-      </Styled.Button>
-      <Styled.Button
-        className="website"
-        href={data.website_url.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        tabIndex={0}
-        role="button"
-      >
-        <span className="button__content">Website</span>
-      </Styled.Button>
-    </Styled.Card>
-  ),
+const Project: React.FunctionComponent<IProject> = ({ project }): React.ReactElement => (
+  <Styled.Card>
+    <Styled.ImageContainer>
+      <Styled.Image src={project.image_url} alt="" />
+    </Styled.ImageContainer>
+    <Styled.Heading>{project.title}</Styled.Heading>
+    <Styled.Paragraph>{project.description}</Styled.Paragraph>
+    <Styled.Button
+      className="github"
+      href={project.github_url}
+      target="_blank"
+      rel="noopener noreferrer"
+      tabIndex={0}
+      role="button"
+    >
+      <span className="button__content">Github</span>
+    </Styled.Button>
+    <Styled.Button
+      className="website"
+      href={project.website_url}
+      target="_blank"
+      rel="noopener noreferrer"
+      tabIndex={0}
+      role="button"
+    >
+      <span className="button__content">Website</span>
+    </Styled.Button>
+  </Styled.Card>
 );
 
 Project.displayName = 'Project';

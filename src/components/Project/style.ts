@@ -1,18 +1,28 @@
 import styled from '../../utils/themed-styled-components';
-import Img from 'gatsby-image';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 export const Card = styled.article`
   border-radius: 2px;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   box-shadow: ${props => props.theme.color.card};
 `;
 
-export const Image = styled(Img)`
-  border-radius: 2px 2px 0 0;
-  height: auto;
+export const ImageContainer = styled.div`
+  position: relative;
+  height: 0;
+  background-color: black;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+`;
+
+export const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  border-radius: 2px 2px 0 0;
 `;
 
 export const Heading = styled.h2`
