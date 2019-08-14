@@ -85,27 +85,27 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/Contender.woff2?alt=media&token=42cca705-eca7-4678-9c81-bb9915a6a8af') format('woff2'),
-      url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/Contender.woff?alt=media&token=b3f445af-d7b8-4b88-b531-6e226a4a9a81') format('woff'),
-      url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/Contender.ttf?alt=media&token=a0beaa23-7bb4-45c4-888a-d9dc53f0949f') format('truetype');
+    src: url('assets/fonts/Contender.woff2') format('woff2'),
+      url('assets/fonts/Contender.woff') format('woff'),
+      url('assets/fonts/Contender.ttf') format('truetype');
   }
 
   @font-face {
     font-family: ${props => props.theme.font.code};
     font-style: normal;
     font-display: swap;
-    src: url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/VictorMono-Light.woff2?alt=media&token=d6d46cde-886a-4fcf-8367-758c6534125d') format('woff2'),
-      url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/VictorMono-Light.woff?alt=media&token=284b76b1-48cc-4266-bb87-f2a6e690ca7d') format('woff'),
-      url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/VictorMono-Light.ttf?alt=media&token=be5c5b34-4609-4def-8c03-9c437f5441e1') format('truetype');
+    src: url('assets/fonts/VictorMono-Light.woff2') format('woff2'),
+      url('assets/fonts/VictorMono-Light.woff') format('woff'),
+      url('assets/fonts/VictorMono-Light.ttf') format('truetype');
   }
 
   @font-face {
     font-family: ${props => props.theme.font.code};
     font-style: italic;
     font-display: swap;
-    src: url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/VictorMono-Light.woff2?alt=media&token=d6d46cde-886a-4fcf-8367-758c6534125d') format('woff2'),
-      url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/VictorMono-Light.woff?alt=media&token=284b76b1-48cc-4266-bb87-f2a6e690ca7d') format('woff'),
-      url('https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/VictorMono-ItalicLight.woff2?alt=media&token=f009a832-b216-4336-b259-0260fb261a2e') format('truetype');
+    src: url('assets/fonts/VictorMono-Light.woff2') format('woff2'),
+      url('assets/fonts/VictorMono-Light.woff') format('woff'),
+      url('assets/fonts/VictorMono-ItalicLight.woff2') format('truetype');
   }
 
   h1,
