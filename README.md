@@ -16,13 +16,13 @@ This project uses the following tech stack:
 - Front-End
 
   - Gatsby.js
-  - SCSS
+  - Styled Components
   - React-Spring (Animation)
   - React Testing Library
 
 - Backend
   - Netlify CMS (Blogging)
-  - Prismic (Projects)
+  - Firebase Firestore (Projects)
 
 ### 🏠 [Homepage](https://asjas.co.za)
 
