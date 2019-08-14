@@ -57,7 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
-.firebase
+# Gatsby Folders
 .cache/
 public/
 
