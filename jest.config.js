@@ -11,18 +11,20 @@ module.exports = {
   ],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   transform: {
-    '.(js)': '<rootDir>/jest-preprocess.js',
+    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.jsx?$': '<rootDir>/jest-preprocess.js',
   },
   globals: {
     __PATH_PREFIX__: '',
   },
   setupFiles: ['<rootDir>/loadershim.js'],
   moduleNameMapper: {
-    '.+\\.(css|scss)$': 'identity-obj-proxy',
-    '.+\\.(jpg|jpeg|png|otf|webp|svg|ttf|woff|woff2|mp3)$': '<rootDir>/__mocks__/fileMock.js',
+    '.+\\.(css)$': 'identity-obj-proxy',
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/__mocks__/fileMock.js',
   },
-  testRegex: '\\.test\\.js',
-  moduleFileExtensions: ['js', 'json'],
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$',
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   collectCoverageFrom: [
     '!.eslintrc.js',
     '!jest.config.js',
