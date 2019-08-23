@@ -6,8 +6,7 @@ module.exports = {
     description:
       'Hey, my name is A-J Roos. I am a Front-End Web Developer based in Bloemfontein, South Africa. I am a self-taught Web Developer that loves to work on anything JavaScript related such as working with React.js and Node.js.',
     googleSiteVerification: '5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0',
-    image:
-      'https://firebasestorage.googleapis.com/v0/b/personal-website-1213.appspot.com/o/messy-desk.jpg?alt=media&token=7495b385-3c0e-4287-8a0f-27babbe00d82',
+    image: 'https://asjas.co.za/assets/logo_transparent.png',
     twitterUsername: '_asjas',
     author: {
       name: 'A-J Roos',
