@@ -1,7 +1,5 @@
-node_modules/
-build/*
-.next/*
-public/js/*
-coverage/
-static/
+node_modules
+public
 .cache
+cypress
+static
