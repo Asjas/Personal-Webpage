@@ -35,12 +35,15 @@ module.exports = {
       options: {
         headers: {
           '/*.html': ['Cache-Control: public, max-age=0, must-revalidate;'],
-          '/*.js|*.css': ['Cache-Control: "public, max-age=31536000, immutable;'],
+          '/sw.js': ['Cache-Control: public, max-age=0, must-revalidate;'],
+          '/*.js|*.css': ['Cache-Control: "public, max-age=604800, immutable;'],
           '/*.jpg|*.jpeg|*.pjpeg|*.webp|*.svg|*.png|*.ttf|*.woff|*.woff2': [
-            'Cache-Control: "public, max-age=31536000, must-revalidate;',
+            'Cache-Control: "public, max-age=604800, must-revalidate;',
           ],
-          '/static/': ['Cache-Control: "public, max-age=31536000, immutable;'],
-          'sw.js': ['Cache-Control: "public, max-age=0, must-revalidate;'],
+          '/*.yml|*.json|*.xml|*.ico|*.webmanifest': [
+            'Cache-Control: "public, max-age=604800, must-revalidate;',
+          ],
+          '/static/': ['Cache-Control: "public, max-age=604800, immutable;'],
         },
         allPageHeaders: [
           'Expect-CT: max-age=604800, report-uri https://asjas.report-uri.com/r/d/ct/enforce; report-to default',
