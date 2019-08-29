@@ -5,7 +5,11 @@ const path = require('path');
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
 
-  createRedirect({ fromPath: '', toPath: '', isPermanent: true });
+  createRedirect({
+    fromPath: '/blog/being-selected-for-andela-google-scholarship-phase-1',
+    toPath: '/blog/google-africa-scholarship-phase-1',
+    isPermanent: true,
+  });
 
   const blogPostTemplate = path.resolve('src/templates/BlogPostTemplate/index.tsx');
   // const tagsTemplate = path.resolve('src/templates/TagsTemplate/index.tsx');
