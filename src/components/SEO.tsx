@@ -94,8 +94,7 @@ const SEO: React.FunctionComponent<Props> = ({
           '@type': 'Organization',
           name: seo.author,
           email: 'asjas@outlook.com',
-          jobTitle: 'JavaScript Web Developer',
-          image: {
+          logo: {
             '@type': 'ImageObject',
             url: seo.authorImage,
           },
