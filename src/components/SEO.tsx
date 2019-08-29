@@ -91,7 +91,7 @@ const SEO: React.FunctionComponent<Props> = ({
           '@id': seo.siteUrl,
         },
         publisher: {
-          '@type': 'Person',
+          '@type': 'Organization',
           name: seo.author,
           email: 'asjas@outlook.com',
           jobTitle: 'JavaScript Web Developer',
