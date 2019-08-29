@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
-import { graphql } from 'gatsby';
+import React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Tags from '../components/Tags';
+// import Tags from '../components/Tags';
 import BlogEntryCard from '../components/BlogEntryCard';
 import ErrorBoundary from '../components/ErrorBoundary';
 import styled from '../utils/themed-styled-components';
@@ -29,25 +29,17 @@ export const Heading = styled.h1`
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allSanityPost(filter: { slug: { current: { ne: null } } }) {
       edges {
         node {
-          id
-          fields {
-            slug
+          title
+          updatedAt
+          publishedAt
+          slug {
+            current
           }
-          frontmatter {
+          categories {
             title
-            date
-            updated_at
-            featured_image {
-              childImageSharp {
-                fluid(maxWidth: 600, quality: 98) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-            tags
           }
         }
       }
@@ -55,38 +47,19 @@ export const GET_ALL_POSTS = graphql`
   }
 `;
 
-interface Props {
-  data: {
-    allMdx: {
-      edges: Node[];
-    };
+interface IAllSanityProject {
+  allSanityPost: {
+    edges: Array<IPost>;
   };
 }
 
-interface Node {
+interface IPost {
   node: {
     id: string;
-    fields: {
-      slug: string;
-    };
-    frontmatter: {
-      title: string;
-      date: string;
-      updated_at: string;
-      tags: string[];
-      featured_image: {
-        childImageSharp: {
-          fluid: {
-            aspectRatio: number;
-            base64: string;
-            sizes: string;
-            src: string;
-            srcSet: string;
-            srcSetWebp: string;
-            srcWebp: string;
-          };
-        };
-      };
+    title: string;
+    description: string;
+    slug: {
+      current: string;
     };
   };
 }
@@ -98,27 +71,27 @@ const seo = {
   blogUrl: 'https://asjas.co.za/blog',
 };
 
-const BlogPage: React.FunctionComponent<Props> = memo(
-  ({ data }): React.ReactElement => (
+const BlogPage: React.FunctionComponent = (): React.ReactElement => {
+  const { allSanityPost: posts } = useStaticQuery(GET_ALL_POSTS);
+
+  return (
     <>
       <SEO {...seo} />
       <Layout>
         <Section>
           <header>
             <Heading>My collection of blog posts.</Heading>
-            <Tags />
+            {/* <Tags /> */}
           </header>
-          <ErrorBoundary>
-            {data.allMdx.edges.map(({ node }) => (
-              <BlogEntryCard key={node.id} node={node} />
-            ))}
-          </ErrorBoundary>
+          {posts.edges.map(({ node: post }) => (
+            <Link to={`/blog/${post.slug.current}`} key={post.id}>
+              <h2>{post.title}</h2>
+            </Link>
+          ))}
         </Section>
       </Layout>
     </>
-  ),
-);
-
-BlogPage.displayName = 'BlogPage';
+  );
+};
 
 export default BlogPage;

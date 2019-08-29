@@ -1,0 +1,35 @@
+{
+  "name": "personalwebsite",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "A-J Roos <asjas@outlook.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "test": "sanity check"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^0.142.1",
+    "@sanity/block-content-to-react": "^2.0.6",
+    "@sanity/components": "^0.142.1",
+    "@sanity/core": "^0.142.1",
+    "@sanity/default-layout": "^0.142.1",
+    "@sanity/default-login": "^0.142.1",
+    "@sanity/desk-tool": "^0.142.1",
+    "get-youtube-id": "^1.0.1",
+    "prop-types": "^15.6",
+    "react": "^16.2",
+    "react-dom": "^16.2",
+    "react-youtube": "^7.9.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Asjas/Personal-Webpage.git"
+  }
+}

@@ -12,9 +12,6 @@ const GET_SEO_METADATA = graphql`
         defaultUrl: siteUrl
         googleSiteVerification
         twitterUsername
-        author {
-          name
-        }
       }
     }
   }
@@ -23,6 +20,8 @@ const GET_SEO_METADATA = graphql`
 interface Props {
   title?: string;
   description?: string;
+  author?: string;
+  authorImage?: string;
   siteUrl?: string;
   blogUrl?: string;
   image?: string;
@@ -34,6 +33,8 @@ interface Props {
 const SEO: React.FunctionComponent<Props> = ({
   title,
   description,
+  author,
+  authorImage,
   siteUrl,
   image,
   blogUrl,
@@ -46,11 +47,12 @@ const SEO: React.FunctionComponent<Props> = ({
   const seo = {
     title: title || data.site.siteMetadata.defaultTitle,
     description: description || data.site.siteMetadata.defaultDescription,
+    author: author || '',
+    authorImage: authorImage || '',
     siteUrl: blogUrl || siteUrl || data.site.siteMetadata.defaultUrl,
     image: image || data.site.siteMetadata.defaultImage,
     googleSiteVerification: data && data.site.siteMetadata.googleSiteVerification,
     twitterUsername: data && data.site.siteMetadata.twitterUsername,
-    author: data && data.site.siteMetadata.author,
   };
 
   const baseSchema = [
@@ -76,11 +78,27 @@ const SEO: React.FunctionComponent<Props> = ({
         description: seo.description,
         author: {
           '@type': 'Person',
-          name: seo.author.name,
+          name: seo.author,
+          email: 'asjas@outlook.com',
+          jobTitle: 'JavaScript Web Developer',
+          image: {
+            '@type': 'ImageObject',
+            url: seo.authorImage,
+          },
         },
         mainEntityOfPage: {
           '@type': 'WebSite',
           '@id': seo.siteUrl,
+        },
+        publisher: {
+          '@type': 'Person',
+          name: seo.author,
+          email: 'asjas@outlook.com',
+          jobTitle: 'JavaScript Web Developer',
+          image: {
+            '@type': 'ImageObject',
+            url: seo.authorImage,
+          },
         },
         datePublished,
         dateModified,

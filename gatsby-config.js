@@ -7,9 +7,6 @@ module.exports = {
     googleSiteVerification: `5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0`,
     image: `https://asjas.co.za/assets/logo_transparent.png`,
     twitterUsername: `_asjas`,
-    author: {
-      name: `A-J Roos`,
-    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -76,47 +73,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-sanity`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        gatsbyRemarkPlugins: [
-          `gatsby-remark-relative-images`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              quality: 95,
-              withWebp: true,
-              backgroundColor: `transparent`,
-            },
-          },
-          // { resolve: `gatsby-remark-social-cards` },
-          {
-            resolve: `gatsby-remark-embed-video`,
-            options: {
-              width: 600,
-              ratio: 1.77,
-              related: false,
-              noIframeBorder: true,
-            },
-          },
-          `gatsby-remark-responsive-iframe`,
-          { resolve: `gatsby-remark-code-titles` },
-          { resolve: `gatsby-remark-prismjs` },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              destinationDir: `${__dirname}/static`,
-            },
-          },
-        ],
+        projectId: `st3lzyf2`,
+        dataset: `development`,
+        token: process.env.MY_SANITY_TOKEN,
       },
     },
     {

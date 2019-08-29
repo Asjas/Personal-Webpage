@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout/index';
@@ -31,7 +30,7 @@ export const Heading = styled.h1`
   }
 `;
 
-export const Div = styled.div`
+export const Container = styled.div`
   display: grid;
   grid-template-columns:
     minmax(1.2rem, 1fr)
@@ -45,55 +44,49 @@ export const Div = styled.div`
   }
 `;
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyARArNM5Ps9wG-zSOS8Fe-tIzmNIu2lGBw',
-  authDomain: 'personal-website-1213.firebaseapp.com',
-  databaseURL: 'https://personal-website-1213.firebaseio.com',
-  projectId: 'personal-website-1213',
-  storageBucket: 'personal-website-1213.appspot.com',
-  messagingSenderId: '436200487184',
-  appId: '1:436200487184:web:a7cc904f69b93dd6',
-};
+export const GET_ALL_PROJECTS = graphql`
+  query GET_ALL_PROJECTS {
+    allSanityProject {
+      edges {
+        node {
+          id
+          title
+          description
+          slug {
+            current
+          }
+        }
+      }
+    }
+  }
+`;
 
 const seo = {
-  title: 'A-J Roos | Portfolio',
+  title: 'Portfolio | A-J Roos',
   description:
     'This is a collection of some of my Web Development projects. A complete collection of my projects can be found on my Github page at https://github.com/asjas.',
   siteUrl: 'https://asjas.co.za/portfolio',
 };
 
+interface IAllSanityProject {
+  allSanityProject: {
+    edges: Array<IProject>;
+  };
+}
+
 interface IProject {
-  id: string;
-  title: string;
-  description: string;
-  image_url: string;
-  website_url: string;
-  github_url: string;
+  node: {
+    id: string;
+    title: string;
+    description: string;
+    slug: {
+      current: string;
+    };
+  };
 }
 
 const PortfolioPage: React.FunctionComponent = (): React.ReactElement => {
-  const [projects, setProjects] = useState<IProject[]>([]);
-
-  useEffect(() => {
-    if (!firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig);
-    }
-
-    var db = firebase.firestore();
-
-    db.collection('projects')
-      .get()
-      .then(querySnapshot => {
-        const projects: any[] = [];
-        querySnapshot.forEach(function(doc) {
-          projects.push(doc.data());
-        });
-        setProjects(projects);
-      })
-      .catch(function(error) {
-        console.error('Error getting documents: ', error);
-      });
-  }, []);
+  const { allSanityProject: projects } = useStaticQuery(GET_ALL_PROJECTS) as IAllSanityProject;
 
   return (
     <>
@@ -101,10 +94,20 @@ const PortfolioPage: React.FunctionComponent = (): React.ReactElement => {
       <Layout>
         <Section>
           <Heading>This is a collection of projects that I have worked on.</Heading>
-          <Div className="projects">
-            {console.log(projects)}
-            {projects && projects.map(project => <Project key={project.id} project={project} />)}
-          </Div>
+          <p>
+            A complete collection of all my projects can be found on my{' '}
+            <a href="https://github.com/asjas" rel="noopener noreferrer" target="_blank">
+              Github page
+            </a>
+            .
+          </p>
+          <Container className="projects">
+            {projects.edges.map(({ node: project }) => (
+              <Link to={`/project/${project.slug.current}`} key={project.id}>
+                <Project project={project} />
+              </Link>
+            ))}
+          </Container>
         </Section>
       </Layout>
     </>
