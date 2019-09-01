@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
-import { Link, graphql } from 'gatsby';
+import * as React from 'react';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
@@ -42,19 +42,17 @@ export const AnchorLink = styled(Link)`
   }
 `;
 
-interface Props {
-  data: {
-    file: {
-      childImageSharp: {
-        fluid: {
-          aspectRatio: number;
-          base64: string;
-          sizes: string;
-          src: string;
-          srcSet: string;
-          srcSetWebp: string;
-          srcWebp: string;
-        };
+interface I404Image {
+  fourohfour: {
+    childImageSharp: {
+      fluid: {
+        aspectRatio: number;
+        base64: string;
+        sizes: string;
+        src: string;
+        srcSet: string;
+        srcSetWebp: string;
+        srcWebp: string;
       };
     };
   };
@@ -62,7 +60,7 @@ interface Props {
 
 export const FOUR_OH_FOUR_IMAGE = graphql`
   query FOUR_OH_FOUR_IMAGE {
-    file(relativePath: { regex: "/ghost.png/" }) {
+    fourohfour: file(relativePath: { regex: "/ghost/" }) {
       childImageSharp {
         fluid(maxWidth: 700, quality: 95) {
           ...GatsbyImageSharpFluid_withWebp
@@ -73,18 +71,20 @@ export const FOUR_OH_FOUR_IMAGE = graphql`
 `;
 
 const seo = {
-  title: 'A-J Roos | 404 - Page not found',
+  title: 'Page not found | A-J Roos',
   description:
     "Oops! Something went wrong. Either the page you tried to access doesn't exist or something mysterious happened.",
 };
 
-const FourOhFour: React.FunctionComponent<Props> = memo(
-  ({ data }): React.ReactElement => (
+const FourOhFour = () => {
+  const { fourohfour } = useStaticQuery(FOUR_OH_FOUR_IMAGE) as I404Image;
+
+  return (
     <>
       <SEO {...seo} />
       <Layout>
         <Section>
-          <Image fluid={data.file.childImageSharp.fluid} alt="ghost" />
+          <Image fluid={fourohfour.childImageSharp.fluid} alt="ghost" />
           <Heading data-testid="404-heading">This page is a Ghost</Heading>
           <Paragraph>
             Once alive and now dead, this ghost appears to have some unfinished business. Could it
@@ -98,9 +98,7 @@ const FourOhFour: React.FunctionComponent<Props> = memo(
         </Section>
       </Layout>
     </>
-  ),
-);
-
-FourOhFour.displayName = 'FourOhFour';
+  );
+};
 
 export default FourOhFour;

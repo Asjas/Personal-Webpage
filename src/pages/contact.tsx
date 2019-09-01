@@ -42,7 +42,7 @@ export const Paragraph = styled.p`
   width: 100%;
 
   a {
-    color: $black;
+    color: ${props => props.theme.color.black};
     text-decoration: underline;
     text-decoration-color: ${props => props.theme.color.primary};
 
@@ -59,13 +59,13 @@ export const Paragraph = styled.p`
 `;
 
 const seo = {
-  title: 'A-J Roos | Contact',
+  title: 'Contact | A-J Roos',
   description:
     'Do you have an interesting project or opportunity to discuss with me? Do you have a Web Development related question that you want to ask me? Feel free to use the contact details or contact form provided to get in touch with me.',
   siteUrl: 'https://asjas.co.za/contact',
 };
 
-const ContactPage = (): React.ReactElement => (
+const ContactPage = () => (
   <>
     <SEO {...seo} />
     <Layout>

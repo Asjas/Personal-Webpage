@@ -41,7 +41,7 @@ const SEO: React.FunctionComponent<Props> = ({
   isBlogPost = false,
   datePublished,
   dateModified,
-}): React.ReactElement => {
+}) => {
   const data = useStaticQuery(GET_SEO_METADATA);
 
   const seo = {
@@ -141,7 +141,11 @@ const SEO: React.FunctionComponent<Props> = ({
 
       {/* Fonts */}
       <link
-        href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat|Playfair+Display&display=swap"
+        href="https://fonts.googleapis.com/css?family=Indie+Flower|Luckiest+Guy|Playfair+Display:400,500&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`'!:;_-=,.?|0123456789&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap"
         rel="stylesheet"
       />
     </Helmet>

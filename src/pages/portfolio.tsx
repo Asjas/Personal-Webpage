@@ -1,9 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 
 import SEO from '../components/SEO';
 import Layout from '../components/Layout/index';
 import Project from '../components/Project';
+import ErrorBoundary from '../components/ErrorBoundary';
+
 import styled from '../utils/themed-styled-components';
 
 export const Section = styled.section`
@@ -23,10 +25,30 @@ export const Section = styled.section`
 export const Heading = styled.h1`
   font-size: ${props => props.theme.fontSize.heading1};
   text-align: center;
-  margin: 0 auto 25px 0;
 
   @media screen and (max-width: ${props => props.theme.mobileQuery.tablet}) {
     width: 90%;
+  }
+`;
+
+export const Paragraph = styled.p`
+  font-size: ${props => props.theme.fontSize.xLarge};
+  text-align: center;
+
+  a {
+    color: ${props => props.theme.color.black};
+    text-decoration: underline;
+    text-decoration-color: ${props => props.theme.color.primary};
+
+    &:hover,
+    &:focus {
+      color: ${props => props.theme.color.primary};
+      outline: 3px solid ${props => props.theme.color.outline};
+    }
+
+    &:visited {
+      color: ${props => props.theme.color.black};
+    }
   }
 `;
 
@@ -37,7 +59,7 @@ export const Container = styled.div`
     minmax(auto, 800px)
     minmax(1.2rem, 1fr);
   justify-items: center;
-  gap: 40px 0;
+  gap: 20px 0;
 
   & > * {
     grid-column: 2;
@@ -94,19 +116,21 @@ const PortfolioPage: React.FunctionComponent = (): React.ReactElement => {
       <Layout>
         <Section>
           <Heading>This is a collection of projects that I have worked on.</Heading>
-          <p>
+          <Paragraph>
             A complete collection of all my projects can be found on my{' '}
             <a href="https://github.com/asjas" rel="noopener noreferrer" target="_blank">
               Github page
             </a>
             .
-          </p>
+          </Paragraph>
           <Container className="projects">
-            {projects.edges.map(({ node: project }) => (
-              <Link to={`/project/${project.slug.current}`} key={project.id}>
-                <Project project={project} />
-              </Link>
-            ))}
+            <ErrorBoundary>
+              {projects.edges.map(({ node: project }) => (
+                <Link to={`/project/${project.slug.current}`} key={project.id}>
+                  <Project project={project} />
+                </Link>
+              ))}
+            </ErrorBoundary>
           </Container>
         </Section>
       </Layout>

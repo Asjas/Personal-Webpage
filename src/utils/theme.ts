@@ -5,16 +5,16 @@ export const myTheme = {
     heading: "'Playfair Display', serif",
     body: "'Montserrat', sans-serif",
     code: 'VictorMono',
-    retro: 'Contender',
+    retro: "'Luckiest Guy', cursive",
     handwriting: "'Indie Flower', cursive",
   },
   fontSize: {
-    heading1: '3.6rem',
-    heading2: '3.2rem',
-    heading3: '2.8rem',
-    heading4: '2.4rem',
-    heading5: '2.1rem',
-    heading6: '2rem',
+    heading1: '3.4rem',
+    heading2: '3rem',
+    heading3: '2.6rem',
+    heading4: '2.3rem',
+    heading5: '2rem',
+    heading6: '1.8rem',
     xLarge: '1.8rem',
     large: '1.7rem',
     medium: '1.6rem',
@@ -81,16 +81,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: ${props => props.theme.font.retro};
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    src: url('assets/fonts/Contender.woff2') format('woff2'),
-      url('assets/fonts/Contender.woff') format('woff'),
-      url('assets/fonts/Contender.ttf') format('truetype');
-  }
-
-  @font-face {
     font-family: ${props => props.theme.font.code};
     font-style: normal;
     font-display: swap;
@@ -103,8 +93,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${props => props.theme.font.code};
     font-style: italic;
     font-display: swap;
-    src: url('assets/fonts/VictorMono-Light.woff2') format('woff2'),
-      url('assets/fonts/VictorMono-Light.woff') format('woff'),
+    src: url('assets/fonts/VictorMono-ItalicLight.woff2') format('woff2'),
+      url('assets/fonts/VictorMono-ItalicLight.woff') format('woff'),
       url('assets/fonts/VictorMono-ItalicLight.woff2') format('truetype');
   }
 
@@ -181,12 +171,12 @@ export const GlobalStyle = createGlobalStyle`
   input,
   textarea,
   label {
-
-    line-height: calc(${props => props.theme.fontSize.large} * 1.7);
+    line-height: calc(${props => props.theme.fontSize.large} * 1.5);
   }
 
   a {
     font-family: ${props => props.theme.font.body};
+    color: ${props => props.theme.color.black};
     text-decoration: none;
   }
 

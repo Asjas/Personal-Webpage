@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -24,22 +24,47 @@ export const Section = styled.section`
 
 export const Heading = styled.h1`
   text-align: center;
-  margin-bottom: 25px;
+`;
+
+export const StyledLink = styled(Link)`
+  width: 100%;
+  max-width: 800px;
 `;
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    allSanityPost(filter: { slug: { current: { ne: null } } }) {
+    allSanityPost(
+      sort: { order: DESC, fields: _createdAt }
+      filter: { slug: { current: { ne: null } } }
+    ) {
       edges {
         node {
+          id
           title
-          updatedAt
           publishedAt
+          updatedAt
           slug {
             current
           }
           categories {
             title
+          }
+          mainImage {
+            asset {
+              fluid {
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
+          author {
+            name
+            image {
+              asset {
+                fluid {
+                  ...GatsbySanityImageFluid
+                }
+              }
+            }
           }
         }
       }
@@ -47,32 +72,69 @@ export const GET_ALL_POSTS = graphql`
   }
 `;
 
-interface IAllSanityProject {
+interface ICategories {
+  id: string;
+  title: string;
+}
+
+export interface IPost {
+  node: {
+    id: string;
+    title: string;
+    description: string;
+    publishedAt: string;
+    updatedAt: string;
+    slug: {
+      current: string;
+    };
+    categories: Array<ICategories>;
+    mainImage: {
+      asset: {
+        fluid: {
+          aspectRatio: number;
+          base64: string;
+          sizes: string;
+          src: string;
+          srcSet: string;
+          srcWebp: string;
+          srcSetWebp: string;
+        };
+      };
+    };
+    author: {
+      name: string;
+      image: {
+        asset: {
+          fluid: {
+            aspectRatio: number;
+            base64: string;
+            sizes: string;
+            src: string;
+            srcSet: string;
+            srcWebp: string;
+            srcSetWebp: string;
+          };
+        };
+      };
+    };
+  };
+}
+
+interface IAllSanityPost {
   allSanityPost: {
     edges: Array<IPost>;
   };
 }
 
-interface IPost {
-  node: {
-    id: string;
-    title: string;
-    description: string;
-    slug: {
-      current: string;
-    };
-  };
-}
-
 const seo = {
-  title: 'A-J Roos | Blog Posts',
+  title: 'Blog Posts | A-J Roos',
   description:
     'This is where I blog about different Web Development topics. I write blog posts about HTML5, CSS3, JavaScript, React.js and Node.js. You can signup for my newsletter as well.',
   blogUrl: 'https://asjas.co.za/blog',
 };
 
-const BlogPage: React.FunctionComponent = (): React.ReactElement => {
-  const { allSanityPost: posts } = useStaticQuery(GET_ALL_POSTS);
+const BlogPage = () => {
+  const { allSanityPost: posts } = useStaticQuery(GET_ALL_POSTS) as IAllSanityPost;
 
   return (
     <>
@@ -83,11 +145,13 @@ const BlogPage: React.FunctionComponent = (): React.ReactElement => {
             <Heading>My collection of blog posts.</Heading>
             {/* <Tags /> */}
           </header>
-          {posts.edges.map(({ node: post }) => (
-            <Link to={`/blog/${post.slug.current}`} key={post.id}>
-              <h2>{post.title}</h2>
-            </Link>
-          ))}
+          <ErrorBoundary>
+            {posts.edges.map(({ node: post }) => (
+              <StyledLink to={`/blog/${post.slug.current}`} key={post.id}>
+                <BlogEntryCard node={post} />
+              </StyledLink>
+            ))}
+          </ErrorBoundary>
         </Section>
       </Layout>
     </>

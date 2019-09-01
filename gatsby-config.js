@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    title: `A-J Roos | Home`,
+    title: `Home | A-J Roos`,
     siteUrl: `https://asjas.co.za`,
     description: `Hey, my name is A-J Roos. I am a Front-End Web Developer based in Bloemfontein, South Africa. I am a self-taught Web Developer that loves to work on anything JavaScript related such as working with React.js and Node.js.`,
     googleSiteVerification: `5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0`,
@@ -11,7 +11,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-twitter`,
     `gatsby-plugin-polyfill-io`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,

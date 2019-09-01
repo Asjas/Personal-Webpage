@@ -1,11 +1,19 @@
-import styled from '../../utils/themed-styled-components';
+import Img from 'gatsby-image';
 import { DiscussionEmbed } from 'disqus-react';
+
+import styled from '../../utils/themed-styled-components';
+
+export const Image = styled(Img)`
+  width: 100%;
+  justify-self: center;
+  margin-bottom: 20px;
+`;
 
 export const Article = styled.article`
   display: grid;
   grid-template-columns:
     minmax(1.2rem, 1fr)
-    minmax(auto, 120ch)
+    minmax(auto, 130ch)
     minmax(1.2rem, 1fr);
 
   & > * {
@@ -27,19 +35,10 @@ export const Article = styled.article`
   }
 
   header {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 
     .post__heading {
       margin-bottom: 30px;
-    }
-
-    .post__image {
-      width: 100%;
-      justify-self: center;
-
-      img {
-        border: 0;
-      }
     }
 
     .post__date {
@@ -48,8 +47,7 @@ export const Article = styled.article`
       border-radius: 25px;
       color: ${props => props.theme.color.white};
       font-size: ${props => props.theme.fontSize.medium};
-      padding: 3px 8px;
-      width: 100%;
+      padding: 2px 6px;
     }
   }
 
@@ -62,20 +60,18 @@ export const Article = styled.article`
 
   p {
     font-size: ${props => props.theme.fontSize.xLarge};
+    line-height: calc(${props => props.theme.fontSize.xLarge} * 1.5);
     margin-top: 10px;
   }
 
   img {
     width: 100%;
-    border: 2px solid ${props => props.theme.color.black};
   }
 
-  .gatsby-resp-image-background-image {
-    padding-bottom: 0 !important;
-  }
-
-  blockquote p {
+  blockquote {
+    font-size: ${props => props.theme.fontSize.large}
     margin: 6px 0 6px 0;
+    padding: 5px 0 5px 20px;
   }
 
   ul,
@@ -85,6 +81,12 @@ export const Article = styled.article`
 
   .twitter-tweet {
     width: 100% !important;
+  }
+
+  .youtube {
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
   }
 
   a {

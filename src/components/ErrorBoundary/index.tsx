@@ -35,8 +35,8 @@ class ErrorBoundary extends React.Component<Props, State> {
     if (hasError) {
       return (
         <Styled.ErrorBoundary>
-          Something went wrong displaying this section of the website. A log of the error has been
-          sent to the website owner.
+          Something went wrong displaying this section of the website. An error notification has
+          been sent to the website owner.
         </Styled.ErrorBoundary>
       );
     }

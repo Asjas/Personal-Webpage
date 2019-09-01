@@ -1,24 +1,28 @@
-import styled from '../../utils/themed-styled-components';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
-import { animated } from 'react-spring';
+import styled from '../../utils/themed-styled-components';
 
-export const Section = styled(animated.section)`
+export const Card = styled.article`
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-template-rows: repeat(4, min-content);
   width: 100%;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 20px;
   justify-items: left;
   gap: 0 20px;
   will-change: transform;
   box-shadow: ${props => props.theme.color.card};
+  transition: all 0.28s ease-in-out;
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(150px, max-content) repeat(4, min-content);
     gap: 4px 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 `;
 
@@ -35,29 +39,12 @@ export const Image = styled(Img)`
   }
 `;
 
-export const BlogLink = styled(Link)`
-  text-decoration: none;
-
-  &:hover {
-    cursor: pointer;
-    color: ${props => props.theme.color.primary};
-    text-decoration: underline;
-  }
-
-  &:focus {
-    outline: 3px solid ${props => props.theme.color.outline};
-  }
+export const Heading = styled.h2`
+  margin-bottom: 10px;
+  font-size: ${props => props.theme.fontSize.heading3};
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
-    grid-row: 2;
-    width: 100%;
     grid-column: 1 / 3;
-  }
-`;
-
-export const Heading = styled.h2`
-  &:focus {
-    outline: 2px solid ${props => props.theme.color.outline};
   }
 `;
 
@@ -67,10 +54,19 @@ export const BlogDate = styled.span`
   color: ${props => props.theme.color.white};
   font-size: ${props => props.theme.fontSize.tags};
   align-self: center;
-  padding: 3px 8px;
+  padding: 0px 6px;
   width: auto;
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
+    grid-column: 1 / 3;
+  }
+`;
+
+export const BlogLink = styled(Link)`
+  text-decoration: none;
+
+  @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
+    grid-row: 2;
     grid-column: 1 / 3;
   }
 `;
@@ -93,7 +89,7 @@ export const BlogTags = styled.span`
     display: inline-block;
     font-family: Goldsmith;
     font-size: ${props => props.theme.fontSize.small};
-    padding: 3px 8px;
+    padding: 2px 6px;
     margin: 8px 8px 8px 0;
     font-style: italic;
   }

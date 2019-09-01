@@ -9,6 +9,7 @@ export const Button = styled.button`
   font-family: ${props => props.theme.font.retro};
   font-size: ${props => props.theme.fontSize.heading4};
   outline: 0;
+  line-height: 40px;
   text-transform: capitalize;
   height: 40px;
   width: 100%;

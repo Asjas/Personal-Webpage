@@ -1,6 +1,6 @@
-import React, { memo } from 'react';
+import * as React from 'react';
 import Img from 'gatsby-image';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -30,7 +30,20 @@ const Section = styled.section`
   }
 `;
 
-const Image = styled(Img)`
+const ProfileImage = styled(Img)`
+  width: 100%;
+  max-width: 220px;
+  height: 100%;
+  border-radius: 50%;
+
+  @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
+    grid-column: 2;
+    justify-self: center;
+    max-width: 250px;
+  }
+`;
+
+const QuoteImage = styled(Img)`
   width: 100%;
   max-width: 220px;
   height: 100%;
@@ -66,32 +79,30 @@ const Quote = styled.p`
   }
 `;
 
-interface Props {
-  data: {
-    quote: {
-      childImageSharp: {
-        fluid: {
-          aspectRatio: number;
-          base64: string;
-          sizes: string;
-          src: string;
-          srcSet: string;
-          srcSetWebp: string;
-          srcWebp: string;
-        };
+interface IHomePageImages {
+  quote: {
+    childImageSharp: {
+      fluid: {
+        aspectRatio: number;
+        base64: string;
+        sizes: string;
+        src: string;
+        srcSet: string;
+        srcSetWebp: string;
+        srcWebp: string;
       };
     };
-    profile: {
-      childImageSharp: {
-        fluid: {
-          aspectRatio: number;
-          base64: string;
-          sizes: string;
-          src: string;
-          srcSet: string;
-          srcSetWebp: string;
-          srcWebp: string;
-        };
+  };
+  profile: {
+    childImageSharp: {
+      fluid: {
+        aspectRatio: number;
+        base64: string;
+        sizes: string;
+        src: string;
+        srcSet: string;
+        srcSetWebp: string;
+        srcWebp: string;
       };
     };
   };
@@ -99,14 +110,14 @@ interface Props {
 
 export const HOME_PAGE_IMAGES = graphql`
   query HOME_PAGE_IMAGES {
-    quote: file(relativePath: { regex: "/messy-desk.jpg/" }) {
+    profile: file(relativePath: { regex: "/asjas/" }) {
       childImageSharp {
         fluid(maxWidth: 250, quality: 95) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    profile: file(relativePath: { regex: "/profile-picture.jpg/" }) {
+    quote: file(relativePath: { regex: "/messy-desk/" }) {
       childImageSharp {
         fluid(maxWidth: 250, quality: 95) {
           ...GatsbyImageSharpFluid_withWebp
@@ -116,14 +127,16 @@ export const HOME_PAGE_IMAGES = graphql`
   }
 `;
 
-const IndexPage: React.FunctionComponent<Props> = memo(
-  ({ data }): React.ReactElement => (
+const IndexPage = () => {
+  const { profile, quote } = useStaticQuery(HOME_PAGE_IMAGES) as IHomePageImages;
+
+  return (
     <>
       <SEO />
       <Layout>
         <Container>
           <Section>
-            <Image fluid={data.profile.childImageSharp.fluid} alt="" />
+            <ProfileImage fluid={profile.childImageSharp.fluid} alt="A-J Roos" />
             <Heading>Hi, I'm A-J and I am a Front-End Web Developer from South Africa.</Heading>
             <Content>
               I am a self-taught Web Developer that loves to work on anything JavaScript related
@@ -137,18 +150,16 @@ const IndexPage: React.FunctionComponent<Props> = memo(
             </Content>
           </Section>
           <Section>
-            <Image fluid={data.quote.childImageSharp.fluid} alt="" />
+            <QuoteImage fluid={quote.childImageSharp.fluid} alt="A messy desk" />
             <Quote>
-              "There are only two hard things in Computer Science: cache invalidation and naming
-              things" - Phil Karlton
+              'There are only two hard things in Computer Science: cache invalidation and naming
+              things' - Phil Karlton
             </Quote>
           </Section>
         </Container>
       </Layout>
     </>
-  ),
-);
-
-IndexPage.displayName = 'IndexPage';
+  );
+};
 
 export default IndexPage;

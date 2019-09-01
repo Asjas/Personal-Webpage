@@ -26,25 +26,50 @@ export default {
         { title: 'H2', value: 'h2' },
         { title: 'H3', value: 'h3' },
         { title: 'H4', value: 'h4' },
+        { title: 'H5', value: 'h5' },
+        { title: 'H6', value: 'h6' },
         { title: 'Quote', value: 'blockquote' },
       ],
-      lists: [{ title: 'Bullet', value: 'bullet' }],
-      // Marks let you mark up inline text in the block editor.
+      lists: [{ title: 'Bullet', value: 'bullet' }, { title: 'Number', value: 'number' }],
       marks: {
-        // Decorators usually describe a single property – e.g. a typographic
-        // preference or highlighting by editors.
-        decorators: [{ title: 'Strong', value: 'strong' }, { title: 'Emphasis', value: 'em' }],
+        decorators: [
+          { title: 'Strong', value: 'strong' },
+          { title: 'Emphasis', value: 'em' },
+          { title: 'Code', value: 'code' },
+        ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'URL',
-            name: 'link',
+            title: 'internalLink',
+            name: 'Internal link',
             type: 'object',
             fields: [
               {
                 title: 'URL',
                 name: 'href',
                 type: 'url',
+                to: [
+                  { type: 'post' },
+                  { type: 'category' },
+                  // other types you may want to link to
+                ],
+              },
+            ],
+          },
+          {
+            name: 'link',
+            type: 'object',
+            title: 'External link',
+            fields: [
+              {
+                name: 'href',
+                title: 'URL',
+                type: 'url',
+              },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                type: 'boolean',
               },
             ],
           },

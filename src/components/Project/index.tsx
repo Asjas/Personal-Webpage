@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import * as Styled from './style';
 
@@ -13,7 +13,7 @@ interface IProject {
   };
 }
 
-const Project: React.FunctionComponent<IProject> = ({ project }): React.ReactElement => (
+const Project: React.FunctionComponent<IProject> = ({ project }) => (
   <Styled.Card>
     <Styled.Heading>{project.title}</Styled.Heading>
     <Styled.Paragraph>{project.description}</Styled.Paragraph>
