@@ -69,7 +69,7 @@ const ProjectTemplate: React.FunctionComponent<IProject> = ({
       <Layout>
         <section>
           <Img fluid={sanityProject.image.asset.fluid} alt={sanityProject.title} />
-          <h2>{sanityProject.title}</h2>
+          <h2 data-testid={sanityProject.title}>{sanityProject.title}</h2>
           <p>{sanityProject.description}</p>
         </section>
       </Layout>

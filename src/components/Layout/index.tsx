@@ -9,7 +9,9 @@ import { GlobalStyle, myTheme } from '../../utils/theme';
 
 import * as Styled from './style';
 
-setupLogRocket();
+if (process.env.NODE_ENV !== 'production') {
+  setupLogRocket();
+}
 
 interface Props {
   children: React.ReactNode;

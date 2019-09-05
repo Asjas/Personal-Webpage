@@ -126,7 +126,11 @@ const PortfolioPage: React.FunctionComponent = (): React.ReactElement => {
           <Container className="projects">
             <ErrorBoundary>
               {projects.edges.map(({ node: project }) => (
-                <Link to={`/project/${project.slug.current}`} key={project.id}>
+                <Link
+                  data-testid={project.slug.current}
+                  to={`/project/${project.slug.current}`}
+                  key={project.id}
+                >
                   <Project project={project} />
                 </Link>
               ))}

@@ -1,11 +1,9 @@
-describe('website', () => {
-  it('works', () => {
+describe('Website', () => {
+  it('loads and works', () => {
     cy.visit('/')
       .findByText(/blog/i)
-      .click()
+      .click({ force: true })
       .findByText(/contact/i)
-      .click()
-      .findByText(/home/i)
-      .click();
+      .click({ force: true });
   });
 });
