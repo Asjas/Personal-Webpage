@@ -96,9 +96,10 @@ export const NavbarLinks = styled.ul`
       color: ${props => props.theme.color.white};
       cursor: pointer;
       font-family: ${props => props.theme.font.retro};
-      font-size: ${props => props.theme.navbarLinkLarge};
+      font-size: ${props => props.theme.fontSize.navbarLinkLarge};
+      line-height: 5rem;
       width: 100%;
-      padding: 6px 0;
+      padding: 3px 0;
 
       &:hover {
         color: ${props => props.theme.color.primary};

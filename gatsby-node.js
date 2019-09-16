@@ -1,6 +1,19 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  fmImagesToRelative(node);
+
+  if (node.internal.type === 'Mdx') {
+    const slug = createFilePath({ node, getNode, basePath: `blog` });
+    createNodeField({ name: 'slug', node, value: slug });
+  }
+};
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
@@ -17,23 +30,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      allSanityPost(filter: { slug: { current: { ne: null } } }) {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
-            slug {
-              current
+            fields {
+              slug
             }
-            categories {
-              title
-            }
-          }
-        }
-      }
-      allSanityProject(filter: { slug: { current: { ne: null } } }) {
-        edges {
-          node {
-            slug {
-              current
+            frontmatter {
+              tags
             }
           }
         }
@@ -47,8 +51,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // const posts = result.data.allMdx.edges.map(({ node }) => node);
   // const tagsSet = new Set();
-  const posts = result.data.allSanityPost.edges.map(({ node }) => node);
-  const projects = result.data.allSanityProject.edges.map(({ node }) => node);
+  const posts = result.data.allMdx.edges.map(({ node }) => node);
+  // const projects = result.data.allSanityProject.edges.map(({ node }) => node);
 
   // posts.forEach(post => {
   //   if (!post.frontmatter.tags) {
@@ -71,21 +75,21 @@ exports.createPages = async ({ graphql, actions }) => {
   // });
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].slug.current;
-    const next = index === 0 ? null : posts[index - 1].slug.current;
+    const previous = index === posts.length - 1 ? null : posts[index + 1].fields.slug;
+    const next = index === 0 ? null : posts[index - 1].fields.slug;
 
     createPage({
-      path: `/blog/${post.slug.current}`,
+      path: `/blog${post.fields.slug}`,
       component: blogPostTemplate,
-      context: { slug: post.slug.current, previous, next },
+      context: { slug: post.fields.slug, previous, next },
     });
   });
 
-  projects.forEach(project => {
-    createPage({
-      path: `/project/${project.slug.current}`,
-      component: projectTemplate,
-      context: { slug: project.slug.current },
-    });
-  });
+  // projects.forEach(project => {
+  //   createPage({
+  //     path: `/project/${project.slug.current}`,
+  //     component: projectTemplate,
+  //     context: { slug: project.slug.current },
+  //   });
+  // });
 };

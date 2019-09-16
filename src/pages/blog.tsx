@@ -33,38 +33,25 @@ export const StyledLink = styled(Link)`
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    allSanityPost(
-      sort: { order: DESC, fields: _createdAt }
-      filter: { slug: { current: { ne: null } } }
-    ) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
-          title
-          publishedAt
-          updatedAt
-          slug {
-            current
+          fields {
+            slug
           }
-          categories {
+          frontmatter {
             title
-          }
-          mainImage {
-            asset {
-              fluid {
-                ...GatsbySanityImageFluid
-              }
-            }
-          }
-          author {
-            name
-            image {
-              asset {
-                fluid {
-                  ...GatsbySanityImageFluid
+            date
+            updated_at
+            featured_image {
+              childImageSharp {
+                fluid(maxWidth: 400, quality: 95) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
+            tags
           }
         }
       }
@@ -72,47 +59,27 @@ export const GET_ALL_POSTS = graphql`
   }
 `;
 
-interface ICategories {
-  id: string;
-  title: string;
-}
-
 export interface IPost {
   node: {
     id: string;
-    title: string;
-    description: string;
-    publishedAt: string;
-    updatedAt: string;
-    slug: {
-      current: string;
+    fields: {
+      slug: string;
     };
-    categories: Array<ICategories>;
-    mainImage: {
-      asset: {
-        fluid: {
-          aspectRatio: number;
-          base64: string;
-          sizes: string;
-          src: string;
-          srcSet: string;
-          srcWebp: string;
-          srcSetWebp: string;
-        };
-      };
-    };
-    author: {
-      name: string;
-      image: {
-        asset: {
+    frontmatter: {
+      title: string;
+      date: string;
+      updated_at: string;
+      tags: string[];
+      featured_image: {
+        childImageSharp: {
           fluid: {
             aspectRatio: number;
             base64: string;
             sizes: string;
             src: string;
             srcSet: string;
-            srcWebp: string;
             srcSetWebp: string;
+            srcWebp: string;
           };
         };
       };
@@ -120,8 +87,8 @@ export interface IPost {
   };
 }
 
-interface IAllSanityPost {
-  allSanityPost: {
+interface IAllMDXPost {
+  allMdx: {
     edges: Array<IPost>;
   };
 }
@@ -134,7 +101,8 @@ const seo = {
 };
 
 const BlogPage = () => {
-  const { allSanityPost: posts } = useStaticQuery(GET_ALL_POSTS) as IAllSanityPost;
+  const { allMdx: posts } = useStaticQuery(GET_ALL_POSTS) as IAllMDXPost;
+  console.log(posts);
 
   return (
     <>
@@ -147,7 +115,7 @@ const BlogPage = () => {
           </header>
           <ErrorBoundary>
             {posts.edges.map(({ node: post }) => (
-              <StyledLink to={`/blog/${post.slug.current}`} key={post.id}>
+              <StyledLink to={`/blog/${post.fields.slug}`} key={post.id}>
                 <BlogEntryCard node={post} />
               </StyledLink>
             ))}

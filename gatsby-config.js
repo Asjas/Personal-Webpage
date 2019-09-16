@@ -36,9 +36,7 @@ module.exports = {
           '/*.jpg|*.jpeg|*.pjpeg|*.webp|*.svg|*.png|*.ttf|*.woff|*.woff2': [
             'Cache-Control: "public, max-age=604800, must-revalidate;',
           ],
-          '/*.yml|*.json|*.xml|*.ico|*.webmanifest': [
-            'Cache-Control: "public, max-age=604800, must-revalidate;',
-          ],
+          '/*.yml|*.json|*.xml|*.ico|*.webmanifest': ['Cache-Control: "public, max-age=604800, must-revalidate;'],
           '/static/': ['Cache-Control: "public, max-age=604800, immutable;'],
         },
         allPageHeaders: [
@@ -72,11 +70,52 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-sanity`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        projectId: `st3lzyf2`,
-        dataset: `development`,
-        token: process.env.MY_SANITY_TOKEN,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/project`,
+        name: `project`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              quality: 95,
+              withWebp: true,
+              backgroundColor: `transparent`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-embed-video`,
+            options: {
+              width: 600,
+              ratio: 1.77,
+              related: false,
+              noIframeBorder: true,
+            },
+          },
+          `gatsby-remark-responsive-iframe`,
+          { resolve: `gatsby-remark-code-titles` },
+          { resolve: `gatsby-remark-prismjs` },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `${__dirname}/static`,
+            },
+          },
+        ],
       },
     },
     {

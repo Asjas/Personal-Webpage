@@ -69,7 +69,7 @@ export const Article = styled.article`
   }
 
   blockquote {
-    font-size: ${props => props.theme.fontSize.large}
+    font-size: ${props => props.theme.fontSize.large};
     margin: 6px 0 6px 0;
     padding: 5px 0 5px 20px;
   }

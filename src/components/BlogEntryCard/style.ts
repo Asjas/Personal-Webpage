@@ -4,7 +4,7 @@ import styled from '../../utils/themed-styled-components';
 
 export const Card = styled.article`
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 280px 1fr;
   grid-template-rows: repeat(4, min-content);
   width: 100%;
   border-radius: 2px;
@@ -28,7 +28,7 @@ export const Card = styled.article`
 
 export const Image = styled(Img)`
   grid-row: 1 / 5;
-  width: 200px;
+  width: 100%;
   height: auto;
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
