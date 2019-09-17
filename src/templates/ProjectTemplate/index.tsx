@@ -1,80 +1,79 @@
-// import React from 'react';
-// import { graphql } from 'gatsby';
-// import Img from 'gatsby-image';
+import React, { useEffect } from 'react';
+import Img from 'gatsby-image';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { graphql, Link } from 'gatsby';
 
-// import SEO from '../../components/SEO';
-// import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
+import Layout from '../../components/Layout';
 
-// // import * as Styled from './style';
+// import * as Styled from './style';
 
-// export const GET_PROJECT_PAGE = graphql`
-//   query GET_PROJECT_PAGE($slug: String) {
-//     sanityProject(slug: { current: { eq: $slug } }) {
-//       title
-//       description
-//       meta
-//       image {
-//         asset {
-//           fluid(maxWidth: 1000) {
-//             ...GatsbySanityImageFluid
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const GET_PROJECT_PAGE = graphql`
+  query GET_PROJECT_PAGE($slug: String) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        slug
+        meta_desc
+        featured_image {
+          childImageSharp {
+            fluid(maxWidth: 600, quality: 98) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
-// interface IProject {
-//   pageContext: {
-//     slug: string;
-//   };
-//   data: {
-//     sanityProject: {
-//       title: string;
-//       description: string;
-//       meta: string;
-//       slug: {
-//         current: string;
-//       };
-//       image: {
-//         asset: {
-//           fluid: {
-//             aspectRatio: number;
-//             base64: string;
-//             sizes: string;
-//             src: string;
-//             srcSet: string;
-//             srcWebp: string;
-//             srcSetWebp: string;
-//           };
-//         };
-//       };
-//     };
-//   };
-// }
+interface IProject {
+  pageContext: {
+    slug: string;
+  };
+  data: {
+    mdx: {
+      frontmatter: {
+        title: string;
+        slug: string;
+        meta_desc: string;
+        featured_image: {
+          childImageSharp: {
+            fluid: {
+              aspectRatio: number;
+              base64: string;
+              sizes: string;
+              src: string;
+              srcSet: string;
+              srcWebp: string;
+              srcSetWebp: string;
+            };
+          };
+        };
+      };
+    };
+  };
+}
 
-// const ProjectTemplate: React.FunctionComponent<IProject> = ({
-//   pageContext,
-//   data: { sanityProject },
-// }) => {
-//   const seo = {
-//     title: `${sanityProject.title} | A-J Roos`,
-//     description: `${sanityProject.meta}`,
-//     siteUrl: `https://asjas.co.za/project/${pageContext.slug}`,
-//   };
+const ProjectTemplate: React.FunctionComponent<IProject> = ({ pageContext, data: { mdx } }) => {
+  const seo = {
+    title: `${mdx.frontmatter.title} | A-J Roos`,
+    description: `${mdx.frontmatter.meta_desc}`,
+    siteUrl: `https://asjas.co.za/project/${pageContext.slug}`,
+  };
 
-//   return (
-//     <>
-//       <SEO {...seo} />
-//       <Layout>
-//         <section>
-//           <Img fluid={sanityProject.image.asset.fluid} alt={sanityProject.title} />
-//           <h2 data-testid={sanityProject.title}>{sanityProject.title}</h2>
-//           <p>{sanityProject.description}</p>
-//         </section>
-//       </Layout>
-//     </>
-//   );
-// };
+  return (
+    <>
+      <SEO {...seo} />
+      <Layout>
+        <section>
+          <Img fluid={mdx.frontmatter.featured_image.childImageSharp.fluid} alt={mdx.frontmatter.title} />
+          <h2 data-testid={mdx.frontmatter.title}>{mdx.frontmatter.title}</h2>
+          <p>{mdx.frontmatter.meta_desc}</p>
+        </section>
+      </Layout>
+    </>
+  );
+};
 
-// export default ProjectTemplate;
+export default ProjectTemplate;

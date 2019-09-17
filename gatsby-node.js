@@ -4,14 +4,13 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
 
   fmImagesToRelative(node);
 
   if (node.internal.type === 'Mdx') {
-    const slug = createFilePath({ node, getNode, basePath: `blog` });
-    createNodeField({ name: 'slug', node, value: slug });
+    createNodeField({ node });
   }
 };
 
@@ -19,8 +18,20 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
 
   createRedirect({
-    fromPath: '/blog/being-selected-for-andela-google-scholarship-phase-1',
+    fromPath: '/blog/being-selected-for-andela-google-scholarship-phase-1/',
     toPath: '/blog/google-africa-scholarship-phase-1',
+    isPermanent: true,
+  });
+
+  createRedirect({
+    fromPath: '/blog/being-selected-for-google-africa-certification-scholarship-phase-2/',
+    toPath: '/blog/google-africa-scholarship-phase-2',
+    isPermanent: true,
+  });
+
+  createRedirect({
+    fromPath: '/blog/use-date-fns-to-format-your-gatsby-js-blog-post-dates/',
+    toPath: '/blog/formatting-gatsby-blog-dates-using-date-fns',
     isPermanent: true,
   });
 
@@ -30,14 +41,27 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      posts: allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { type: { eq: "blogpost" } } }
+      ) {
         edges {
           node {
-            fields {
-              slug
-            }
             frontmatter {
+              slug
               tags
+            }
+          }
+        }
+      }
+      projects: allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { type: { eq: "project" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              slug
             }
           }
         }
@@ -51,8 +75,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // const posts = result.data.allMdx.edges.map(({ node }) => node);
   // const tagsSet = new Set();
-  const posts = result.data.allMdx.edges.map(({ node }) => node);
-  // const projects = result.data.allSanityProject.edges.map(({ node }) => node);
+  const posts = result.data.posts.edges.map(({ node }) => node);
+  const projects = result.data.projects.edges.map(({ node }) => node);
 
   // posts.forEach(post => {
   //   if (!post.frontmatter.tags) {
@@ -75,21 +99,21 @@ exports.createPages = async ({ graphql, actions }) => {
   // });
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].fields.slug;
-    const next = index === 0 ? null : posts[index - 1].fields.slug;
+    const previous = index === posts.length - 1 ? null : posts[index + 1].frontmatter.slug;
+    const next = index === 0 ? null : posts[index - 1].frontmatter.slug;
 
     createPage({
-      path: `/blog${post.fields.slug}`,
+      path: `/blog/${post.frontmatter.slug}`,
       component: blogPostTemplate,
-      context: { slug: post.fields.slug, previous, next },
+      context: { slug: post.frontmatter.slug, previous, next },
     });
   });
 
-  // projects.forEach(project => {
-  //   createPage({
-  //     path: `/project/${project.slug.current}`,
-  //     component: projectTemplate,
-  //     context: { slug: project.slug.current },
-  //   });
-  // });
+  projects.forEach(project => {
+    createPage({
+      path: `/project/${project.frontmatter.slug}`,
+      component: projectTemplate,
+      context: { slug: project.frontmatter.slug },
+    });
+  });
 };

@@ -12,7 +12,7 @@ import * as Styled from './style';
 
 export const GET_POST_PAGE = graphql`
   query GET_POST_PAGE($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
         slug

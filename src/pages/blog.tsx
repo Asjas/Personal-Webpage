@@ -33,15 +33,13 @@ export const StyledLink = styled(Link)`
 
 export const GET_ALL_POSTS = graphql`
   query GET_ALL_POSTS {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { type: { eq: "blogpost" } } }) {
       edges {
         node {
           id
-          fields {
-            slug
-          }
           frontmatter {
             title
+            slug
             date
             updated_at
             featured_image {
@@ -62,11 +60,9 @@ export const GET_ALL_POSTS = graphql`
 export interface IPost {
   node: {
     id: string;
-    fields: {
-      slug: string;
-    };
     frontmatter: {
       title: string;
+      slug: string;
       date: string;
       updated_at: string;
       tags: string[];
@@ -102,7 +98,6 @@ const seo = {
 
 const BlogPage = () => {
   const { allMdx: posts } = useStaticQuery(GET_ALL_POSTS) as IAllMDXPost;
-  console.log(posts);
 
   return (
     <>
@@ -115,7 +110,7 @@ const BlogPage = () => {
           </header>
           <ErrorBoundary>
             {posts.edges.map(({ node: post }) => (
-              <StyledLink to={`/blog/${post.fields.slug}`} key={post.id}>
+              <StyledLink to={`/blog/${post.frontmatter.slug}`} key={post.id}>
                 <BlogEntryCard node={post} />
               </StyledLink>
             ))}
