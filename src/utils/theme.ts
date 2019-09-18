@@ -29,8 +29,8 @@ export const myTheme = {
     black: '#292522',
     error: 'hsl(1, 84%, 44%)',
     navbar: 'hsl(247, 15%, 2%)',
-    outline: 'hsl(194, 47%, 56%)',
-    linkVisited: '#6ca19e',
+    outline: 'hsl(194, 77%, 42%)',
+    linkVisited: 'hsl(206, 80%, 43%)',
     card:
       '0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)',
   },
