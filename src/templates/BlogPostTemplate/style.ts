@@ -10,16 +10,6 @@ export const Image = styled(Img)`
 `;
 
 export const Article = styled.article`
-  display: grid;
-  grid-template-columns:
-    minmax(1.2rem, 1fr)
-    minmax(auto, 130ch)
-    minmax(1.2rem, 1fr);
-
-  & > * {
-    grid-column: 2;
-  }
-
   .progress__container {
     top: 0;
     position: fixed;
@@ -36,18 +26,25 @@ export const Article = styled.article`
 
   header {
     margin-bottom: 15px;
+    display: grid;
 
     .post__heading {
       margin-bottom: 30px;
+      justify-self: center;
+    }
+
+    .post__dates {
+      margin-top: 20px;
     }
 
     .post__date {
+      justify-self: left;
       background: ${props => props.theme.color.black};
-      display: block;
       border-radius: 25px;
       color: ${props => props.theme.color.white};
       font-size: ${props => props.theme.fontSize.medium};
-      padding: 2px 6px;
+      padding: 4px 8px;
+      margin-right: 10px;
     }
   }
 
@@ -83,20 +80,24 @@ export const Article = styled.article`
     width: 100% !important;
   }
 
-  .youtube {
-    width: 100%;
-    height: 100%;
-    max-height: 360px;
+  .gatsby-resp-iframe-wrapper {
+    margin-top: 50px;
   }
 
   a {
     color: ${props => props.theme.color.primary};
     text-decoration: underline;
-  }
+    text-decoration-color: ${props => props.theme.color.primary};
 
-  a:hover {
-    color: ${props => props.theme.color.outline};
-    text-decoration: underline;
+    &:hover,
+    &:focus {
+      outline: 3px solid ${props => props.theme.color.outline};
+    }
+
+    &:visited {
+      color: ${props => props.theme.color.linkVisited};
+      text-decoration-color: ${props => props.theme.color.linkVisited};
+    }
   }
 
   .gatsby-code-title {

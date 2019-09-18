@@ -1,9 +1,10 @@
 import styled from '../../utils/themed-styled-components';
 
 export const Form = styled.form`
-  align-self: center;
+  justify-self: center;
   padding: 25px 0;
-  width: 480px;
+  margin-top: 20px;
+  width: 550px;
   height: 100%;
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {

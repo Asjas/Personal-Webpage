@@ -2,7 +2,7 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import styled from '../../utils/themed-styled-components';
 
-export const Card = styled.article`
+export const Card = styled.section`
   display: grid;
   grid-template-columns: 280px 1fr;
   grid-template-rows: repeat(4, min-content);

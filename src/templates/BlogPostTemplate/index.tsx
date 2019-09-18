@@ -120,22 +120,24 @@ const BlogPostTemplate: React.FunctionComponent<IPost> = ({ data, pageContext })
             <header>
               <h1 className="post__heading">{post.frontmatter.title}</h1>
               <Img className="post__image" fluid={post.frontmatter.featured_image.childImageSharp.fluid} alt="" />
-              <span className="post__date">
-                Published:{' '}
-                <time dateTime={format(new Date(post.frontmatter.date), 'yyyy-MM-dd')}>
-                  {formatDistance(new Date(post.frontmatter.date), new Date(), {
-                    addSuffix: true,
-                  })}
-                </time>
-              </span>
-              <span className="post__date">
-                Last Updated:{' '}
-                <time dateTime={format(new Date(post.frontmatter.updated_at), 'yyyy-MM-dd')}>
-                  {formatDistance(new Date(post.frontmatter.updated_at), new Date(), {
-                    addSuffix: true,
-                  })}
-                </time>
-              </span>
+              <div className="post__dates">
+                <span className="post__date">
+                  Published:{' '}
+                  <time dateTime={format(new Date(post.frontmatter.date), 'yyyy-MM-dd')}>
+                    {formatDistance(new Date(post.frontmatter.date), new Date(), {
+                      addSuffix: true,
+                    })}
+                  </time>
+                </span>
+                <span className="post__date">
+                  Last Updated:{' '}
+                  <time dateTime={format(new Date(post.frontmatter.updated_at), 'yyyy-MM-dd')}>
+                    {formatDistance(new Date(post.frontmatter.updated_at), new Date(), {
+                      addSuffix: true,
+                    })}
+                  </time>
+                </span>
+              </div>
             </header>
             <MDXRenderer>{post.body}</MDXRenderer>
             <footer className="post__footer">

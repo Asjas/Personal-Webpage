@@ -8,7 +8,6 @@ import * as Styled from './style';
 
 const BlogEntryCard: React.FunctionComponent<IPost> = ({ node }) => (
   <Styled.Card>
-    {console.log(node)}
     <Styled.Image fluid={node.frontmatter.featured_image.childImageSharp.fluid} alt="" />
     <Styled.Heading>{node.frontmatter.title}</Styled.Heading>
     <Styled.BlogDate>

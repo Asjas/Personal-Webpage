@@ -10,16 +10,7 @@ import styled from '../utils/themed-styled-components';
 
 export const Section = styled.section`
   display: grid;
-  grid-template-columns:
-    minmax(1.2rem, 1fr)
-    minmax(auto, 800px)
-    minmax(1.2rem, 1fr);
-  justify-items: center;
-  gap: 40px 0;
-
-  & > * {
-    grid-column: 2;
-  }
+  gap: 20px 0;
 `;
 
 export const Heading = styled.h1`
@@ -36,34 +27,25 @@ export const Paragraph = styled.p`
   text-align: center;
 
   a {
-    color: ${props => props.theme.color.black};
+    color: ${props => props.theme.color.primary};
     text-decoration: underline;
     text-decoration-color: ${props => props.theme.color.primary};
 
     &:hover,
     &:focus {
-      color: ${props => props.theme.color.primary};
       outline: 3px solid ${props => props.theme.color.outline};
     }
 
     &:visited {
-      color: ${props => props.theme.color.black};
+      color: ${props => props.theme.color.linkVisited};
+      text-decoration-color: ${props => props.theme.color.linkVisited};
     }
   }
 `;
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns:
-    minmax(1.2rem, 1fr)
-    minmax(auto, 800px)
-    minmax(1.2rem, 1fr);
-  justify-items: center;
   gap: 20px 0;
-
-  & > * {
-    grid-column: 2;
-  }
 `;
 
 export const GET_ALL_PROJECTS = graphql`
@@ -114,7 +96,7 @@ interface IProject {
   };
 }
 
-const PortfolioPage: React.FunctionComponent = (): React.ReactElement => {
+const ProjectsPage: React.FunctionComponent = (): React.ReactElement => {
   const { allMdx: projects } = useStaticQuery(GET_ALL_PROJECTS) as IAllMdxProject;
 
   return (
@@ -149,4 +131,4 @@ const PortfolioPage: React.FunctionComponent = (): React.ReactElement => {
   );
 };
 
-export default PortfolioPage;
+export default ProjectsPage;

@@ -85,8 +85,8 @@ function Nav(): React.ReactElement {
               </Link>
             </li>
             <li>
-              <Link activeClassName="navbar__link--active" to="/portfolio/">
-                Portfolio
+              <Link activeClassName="navbar__link--active" to="/projects/">
+                Projects
               </Link>
             </li>
             <li>
