@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
   "assignees": ["asjas"],
-  "assignAutomerge": ["asjas"],
+  "assignAutomerge": true,
   "labels": ["renovate-bot"]
 }
