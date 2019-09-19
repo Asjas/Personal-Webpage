@@ -14,7 +14,11 @@ before_install:
 git:
   quiet: true
 
-cache: yarn
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - /home/travis/.cache/Cypress
 
 script:
   - 'yarn test:e2e:ci'
