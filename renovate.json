@@ -16,5 +16,7 @@
       "packagePatterns": ["@types"],
       "groupName": "typescript types"
     }
-  ]
+  ],
+  "automerge": true,
+  "automergeType": "branch"
 }
