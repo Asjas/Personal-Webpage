@@ -1,4 +1,10 @@
 dist: bionic
+
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
+
 language: node_js
 
 node_js:
@@ -7,18 +13,16 @@ node_js:
   - '11'
   - '12'
 
-before_install:
-  - sudo apt-get update
-  - sudo apt install -y libgconf-2-4
-
 git:
   quiet: true
 
 cache:
   yarn: true
   directories:
-    - node_modules
-    - /home/travis/.cache/Cypress
+    - ~/.cache
+
+install:
+  - yarn install --frozen-lockfile
 
 script:
   - 'yarn test:e2e:ci'
