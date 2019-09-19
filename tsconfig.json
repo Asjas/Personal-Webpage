@@ -4,7 +4,7 @@
     "target": "esnext",
     "module": "commonjs",
     "lib": ["dom", "es2017"],
-    "types": ["cypress", "@types/testing-library__cypress"],
+    "types": ["node", "cypress", "@types/testing-library__cypress"],
     "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
