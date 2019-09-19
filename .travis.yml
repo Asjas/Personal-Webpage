@@ -2,14 +2,13 @@ dist: trusty
 language: node_js
 
 node_js:
-  - "lts/*"
-  - "node"
+  - '8'
+  - '10'
+  - '11'
+  - '12'
 
 cache: yarn
 
 script:
-  - "yarn lint:js"
-  - "yarn lint:css"
-  - "yarn type-check"
-  - "yarn test"
-  - "yarn build"
+  - 'yarn test:e2e:ci'
+  - 'yarn build'
