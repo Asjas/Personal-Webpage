@@ -80,22 +80,22 @@ function Nav(): React.ReactElement {
           <Styled.Image src={'/assets/logo_transparent.png'} alt="" />
           <Styled.NavbarLinks>
             <li>
-              <Link activeClassName="navbar__link--active" to="/">
+              <Link activeClassName="navbar__link--active" to="/" data-testid="home">
                 Home
               </Link>
             </li>
             <li>
-              <Link activeClassName="navbar__link--active" to="/projects/">
+              <Link activeClassName="navbar__link--active" to="/projects/" data-testid="projects">
                 Projects
               </Link>
             </li>
             <li>
-              <Link activeClassName="navbar__link--active" to="/blog/">
+              <Link activeClassName="navbar__link--active" to="/blog/" data-testid="blog">
                 Blog
               </Link>
             </li>
             <li>
-              <Link activeClassName="navbar__link--active" to="/contact/">
+              <Link activeClassName="navbar__link--active" to="/contact/" data-testid="contact">
                 Contact
               </Link>
             </li>
