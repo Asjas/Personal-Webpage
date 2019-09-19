@@ -78,7 +78,7 @@
     "react-icons": "3.7.0",
     "react-spring": "8.0.27",
     "snyk": "1.221.1",
-    "start-server-and-test": "1.10.0",
+    "start-server-and-test": "1.10.2",
     "styled-components": "4.3.2"
   },
   "devDependencies": {
