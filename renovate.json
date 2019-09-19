@@ -2,5 +2,19 @@
   "extends": ["config:base"],
   "assignees": ["asjas"],
   "assignAutomerge": true,
-  "labels": ["renovate-bot"]
+  "labels": ["renovate-bot"],
+  "packageRules": [
+    {
+      "packagePatterns": ["gatsby"],
+      "groupName": "gatsby"
+    },
+    {
+      "packagePatterns": ["eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "packagePatterns": ["@types"],
+      "groupName": "typescript types"
+    }
+  ]
 }
