@@ -4,7 +4,6 @@ module.exports = {
     title: `Home | A-J Roos`,
     siteUrl: `https://asjas.co.za`,
     description: `Hey, my name is A-J Roos. I am a Front-End Web Developer based in Bloemfontein, South Africa. I am a self-taught Web Developer that loves to work on anything JavaScript related such as working with React.js and Node.js.`,
-    googleSiteVerification: `5tLgWJK__aZr2ylpfLvZuN0wMdlKY05YcS4SZ2CoIx0`,
     image: `https://asjas.co.za/assets/logo_transparent.png`,
     twitterUsername: `_asjas`,
   },

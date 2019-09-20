@@ -10,7 +10,6 @@ const GET_SEO_METADATA = graphql`
         defaultDescription: description
         defaultImage: image
         defaultUrl: siteUrl
-        googleSiteVerification
         twitterUsername
       }
     }
@@ -51,7 +50,6 @@ const SEO: React.FunctionComponent<Props> = ({
     authorImage: authorImage || '',
     siteUrl: blogUrl || siteUrl || data.site.siteMetadata.defaultUrl,
     image: image || data.site.siteMetadata.defaultImage,
-    googleSiteVerification: data && data.site.siteMetadata.googleSiteVerification,
     twitterUsername: data && data.site.siteMetadata.twitterUsername,
   };
 
@@ -113,7 +111,6 @@ const SEO: React.FunctionComponent<Props> = ({
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <link rel="canonical" href={seo.siteUrl} />
-      <meta name="google-site-verification" content={seo.googleSiteVerification} />
 
       {/* DNS Prefetching */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com"></link>
