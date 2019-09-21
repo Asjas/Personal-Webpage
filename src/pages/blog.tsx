@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -15,11 +15,6 @@ export const Section = styled.section`
 
 export const Heading = styled.h1`
   text-align: center;
-`;
-
-export const StyledLink = styled(Link)`
-  width: 100%;
-  max-width: 800px;
 `;
 
 export const GET_ALL_POSTS = graphql`
@@ -101,9 +96,7 @@ const BlogPage = () => {
           </header>
           <ErrorBoundary>
             {posts.edges.map(({ node: post }) => (
-              <StyledLink to={`/blog/${post.frontmatter.slug}`} key={post.id}>
-                <BlogEntryCard node={post} />
-              </StyledLink>
+              <BlogEntryCard key={post.id} node={post} />
             ))}
           </ErrorBoundary>
         </Section>

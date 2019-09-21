@@ -9,21 +9,21 @@ export const Image = styled(Img)`
   margin-bottom: 20px;
 `;
 
-export const Article = styled.article`
-  .progress__container {
-    top: 0;
-    position: fixed;
-    width: 100%;
-    height: 8px;
-    z-index: 20;
-  }
+export const ProgressContainer = styled.div`
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 8px;
+  z-index: 20;
 
   .progress__bar {
-    background: ${props => props.theme.color.primary};
+    background: hsl(341, 79%, 45%);
     height: 8px;
     width: 0%;
   }
+`;
 
+export const Article = styled.article`
   header {
     margin-bottom: 15px;
     display: grid;
@@ -125,18 +125,24 @@ export const Article = styled.article`
       font-size: ${props => props.theme.fontSize.medium};
       padding: 3px 8px;
       text-decoration: none;
-    }
 
-    .post__link:hover {
-      background: ${props => props.theme.color.black};
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background: ${props => props.theme.color.navbar};
+        color: ${props => props.theme.color.white};
+        outline: 3px solid ${props => props.theme.color.outline};
+      }
     }
 
     .previous {
       justify-self: start;
+      grid-column: 1;
     }
 
     .next {
       justify-self: end;
+      grid-column: 2;
     }
   }
 

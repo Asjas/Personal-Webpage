@@ -34,7 +34,7 @@ export const GET_POST_PAGE = graphql`
   }
 `;
 
-interface IPost {
+interface IPostPage {
   data: {
     mdx: {
       frontmatter: {
@@ -69,11 +69,11 @@ interface IPost {
   };
 }
 
-const BlogPostTemplate: React.FunctionComponent<IPost> = ({ data, pageContext }) => {
+const BlogPostTemplate: React.FunctionComponent<IPostPage> = ({ data, pageContext }) => {
   const post = data.mdx;
 
   const seo = {
-    title: post.frontmatter.title,
+    title: `${post.frontmatter.title} | A-J Roos`,
     description: post.frontmatter.meta_desc,
     author: post.frontmatter.author,
     image: post.frontmatter.featured_image.childImageSharp.fluid.src,
@@ -111,12 +111,12 @@ const BlogPostTemplate: React.FunctionComponent<IPost> = ({ data, pageContext })
   return (
     <>
       <SEO {...seo} datePublished={post.frontmatter.date} dateModified={post.frontmatter.updated_at} />
+      <Styled.ProgressContainer>
+        <div className="progress__bar" id="myBar" />
+      </Styled.ProgressContainer>
       <Layout>
         <ErrorBoundary>
           <Styled.Article>
-            <div className="progress__container">
-              <div className="progress__bar" id="myBar" />
-            </div>
             <header>
               <h1 className="post__heading">{post.frontmatter.title}</h1>
               <Img className="post__image" fluid={post.frontmatter.featured_image.childImageSharp.fluid} alt="" />

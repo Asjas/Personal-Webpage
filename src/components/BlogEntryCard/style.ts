@@ -22,7 +22,7 @@ export const Card = styled.section`
   }
 
   &:hover {
-    transform: scale(1.05);
+    transform: perspective(1.1px) scale(1.05) translateZ(0);
   }
 `;
 
@@ -87,21 +87,28 @@ export const BlogTags = styled.span`
     border-radius: 25px;
     color: ${props => props.theme.color.white};
     display: inline-block;
-    font-family: Goldsmith;
     font-size: ${props => props.theme.fontSize.small};
     padding: 2px 6px;
     margin: 8px 8px 8px 0;
     font-style: italic;
-  }
 
-  .blogpost__tag:hover {
-    text-decoration: none;
-    background: ${props => props.theme.color.navbar};
-    color: ${props => props.theme.color.white};
-    cursor: pointer;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background: ${props => props.theme.color.navbar};
+      color: ${props => props.theme.color.white};
+      outline: 3px solid ${props => props.theme.color.outline};
+    }
   }
+`;
 
-  .blogpost__tag:focus {
-    outline: 3px solid ${props => props.theme.color.outline};
+export const StyledLink = styled(Link)`
+  width: 100%;
+  max-width: 800px;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-decoration-color: ${props => props.theme.color.primary};
   }
 `;

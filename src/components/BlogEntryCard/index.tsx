@@ -9,7 +9,9 @@ import * as Styled from './style';
 const BlogEntryCard: React.FunctionComponent<IPost> = ({ node }) => (
   <Styled.Card>
     <Styled.Image fluid={node.frontmatter.featured_image.childImageSharp.fluid} alt="" />
-    <Styled.Heading>{node.frontmatter.title}</Styled.Heading>
+    <Styled.StyledLink to={`/blog/${node.frontmatter.slug}`}>
+      <Styled.Heading>{node.frontmatter.title}</Styled.Heading>
+    </Styled.StyledLink>
     <Styled.BlogDate>
       Published:{' '}
       <time dateTime={format(new Date(node.frontmatter.date), 'yyyy-MM-dd')}>
