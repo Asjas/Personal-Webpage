@@ -1,21 +1,18 @@
 import styled from '../../utils/themed-styled-components';
 import { Link } from 'gatsby';
 
-export const Section = styled.section`
-  display: grid;
-  grid-template-columns:
-    minmax(1.2rem, 1fr)
-    minmax(auto, 700px)
-    minmax(1.2rem, 1fr);
-  justify-items: center;
-  gap: 40px 0;
+export const Heading = styled.h1`
+  font-size: ${props => props.theme.fontSize.heading1};
+  text-align: center;
+  margin-bottom: 30px;
 
-  & > * {
-    grid-column: 2;
+  @media screen and (max-width: ${props => props.theme.mobileQuery.tablet}) {
+    width: 90%;
   }
 `;
 
-export const Heading = styled.h1`
+export const Paragraph = styled.p`
+  font-size: ${props => props.theme.fontSize.xLarge};
   text-align: center;
 `;
 
@@ -39,13 +36,11 @@ export const ReturnLink = styled(Link)`
   padding: 3px 8px;
   justify-self: left;
 
-  &:hover {
-    background: ${props => props.theme.color.black};
-    color: ${props => props.theme.color.white};
-    cursor: pointer;
-  }
-
+  &:hover,
   &:focus {
+    cursor: pointer;
+    background: ${props => props.theme.color.navbar};
+    color: ${props => props.theme.color.white};
     outline: 3px solid ${props => props.theme.color.outline};
   }
 `;

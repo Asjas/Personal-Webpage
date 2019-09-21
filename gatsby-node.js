@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   const blogPostTemplate = path.resolve('src/templates/BlogPostTemplate/index.tsx');
-  // const tagsTemplate = path.resolve('src/templates/TagsTemplate/index.tsx');
+  const tagsTemplate = path.resolve('src/templates/TagsTemplate/index.tsx');
   const projectTemplate = path.resolve('src/templates/ProjectTemplate/index.tsx');
 
   const result = await graphql(`
@@ -73,30 +73,19 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors;
   }
 
-  // const posts = result.data.allMdx.edges.map(({ node }) => node);
-  // const tagsSet = new Set();
+  const postTags = new Set();
   const posts = result.data.posts.edges.map(({ node }) => node);
   const projects = result.data.projects.edges.map(({ node }) => node);
 
-  // posts.forEach(post => {
-  //   if (!post.frontmatter.tags) {
-  //     throw Error(`${post.fileAbsolutePath} is missing tags in the frontmatter.`);
-  //   } else {
-  //     post.frontmatter.tags.forEach(tag => {
-  //       tagsSet.add(tag);
-  //     });
-  //   }
-  // });
-
-  // Array.from(tagsSet).forEach(tag => {
-  //   createPage({
-  //     path: `/tags/${tag}/`,
-  //     component: tagsTemplate,
-  //     context: {
-  //       tag,
-  //     },
-  //   });
-  // });
+  posts.forEach(post => {
+    if (!post.frontmatter.tags) {
+      throw Error(`${post.fileAbsolutePath} is missing tags in the frontmatter.`);
+    } else {
+      post.frontmatter.tags.forEach(tag => {
+        postTags.add(tag);
+      });
+    }
+  });
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].frontmatter.slug;
@@ -114,6 +103,18 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/project/${project.frontmatter.slug}`,
       component: projectTemplate,
       context: { slug: project.frontmatter.slug },
+    });
+  });
+
+  Array.from(postTags).forEach(tag => {
+    createPage({
+      path: `/tags/${tag}/`,
+      component: tagsTemplate,
+      context: {
+        slug: `/tags/${tag}/`,
+        postTags: Array.from(postTags),
+        tag,
+      },
     });
   });
 };
