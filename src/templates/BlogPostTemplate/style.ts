@@ -109,7 +109,6 @@ export const Article = styled.article`
     grid-column: 1 / 4 !important;
     width: 98%;
     justify-self: center;
-    max-width: 700px;
   }
 
   .post__footer {
