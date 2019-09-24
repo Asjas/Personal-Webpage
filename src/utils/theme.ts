@@ -9,12 +9,12 @@ export const myTheme = {
     handwriting: "'Indie Flower', cursive",
   },
   fontSize: {
-    heading1: '3.4rem',
-    heading2: '3rem',
-    heading3: '2.6rem',
-    heading4: '2.3rem',
-    heading5: '2rem',
-    heading6: '1.8rem',
+    heading1: '4.2rem',
+    heading2: '3.8rem',
+    heading3: '3.4rem',
+    heading4: '3rem',
+    heading5: '2.6rem',
+    heading6: '2.2rem',
     navbarLinkLarge: '3rem',
     xLarge: '1.8rem',
     large: '1.7rem',
@@ -49,16 +49,8 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body {
     box-sizing: border-box;
-    text-rendering: optimizelegibility;
     hyphens: auto;
-    -ms-hyphens: auto;
     font-feature-settings: 'liga1' on;
-    -moz-font-feature-settings: 'liga' on;
-    -webkit-hyphens: auto;
-    -moz-osx-font-smoothing: grayscale;
-    -ms-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
     font-size: 10px;
     line-height: 1.45;
     margin: 0;
@@ -106,8 +98,9 @@ export const GlobalStyle = createGlobalStyle`
   h6 {
     color: ${props => props.theme.color.primary};
     font-family: ${props => props.theme.font.heading};
+    line-height: 1.15;
     font-weight: 500;
-    margin: 0;
+    margin: 25px 0;
     text-shadow: 1px 2px 2px #aaa;
   }
 
@@ -163,15 +156,8 @@ export const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.color.black};
     font-family: ${props => props.theme.font.body};
     font-size: ${props => props.theme.fontSize.large};
+    line-height: 1.45;
     margin: 6px 0;
-  }
-
-  p,
-  span,
-  input,
-  textarea,
-  label {
-    line-height: calc(${props => props.theme.fontSize.large} * 1.5);
   }
 
   a {

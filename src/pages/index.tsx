@@ -61,6 +61,7 @@ const Quote = styled.p`
   color: ${props => props.theme.color.primary};
   font-family: ${props => props.theme.font.handwriting};
   font-size: ${props => props.theme.fontSize.heading2};
+  line-height: ${props => props.theme.fontSize.heading2};
   grid-column: 2;
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {

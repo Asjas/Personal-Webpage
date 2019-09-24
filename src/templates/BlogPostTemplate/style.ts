@@ -48,17 +48,9 @@ export const Article = styled.article`
     }
   }
 
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 20px 0 8px 0;
-  }
-
   p {
     font-size: ${props => props.theme.fontSize.xLarge};
-    line-height: calc(${props => props.theme.fontSize.xLarge} * 1.5);
-    margin-top: 10px;
+    margin-top: 35px;
   }
 
   img {
@@ -67,8 +59,12 @@ export const Article = styled.article`
 
   blockquote {
     font-size: ${props => props.theme.fontSize.large};
-    margin: 6px 0 6px 0;
+    margin: 20px 0 6px 0;
     padding: 5px 0 5px 20px;
+
+    p {
+      margin-top: 5px;
+    }
   }
 
   ul,

@@ -40,7 +40,7 @@ export const Image = styled(Img)`
 `;
 
 export const Heading = styled.h2`
-  margin-bottom: 10px;
+  margin: 0px 0 10px 0;
   font-size: ${props => props.theme.fontSize.heading3};
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
