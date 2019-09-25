@@ -8,7 +8,6 @@ import BlogEntryCard from '../../components/BlogEntryCard';
 import capitalize from '../../utils/capitalize';
 
 import * as Styled from './style';
-import { node } from 'prop-types';
 
 export const GET_TAG_PAGES = graphql`
   query GET_TAG_PAGES($tag: String) {
@@ -23,6 +22,9 @@ export const GET_TAG_PAGES = graphql`
           id
           frontmatter {
             title
+            slug
+            meta_desc
+            author
             date
             updated_at
             featured_image {
@@ -90,6 +92,7 @@ const TagTemplate: React.FunctionComponent<IAllTags> = ({ pageContext, data }) =
     description: `This is all the blog posts on my website tagged as "${tag}".`,
     siteUrl: `https://asjas.co.za${slug}`,
   };
+  console.log(edges);
 
   return (
     <>

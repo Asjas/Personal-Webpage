@@ -7,7 +7,7 @@ export const Button = styled.button`
   color: ${props => props.theme.color.white};
   cursor: pointer;
   font-family: ${props => props.theme.font.retro};
-  font-size: ${props => props.theme.fontSize.heading4};
+  font-size: ${props => props.theme.fontSize.heading5};
   outline: 0;
   line-height: 40px;
   text-transform: capitalize;

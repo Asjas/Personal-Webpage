@@ -54,7 +54,7 @@ export const BlogDate = styled.span`
   color: ${props => props.theme.color.white};
   font-size: ${props => props.theme.fontSize.tags};
   align-self: center;
-  padding: 0px 6px;
+  padding: 2px 6px;
   width: auto;
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
