@@ -51,7 +51,6 @@ export interface IPost {
       slug: string;
       date: string;
       updated_at: string;
-      tags: string[];
       featured_image: {
         childImageSharp: {
           fluid: {
@@ -65,6 +64,7 @@ export interface IPost {
           };
         };
       };
+      tags: string[];
     };
   };
 }

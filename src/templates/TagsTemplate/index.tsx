@@ -23,8 +23,6 @@ export const GET_TAG_PAGES = graphql`
           frontmatter {
             title
             slug
-            meta_desc
-            author
             date
             updated_at
             featured_image {
@@ -62,8 +60,6 @@ interface ITag {
     frontmatter: {
       title: string;
       slug: string;
-      meta_desc: string;
-      author: string;
       date: string;
       updated_at: string;
       featured_image: {
@@ -92,7 +88,6 @@ const TagTemplate: React.FunctionComponent<IAllTags> = ({ pageContext, data }) =
     description: `This is all the blog posts on my website tagged as "${tag}".`,
     siteUrl: `https://asjas.co.za${slug}`,
   };
-  console.log(edges);
 
   return (
     <>
