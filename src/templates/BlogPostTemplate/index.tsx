@@ -18,6 +18,7 @@ export const GET_POST_PAGE = graphql`
         slug
         meta_desc
         author
+        authorImage
         date
         updated_at
         featured_image {
@@ -42,6 +43,7 @@ interface IPostPage {
         slug: string;
         meta_desc: string;
         author: string;
+        authorImage: string;
         date: string;
         updated_at: string;
         featured_image: {
@@ -76,7 +78,8 @@ const BlogPostTemplate: React.FunctionComponent<IPostPage> = ({ data, pageContex
     title: `${post.frontmatter.title} | A-J Roos`,
     description: post.frontmatter.meta_desc,
     author: post.frontmatter.author,
-    image: post.frontmatter.featured_image.childImageSharp.fluid.src,
+    authorImage: post.frontmatter.authorImage,
+    image: `https://asjas.co.za${post.frontmatter.featured_image.childImageSharp.fluid.src}`,
     siteUrl: `https://asjas.co.za/blog/${post.frontmatter.slug}`,
     isBlogPost: true,
   };
