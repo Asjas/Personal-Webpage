@@ -111,4 +111,8 @@ export const StyledLink = styled(Link)`
     text-decoration: underline;
     text-decoration-color: ${props => props.theme.color.primary};
   }
+
+  @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
+    grid-column: 1 / 3;
+  }
 `;
