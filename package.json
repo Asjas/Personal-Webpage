@@ -37,7 +37,7 @@
     "@types/styled-components": "4.1.19",
     "babel-plugin-styled-components": "1.10.6",
     "cypress": "3.4.1",
-    "date-fns": "2.3.0",
+    "date-fns": "2.4.0",
     "disqus-react": "1.0.7",
     "gatsby": "2.15.28",
     "gatsby-image": "2.2.23",
