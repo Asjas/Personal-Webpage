@@ -1,0 +1,10 @@
+account_id = "d34e365e96c3cd636081f05b0a6b031a"
+name = "personal-website"
+type = "webpack"
+route = "asjas.co.za"
+workers_dev = false
+zone_id = "5ff922d3b7395550270d5cefcdefe6ea"
+
+[site]
+bucket = "./public/"
+entry-point = "workers-site"
