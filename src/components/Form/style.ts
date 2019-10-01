@@ -4,22 +4,9 @@ export const Form = styled.form`
   justify-self: center;
   padding: 25px 0;
   margin-top: 20px;
-  width: 550px;
+  width: 100%;
+  max-width: 550px;
   height: 100%;
-
-  @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
-    width: 400px;
-  }
-
-  @media ${props => props.theme.mobileQuery.mobileL} {
-    width: 350px;
-    padding: 0;
-    margin: 0;
-  }
-
-  @media ${props => props.theme.mobileQuery.mobileM} {
-    width: 300px;
-  }
 `;
 
 export const Fieldset = styled.fieldset`
