@@ -1,20 +1,22 @@
 import * as React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import { navigate } from '@reach/router';
 
-import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Layout from '../components/Layout';
+
 import styled from '../utils/themed-styled-components';
 
 export const Section = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(4, max-content);
+  justify-items: center;
 `;
 
 export const Image = styled(Img)`
   width: 100%;
-  max-width: 420px;
+  max-width: 380px;
   height: auto;
 `;
 
@@ -24,21 +26,26 @@ export const Heading = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-  font-size: ${props => props.theme.fontSize.large};
   font-size: ${props => props.theme.fontSize.xLarge};
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
-  width: 90%;
 `;
 
 export const AnchorLink = styled(Link)`
-  font-size: ${props => props.theme.fontSize.xLarge};
-  margin-top: 55px;
   color: ${props => props.theme.color.primary};
+  font-size: ${props => props.theme.fontSize.xLarge};
+  margin-top: 35px;
+  text-decoration-color: ${props => props.theme.color.primary};
   text-decoration: underline;
 
-  &:hover {
-    color: ${props => props.theme.color.outline};
+  &:hover,
+  &:focus {
+    outline: 3px solid ${props => props.theme.color.outline};
+  }
+
+  &:visited {
+    color: ${props => props.theme.color.linkVisited};
+    text-decoration-color: ${props => props.theme.color.linkVisited};
   }
 `;
 
@@ -62,7 +69,7 @@ export const FOUR_OH_FOUR_IMAGE = graphql`
   query FOUR_OH_FOUR_IMAGE {
     fourohfour: file(relativePath: { regex: "/ghost/" }) {
       childImageSharp {
-        fluid(maxWidth: 700, quality: 95) {
+        fluid(maxWidth: 400, quality: 95) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
@@ -79,6 +86,14 @@ const seo = {
 const FourOhFour = () => {
   const { fourohfour } = useStaticQuery(FOUR_OH_FOUR_IMAGE) as I404Image;
 
+  function handleKeyDown(event: React.KeyboardEvent) {
+    const { keyCode } = event;
+
+    if (keyCode === 32 || keyCode === 13) {
+      navigate('/');
+    }
+  }
+
   return (
     <>
       <SEO {...seo} />
@@ -87,12 +102,11 @@ const FourOhFour = () => {
           <Image fluid={fourohfour.childImageSharp.fluid} alt="ghost" />
           <Heading data-testid="404-heading">This page is a Ghost</Heading>
           <Paragraph>
-            Once alive and now dead, this ghost appears to have some unfinished business. Could it
-            be with you? Or the treasure hidden under the floorboards of the old mansion in the
-            hills that may never reach its rightful owner, a compassionate school teacher in
-            Brooklyn.
+            Once alive and now dead, this ghost appears to have some unfinished business. Could it be with you? Or the
+            treasure hidden under the floorboards of the old mansion in the hills that may never reach its rightful
+            owner, a compassionate school teacher in Brooklyn.
           </Paragraph>
-          <AnchorLink to="/" data-testid="404-link">
+          <AnchorLink to="/" data-testid="404-link" onKeyDown={handleKeyDown}>
             Go Home
           </AnchorLink>
         </Section>
