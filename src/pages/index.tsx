@@ -40,7 +40,6 @@ const QuoteImage = styled(Img)`
     grid-column: 2;
     justify-self: center;
     margin-top: 40px;
-    max-width: 240px;
   }
 `;
 
