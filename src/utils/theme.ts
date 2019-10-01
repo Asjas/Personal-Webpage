@@ -63,12 +63,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    color: ${props => props.theme.color.secondary};
+    color: ${props => props.theme.color.white};
     background: ${props => props.theme.color.primary};
   }
 
   ::-moz-selection {
-    color: ${props => props.theme.color.secondary};
+    color: ${props => props.theme.color.white};
     background: ${props => props.theme.color.primary};
   }
 
