@@ -63,6 +63,7 @@ typings/
 # Gatsby Folders
 .cache/
 public/
+dist/
 
 # Jest test results
 .jest-test-results.json
