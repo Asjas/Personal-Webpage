@@ -16,9 +16,11 @@ export const Card = styled.section`
   transition: all 0.28s ease-in-out;
 
   @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(150px, max-content) repeat(4, min-content);
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px, 320px) repeat(4, min-content);
+    justify-self: center;
     gap: 4px 0;
+    max-width: 380px;
   }
 
   &:hover {
