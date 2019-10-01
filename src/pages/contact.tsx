@@ -8,22 +8,6 @@ import styled from '../utils/themed-styled-components';
 
 export const Section = styled.section`
   display: grid;
-
-  @media (max-width: ${props => props.theme.mobileQuery.laptop}) {
-    flex-direction: column;
-  }
-
-  @media (max-width: ${props => props.theme.mobileQuery.tablet}) {
-    width: 400px;
-  }
-
-  @media (max-width: ${props => props.theme.mobileQuery.mobileL}) {
-    width: 350px;
-  }
-
-  @media (max-width: ${props => props.theme.mobileQuery.mobileM}) {
-    width: 300px;
-  }
 `;
 
 export const Heading = styled.h1`
