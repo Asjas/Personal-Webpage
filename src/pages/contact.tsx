@@ -44,7 +44,7 @@ const seo = {
   title: 'Contact | A-J Roos',
   description:
     'Do you have an interesting project or opportunity to discuss with me? Do you have a Web Development related question that you want to ask me? Feel free to use the contact details or contact form provided to get in touch with me.',
-  siteUrl: 'https://asjas.co.za/contact',
+  siteUrl: 'https://asjas.co.za/contact/',
 };
 
 const ContactPage = () => (

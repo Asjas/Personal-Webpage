@@ -14,7 +14,7 @@ const Tags: React.FunctionComponent<ITags> = ({ tags }) => {
       <Styled.Heading>All Tags</Styled.Heading>
       <ErrorBoundary>
         {tags.map(tag => (
-          <Styled.TagLink key={tag} to={`/tags/${tag}`}>
+          <Styled.TagLink key={tag} to={`/tags/${tag}/`}>
             {`#${tag}`}
           </Styled.TagLink>
         ))}

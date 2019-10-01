@@ -31,7 +31,7 @@ const BlogEntryCard: React.FunctionComponent<IPost> = ({ node }) => (
     <Styled.BlogTags>
       <ErrorBoundary>
         {node.frontmatter.tags.map(tag => (
-          <Styled.BlogLink key={tag} className="blogpost__tag" to={`/tags/${tag.toLowerCase()}`}>
+          <Styled.BlogLink key={tag} className="blogpost__tag" to={`/tags/${tag}/`}>
             {`#${tag}`}
           </Styled.BlogLink>
         ))}

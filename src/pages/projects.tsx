@@ -76,7 +76,7 @@ const seo = {
   title: 'Portfolio | A-J Roos',
   description:
     'This is a collection of some of my Web Development projects. A complete collection of my projects can be found on my Github page at https://github.com/asjas.',
-  siteUrl: 'https://asjas.co.za/portfolio',
+  siteUrl: 'https://asjas.co.za/portfolio/',
 };
 
 interface IAllMdxProject {
