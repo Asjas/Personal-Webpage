@@ -68,7 +68,7 @@ const ProjectTemplate: React.FunctionComponent<IProject> = ({ pageContext, data:
       <Layout>
         <section>
           <Img fluid={mdx.frontmatter.featured_image.childImageSharp.fluid} alt={mdx.frontmatter.title} />
-          <h2 data-testid={mdx.frontmatter.title}>{mdx.frontmatter.title}</h2>
+          <h1 data-testid={mdx.frontmatter.title}>{mdx.frontmatter.title}</h1>
           <p>{mdx.frontmatter.meta_desc}</p>
         </section>
       </Layout>
