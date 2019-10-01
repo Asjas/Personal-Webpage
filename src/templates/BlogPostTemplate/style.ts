@@ -3,12 +3,6 @@ import { DiscussionEmbed } from 'disqus-react';
 
 import styled from '../../utils/themed-styled-components';
 
-export const Image = styled(Img)`
-  width: 100%;
-  justify-self: center;
-  margin-bottom: 20px;
-`;
-
 export const ProgressContainer = styled.div`
   top: 0;
   position: fixed;
@@ -25,16 +19,20 @@ export const ProgressContainer = styled.div`
 
 export const Article = styled.article`
   header {
-    margin-bottom: 15px;
-    display: grid;
-
     .post__heading {
-      margin-bottom: 30px;
       justify-self: center;
+      text-align: center;
+    }
+
+    .post__image {
+      width: 100%;
+      margin-top: 40px;
     }
 
     .post__dates {
-      margin-top: 20px;
+      margin-top: 10px;
+      display: grid;
+      grid-template-rows: repeat(2, min-content);
     }
 
     .post__date {
@@ -43,8 +41,7 @@ export const Article = styled.article`
       border-radius: 25px;
       color: ${props => props.theme.color.white};
       font-size: ${props => props.theme.fontSize.medium};
-      padding: 4px 8px;
-      margin-right: 10px;
+      padding: 2px 8px;
     }
   }
 
@@ -60,7 +57,7 @@ export const Article = styled.article`
   blockquote {
     font-size: ${props => props.theme.fontSize.large};
     margin: 20px 0 6px 0;
-    padding: 5px 0 5px 20px;
+    padding: 5px 5px 5px 10px;
 
     p {
       margin-top: 5px;
@@ -70,6 +67,7 @@ export const Article = styled.article`
   ul,
   ol {
     font-size: ${props => props.theme.fontSize.xLarge};
+    padding: 8px 0 0 25px;
   }
 
   .twitter-tweet {
@@ -94,10 +92,6 @@ export const Article = styled.article`
       color: ${props => props.theme.color.linkVisited};
       text-decoration-color: ${props => props.theme.color.linkVisited};
     }
-  }
-
-  .gatsby-code-title {
-    margin-top: 12px;
   }
 
   .gatsby-code-title,
@@ -333,11 +327,12 @@ export const Article = styled.article`
   .gatsby-code-title {
     margin-bottom: -0.8rem;
     font-family: ${props => props.theme.font.body};
-    padding: 10px 0 10px 15px;
+    padding: 6px 0 14px 15px;
     font-size: ${props => props.theme.fontSize.small};
     background-color: ${props => props.theme.color.primary};
     color: white;
     z-index: 0;
+    margin-top: 20px;
     border-top-left-radius: 0.9rem;
     border-top-right-radius: 0.9rem;
   }

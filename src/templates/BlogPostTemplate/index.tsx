@@ -150,7 +150,7 @@ const BlogPostTemplate: React.FunctionComponent<IPostPage> = ({ data, pageContex
                 </Link>
               )}
               {pageContext.next && (
-                <Link to={`/blog${pageContext.next}`} className="post__link next">
+                <Link to={`/blog/${pageContext.next}`} className="post__link next">
                   Next Post
                 </Link>
               )}
