@@ -19,9 +19,9 @@ export const Main = styled.main`
   grid-area: main;
   display: grid;
   grid-template-columns:
-    minmax(1.2rem, 1fr)
+    minmax(1.8rem, 1fr)
     minmax(auto, 800px)
-    minmax(1.2rem, 1fr);
+    minmax(1.8rem, 1fr);
   margin: 60px 0;
 
   & > * {
