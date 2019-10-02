@@ -1,4 +1,5 @@
 import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler';
+import { log } from './sentry';
 
 /**
  * The DEBUG flag will do two things that help during development:
@@ -20,6 +21,8 @@ addEventListener('fetch', event => {
         }),
       );
     }
+
+    log(e, event.request);
     event.respondWith(new Response('Internal Error', { status: 500 }));
   }
 });
@@ -54,6 +57,7 @@ async function handleEvent(event) {
       } catch (e) {}
     }
 
+    log(e, event.request);
     return new Response(e.message || e.toString(), { status: 500 });
   }
 }
