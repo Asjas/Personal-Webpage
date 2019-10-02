@@ -59,7 +59,7 @@ const ProjectTemplate: React.FunctionComponent<IProject> = ({ pageContext, data:
   const seo = {
     title: `${mdx.frontmatter.title} | A-J Roos`,
     description: `${mdx.frontmatter.meta_desc}`,
-    siteUrl: `https://asjas.co.za/project/${pageContext.slug}`,
+    siteUrl: `https://asjas.xyz/project/${pageContext.slug}`,
   };
 
   return (

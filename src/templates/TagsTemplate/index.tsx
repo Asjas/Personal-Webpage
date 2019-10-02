@@ -86,7 +86,7 @@ const TagTemplate: React.FunctionComponent<IAllTags> = ({ pageContext, data }) =
   const seo = {
     title: `${capitalize(tag)} | A-J Roos`,
     description: `This is all the blog posts on my website tagged as "${tag}".`,
-    siteUrl: `https://asjas.co.za${slug}`,
+    siteUrl: `https://asjas.xyz${slug}`,
   };
 
   return (

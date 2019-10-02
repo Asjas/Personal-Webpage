@@ -117,12 +117,19 @@ export const HOME_PAGE_IMAGES = graphql`
   }
 `;
 
+const seo = {
+  title: 'Home | A-J Roos',
+  description:
+    'Hey, my name is A-J Roos. I am a Front-End Web Developer based in Bloemfontein, South Africa. I am a self-taught Web Developer that loves to work on anything JavaScript related such as working with React.js and Node.js.',
+  siteUrl: 'https://asjas.xyz/',
+};
+
 const IndexPage = () => {
   const { profile, quote } = useStaticQuery(HOME_PAGE_IMAGES) as IHomePageImages;
 
   return (
     <>
-      <SEO />
+      <SEO {...seo} />
       <Layout>
         <Container>
           <Section>

@@ -79,8 +79,8 @@ const BlogPostTemplate: React.FunctionComponent<IPostPage> = ({ data, pageContex
     description: post.frontmatter.meta_desc,
     author: post.frontmatter.author,
     authorImage: post.frontmatter.authorImage,
-    image: `https://asjas.co.za${post.frontmatter.featured_image.childImageSharp.fluid.src}`,
-    siteUrl: `https://asjas.co.za/blog/${post.frontmatter.slug}`,
+    image: `https://asjas.xyz${post.frontmatter.featured_image.childImageSharp.fluid.src}`,
+    siteUrl: `https://asjas.xyz/blog/${post.frontmatter.slug}`,
     isBlogPost: true,
   };
 

@@ -1,9 +1,9 @@
 account_id = "d34e365e96c3cd636081f05b0a6b031a"
 name = "personal-website"
 type = "webpack"
-route = "https://asjas.co.za/*"
+route = "https://asjas.xyz/*"
 workers_dev = false
-zone_id = "5ff922d3b7395550270d5cefcdefe6ea"
+zone_id = "34bf06b11a24aee26d1c99056fe3fdf9"
 
 [site]
 bucket = "./public/"
