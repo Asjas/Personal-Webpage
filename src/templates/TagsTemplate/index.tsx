@@ -84,8 +84,8 @@ const TagTemplate: React.FunctionComponent<IAllTags> = ({ pageContext, data }) =
   const { slug, tag, postTags } = pageContext;
   const { edges, totalCount } = data.allMdx;
   const seo = {
-    title: `${capitalize(tag)} | A-J Roos`,
-    description: `This is all the blog posts on my website tagged as "${tag}".`,
+    title: `Blog posts tagged as ${capitalize(tag)} | A-J Roos`,
+    description: `This is all the blog posts on my website tagged as ${capitalize(tag)}.`,
     siteUrl: `https://asjas.xyz${slug}`,
   };
 
@@ -93,7 +93,7 @@ const TagTemplate: React.FunctionComponent<IAllTags> = ({ pageContext, data }) =
     <>
       <SEO {...seo} />
       <Layout>
-        <Styled.Heading>{`${capitalize(tag)}`}</Styled.Heading>
+        <Styled.Heading>{`Blog posts tagged as ${capitalize(tag)}`}</Styled.Heading>
         <Styled.Paragraph>{`A collection of ${totalCount} blog post${totalCount === 1 ? '' : 's'}`}</Styled.Paragraph>
         <Tags tags={postTags} />
         <Styled.List>
