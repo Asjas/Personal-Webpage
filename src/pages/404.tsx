@@ -78,7 +78,7 @@ export const FOUR_OH_FOUR_IMAGE = graphql`
 `;
 
 const seo = {
-  title: 'Page not found | A-J Roos',
+  title: '404 - Not Found | A-J Roos',
   description:
     "Oops! Something went wrong. Either the page you tried to access doesn't exist or something mysterious happened.",
 };

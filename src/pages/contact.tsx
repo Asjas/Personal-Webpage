@@ -41,9 +41,9 @@ export const Paragraph = styled.p`
 `;
 
 const seo = {
-  title: 'Contact | A-J Roos',
+  title: 'Contact Page | A-J Roos',
   description:
-    'Do you have an interesting project or opportunity to discuss with me? Do you have a Web Development related question that you want to ask me? Feel free to use the contact details or contact form provided to get in touch with me.',
+    'I am available to work on projects. Feel free to use the contact form or email address on the page to contact me. You can also reach me on twitter at https://twitter.com/_asjas.',
   siteUrl: 'https://asjas.xyz/contact/',
 };
 

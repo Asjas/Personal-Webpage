@@ -5,7 +5,10 @@ class HTML extends React.Component {
   render() {
     return (
       <html lang="en" {...this.props.htmlAttributes}>
-        <head>{this.props.headComponents}</head>
+        <head>
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          {this.props.headComponents}
+        </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />

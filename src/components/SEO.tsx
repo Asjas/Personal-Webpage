@@ -78,7 +78,7 @@ const SEO: React.FunctionComponent<Props> = ({
           '@type': 'Person',
           name: seo.author,
           email: 'asjas@outlook.com',
-          jobTitle: 'JavaScript Web Developer',
+          jobTitle: 'Front-End Web Developer',
           image: {
             '@type': 'ImageObject',
             url: seo.authorImage,
@@ -105,8 +105,7 @@ const SEO: React.FunctionComponent<Props> = ({
   return (
     <Helmet>
       {/* General HTML Tags */}
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />

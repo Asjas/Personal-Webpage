@@ -73,9 +73,9 @@ export const GET_ALL_PROJECTS = graphql`
 `;
 
 const seo = {
-  title: 'Portfolio | A-J Roos',
+  title: 'Web Development Projects | A-J Roos',
   description:
-    'This is a collection of some of my Web Development projects. A complete collection of my projects can be found on my Github page at https://github.com/asjas.',
+    'This is a collection of some of my Web Development projects that I have worked on. A complete collection of all my projects can be found on my Github page at https://github.com/asjas.',
   siteUrl: 'https://asjas.xyz/projects/',
 };
 

@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
-    title: `Home | A-J Roos`,
+    title: `A-J Roos`,
     siteUrl: `https://asjas.xyz/`,
-    description: `Hey, my name is A-J Roos. I am a Front-End Web Developer based in Bloemfontein, South Africa. I am a self-taught Web Developer that loves to work on anything JavaScript related such as working with React.js and Node.js.`,
+    description: `I am a Front-End Web Developer based in Bloemfontein, South Africa. I am a self-taught Web Developer that loves to create websites and working on anything JavaScript related such as working with React.js, Gatsby.js and Node.js.`,
     image: `https://asjas.xyz/assets/logo_transparent.png`,
     twitterUsername: `_asjas`,
   },

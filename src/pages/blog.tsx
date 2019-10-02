@@ -78,7 +78,7 @@ interface IAllMDXPost {
 const seo = {
   title: 'Blog Posts | A-J Roos',
   description:
-    'This is where I blog about different Web Development topics. I write blog posts about HTML5, CSS3, JavaScript, React.js and Node.js. You can signup for my newsletter as well.',
+    'I blog about different Web Development topics. I write blog posts about HTML5, CSS3, JavaScript, React.js, Gatsby.js, Node.js and anything Serverless.',
   blogUrl: 'https://asjas.xyz/blog/',
 };
 
