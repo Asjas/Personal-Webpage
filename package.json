@@ -70,7 +70,7 @@
     "prismjs": "1.17.1",
     "prop-types": "15.7.2",
     "react": "16.9.0",
-    "react-dom": "16.9.0",
+    "react-dom": "16.10.1",
     "react-helmet": "6.0.0-beta",
     "react-icons": "3.7.0",
     "react-spring": "8.0.27",
