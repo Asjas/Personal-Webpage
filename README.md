@@ -7,9 +7,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/aeb0308fc860db634f77/maintainability)](https://codeclimate.com/github/Asjas/Personal-Webpage/maintainability)
 [![Coverage Status](https://coveralls.io/repos/github/Asjas/Personal-Webpage/badge.svg?branch=master)](https://coveralls.io/github/Asjas/Personal-Webpage?branch=master)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7c016567-e4f4-48df-8c1b-80fb4aeaab54/deploy-status)](https://app.netlify.com/sites/asjas/deploys)
-
-> This is my Personal Website built with Gatsby.js and Netlify CMS.
+> This is my Personal Website built with Gatsby.js and TypeScript.
 
 This project uses the following tech stack:
 
