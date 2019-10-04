@@ -20,10 +20,6 @@ This project uses the following tech stack:
   - React-Spring (Animation)
   - React Testing Library
 
-- Backend
-  - Netlify CMS (Blogging)
-  - Firebase Firestore (Projects)
-
 ### 🏠 [Homepage](https://asjas.co.za)
 
 ## Install
