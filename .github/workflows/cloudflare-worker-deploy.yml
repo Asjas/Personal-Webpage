@@ -1,21 +1,20 @@
 name: Cloudflare Worker Deploy
 
-on: 
+on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: GitHub Action for Cloudflare Workers
-      uses: cloudflare/serverless-action@v1.1
-      env:
-        CLOUDFLARE_ACCOUNT_ID: d34e365e96c3cd636081f05b0a6b031a
-        CLOUDFLARE_ZONE_ID: 34bf06b11a24aee26d1c99056fe3fdf9
-        CLOUDFLARE_AUTH_EMAIL: asjas@outlook.com
-        CLOUDFLARE_SCRIPT_NAME: workers-site/index.js
-        CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+      - name: GitHub Action for Cloudflare Workers
+        uses: cloudflare/serverless-action@v1.1
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_AUTH_EMAIL: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}
+          CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+          CLOUDFLARE_SCRIPT_NAME: workers-site/index
