@@ -15,7 +15,6 @@ This project uses the following tech stack:
 
   - Gatsby.js
   - Styled Components
-  - React-Spring (Animation)
   - React Testing Library
 
 ### 🏠 [Homepage](https://asjas.co.za)
