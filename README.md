@@ -17,7 +17,7 @@ This project uses the following tech stack:
   - Styled Components
   - React Testing Library
 
-### 🏠 [Homepage](https://asjas.co.za)
+### 🏠 [Homepage](https://asjas.xyz)
 
 ## Install
 
