@@ -86,12 +86,17 @@ function Nav(): React.ReactElement {
               </Link>
             </li>
             <li>
-              <Link activeClassName="navbar__link--active" to="/projects/" data-testid="projects">
+              <Link
+                activeClassName="navbar__link--active"
+                partiallyActive={true}
+                to="/projects/"
+                data-testid="projects"
+              >
                 Projects
               </Link>
             </li>
             <li>
-              <Link activeClassName="navbar__link--active" to="/blog/" data-testid="blog">
+              <Link activeClassName="navbar__link--active" partiallyActive={true} to="/blog/" data-testid="blog">
                 Blog
               </Link>
             </li>
