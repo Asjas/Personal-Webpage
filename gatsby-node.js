@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -16,6 +15,12 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
+
+  createRedirect({
+    fromPath: '/portfolio',
+    toPath: '/projects',
+    isPermanent: true,
+  });
 
   createRedirect({
     fromPath: '/blog/being-selected-for-andela-google-scholarship-phase-1/',
