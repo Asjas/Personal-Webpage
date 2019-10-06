@@ -311,6 +311,7 @@ export const Article = styled.article`
   }
 
   .gatsby-highlight {
+    position: relative;
     margin-bottom: 1.75rem;
     border-radius: 10px;
     font-family: ${props => props.theme.font.code};
@@ -326,8 +327,9 @@ export const Article = styled.article`
 
   .gatsby-code-title {
     margin-bottom: -0.8rem;
-    font-family: ${props => props.theme.font.body};
+    font-family: ${props => props.theme.font.code};
     padding: 6px 0 14px 15px;
+    font-weight: 700;
     font-size: ${props => props.theme.fontSize.small};
     background-color: ${props => props.theme.color.primary};
     color: white;
@@ -335,6 +337,34 @@ export const Article = styled.article`
     margin-top: 20px;
     border-top-left-radius: 0.9rem;
     border-top-right-radius: 0.9rem;
+  }
+
+  .gatsby-highlight pre[class*='language-']::before {
+    background: black;
+    border-radius: 0 0 0.25rem 0.25rem;
+    color: black;
+    font-size: 12px;
+    letter-spacing: 0.025rem;
+    padding: 0.1rem 0.5rem;
+    position: absolute;
+    right: 1rem;
+    text-align: right;
+    text-transform: uppercase;
+    top: 0;
+  }
+  .gatsby-highlight pre[class='language-js']::before {
+    content: 'js';
+    background: #f7df1e;
+  }
+
+  .gatsby-highlight pre[class='language-jsx']::before {
+    content: 'jsx';
+    background: #61dafb;
+  }
+
+  .gatsby-highlight pre[class='language-bash']::before {
+    content: 'bash';
+    background: #ddd;
   }
 `;
 
