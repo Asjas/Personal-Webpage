@@ -76,18 +76,18 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${props => props.theme.font.code};
     font-style: normal;
     font-display: swap;
-    src: url('https://asjas.xyz/assets/fonts/VictorMono-Light.woff2') format('woff2'),
-      url('https://asjas.xyz/assets/fonts/VictorMono-Light.woff') format('woff'),
-      url('https://asjas.xyz/assets/fonts/VictorMono-Light.ttf') format('truetype');
+    src: url('https://asjas-s3-storage.s3-eu-west-1.amazonaws.com/VictorMono-Light.woff2') format('woff2'),
+      url('https://asjas-s3-storage.s3-eu-west-1.amazonaws.com/VictorMono-Light.woff') format('woff'),
+      url('https://asjas-s3-storage.s3-eu-west-1.amazonaws.com/VictorMono-Light.ttf') format('truetype');
   }
 
   @font-face {
     font-family: ${props => props.theme.font.code};
     font-style: italic;
     font-display: swap;
-    src: url('https://asjas.xyz/assets/fonts/VictorMono-ItalicLight.woff2') format('woff2'),
-      url('https://asjas.xyz/assets/fonts/VictorMono-ItalicLight.woff') format('woff'),
-      url('https://asjas.xyz/assets/fonts/VictorMono-ItalicLight.woff2') format('truetype');
+    src: url('https://asjas-s3-storage.s3-eu-west-1.amazonaws.com/VictorMono-ItalicLight.woff2') format('woff2'),
+      url('https://asjas-s3-storage.s3-eu-west-1.amazonaws.com/VictorMono-ItalicLight.woff') format('woff'),
+      url('https://asjas-s3-storage.s3-eu-west-1.amazonaws.com/VictorMono-ItalicLight.ttf') format('truetype');
   }
 
   h1,
