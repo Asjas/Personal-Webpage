@@ -8,6 +8,7 @@ class HTML extends React.Component {
         <head>
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           {this.props.headComponents}
+          <script src="https://www.google.com/recaptcha/api.js?render=6LfRSKAUAAAAAOWRrjorE2kWWLN_aRlCuhTu6x-b" />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
