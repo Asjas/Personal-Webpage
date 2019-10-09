@@ -74,7 +74,7 @@
     "react-helmet": "6.0.0-beta",
     "react-icons": "3.7.0",
     "react-spring": "8.0.27",
-    "snyk": "1.232.0",
+    "snyk": "1.233.0",
     "start-server-and-test": "1.10.4",
     "styled-components": "4.4.0"
   },
