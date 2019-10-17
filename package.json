@@ -39,7 +39,7 @@
     "cypress": "3.4.1",
     "date-fns": "2.5.0",
     "disqus-react": "1.0.7",
-    "gatsby": "2.16.3",
+    "gatsby": "2.16.4",
     "gatsby-image": "2.2.29",
     "gatsby-plugin-advanced-sitemap": "1.4.5",
     "gatsby-plugin-catch-links": "2.1.15",
