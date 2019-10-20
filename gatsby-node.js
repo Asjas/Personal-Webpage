@@ -105,7 +105,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   projects.forEach(project => {
     createPage({
-      path: `/project/${project.frontmatter.slug}`,
+      path: `/projects/${project.frontmatter.slug}`,
       component: projectTemplate,
       context: { slug: project.frontmatter.slug },
     });

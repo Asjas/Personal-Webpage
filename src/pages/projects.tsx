@@ -117,7 +117,7 @@ const ProjectsPage: React.FunctionComponent = (): React.ReactElement => {
               {projects.edges.map(({ node: project }) => (
                 <Link
                   data-testid={project.frontmatter.slug}
-                  to={`/project/${project.frontmatter.slug}`}
+                  to={`/projects/${project.frontmatter.slug}`}
                   key={project.id}
                 >
                   <Project project={project} />

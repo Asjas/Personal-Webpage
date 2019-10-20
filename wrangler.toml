@@ -8,3 +8,7 @@ zone_id = "34bf06b11a24aee26d1c99056fe3fdf9"
 [site]
 bucket = "./public/"
 entry-point = "workers-site"
+
+[email]
+bucket = "./functions/"
+entry-point = "functions"

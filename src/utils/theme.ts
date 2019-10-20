@@ -54,6 +54,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 10px;
     line-height: 1.45;
     margin: 0;
+    height: 100%;
   }
 
   *,
