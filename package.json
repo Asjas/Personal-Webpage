@@ -62,7 +62,7 @@
     "gatsby-remark-relative-images": "0.2.3",
     "gatsby-remark-responsive-iframe": "2.2.25",
     "gatsby-source-filesystem": "2.1.33",
-    "gatsby-transformer-sharp": "2.2.23",
+    "gatsby-transformer-sharp": "2.3.0",
     "jest-styled-components": "6.3.3",
     "logrocket": "1.0.3",
     "logrocket-react": "4.0.1",
