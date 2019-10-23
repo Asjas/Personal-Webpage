@@ -14,7 +14,7 @@ This project uses the following tech stack:
 
   - Gatsby.js
   - Styled Components
-  - React Testing Library
+  - MDX Markdown (Blogs)
 
 ### 🏠 [Homepage](https://asjas.xyz)
 
