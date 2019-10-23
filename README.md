@@ -16,6 +16,10 @@ This project uses the following tech stack:
   - Gatsby.js
   - Styled Components
   - React Testing Library
+  
+- Testing
+
+  - Cypress
 
 ### 🏠 [Homepage](https://asjas.xyz)
 
