@@ -72,7 +72,7 @@
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-helmet": "6.0.0-beta",
-    "react-icons": "3.7.0",
+    "react-icons": "3.8.0",
     "react-spring": "8.0.27",
     "snyk": "1.238.0",
     "start-server-and-test": "1.10.6",
