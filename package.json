@@ -34,7 +34,7 @@
     "@types/react-dom": "16.9.3",
     "@types/react-helmet": "5.0.13",
     "@types/react-youtube": "7.6.2",
-    "@types/styled-components": "4.1.19",
+    "@types/styled-components": "4.1.20",
     "babel-plugin-styled-components": "1.10.6",
     "cypress": "3.5.0",
     "date-fns": "2.6.0",
