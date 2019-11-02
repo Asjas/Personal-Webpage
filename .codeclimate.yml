@@ -20,8 +20,7 @@ checks:
 
 ratings:
   paths:
-    - "**.js"
-    - "**.scss"
+    - "**.ts"
 
 exclude_paths:
   - public/*
