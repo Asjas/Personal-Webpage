@@ -36,7 +36,7 @@
     "@types/react-youtube": "7.6.2",
     "@types/styled-components": "4.4.0",
     "babel-plugin-styled-components": "1.10.6",
-    "cypress": "3.6.1",
+    "cypress": "3.7.0",
     "date-fns": "2.8.1",
     "disqus-react": "1.0.7",
     "gatsby": "2.17.17",
