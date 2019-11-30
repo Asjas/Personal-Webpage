@@ -90,7 +90,7 @@
     "babel-jest": "24.9.0",
     "babel-preset-gatsby": "0.2.23",
     "coveralls": "3.0.9",
-    "eslint": "6.7.1",
+    "eslint": "6.7.2",
     "eslint-config-airbnb": "18.0.1",
     "eslint-plugin-cypress": "2.7.0",
     "eslint-plugin-import": "2.18.2",
