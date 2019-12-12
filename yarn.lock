@@ -8004,10 +8004,10 @@ gatsby-plugin-styled-components@3.1.16:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-typescript@2.1.22:
-  version "2.1.22"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.1.22.tgz#3e70bd7b294e50275b42078c6bc1de878b3bf753"
-  integrity sha512-aRPy1ZlKQ85BxOmLt16SZsZqwXc1bgoVF+h66Cpyx4IWbWsaYVUM97JGmTplNd7h5UIquSiDfjixXfjPi1KImQ==
+gatsby-plugin-typescript@2.1.23:
+  version "2.1.23"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.1.23.tgz#02b29bf1986816d74a3f94231437b17b32bf1d12"
+  integrity sha512-qh321KlDNjHqhL8wKCL6wvrUWFZNQk625cUlEEnDjCoggJSBRJanLSwguzp3+wiXxk2eHNhfhqv1zpvrF/tB1A==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.7.4"
     "@babel/plugin-proposal-numeric-separator" "^7.7.4"
@@ -8056,10 +8056,10 @@ gatsby-remark-embed-video@2.0.1:
     remark-burger "^1.0.1"
     unist-util-visit "^2.0.0"
 
-gatsby-remark-images@3.1.37:
-  version "3.1.37"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.37.tgz#e270630e208470326faf51e9cec34ffd3cded09c"
-  integrity sha512-6eQ82CxzOFyTzI3CaxzTI6j16Xbm28CNJYu/Wdbl8QZdAnznJnLIAdlE074VYyo60QhKyQwu8a3wV5bhrHSfQQ==
+gatsby-remark-images@3.1.38:
+  version "3.1.38"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.38.tgz#9e66ba43b3a0211f3a08167badc33bd7d0653bb3"
+  integrity sha512-eMEq3anD/cCgCh2ZgcWhR/ejvd25R1tki2bS3jLEl0ceafJbOGvWD1hpSDL/N9KtpsX2zyVOTZn56tg5oRhTrQ==
   dependencies:
     "@babel/runtime" "^7.7.6"
     chalk "^2.4.2"
