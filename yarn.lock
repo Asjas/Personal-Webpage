@@ -5319,7 +5319,7 @@ create-react-context@^0.2.1:
     fbjs "^0.8.0"
     gud "^1.0.0"
 
-cross-env@^6.0.3:
+cross-env@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-6.0.3.tgz#4256b71e49b3a40637a0ce70768a6ef5c72ae941"
   integrity sha512-+KqxF6LCvfhWvADcDPqo64yVIB31gv/jQulX2NGzKS/g3GEVz6/pt4wjHFtFWsHMddebWD/sDthJemzM4MaAag==
@@ -8051,7 +8051,7 @@ gatsby-plugin-typescript@2.1.23:
     "@babel/runtime" "^7.7.6"
     babel-plugin-remove-graphql-queries "^2.7.19"
 
-gatsby-plugin-webpack-bundle-analyzer@^1.0.5:
+gatsby-plugin-webpack-bundle-analyzer@1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-webpack-bundle-analyzer/-/gatsby-plugin-webpack-bundle-analyzer-1.0.5.tgz#1e47b152cccbc5cbd74415cf70a659f5b5274fb5"
   integrity sha512-CsdekOGjrWgk5RjymSkz8yKP/lyU6Kx1LmxA8qiUH9qbma+B8dKo3ALd2d6/3E57Wj1jUblTtTZPZCCCYRubMw==
