@@ -46,6 +46,16 @@ export const myTheme = {
 };
 
 export const GlobalStyle = createGlobalStyle`
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  * + * {
+    margin-top: 1rem;
+  }
+
   html,
   body {
     box-sizing: border-box;
@@ -55,12 +65,6 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.45;
     margin: 0;
     height: 100%;
-  }
-
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
   }
 
   ::selection {
