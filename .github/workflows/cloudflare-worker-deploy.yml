@@ -11,6 +11,18 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@master
+
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.13.0
+
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
+
+      - name: Build
+        run: yarn run build
+
       - name: Publish
         uses: cloudflare/wrangler-action@1.1.0
         with:
