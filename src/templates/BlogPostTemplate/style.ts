@@ -78,22 +78,6 @@ export const Article = styled.article`
     margin-top: 50px;
   }
 
-  a {
-    color: ${props => props.theme.color.primary};
-    text-decoration: underline;
-    text-decoration-color: ${props => props.theme.color.primary};
-
-    &:hover,
-    &:focus {
-      outline: 3px solid ${props => props.theme.color.outline};
-    }
-
-    &:visited {
-      color: ${props => props.theme.color.linkVisited};
-      text-decoration-color: ${props => props.theme.color.linkVisited};
-    }
-  }
-
   .gatsby-code-title,
   .gatsby-highlight {
     grid-column: 1 / 4 !important;
@@ -114,10 +98,14 @@ export const Article = styled.article`
       font-size: ${props => props.theme.fontSize.medium};
       padding: 3px 8px;
       text-decoration: none;
+      margin-top: 0;
 
-      &:hover,
+      &:hover {
+        background: ${props => props.theme.color.navbar};
+        color: ${props => props.theme.color.white};
+      }
+
       &:focus {
-        cursor: pointer;
         background: ${props => props.theme.color.navbar};
         color: ${props => props.theme.color.white};
         outline: 3px solid ${props => props.theme.color.outline};

@@ -29,11 +29,18 @@ export const TagLink = styled(Link)`
   margin: 5px 4px;
   font-style: italic;
 
-  &:hover,
+  &:hover {
+    background: ${props => props.theme.color.navbar};
+    color: ${props => props.theme.color.white};
+  }
+
   &:focus {
-    cursor: pointer;
     background: ${props => props.theme.color.navbar};
     color: ${props => props.theme.color.white};
     outline: 3px solid ${props => props.theme.color.outline};
+  }
+
+  &:visited {
+    color: ${props => props.theme.color.white};
   }
 `;

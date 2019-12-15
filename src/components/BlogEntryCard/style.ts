@@ -94,9 +94,12 @@ export const BlogTags = styled.span`
     margin: 8px 8px 8px 0;
     font-style: italic;
 
-    &:hover,
+    &:hover {
+      background: ${props => props.theme.color.navbar};
+      color: ${props => props.theme.color.white};
+    }
+
     &:focus {
-      cursor: pointer;
       background: ${props => props.theme.color.navbar};
       color: ${props => props.theme.color.white};
       outline: 3px solid ${props => props.theme.color.outline};

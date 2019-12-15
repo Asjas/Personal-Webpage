@@ -25,27 +25,17 @@ export const Heading = styled.h1`
 export const Paragraph = styled.p`
   font-size: ${props => props.theme.fontSize.xLarge};
   text-align: center;
-
-  a {
-    color: ${props => props.theme.color.primary};
-    text-decoration: underline;
-    text-decoration-color: ${props => props.theme.color.primary};
-
-    &:hover,
-    &:focus {
-      outline: 3px solid ${props => props.theme.color.outline};
-    }
-
-    &:visited {
-      color: ${props => props.theme.color.linkVisited};
-      text-decoration-color: ${props => props.theme.color.linkVisited};
-    }
-  }
 `;
 
 export const Container = styled.div`
   display: grid;
   gap: 20px 0;
+`;
+
+export const StyledLink = styled(Link)`
+  && {
+    text-decoration: none;
+  }
 `;
 
 export const GET_ALL_PROJECTS = graphql`
@@ -115,13 +105,13 @@ const ProjectsPage: React.FunctionComponent = (): React.ReactElement => {
           <Container className="projects">
             <ErrorBoundary>
               {projects.edges.map(({ node: project }) => (
-                <Link
+                <StyledLink
                   data-testid={project.frontmatter.slug}
                   to={`/projects/${project.frontmatter.slug}`}
                   key={project.id}
                 >
                   <Project project={project} />
-                </Link>
+                </StyledLink>
               ))}
             </ErrorBoundary>
           </Container>

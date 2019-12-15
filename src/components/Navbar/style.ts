@@ -4,6 +4,7 @@ export const Sidenav = styled.div`
   grid-area: sidenav;
   height: 100vh;
   left: 0;
+  margin-top: 0;
   padding: 0;
   position: fixed;
   transform: translateX(0);
@@ -35,7 +36,6 @@ export const Sidenav = styled.div`
 `;
 
 export const HamburgerMenu = styled.a`
-  cursor: pointer;
   display: block;
   height: 32px;
   position: fixed;
@@ -45,13 +45,17 @@ export const HamburgerMenu = styled.a`
   z-index: 10;
   visibility: hidden;
 
-  &:focus {
-    outline: 3px solid ${props => props.theme.color.outline};
+  svg {
+    margin-top: 0;
   }
 
-  & span {
+  span {
     position: absolute;
     left: -9999px;
+  }
+
+  &:focus {
+    outline: 3px solid ${props => props.theme.color.outline};
   }
 
   @media (max-width: ${props => props.theme.mobileQuery.laptop}) {
@@ -94,7 +98,6 @@ export const NavbarLinks = styled.ul`
       display: block;
       border: 2px solid transparent;
       color: ${props => props.theme.color.white};
-      cursor: pointer;
       font-family: ${props => props.theme.font.retro};
       font-size: ${props => props.theme.fontSize.navbarLinkLarge};
       line-height: 5rem;

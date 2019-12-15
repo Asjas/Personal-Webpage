@@ -12,7 +12,7 @@ export const Footer = styled.footer`
   }
 
   a {
-    cursor: pointer;
+    margin-top: 1rem;
 
     .sr-only {
       border: 0;

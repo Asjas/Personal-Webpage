@@ -166,9 +166,25 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    color: ${props => props.theme.color.primary};
+    cursor: pointer;
     font-family: ${props => props.theme.font.body};
-    color: ${props => props.theme.color.black};
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: ${props => props.theme.color.black};
+    }
+
+    &:focus {
+      text-decoration: underline;
+      text-decoration-color: ${props => props.theme.color.black};
+      outline: 3px solid ${props => props.theme.color.outline};
+    }
+
+    &:visited {
+      color: ${props => props.theme.color.linkVisited};
+    }
   }
 
   input:focus,

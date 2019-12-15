@@ -22,22 +22,6 @@ export const Paragraph = styled.p`
   padding: 10px 0;
   width: 100%;
   text-align: center;
-
-  a {
-    color: ${props => props.theme.color.primary};
-    text-decoration: underline;
-    text-decoration-color: ${props => props.theme.color.primary};
-
-    &:hover,
-    &:focus {
-      outline: 3px solid ${props => props.theme.color.outline};
-    }
-
-    &:visited {
-      color: ${props => props.theme.color.linkVisited};
-      text-decoration-color: ${props => props.theme.color.linkVisited};
-    }
-  }
 `;
 
 const seo = {

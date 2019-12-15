@@ -36,11 +36,18 @@ export const ReturnLink = styled(Link)`
   padding: 3px 8px;
   justify-self: left;
 
-  &:hover,
+  &:hover {
+    background: ${props => props.theme.color.navbar};
+    color: ${props => props.theme.color.white};
+  }
+
   &:focus {
-    cursor: pointer;
     background: ${props => props.theme.color.navbar};
     color: ${props => props.theme.color.white};
     outline: 3px solid ${props => props.theme.color.outline};
+  }
+
+  &:visited {
+    color: ${props => props.theme.color.white};
   }
 `;
