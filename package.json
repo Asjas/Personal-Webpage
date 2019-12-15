@@ -40,7 +40,7 @@
     "cypress": "3.8.0",
     "date-fns": "2.8.1",
     "disqus-react": "1.0.7",
-    "gatsby": "2.18.11",
+    "gatsby": "2.18.12",
     "gatsby-image": "2.2.36",
     "gatsby-plugin-advanced-sitemap": "1.4.5",
     "gatsby-plugin-catch-links": "2.1.21",
