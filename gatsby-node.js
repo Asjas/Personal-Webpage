@@ -1,12 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 const path = require('path');
-const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
-
-  fmImagesToRelative(node);
 
   if (node.internal.type === 'Mdx') {
     createNodeField({ node });
