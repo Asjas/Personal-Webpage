@@ -25,8 +25,8 @@
     "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "@mdx-js/mdx": "1.5.2",
-    "@mdx-js/react": "1.5.2",
+    "@mdx-js/mdx": "1.5.3",
+    "@mdx-js/react": "1.5.3",
     "@sentry/browser": "5.10.2",
     "@types/jest": "24.0.23",
     "@types/logrocket-react": "3.0.0",
