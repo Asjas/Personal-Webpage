@@ -9,7 +9,7 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "serve": "gatsby serve",
-    "dev": "gatsby develop",
+    "dev": "hugo server",
     "analyze": "cross-env ANALYZE_BUNDLE_SIZE=true gatsby build",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
