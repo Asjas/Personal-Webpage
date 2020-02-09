@@ -2,10 +2,6 @@ baseURL = "https://asjas.xyz"
 title = "A-J Roos"
 theme = "zzo"
 
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
-hasCJKLanguage = true
-
 summaryLength = 70
 buildFuture = true
 

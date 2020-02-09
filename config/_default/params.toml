@@ -1,6 +1,6 @@
 logoText = "A-J Roos"
 logoType = "short" # long, short
-description = "The Zzo theme for Hugo example site."
+description = "I am a Front-End Web Developer based in Bloemfontein, South Africa. I am a self-taught Web Developer that loves to create websites and working on anything JavaScript related such as working with React.js, Gatsby.js and Node.js."
 custom_css = []
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
@@ -56,10 +56,10 @@ itemsPerCategory = 5
 sidebarPosition = "right"
 
 # footer
-showPoweredBy = true
+showPoweredBy = false
 showFeedLinks = true
 showSocialLinks = true
-enableLangChange = true
+enableLangChange = false
 enableThemeChange = true
 
 # service
@@ -71,7 +71,7 @@ busuanziPagePV = true
 
 # comment
 enableComment = true
-disqus_shortname = ""
+disqus_shortname = "asjas"
 commento = false
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
