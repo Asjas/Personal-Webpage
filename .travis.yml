@@ -8,9 +8,9 @@ addons:
 language: node_js
 
 node_js:
-  - '10'
-  - '11'
-  - '12'
+  - "10"
+  - "11"
+  - "12"
 
 git:
   quiet: true
@@ -24,5 +24,4 @@ install:
   - yarn install --frozen-lockfile
 
 script:
-  - 'yarn test:e2e:ci'
-  - 'yarn build'
+  - "yarn build"
