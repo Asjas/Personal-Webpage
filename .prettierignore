@@ -1,7 +1,4 @@
-package-lock.json
 node_modules
+content
 public
-coverage
 LICENSE
-.cache
-src/posts/*
