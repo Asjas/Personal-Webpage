@@ -13,6 +13,7 @@ tags:
   - scholarship
 categories:
   - andela
+  - google
 series:
   - Scholarships
 image: images/blogposts/google-phase-1.jpg
