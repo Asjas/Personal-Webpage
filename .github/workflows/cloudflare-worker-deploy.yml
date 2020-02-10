@@ -8,25 +8,23 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy
+    name: Build Hugo site and deploy to Cloudflare Workers
     steps:
-      - name: Install Hugo
-        run: sudo apt-get install hugo
-
-      - uses: actions/checkout@master
-
-      - name: Set Node.js
-        uses: actions/setup-node@master
+      - name: Checkout Git Source
+        uses: actions/checkout@master
         with:
-          node-version: 12.13.0
+          submodules: true
 
-      - name: Install dependencies
-        run: yarn install --prod --pure-lockfile
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.64.1'
+          extended: true
 
-      - name: Build
-        run: yarn run build
+      - name: Build Hugo Site
+        run: hugo --minify
 
-      - name: Publish
+      - name: Publish to Cloudflare Workers
         uses: cloudflare/wrangler-action@1.1.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
