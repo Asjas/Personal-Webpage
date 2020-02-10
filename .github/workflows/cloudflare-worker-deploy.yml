@@ -6,12 +6,12 @@ on:
       - master
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build-deploy:
+    runs-on: ubuntu-18.04
     name: Build Hugo site and deploy to Cloudflare Workers
     steps:
       - name: Checkout Git Source
-        uses: actions/checkout@master
+        uses: actions/checkout@v1
         with:
           submodules: true
 
