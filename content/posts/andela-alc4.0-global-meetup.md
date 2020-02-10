@@ -16,7 +16,6 @@ categories:
   - google
 series:
   - Scholarships
-image: images/blogposts/andela-global-meetup.jpg
 ---
 
 # Introduction

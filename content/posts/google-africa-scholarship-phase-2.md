@@ -16,7 +16,6 @@ categories:
   - google
 series:
   - Scholarships
-image: images/blogposts/google-phase-2.jpg
 ---
 
 # Introduction

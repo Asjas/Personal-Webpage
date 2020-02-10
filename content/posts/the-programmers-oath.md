@@ -12,7 +12,6 @@ tags:
   - development
 categories:
   - freecodecamp
-image: images/blogposts/the-programmers-oath.jpg
 ---
 
 # Introduction
