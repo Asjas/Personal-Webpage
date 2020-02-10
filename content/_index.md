@@ -6,17 +6,17 @@ header:
     paddingY: 0
     align: center
     title:
-      - HUGO
+      - A-J Roos
     subtitle:
-      - The world’s fastest framework for building websites
-    titleColor: 
+      - Hi, Welcome to my personal website and blog
+    titleColor:
     titleShadow: true
     titleFontSize: 44
-    subtitleColor: 
+    subtitleColor:
     subtitleCursive: true
     subtitleFontSize: 18
     spaceBetweenTitleSubtitle: 16
-  
+
   - type: img
     imageSrc: images/header/background.jpg
     imageSize: cover
@@ -41,13 +41,13 @@ header:
   - type: slide
     height: 235
     options:
-        startSlide: 0
-        auto: 5000
-        draggable: true
-        autoRestart: true
-        continuous: true
-        disableScroll: true
-        stopPropagation: true
+      startSlide: 0
+      auto: 5000
+      draggable: true
+      autoRestart: true
+      continuous: true
+      disableScroll: true
+      stopPropagation: true
     slide:
       - paddingX: 50
         paddingY: 0

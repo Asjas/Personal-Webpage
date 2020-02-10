@@ -2,8 +2,7 @@
 title: Google Africa Scholarship Phase 2
 date: 2019-08-20T13:19:00.000Z
 description:
-  This is a blog post about being selected for the Google Africa Certification Scholarship Phase 2. This is the second
-  phase where only 10,000 learners are chosen to continue.
+  This is a blog post about being selected for the Google Africa Certification Scholarship Phase 2. This is the second phase where only 10,000 learners are chosen to continue.
 draft: false
 hideToc: false
 enableToc: true
@@ -16,24 +15,16 @@ categories:
   - andela
 series:
   - Scholarships
-image: images/scholarships/google-phase-2.jpg
+image: images/blogposts/google-phase-2.jpg
 ---
 
-## Introduction
+# Introduction
 
-Late last week the first people were receiving emails confirming who was selected for Phase 2 of the
-[Google Africa Certifications Scholarship](https://africa.googleblog.com/2019/04/advance-your-career-with-google-africa.html)
-program. I was lucky enough to find out the weekend that I was also one of the 10,000 or so students that have been
-selected for Phase 2. Phase 1 was quite the challenge to focus on both the course content and the 2 Andela MyGradr
-challenges that we had to complete. Congratulations to all of those that also made it to the next phase of the
-Scholarship program. To those that haven't made it, you did a great job and I hope that we will have another Andela ALC
-program soon and that you can join it.
+Late last week the first people were receiving emails confirming who was selected for Phase 2 of the [Google Africa Certifications Scholarship](https://africa.googleblog.com/2019/04/advance-your-career-with-google-africa.html) program. I was lucky enough to find out the weekend that I was also one of the 10,000 or so students that have been selected for Phase 2. Phase 1 was quite the challenge to focus on both the course content and the 2 Andela MyGradr challenges that we had to complete. Congratulations to all of those that also made it to the next phase of the Scholarship program. To those that haven't made it, you did a great job and I hope that we will have another Andela ALC program soon and that you can join it.
 
-### Pluralsight Courses
+## Pluralsight Courses
 
-Since I am in the Web Track I will be including only the Web Courses for Phase 2 here. Now that we are only 10,000
-students in the Phase 2 of the Google Scholarship we have fewer courses but the courses are more focused on Angular and
-Web Security.
+Since I am in the Web Track I will be including only the Web Courses for Phase 2 here. Now that we are only 10,000 students in the Phase 2 of the Google Scholarship we have fewer courses but the courses are more focused on Angular and Web Security.
 
 - [Good Parts of JavaScript and the Web](https://app.pluralsight.com/library/courses/good-parts-javascript-web/table-of-contents)
 - [Angular Fundamentals](https://app.pluralsight.com/library/courses/angular-fundamentals/table-of-contents)
@@ -47,27 +38,12 @@ The courses are split across 2 Pluralsight Channels that you need to join.
 - [Mobile Web Specialist Learning Phase 2 Main Track](https://app.pluralsight.com/channels/details/d1341a43-3766-475d-bea9-f7b45222fd65)
 - [Mobile Web Specialist Learning Phase 2 Deep Dive](https://app.pluralsight.com/channels/details/f8278ecb-d711-4cd0-9d26-21f27b8cf0e2)
 
-#### What is next?
+### What is next
 
-If you have been selected for the Phase 2 of the Scholarship program but you haven't joined the Phase 2 Slack yet you
-can use this [link](https://alc4slack-invite.firebaseapp.com/) to generate an invite to the ALC 4 Phase 2 Slack. We also
-have a Andela onboarding live stream on Zoom this week that will go into more details on what will be expected of us in
-this phase. The live stream will be on Friday, 23 August 2019 at 3PM GMT. The link to the Zoom call is
-[here](https://andela.zoom.us/j/383583000). So for now you can focus on the Pluralsight course content as that is
-available at the moment since we have to wait for the onboarding live stream.
+If you have been selected for the Phase 2 of the Scholarship program but you haven't joined the Phase 2 Slack yet you can use this [ALC Slack Invite Page](https://alc4slack-invite.firebaseapp.com/) to generate an invite to the ALC 4 Phase 2 Slack. We also have a Andela onboarding live stream on Zoom this week that will go into more details on what will be expected of us in this phase. The live stream will be on Friday, 23 August 2019 at 3PM GMT. This is the link to the [Zoom call Recording](https://andela.zoom.us/j/383583000). So for now you can focus on the Pluralsight course content as that is available at the moment since we have to wait for the onboarding live stream.
 
-##### Personal Update
+#### Personal Update
 
-I've been quiet for the last month on Slack and just in general. I've mainly been focusing on learning more about
-Node.js backend development and creating Docker containers. I am currently busy with 2 Udemy courses that I am focusing
-on. One is named [Docker for Node.js Projects From a Docker Captain](https://www.udemy.com/docker-mastery-for-nodejs/)
-and the second is
-[NestJS Zero to Hero - Modern TypeScript Back-end Development](https://www.udemy.com/nestjs-zero-to-hero/). I've been
-loving TypeScript so far. It's not easy to learn but it does make my development workflow much easier to debug and
-reason about. [Nest.js](https://nestjs.com/) is such an amazing TypeScript framework for building Node.js applications.
-And Docker is very fun to learn as well. I used it a few years ago but I didn't have many use cases for it so I never
-continued with it. I created my first Docker Swarm recently and I'm learning how to update and maintain my containers on
-that swarm.
+I've been quiet for the last month on Slack and just in general. I've mainly been focusing on learning more about Node.js backend development and creating Docker containers. I am currently busy with 2 Udemy courses that I am focusing on. One is named [Docker for Node.js Projects From a Docker Captain](https://www.udemy.com/docker-mastery-for-nodejs/) and the second is [NestJS Zero to Hero - Modern TypeScript Back-end Development](https://www.udemy.com/nestjs-zero-to-hero/). I've been loving TypeScript so far. It's not easy to learn but it does make my development workflow much easier to debug and reason about. [Nest.js](https://nestjs.com/) is such an amazing TypeScript framework for building Node.js applications. And Docker is very fun to learn as well. I used it a few years ago but I didn't have many use cases for it so I never continued with it. I created my first Docker Swarm recently and I'm learning how to update and maintain my containers on that swarm.
 
-Found a issue or have any recommendations? Please open an issue
-[here](https://github.com/Asjas/Personal-Website/issues).
+Found an issue or have any recommendations? Please open an issue on [my Github repository](https://github.com/Asjas/Personal-Website/issues).
