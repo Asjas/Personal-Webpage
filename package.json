@@ -18,7 +18,7 @@
     "@sentry/browser": "5.10.2",
     "cypress": "3.8.1",
     "date-fns": "2.8.1",
-    "logrocket": "1.0.5",
+    "logrocket": "1.0.6",
     "snyk": "1.262.0",
     "start-server-and-test": "1.10.6"
   },
