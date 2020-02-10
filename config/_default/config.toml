@@ -26,9 +26,9 @@ googleAnalytics = "UA-112825816-1"
     lineNumbersInTable = true
     noClasses = false
   [markup.tableOfContents]
-    endLevel = 4
+    startLevel = 1
+    endLevel = 6
     ordered = false
-    startLevel = 2
 
 [outputs]
   page = ["HTML", "SearchIndex"]
