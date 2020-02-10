@@ -11,7 +11,7 @@ jobs:
     name: Deploy
     steps:
       - name: Install Hugo
-        run: apt-get install hugo
+        run: sudo apt-get install hugo
 
       - uses: actions/checkout@master
 
