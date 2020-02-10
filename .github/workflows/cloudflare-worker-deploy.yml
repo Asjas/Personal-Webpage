@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
+      - name: Install Hugo
+        run: apt-get install hugo
+
       - uses: actions/checkout@master
 
       - name: Set Node.js
