@@ -6,7 +6,7 @@
   "author": "A-J Roos <asjas@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "build": "hugo -D",
+    "build": "hugo -D --configDir config",
     "dev": "hugo server",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
