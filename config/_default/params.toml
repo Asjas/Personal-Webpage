@@ -8,7 +8,8 @@ useFaviconGenerator = true # https://www.favicon-generator.org/
 themeOptions = ["solarized", "light", "hacker", "dark", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation"]
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation"]
-notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation"]
+notAllowedTypesInArchive = ["about", "talks", "showcase", "contact", "publication", "presentation", "resume", "gallery"]
+notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
 # header
 homeHeaderType = "text" # text, img, slide
