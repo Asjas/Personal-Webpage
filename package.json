@@ -6,8 +6,8 @@
   "author": "A-J Roos <asjas@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "build": "hugo -D --configDir config",
-    "dev": "hugo server",
+    "build": "hugo --configDir config",
+    "dev": "hugo -DF server",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "lint:js": "eslint .",
