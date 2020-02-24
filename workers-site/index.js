@@ -1,5 +1,17 @@
 import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler';
-import { log } from './sentry';
+
+// HTTP Security Headers
+const addHeaders = {
+  'Expect-CT': 'max-age=604800, report-uri https://asjas.report-uri.com/r/d/ct/enforce; report-to default',
+  'Referrer-Policy': 'same-origin',
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
+  'X-XSS-Protection': '1; mode=block',
+  'X-CF-Worker': 'true',
+  'Report To':
+    '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://asjas.report-uri.com/a/d/g"}],"include_subdomains":true}',
+};
 
 /**
  * The DEBUG flag will do two things that help during development:
@@ -8,7 +20,7 @@ import { log } from './sentry';
  * 2. we will return an error message on exception in your Response rather
  *    than the default 404.html page.
  */
-const DEBUG = false;
+const DEBUG = true;
 
 addEventListener('fetch', event => {
   try {
@@ -44,7 +56,15 @@ async function handleEvent(event) {
         bypassCache: true,
       };
     }
-    return await getAssetFromKV(event, options);
+    const asset = await getAssetFromKV(event, options);
+
+    let response = new Response(asset);
+
+    Object.keys(addHeaders).forEach(function(header) {
+      response.headers.set(header, addHeaders[header]);
+    });
+
+    return response;
   } catch (e) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
@@ -60,25 +80,4 @@ async function handleEvent(event) {
     log(e, event.request);
     return new Response(e.message || e.toString(), { status: 500 });
   }
-}
-
-/**
- * Here's one example of how to modify a request to
- * remove a specific prefix, in this case `/docs` from
- * the url. This can be useful if you are deploying to a
- * route on a zone, or if you only want your static content
- * to exist at a specific path.
- */
-function handlePrefix(prefix) {
-  return request => {
-    // compute the default (e.g. / -> index.html)
-    let defaultAssetKey = mapRequestToAsset(request);
-    let url = new URL(defaultAssetKey.url);
-
-    // strip the prefix from the path for lookup
-    url.pathname = url.pathname.replace(prefix, '/');
-
-    // inherit all other props from the default request
-    return new Request(url.toString(), defaultAssetKey);
-  };
 }
