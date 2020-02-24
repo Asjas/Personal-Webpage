@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@sentry/browser": "5.10.2",
-    "cypress": "3.8.1",
+    "cypress": "4.0.2",
     "date-fns": "2.8.1",
     "logrocket": "1.0.5",
     "snyk": "1.262.0",
