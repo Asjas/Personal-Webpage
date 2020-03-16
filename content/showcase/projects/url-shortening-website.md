@@ -1,10 +1,10 @@
 ---
-title: 'URL Shortening Landing Page'
-date: 2020-02-10T08:43:42+02:00
-description: Frontendmentor.io - URL shortening API landing page built with Vue.js.
+title: 'Shortly Landing Page'
+date: 2020-03-16T21:15:42+02:00
+description: This is the Shortly Landing Page build with Nuxt.js, Vue.js and Tailwind CSS. I also used Cloudflare Workers for hosting.
 weight: 1
-link: https://urlshortener.asjas.xyz/
-repo: https://github.com/Asjas/URL-shortening-API-landing-page
+link: https://shortly.asjas.xyz/
+repo: https://github.com/Asjas/shortly-landing-page
 pinned: true
 thumb: feature3/css3.png
 ---
