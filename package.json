@@ -11,12 +11,12 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "yarn run snyk-protect"
   },
   "dependencies": {
     "@sentry/browser": "5.14.2",
     "cypress": "4.1.0",
-    "snyk": "1.299.0",
+    "snyk": "^1.316.1",
     "start-server-and-test": "1.10.10"
   },
   "devDependencies": {
