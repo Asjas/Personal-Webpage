@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@sentry/browser": "5.15.5",
-    "cypress": "4.5.0",
+    "cypress": "4.8.0",
     "snyk": "1.321.0",
     "start-server-and-test": "1.11.0"
   },
