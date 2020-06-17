@@ -22,7 +22,7 @@
   "devDependencies": {
     "@testing-library/cypress": "6.0.0",
     "husky": "4.2.5",
-    "lint-staged": "10.2.3",
+    "lint-staged": "10.2.11",
     "prettier": "1.19.1"
   },
   "husky": {
