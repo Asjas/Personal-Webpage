@@ -1,0 +1,36 @@
+name: Cypress Firefox on every OS
+
+on: [push, pull_request]
+
+jobs:
+  parallel-runs-across-platforms:
+    name: every OS
+    strategy:
+      matrix:
+        os: ['ubuntu-latest', 'windows-latest', 'macos-latest']
+        machines: [1, 2]
+
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
+    container:
+      image: cypress/browsers:node12.16.1-chrome80-ff73
+      options: --user 1001
+    steps:
+      - name: Checkout Git Source
+        uses: actions/checkout@v2
+
+      - name: Run Cypress in Firefox
+        uses: cypress-io/github-action@v1
+        timeout-minutes: 10
+        with:
+          browser: firefox
+          group: Parallel 2x on ${{ matrix.os }}
+          build: yarn build
+          start: yarn dev
+          start-windows: yarn ci:dev
+          wait-on: http://localhost:8080
+          record: true
+          parallel: true
+          tag: firefox-${{ matrix.os }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
