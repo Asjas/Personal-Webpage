@@ -1,0 +1,13 @@
+@tailwind base;
+
+html {
+  @apply antialiased font-body;
+  font-size: 18px;
+}
+body {
+  @apply bg-primary text-secondary;
+}
+
+@tailwind components;
+
+@tailwind utilities;
