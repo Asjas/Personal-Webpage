@@ -12,7 +12,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: '12.16.1'
+          node-version: "12.16.1"
 
       - name: Install npm packages
         run: yarn
@@ -20,11 +20,11 @@ jobs:
       - name: Build Gatsby Site
         run: yarn build
 
-      - name: Cypress Chrome
-        run: yarn test:e2e:chrome:ci
+      # - name: Cypress Chrome
+      #   run: yarn test:e2e:chrome:ci
 
-      - name: Cypress Firefox
-        run: yarn test:e2e:firefox:ci
+      # - name: Cypress Firefox
+      #   run: yarn test:e2e:firefox:ci
 
       - name: Publish to Cloudflare Workers
         uses: cloudflare/wrangler-action@1.1.0
