@@ -1,0 +1,16 @@
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac
+.DS_Store
+
+# Dependency directories
+node_modules/
+
+# Gatsby directories
+.cache
+public
+dist

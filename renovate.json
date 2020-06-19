@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "assignees": [
+    "asjas"
+  ],
+  "assignAutomerge": true,
+  "labels": [
+    "renovate-bot"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "gatsby"
+      ],
+      "groupName": "gatsby"
+    }
+  ],
+  "automerge": true,
+  "automergeType": "branch"
+}

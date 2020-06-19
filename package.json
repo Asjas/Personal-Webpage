@@ -1,0 +1,28 @@
+{
+  "name": "personal-website",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "GATSBY_GRAPHQL_IDE=playground gatsby develop -o -H $HOSTNAME -p 8000",
+    "clean": "gatsby clean"
+  },
+  "author": "A-J Roos",
+  "license": "MIT",
+  "dependencies": {
+    "@sentry/browser": "5.17.0",
+    "gatsby": "^2.23.6",
+    "gatsby-plugin-favicon": "3.1.6",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-postcss": "2.3.4",
+    "gatsby-plugin-prefetch-google-fonts": "1.4.3",
+    "gatsby-plugin-react-helmet": "3.3.4",
+    "gatsby-plugin-sentry": "1.0.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet": "6.1.0",
+    "react-social-icons": "^4.1.0",
+    "tailwindcss": "1.4.6"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  }
+}
