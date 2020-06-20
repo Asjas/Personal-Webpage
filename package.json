@@ -3,7 +3,9 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "GATSBY_GRAPHQL_IDE=playground gatsby develop -o -H $HOSTNAME -p 8000",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "author": "A-J Roos",
   "license": "MIT",
@@ -20,9 +22,11 @@
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0",
     "react-social-icons": "^4.1.0",
-    "tailwindcss": "1.4.6"
+    "tailwindcss": "1.4.6",
+    "snyk": "^1.346.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"
-  }
+  },
+  "snyk": true
 }
