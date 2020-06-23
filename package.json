@@ -10,7 +10,7 @@
   "author": "A-J Roos",
   "license": "MIT",
   "dependencies": {
-    "@sentry/browser": "5.17.0",
+    "@sentry/browser": "5.18.0",
     "gatsby": "2.23.9",
     "gatsby-plugin-favicon": "3.1.6",
     "gatsby-plugin-google-fonts": "1.0.1",
