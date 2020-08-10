@@ -23,7 +23,7 @@
     "react-helmet": "6.1.0",
     "react-social-icons": "4.1.0",
     "tailwindcss": "1.4.6",
-    "snyk": "1.355.0"
+    "snyk": "1.371.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"
