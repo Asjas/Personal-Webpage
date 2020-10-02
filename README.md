@@ -10,6 +10,8 @@ The current tech stack is as follows.
 
 * TailwindCSS
 
+* TypeScript
+
 ## Backend
 
 * GhostCMS
