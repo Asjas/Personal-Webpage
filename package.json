@@ -2,6 +2,7 @@
   "name": "remix-starter-express",
   "version": "1.0.0",
   "scripts": {
+    "prod": "NODE_ENV=production node server.js",
     "build": "NODE_ENV=production npm run css:build && NODE_ENV=production remix build && tsc -b",
     "start": "NODE_ENV=development concurrently \"npm run css:watch\" \"remix run\" \"tsc -b -w\" \"nodemon --ignore app server.js\"",
     "css:watch": "postcss styles --base styles --dir app/ -w",
