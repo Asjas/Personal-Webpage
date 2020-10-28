@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
   return (
     <footer className="flex pt-6 text-storm-gray">
-      <a href="https://linked.com/in/asjasroos">
+      <a href="https://linkedin.com/in/asjasroos">
         <svg className="w-10 h-10 mr-6" viewBox="0 0 128 128">
           <title>LinkedIn</title>
           <g fill="currentColor">
