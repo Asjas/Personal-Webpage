@@ -8,5 +8,3 @@ node_modules/
 /.cache
 
 app/**/*.css
-
-.npmrc
