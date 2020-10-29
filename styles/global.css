@@ -5,13 +5,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-  font-family: 'Playfair Display', serif;
+  @apply font-serif;
 }
 
 @tailwind components;

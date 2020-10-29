@@ -13,7 +13,6 @@ export default function Index() {
   return (
     <>
       <Header />
-      <div className="text-storm-gray"></div>
       <Footer />
     </>
   );
