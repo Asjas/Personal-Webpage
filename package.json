@@ -2,7 +2,7 @@
   "name": "asjas-personal-website",
   "version": "1.0.0",
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm run css:build && cross-env NODE_ENV=production remix build",
+    "build": "npm run css:build && remix build",
     "start": "cross-env NODE_ENV=development concurrently \"npm run css:watch\" \"remix run\" \"nodemon --ignore app start.js\"",
     "css:watch": "postcss styles --base styles --dir app/ -w",
     "css:build": "postcss styles --base styles --dir app/ --env production"
