@@ -3,7 +3,6 @@ module.exports = {
   loadersDirectory: 'loaders',
   browserBuildDirectory: 'public/build',
   publicPath: '/build/',
-  serverBuildDirectory: 'server-build',
-  rehypePlugins: [],
+  serverBuildDirectory: 'build/app',
   devServerPort: 8002,
 };

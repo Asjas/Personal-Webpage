@@ -1,5 +1,3 @@
-const mdx = require('@mdx-js/mdx');
-
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -7,22 +5,9 @@ module.exports = {
   },
   purge: {
     mode: 'all',
-    content: ['./app/**/*.{tsx, mdx}'],
+    content: ['./app/**/*.{js}'],
     options: {
-      extractors: [
-        {
-          extensions: ['mdx'],
-          extractor: content => {
-            content = mdx.sync(content);
-            // https://github.com/tailwindlabs/blog.tailwindcss.com/blob/eb2a0ff80c8e56a79f6514c8dc4253ef84ac5548/tailwind.config.js#L13
-
-            const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
-            const innerMatches = content.match(/[^<>"'`\s.(){}[\]#=%]*[^<>"'`\s.(){}[\]#=%:]/g) || [];
-
-            return broadMatches.concat(innerMatches);
-          },
-        },
-      ],
+      whitelist: ['h1', 'h3', 'h4', 'p', 'strong'],
     },
   },
   theme: {
@@ -32,16 +17,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        'amor-red': '#ee5253',
         'casandora-yellow': '#feca57',
-        'france-blue': '#2e86de',
         'imperial-black': '#222f3e',
-        'jade-green': '#00d2d3',
         'lotus-pink': '#f368e0',
-        'mountain-green': '#10ac84',
-        'prince-purple': '#5f27cd',
         'storm-gray': '#c8d6e5',
-        'tiger-orange': '#ff9f43',
       },
     },
     typography: theme => ({
@@ -60,11 +39,38 @@ module.exports = {
             fontFamily: theme('fontFamily.serif'),
             color: theme('colors.storm-gray'),
           },
+          h4: {
+            fontFamily: theme('fontFamily.serif'),
+            color: theme('colors.storm-gray'),
+          },
+          p: {
+            color: theme('colors.storm-gray'),
+          },
+          strong: {
+            color: theme('colors.storm-gray'),
+          },
+          em: {
+            color: theme('colors.storm-gray'),
+          },
           a: {
-            color: theme('colors.tiger-orange'),
+            color: theme('colors.lotus-pink'),
             '&:hover': {
               color: theme('colors.casandora-yellow'),
+              textDecoration: 'none',
             },
+          },
+          code: {
+            color: theme('colors.casandora-yellow'),
+          },
+          ul: {
+            color: theme('colors.storm-gray'),
+          },
+          ol: {
+            color: theme('colors.storm-gray'),
+          },
+          blockquote: {
+            color: theme('colors.storm-gray'),
+            borderLeftColor: theme('colors.casandora-yellow'),
           },
         },
       },

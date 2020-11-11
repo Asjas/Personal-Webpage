@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="flex justify-between text-storm-gray">
       <div>
-        <h1 className="text-4xl font-medium">
+        <h1 className="font-serif text-4xl font-medium">
           <Link className="hover:underline" to="/">
             A-J Roos
           </Link>

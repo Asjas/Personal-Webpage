@@ -4,8 +4,12 @@
   outline: none;
 }
 
-body {
-  @apply font-serif;
+::selection {
+  @apply bg-storm-gray text-imperial-black;
+}
+
+::-moz-selection {
+  @apply bg-storm-gray text-imperial-black;
 }
 
 @tailwind components;

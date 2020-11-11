@@ -1,10 +1,7 @@
 node_modules/
 
-/server-build
-/loaders/**/*.js
-/loaders/**/*.d.ts
-/public/build
-/yarn-error.log
 /.cache
+/build
+/public/build
 
 app/**/*.css
