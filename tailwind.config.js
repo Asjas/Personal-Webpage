@@ -3,13 +3,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: {
-    mode: 'all',
-    content: ['./app/**/*.{js}'],
-    options: {
-      whitelist: ['h1', 'h3', 'h4', 'p', 'strong'],
-    },
-  },
+  purge: ['./app/**/*.js'],
   theme: {
     fontFamily: {
       serif: ['Playfair Display', 'serif'],
