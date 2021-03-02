@@ -1,0 +1,6 @@
+public/build
+app-build
+tailwind.config.js
+remix.config.js
+prettier.config.js
+postcss.config.js

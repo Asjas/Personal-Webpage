@@ -1,0 +1,36 @@
+---
+meta:
+  title: Title of the page
+  description: A solid description of this document.
+
+headers:
+  Cache-Control: max-age=60, s-maxage=604800
+---
+
+# Page title
+
+.tooltip has a much larger z-index than header! So why on earth is the header on top?
+
+## Layer 2 title
+
+To unravel this mystery, we'll need to learn about stacking contexts, an obscure-yet-fundamental CSS mechanism. In this
+article, we'll explore what they are, how they work, and how we can use them to our advantage.
+
+### Layer 3 title
+
+Our `.tooltip` element has a z-index of **999999**, but that value is only relevant within the `<main>` stacking
+context. It controls whether the tooltip shows up above or below the adjacent `<p>` tag, nothing more.
+
+Meanwhile, in the parent context, `<header>` and `<main>` are compared. Because `<main>` has a smaller z-index, it shows
+up underneath `<header>`. All of its children come along for the ride.
+
+We've seen how we can create a stacking context by combining relative or absolute positioning with z-index, but it's not
+the only way! Here are some others:
+
+- Setting opacity to a value less than 1
+- Setting position to fixed or sticky (No z-index needed for these values!)
+- Applying a mix-blend-mode other than normal
+- Adding a z-index to a child inside a display: flex or display: grid container
+- Using transform, filter, clip-path, or perspective
+- Using will-change with a value like opacity or transform
+- Explicitly creating a context with isolation: isolate (More on this soon!)

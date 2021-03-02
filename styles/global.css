@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Wotfard;
+  src: url('/fonts/wotfard-semibold-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Wotfard;
+  src: url('/fonts/wotfard-medium-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Wotfard;
+  src: url('/fonts/wotfard-regular-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+::selection {
+  @apply text-white bg-hot-pink;
+}
+
+::-moz-selection {
+  @apply text-white bg-hot-pink;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
