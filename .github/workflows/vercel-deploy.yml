@@ -31,6 +31,7 @@ jobs:
           npm config set //npm.remix.run/:_authToken=${REMIX_NPM_TOKEN}
           npm config set @remix-run:registry=https://npm.remix.run
           npm ci
+          npm run predeploy
         env:
           REMIX_NPM_TOKEN: ${{ secrets.REMIX_NPM_TOKEN }}
 
