@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
         env:
-          ${REMIX_REGISTRY_TOKEN}: ${{ secrets.REMIX_REGISTRY_TOKEN }}
+          REMIX_REGISTRY_TOKEN: ${{ secrets.REMIX_REGISTRY_TOKEN }}
 
       - name: Deploy Production
         uses: amondnet/vercel-action@v20
