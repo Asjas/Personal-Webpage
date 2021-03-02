@@ -15,6 +15,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 15
+          registry-url: https://npm.remix.run
+          scope: '@remix-run'
       - uses: actions/cache@v1
         with:
           path: ~/.npm
@@ -22,12 +24,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install dependencies
-        run: |
-          npm config set //npm.remix.run/:_authToken=${REMIX_NPM_TOKEN}
-          npm config set @remix-run:registry=https://npm.remix.run
-          npm ci
+        run: npm ci
         env:
-          REMIX_NPM_TOKEN: ${{ secrets.REMIX_REGISTRY_TOKEN }}
+          _authToken: ${{ secrets.REMIX_REGISTRY_TOKEN }}
 
       - name: Deploy Production
         uses: amondnet/vercel-action@v20
