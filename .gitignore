@@ -6,3 +6,5 @@ app/**/*.css
 /public/build
 
 .vercel
+
+.env
