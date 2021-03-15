@@ -1,3 +1,6 @@
 module.exports = {
-  plugins: [require('tailwindcss'), require('autoprefixer'), require('cssnano')],
+  plugins: [
+    require('@tailwindcss/jit'),
+    ...(process.env.NODE_ENV === 'production' ? [require('autoprefixer'), require('cssnano')] : []),
+  ],
 };

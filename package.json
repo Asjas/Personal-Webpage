@@ -22,6 +22,8 @@
     "react-router-dom": "6.0.0-beta.0"
   },
   "devDependencies": {
+    "@remix-run/dev": "^0.14.1",
+    "@tailwindcss/jit": "0.1.0",
     "@tailwindcss/line-clamp": "0.2.0",
     "@tailwindcss/typography": "0.4.0",
     "@types/react": "17.0.2",

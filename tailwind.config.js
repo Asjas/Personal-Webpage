@@ -3,7 +3,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ['./app/**/*.tsx', './app/**/*.js', './app/**/*.mdx'],
+  purge: ['./app/**/*.{js,mdx,tsx}'],
   theme: {
     fontFamily: {
       serif: ['Wotfard'],
