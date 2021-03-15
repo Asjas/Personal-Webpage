@@ -1,9 +1,11 @@
 {
   "scripts": {
-    "predeploy": "npm run css:build && remix build",
+    "prebuild": "npm run css:build",
+    "build": "remix build",
+    "predeploy": "npm run build",
     "deploy": "vercel",
     "dev": "concurrently \"npm run css:watch\" \"remix run\" \"vercel dev\"",
-    "clean": "rimraf app-build public/build",
+    "clean": "rimraf .cache app/styles build",
     "css:watch": "postcss styles --base styles --dir app/styles --ext css -w",
     "css:build": "postcss styles --base styles --dir app/styles --ext css --env production"
   },
@@ -22,7 +24,6 @@
     "react-router-dom": "6.0.0-beta.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^0.14.1",
     "@tailwindcss/jit": "0.1.0",
     "@tailwindcss/line-clamp": "0.2.0",
     "@tailwindcss/typography": "0.4.0",

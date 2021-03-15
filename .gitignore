@@ -2,9 +2,10 @@ node_modules/
 
 app/**/*.css
 
-/app-build
+.cache/
+/build
 /public/build
 
-.vercel
+.vercel/
 
 .env
