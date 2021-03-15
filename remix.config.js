@@ -1,7 +1,3 @@
-// Make sure you turn on "Automatically expose System Environment Variables" in the Vercel console here:
-// https://vercel.com/<username>/<app-name>/settings/environment-variables
-let isLocalDev = process.env.VERCEL_ENV !== 'production' && process.env.VERCEL_ENV !== 'preview';
-
 module.exports = {
   /**
    * The path to the `app` directory, relative to remix.config.js. Defaults to
@@ -11,7 +7,7 @@ module.exports = {
    * We prevent vercel from building when it deploys because it chokes on the
    * typescript files that Remix already built.
    */
-  appDirectory: isLocalDev ? 'app' : 'app-build',
+  appDirectory: 'app',
 
   /**
    * The path to the browser build, relative to remix.config.js. Defaults to
@@ -32,7 +28,7 @@ module.exports = {
    * that are created from building your routes. They are used on the server to
    * generate HTML.
    */
-  serverBuildDirectory: 'app-build',
+  serverBuildDirectory: 'build',
 
   /**
    * MDX Plugins
