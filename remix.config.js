@@ -1,38 +1,8 @@
 module.exports = {
-  /**
-   * The path to the `app` directory, relative to remix.config.js. Defaults to
-   * "app". All code in this directory is part of your app and will be compiled
-   * by Remix.
-   *
-   * We prevent vercel from building when it deploys because it chokes on the
-   * typescript files that Remix already built.
-   */
   appDirectory: 'app',
-
-  /**
-   * The path to the browser build, relative to remix.config.js. Defaults to
-   * `public/build`. The browser build contains all public JavaScript and CSS
-   * files that are created when building your routes.
-   */
   browserBuildDirectory: 'public/build',
-
-  /**
-   * The URL prefix of the browser build with a trailing slash. Defaults to
-   * `/build/`.
-   */
   publicPath: '/build/',
-
-  /**
-   * The path to the server build directory, relative to remix.config.js.
-   * Defaults to `build`. The server build is a collection of JavaScript modules
-   * that are created from building your routes. They are used on the server to
-   * generate HTML.
-   */
   serverBuildDirectory: 'build',
-
-  /**
-   * MDX Plugins
-   */
   mdx: {
     rehypePlugins: [
       require('rehype-slug'),
@@ -56,8 +26,5 @@ module.exports = {
     ],
     remarkPlugins: [require('remark-squeeze-paragraphs')],
   },
-  /**
-   * The port to use when running `remix run`. Defaults to 8002.
-   */
   devServerPort: 8002,
 };
