@@ -1,16 +1,14 @@
-import type { LinksFunction } from '@remix-run/react';
-import { Meta, Links, Scripts } from '@remix-run/react';
-import { Outlet } from 'react-router-dom';
+import type { LinksFunction } from "@remix-run/react";
+import { Meta, Links, Scripts } from "@remix-run/react";
+import { Outlet } from "react-router-dom";
 
-import tailwind from 'css:./styles/tailwind.css';
-import styles from 'css:./styles/global.css';
+import tailwind from "css:./styles/tailwind.css";
+import styles from "css:./styles/global.css";
 
-export let links: LinksFunction = () => {
-  return [
-    { rel: 'stylesheet', href: tailwind },
-    { rel: 'stylesheet', href: styles },
-  ];
-};
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: tailwind },
+  { rel: "stylesheet", href: styles },
+];
 
 export default function App() {
   return (
@@ -42,7 +40,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
           <h1>App Error</h1>
           <pre>{error.message}</pre>
           <p>
-            Replace this UI with what you want users to see when your app throws uncaught errors. The file is at{' '}
+            Replace this UI with what you want users to see when your app throws uncaught errors. The file is at{" "}
             <code>app/App.tsx</code>.
           </p>
         </div>

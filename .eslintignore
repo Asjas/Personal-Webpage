@@ -1,6 +1,12 @@
+.cache/
+.vercel/
+.vscode/
+build/
+node_modules/
 public/build
-app-build
-tailwind.config.js
-remix.config.js
-prettier.config.js
+app/**/*.css
+
 postcss.config.js
+remix.config.js
+index.js
+tailwind.config.js

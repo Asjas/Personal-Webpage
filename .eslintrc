@@ -1,0 +1,8 @@
+{
+  "extends": ["eslint-config-asjas/react-typescript"],
+  "parserOptions": {
+    "tsconfigRootDir": "app",
+    "project": "tsconfig.json"
+  },
+  "rules": {}
+}

@@ -1,11 +1,11 @@
-import ReactDOM from 'react-dom';
-import Remix from '@remix-run/react/browser';
-import * as Sentry from '@sentry/react';
-import { Integrations } from '@sentry/tracing';
-import { CaptureConsole as CaptureConsoleIntegration } from '@sentry/integrations'
+import ReactDOM from "react-dom";
+import Remix from "@remix-run/react/browser";
+import * as Sentry from "@sentry/react";
+import { Integrations } from "@sentry/tracing";
+import { CaptureConsole as CaptureConsoleIntegration } from "@sentry/integrations";
 
 Sentry.init({
-  dsn: 'https://18b2fcfdb3334223b3577719a6c05296@o183318.ingest.sentry.io/1275165',
+  dsn: "https://18b2fcfdb3334223b3577719a6c05296@o183318.ingest.sentry.io/1275165",
   integrations: [new Integrations.BrowserTracing(), new CaptureConsoleIntegration()],
   tracesSampleRate: 0.4,
 });
